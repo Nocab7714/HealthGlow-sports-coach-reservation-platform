@@ -44,6 +44,7 @@
   --#{$prefix}font-sans-serif: #{inspect($font-family-sans-serif)};
   --#{$prefix}font-monospace: #{inspect($font-family-monospace)};
   --#{$prefix}gradient: #{$gradient};
+  --#{$prefix}font-Anton: "Anton";
 
   // Root and body
   // scss-docs-start root-body-variables

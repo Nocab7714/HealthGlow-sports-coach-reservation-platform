@@ -298,14 +298,25 @@ $cyans: (
 // fusv-enable
 
 // scss-docs-start theme-color-variables
-$primary:       $blue !default;
-$secondary:     $gray-600 !default;
+$primary:       #00B3BF; //$blue !default;
+$secondary:     #114E59; //$gray-600 !default;
 $success:       $green !default;
 $info:          $cyan !default;
 $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+
+$accent:        #FECA00;
+$tint:          #FFFDCF;
+$gradient:      #09A460;
+
+$gray-800:      #3C4A4B;
+$gray-700:      #78838E;
+$gray-600:      #979CA2;
+$gray-300:      #BCC7C8;
+$gray-100:      #E8E8E8;
+
 // scss-docs-end theme-color-variables
 
 // scss-docs-start theme-colors-map
@@ -317,7 +328,16 @@ $theme-colors: (
   "warning":    $warning,
   "danger":     $danger,
   "light":      $light,
-  "dark":       $dark
+  "dark":       $dark,
+  "accent":     $accent,
+  "tint":       $tint,
+  "gradient":   $gradient,
+  "gray-800":   $gray-800,
+  "gray-700":   $gray-700,
+  "gray-600":   $gray-600,
+  "gray-300":   $gray-300,
+  "gray-100":   $gray-100,
+
 ) !default;
 // scss-docs-end theme-colors-map
 
@@ -603,7 +623,7 @@ $aspect-ratios: (
 
 // scss-docs-start font-variables
 // stylelint-disable value-keyword-case
-$font-family-sans-serif:      system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
+$font-family-sans-serif:      "Noto Sans TC", sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", "Liberation Sans", Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji" !default;
 $font-family-monospace:       SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace !default;
 // stylelint-enable value-keyword-case
 $font-family-base:            var(--#{$prefix}font-sans-serif) !default;
