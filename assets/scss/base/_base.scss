@@ -2,3 +2,14 @@ a {
   color: inherit;
   display: inline-block;
 }
+
+// bootstrap 沒有針對的字距變數可以設定，所以將字距設定寫在 base 中
+h1,h2,h3,h4,h5,h6{
+  // 設計稿上顯示為 3%
+  letter-spacing: 0.03em;
+}
+
+p{
+  // 設計稿上顯示為 3%
+  letter-spacing: 0.03em;  
+}

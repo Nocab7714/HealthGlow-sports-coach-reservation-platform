@@ -3,3 +3,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@100..900&display=swap');
 // Google Fonts Anton
 @import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
+// 使用 Anton 字體請套用此 class 
+.font-anton-regular {
+  font-family: "Anton", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.05em;  
+}
