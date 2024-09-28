@@ -430,12 +430,34 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
-  1: $spacer * .25,
-  2: $spacer * .5,
-  3: $spacer,
-  4: $spacer * 1.5,
-  5: $spacer * 3,
-) !default;
+  1: $spacer * .25,   //4px
+  2: $spacer * .5,    //8px 
+  3: $spacer * .75,   //12px
+  4: $spacer ,        //16px
+  5: $spacer * 1.25,  //20px
+  6: $spacer * 1.5,   //24px
+  7: $spacer * 1.75,  //28px
+  8: $spacer * 2,     //32x
+  9: $spacer * 2.25,  //36x
+  10: $spacer * 2.5,  //40x
+  11: $spacer * 3,    //48x
+  12: $spacer * 3.75, //60x
+  13: $spacer * 4,    //64x
+  14: $spacer * 4.5,  //72x 
+  15: $spacer * 5,    //80x
+  16: $spacer * 6.25, //100x
+  17: $spacer * 7.5,  //120x 
+  // 如果需要額外新增其他的 spacer 數值，請在下方直接增加。
+  // ex. 19: $spacer * 7,
+) ;
+// $spacers: (
+//   0: 0,
+//   1: $spacer * .25,
+//   2: $spacer * .5,
+//   3: $spacer,
+//   4: $spacer * 1.5,
+//   5: $spacer * 3,
+// ) !default;
 // scss-docs-end spacer-variables-maps
 
 // Position
