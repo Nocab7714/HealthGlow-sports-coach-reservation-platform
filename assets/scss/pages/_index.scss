@@ -1,0 +1,39 @@
+.home-banner{
+  height: 700px;
+  background-image: url(/assets/images/img/banner-01-mobile.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media-breakpoint-up(md) { 
+    &{
+      background-image: url(/assets/images/img/banner-01-pc.webp);
+      height: 1050px;
+      // height: 100vh;
+    }
+  }
+}
+
+.text-shadow{
+  text-shadow: 4px 4px 26px #0000004D;
+}
+
+.home-banner-input{
+  &::placeholder{
+    font-weight: $font-weight-normal;
+  }
+}
+
+
+.home-banner-input-btn{
+  z-index: 1100 !important;
+  right: 3%;
+  top: 25%;
+
+  @include media-breakpoint-up(md) { 
+    &{
+      right: 4%;
+      top: 22%;
+    }
+  }
+}

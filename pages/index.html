@@ -38,16 +38,54 @@
       property="og:url"
       content="https://nocab7714.github.io/HealthGlow-sports-coach-reservation-platform/"
     />
+    <!-- Google Material Symbols -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
   </head>
   <body>
     <%- include('./layout/header'); -%>
+    <!-- banner -->
+    <section class="home-banner d-flex flex-column justify-content-center">
+      <div class="container">
+        <h1 class="font-anton-regular fs-2 fs-md-72 text-tint text-shadow mb-2">
+          TRAIN TODAY, <span class="d-inline-block">STRONG TOMORROW</span>
+        </h1>
+        <p class="text-white fs-6 fs-md-4 text-shadow">
+          簡單註冊、免費聯絡教練，一對一為你量身打造健身課程！
+        </p>
+        <p class="text-white fs-6 fs-md-4 text-shadow mb-2">
+          您想上什麼課？立即預約健康
+        </p>
+        <div class="row">
+          <div class="col-lg-4 col-md-8">
+            <div class="position-relative">
+              <div class="input-group mt-4 mb-3 border-1 rounded-0">
+                <span
+                  class="input-group-text material-symbols-outlined fs-4 text-dark bg-white rounded-0 border-0 py-5 py-md-6 ps-3 ps-md-4 pe-0 pe-md-3"
+                  >search
+                </span>
 
-    <!-- 使用 Anton 字體的方法 -->
-    <h1 class="font-anton-regular">Anton</h1>
-
-    <button class="btn btn-primary-radial-gradient py-3 px-4">
-      立即預約 →
-    </button>
+                <input
+                  type="text"
+                  class="form-control home-banner-input rounded-0 border-0 py-5 py-md-6 ps-1"
+                  placeholder="有氧運動"
+                  aria-label="Username"
+                  aria-describedby="basic-addon1"
+                />
+              </div>
+              <button
+                class="btn btn-primary-radial-gradient py-2 py-md-3 px-6 position-absolute home-banner-input-btn rounded-2"
+                type="search"
+              >
+                立即預約 →
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <%- include('./layout/footer'); -%>
 

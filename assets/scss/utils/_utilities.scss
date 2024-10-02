@@ -506,6 +506,7 @@ $utilities: map-merge(
     ),
     "font-size": (
       rfs: true,
+      responsive: true,
       property: font-size,
       class: fs,
       values: $font-sizes
@@ -567,6 +568,7 @@ $utilities: map-merge(
     ),
     "word-wrap": (
       property: word-wrap word-break,
+      responsive: true,
       class: text,
       values: (break: break-word),
       rtl: false
