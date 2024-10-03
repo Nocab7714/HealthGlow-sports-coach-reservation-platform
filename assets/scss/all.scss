@@ -1,3 +1,9 @@
+// Material Symbols outlined
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+// Material Symbols rounded
+@import url("https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200");
+
+
 // Configuration
 @import "../node_modules/bootstrap/scss/functions";
 @import "../scss/base/font"; // google font
@@ -41,6 +47,15 @@
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/placeholders";
 
+
+// custom components
+@import "../scss/components/list-group";
+@import "../scss/components/nav-tabs";
+@import "../scss/components/card";
+@import "../scss/components/dropdown";
+@import "../scss/components/buttons";
+@import "../scss/components/flatpicker";
+
 // Helpers
 @import "../node_modules/bootstrap/scss/helpers";
 
@@ -59,3 +74,6 @@
 
 // pages
 @import './pages/index.scss';
+
+// others
+@import "./vendors/swiper";

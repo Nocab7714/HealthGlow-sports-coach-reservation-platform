@@ -1,46 +1,35 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Health Glow | 首頁</title>
 
-    <!-- 差 title icon 和 OG img -->
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Health Glow | 首頁</title>
+  <!-- flatpicker -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <!-- 差 title icon 和 OG img -->
 
-    <link
-      rel="icon"
-      href="../assets/images/icons/health-glow-icon-32x32.webp"
-      type="image/x-icon"
-    />
-    <!-- 網頁描述 -->
-    <meta
-      name="description"
-      content="Health Glow，透過我們的運動預約平台，輕鬆探索多元運動課程，預約專業教練，打造屬於你的個性化健身計劃。無論何時何地，都能快速預約並開始你的健康運動生活。"
-    />
-    <meta name="author" content="Sonia、Macy、Jason、Nocab" />
-    <meta
-      name="keywords"
-      content="運動預約, 教練課程, 健身課程, 線上預約, 私人教練, 課程管理, 運動平台, 健康運動, 運動場地預約, 團體課程, 健身房預約, 個人訓練, 健身計劃, 線上運動, 運動課程推薦, 運動健身, 課程報名, 課程評價, 運動教練, 運動學習, 健身預約系統, 瑜伽課程, 健身教練, 課程搜索, 訓練課程, 運動類型選擇, 健身目標, 課程時間表, 彈性取消, 線上支付運動課程"
-    />
-    <!-- OG -->
-    <meta property="og:title" content="Health Glow" />
-    <meta
-      property="og:description"
-      content="探索多元運動課程，輕鬆預約專業教練，隨時隨地開啟健康生活。立即加入，打造屬於你的個性化健身計劃！"
-    />
-    <meta property="og:image" content="" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Health Glow og" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:url"
-      content="https://nocab7714.github.io/HealthGlow-sports-coach-reservation-platform/"
-    />
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+  <link rel="icon" href="../assets/images/icons/health-glow-icon-32x32.webp" type="image/x-icon" />
+  <!-- 網頁描述 -->
+  <meta name="description"
+    content="Health Glow，透過我們的運動預約平台，輕鬆探索多元運動課程，預約專業教練，打造屬於你的個性化健身計劃。無論何時何地，都能快速預約並開始你的健康運動生活。" />
+  <meta name="author" content="Sonia、Macy、Jason、Nocab" />
+  <meta name="keywords"
+    content="運動預約, 教練課程, 健身課程, 線上預約, 私人教練, 課程管理, 運動平台, 健康運動, 運動場地預約, 團體課程, 健身房預約, 個人訓練, 健身計劃, 線上運動, 運動課程推薦, 運動健身, 課程報名, 課程評價, 運動教練, 運動學習, 健身預約系統, 瑜伽課程, 健身教練, 課程搜索, 訓練課程, 運動類型選擇, 健身目標, 課程時間表, 彈性取消, 線上支付運動課程" />
+  <!-- OG -->
+  <meta property="og:title" content="Health Glow" />
+  <meta property="og:description" content="探索多元運動課程，輕鬆預約專業教練，隨時隨地開啟健康生活。立即加入，打造屬於你的個性化健身計劃！" />
+  <meta property="og:image" content="" />
+  <meta property="og:image:type" content="image/png" />
+  <meta property="og:image:alt" content="Health Glow og" />
+  <meta property="og:image:width" content="1200" />
+  <meta property="og:image:height" content="630" />
+  <meta property="og:url" content="https://nocab7714.github.io/HealthGlow-sports-coach-reservation-platform/" />
+</head>
+
+<body>
+  <%- include('./layout/header'); -%>
 
     <!-- 使用 Anton 字體的方法 -->
     <h1 class="font-anton-regular">Anton</h1>
@@ -49,8 +38,769 @@
       立即預約 →
     </button>
 
+    <div class="dropdown">
+      <input class="form-control py-5 px-9 dropdown-toggle" type="button" data-bs-toggle="dropdown"
+        aria-expanded="false" placeholder="Dropdown button">
+      <ul class="dropdown-menu">
+        <li><a class="dropdown-item" href="#">Action</a></li>
+        <li><a class="dropdown-item" href="#">Another action</a></li>
+        <li><a class="dropdown-item" href="#">Something else here</a></li>
+      </ul>
+    </div>
+
+    <!-- navbar dropdown menu  -->
+    <section class="search container">
+      <form class="d-flex gap-lg-3" role="search">
+        <!-- 課程搜尋 dropdown -->
+        <div class="dropdown">
+          <span class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y ms-2">search</span>
+          <input class="form-control py-5 px-9 dropdown-toggle" data-bs-toggle="dropdown" type="search"
+            placeholder="搜尋課程，有氧、飛輪、瑜伽、" aria-label="Search" aria-expanded="false">
+          <!-- dropdown 開始區塊 -->
+          <div class="course-menu dropdown-menu">
+            <div class="d-flex">
+              <p class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">健身運動類別</p>
+              <p class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2">運動課程</p>
+            </div>
+            <div class="d-flex">
+              <div class="course-dropdown-menu-level-one border border-primary">
+                <ul class="list-unstyled mb-0"></ul>
+              </div>
+              <!-- 運動課程 -->
+              <div class="course-dropdown-menu-level-two border border-primary">
+                <ul class="list-unstyled mb-0 ">
+                  <li><a class="dropdown-item undefined" href="#">有氧運動 1</a></li>
+                  <li><a class="dropdown-item undefined" href="#">有氧運動 2</a></li>
+                  <li><a class="dropdown-item undefined" href="#">有氧運動 3</a></li>
+                </ul>
+              </div>
+              <div class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3">
+                <div>
+                  <div class="d-flex justify-content-center align-items-center">
+                    <p class="text-primary font-anton-regular fs-5">5.0</p>
+                    <span class="material-symbols-rounded star">star</span>
+                    <span class="text-gray-600 fs-8">(1,200評價)</span>
+                  </div>
+                  <button class="btn btn-primary w-100" type="button">找<span
+                      class="selected-exercise-type">瑜伽</span>教練</button>
+                </div>
+                <div>
+                  <p class="text-gray-700 fw-semibold">更多資訊</p>
+                  <ul class="list-unstyled fs-7 fw-normal mb-0">
+                    <li><a href="#"><span class="selected-exercise-type">瑜伽</span>課內容</a></li>
+                    <li><a href="#"><span class="selected-exercise-type">瑜伽</span>教練薪資行情</a></li>
+                    <li><a href="#"><span class="selected-exercise-type">瑜伽</span>學生評價內容</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 地點 dropdown  -->
+        <div class="dropdown">
+          <span
+            class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y ms-2">location_on</span>
+          <input class="form-control py-5 px-9 dropdown-toggle" data-bs-toggle="dropdown" type="search"
+            placeholder="地點？" aria-label="Search" aria-expanded="false">
+          <!-- dropdown 開始區塊 -->
+          <div class="location-menu dropdown-menu">
+            <div class="d-flex flex-column">
+              <p class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">挑選地區</p>
+              <div class="d-flex justify-content-between">
+                <span>已選擇 2/10</span>
+                <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
+              </div>
+            </div>
+            <div class="d-flex">
+              <div class="location-dropdown-menu-level-one border border-primary">
+                <ul class="list-unstyled mb-0"></ul>
+              </div>
+              <!-- 地點 Level Two -->
+              <div class="location-dropdown-menu-level-two border border-primary">
+                <ul class="list-unstyled mb-0 d-block">
+                  <li><a class="dropdown-item" href="#">中正區</a></li>
+                  <li><a class="dropdown-item" href="#">大同區</a></li>
+                  <li><a class="dropdown-item" href="#">中山區</a></li>
+                  <li><a class="dropdown-item" href="#">松山區</a></li>
+                  <li><a class="dropdown-item" href="#">大安區</a></li>
+                  <li><a class="dropdown-item" href="#">萬華區</a></li>
+                  <li><a class="dropdown-item" href="#">信義區</a></li>
+                </ul>
+              </div>
+            </div>
+            <button class="btn btn-primary w-100 mt-10" type="button">確認</button>
+          </div>
+        </div>
+        <script>
+          document.addEventListener("DOMContentLoaded", function () {
+            // 帶入 courseMenu 資料
+            const courseMenuLevelOne = document.querySelector(".course-dropdown-menu-level-one ul"); // 取得第一層區塊的 ul 標籤
+            const courseMenuLevelTwo = document.querySelector(".course-dropdown-menu-level-two ul"); // 取得第二層區塊的 ul 標籤
+
+            courseData.forEach((element) => {
+              let menuItem = createMainMenuItem(element, courseMenuLevelTwo);
+              courseMenuLevelOne.append(menuItem);
+            })
+            // 帶入 locationMenu 資料
+            const locationMenuLevelOne = document.querySelector(".location-dropdown-menu-level-one ul");
+            const locationMenuLevelTwo = document.querySelector(".location-dropdown-menu-level-two ul");
+
+            locationData.forEach((element) => {
+              let locationItem = createMainMenuItem(element, locationMenuLevelTwo);
+              locationMenuLevelOne.append(locationItem);
+            })
+
+          });
+          function createMainMenuItem(element, whatToSearch) {
+            let mainMenuItem = createMenuItem(element.title, element.status); // 從 menu 物件中取得課程類別 title，並建立 li>a 結構的元素，該元素名稱為  mainMenuItem
+
+            mainMenuItem.addEventListener("mouseover", () => { // 以下為滑鼠滑過 mainMenuItem 時，會執行的內容
+              const menuLevelTwo = whatToSearch; // 取得第二層區塊的 ul 標籤區塊
+              menuLevelTwo.classList.add("d-block");  // 顯示第二層資料
+              [...menuLevelTwo.querySelectorAll("li")].forEach(item => item.remove()); // 先將第二層的課程資料清空，但開頭的 「運動課程」不刪除。
+
+              element.subject.forEach((element) => {  // 從 menu 物件中取得 subject 資料，每一筆都執行下方程式
+                menuLevelTwoItem = createMenuItem(element);  // 建立 ul>a 結構的元素，並宣告為 menuLevelTwoItem
+                menuLevelTwo.append(menuLevelTwoItem);  // 將新建立的 ul>a 結構加入 menuLevelTwo
+              });
+
+              let selectedMenuItem = document.querySelectorAll(".selected");
+              selectedMenuItem.forEach((item) => {
+                item.classList.remove("selected");
+              });
+
+              let link = mainMenuItem.querySelector(".dropdown-item");
+              link.classList.add("selected");
+
+              console.log(link);
+
+            });
+            // console.log(mainMenuItem);
+            return mainMenuItem;
+
+
+          };
+          function createMenuItem(title, status) {
+            let menuItem = document.createElement("li");
+            let link = document.createElement("a");
+
+            link.classList.add("dropdown-item", status);
+            link.href = "#";
+            link.textContent = title;
+            menuItem.append(link);
+
+            return menuItem;
+          };
+          const courseData = [
+            {
+              title: "有氧運動",
+              subject: ["有氧 1", "有氧 2", "有氧 3"],
+              status: "selected",
+            },
+            {
+              title: "肌力訓練",
+              subject: ["肌力 1", "肌力 2", "肌力 3"]
+            },
+            {
+              title: "核心訓練",
+              subject: ["核心 1", "核心 2", "核心 3"]
+            },
+            {
+              title: "舞蹈課程",
+              subject: ["舞蹈 1", "舞蹈 2", "舞蹈 3"]
+            },
+            {
+              title: "靜態課程",
+              subject: ["瑜珈", "皮拉提斯", "冥想", "太極"]
+            },
+          ];
+          const locationData = [
+            {
+              title: "台北市",
+              subject: ["中正區", "大同區", "中山區", "松山區", "大安區", "萬華區", "信義區"],
+              status: "selected",
+            },
+            {
+              title: "宜蘭縣",
+              subject: ["宜蘭縣 1", "宜蘭縣 2", "宜蘭縣 3"]
+            },
+            {
+              title: "新北市",
+              subject: ["新北市 1", "新北市 2", "新北市 3"]
+            },
+            {
+              title: "基隆市",
+              subject: ["基隆市 1", "基隆市 2", "基隆市 3"]
+            },
+          ];
+        </script>
+        <!-- 時間 dropdown  -->
+        <div class="dropdown">
+          <span
+            class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y ms-2">schedule</span>
+            <input id="datepicker" class="form-control py-5 px-9 dropdown-toggle" data-bs-toggle="dropdown" type="search"
+            placeholder="時間？" aria-label="Search" aria-expanded="false">
+
+        </div>
+        <button type="submit" class="btn btn-primary">搜尋</button>
+      </form>
+
+
+    </section>
+    <!-- 課程類別推薦 -->
+    <section class="recommend-sport-type">
+      <div class="mx-auto position-relative" style="max-width: 1500px;">
+        <div class="container pt-16">
+          <ul class="nav nav-tabs border-0 gap-lg-5 gap-2 flex-nowrap flex-lg-wrap pb-1 mb-5 overflow-x-auto me-n3"
+            id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="type1-tab" data-bs-toggle="tab" data-bs-target="#type1-tab-pane"
+                type="button" role="tab" aria-controls="type1-tab-pane" aria-selected="true">有氧運動</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type2-tab" data-bs-toggle="tab" data-bs-target="#type2-tab-pane"
+                type="button" role="tab" aria-controls="type2-tab-pane" aria-selected="false">肌力訓練</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type3-tab" data-bs-toggle="tab" data-bs-target="#type3-tab-pane"
+                type="button" role="tab" aria-controls="type3-tab-pane" aria-selected="false">核心訓練</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type4-tab" data-bs-toggle="tab" data-bs-target="#type4-tab-pane"
+                type="button" role="tab" aria-controls="type4-tab-pane" aria-selected="false">舞蹈課程</button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type5-tab" data-bs-toggle="tab" data-bs-target="#type5-tab-pane"
+                type="button" role="tab" aria-controls="type5-tab-pane" aria-selected="false">靜態課程</button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <div class="tab-pane fade show active" id="type1-tab-pane" role="tabpanel" aria-labelledby="type1-tab"
+              tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="../assets/images/img/sports-01.webp" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">舞蹈有氧</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 2 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="../assets/images/img/sports-02.webp" class="card-img-top" alt="sports-02">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">高強度間歇訓練 (HIIT)</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 3 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="../assets/images/img/sports-03.webp" class="card-img-top" alt="sports-03">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">拳擊有氧</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 4 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="../assets/images/img/sports-04.webp" class="card-img-top" alt="sports-04">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">健身操</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 5 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="../assets/images/img/sports-01.webp" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">XXX</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 6 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="../assets/images/img/sports-02.webp" class="card-img-top" alt="sports-02">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">XXX</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex">
+
+                    </div>
+                    <div class="swiper-button-prev d-none d-md-flex">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="type2-tab-pane" role="tabpanel" aria-labelledby="type2-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">肌力訓練 1</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 2 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">肌力訓練 2</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 3 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">肌力訓練 3</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 4 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">肌力訓練 4</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 5 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">肌力訓練 5</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 6 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">肌力訓練 6</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex">
+
+                    </div>
+                    <div class="swiper-button-prev d-none d-md-flex">
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <div class="tab-pane fade" id="type3-tab-pane" role="tabpanel" aria-labelledby="type3-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">核心訓練 1</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 2 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">核心訓練 2</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 3 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">核心訓練 3</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 4 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">核心訓練 4</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 5 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">核心訓練 5</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 6 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">核心訓練 6</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex">
+
+                    </div>
+                    <div class="swiper-button-prev d-none d-md-flex">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="type4-tab-pane" role="tabpanel" aria-labelledby="type4-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">舞蹈課程 1</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 2 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">舞蹈課程 2</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 3 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">舞蹈課程 3</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 4 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">舞蹈課程 4</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 5 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">舞蹈課程 5</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 6 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">舞蹈課程 6</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex">
+
+                    </div>
+                    <div class="swiper-button-prev d-none d-md-flex">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="tab-pane fade" id="type5-tab-pane" role="tabpanel" aria-labelledby="type5-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">靜態課程 1</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 2 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">靜態課程 2</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 3 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">靜態課程 3</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 4 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">靜態課程 4</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 5 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">靜態課程 5</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- slide 6 -->
+                      <div class="swiper-slide">
+                        <div class="card h-100">
+                          <img src="https://fakeimg.pl/306x286/" class="card-img-top" alt="sports-01">
+                          <div class="card-body d-flex flex-column py-3 px-5 py-lg-4 px-lg-6">
+                            <h5 class="card-title fs-6 fs-lg-4 w-fit-content mb-3 mb-lg-4">靜態課程 6</h5>
+                            <p class="card-text fs-6 fs-lg-4 mt-auto">NT$ 1,000 起</p>
+                            <a href="#" class=""></a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex">
+
+                    </div>
+                    <div class="swiper-button-prev d-none d-md-flex">
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pain point 想要健身運動，卻找不到合適教練 -->
+    <section class="overflow-hidden" style="background-color: #FBFAE8;">
+      <div class="container py-14 py-lg-16">
+        <h2 class="fs-3 fs-lg-1 fw-semibold text-primary text-center mb-11 mb-lg-8 text-lg-start">想要健身運動，<br>卻找不到合適教練
+        </h2>
+        <div class="row gap-4 gap-lg-0">
+          <div class="col-lg-7 order-lg-2">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-pain-point-1" role="tabpanel"
+                aria-labelledby="list-pain-point-1-list">
+                <img class="img-fluid" src="../assets/images/img/pain-points-01-circular.png" alt="pain-points-01"
+                  data-aos="fade-left">
+              </div>
+              <div class="tab-pane fade" id="list-pain-point-2" role="tabpanel"
+                aria-labelledby="list-pain-point-2-list">
+                <img class="img-fluid" src="../assets/images/img/pain-points-02-circular.png" alt="pain-points-02">
+              </div>
+              <div class="tab-pane fade" id="list-pain-point-3" role="tabpanel"
+                aria-labelledby="list-pain-point-3-list">
+                <img class="img-fluid" src="../assets/images/img/pain-points-03-circular.png" alt="pain-points-03">
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="list-group gap-3 gap-lg-4" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action py-4 px-6 p-lg-8 active" id="list-pain-point-1-list"
+                data-bs-toggle="list" href="#list-pain-point-1" role="tab" aria-controls="list-pain-point-1">
+                <div class="d-flex align-items-center align-items-lg-start gap-5">
+                  <span class="font-anton-regular fs-3 fs-lg-2 lh-base lh-lg-sm">01</span>
+                  <p class="fw-medium fs-6 fs-lg-5">訂閱了整年度健身房課程卻發現實際只去了幾堂</p>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action py-4 px-6 p-lg-8" id="list-pain-point-2-list"
+                data-bs-toggle="list" href="#list-pain-point-2" role="tab" aria-controls="list-pain-point-2">
+                <div class="d-flex align-items-center align-items-lg-start gap-5">
+                  <span class="font-anton-regular fs-3 fs-lg-2 lh-base lh-lg-sm">02</span>
+                  <p class="fw-medium fs-6 fs-lg-5">特定時間段,健身教練的資源可能有限,導致難以找到符合特定需求和期望的教練</p>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action py-4 px-6 p-lg-8" id="list-pain-point-3-list"
+                data-bs-toggle="list" href="#list-pain-point-3" role="tab" aria-controls="list-pain-point-3">
+                <div class="d-flex align-items-center align-items-lg-start gap-5">
+                  <span class="font-anton-regular fs-3 fs-lg-2 lh-base lh-lg-sm">03</span>
+                  <p class="fw-medium fs-6 fs-lg-5">個人和教練的時間安排不匹配<br>
+                    繁忙的工作和生活日程可能使人無法與教練的可用時間對接</p>
+                </div>
+              </a>
+            </div>
+            <div class="text-center">
+              <button type="button"
+                class="btn btn-primary-radial-gradient lh-sm py-3 px-6 py-lg-6 px-lg-8 fs-5 fs-lg-3 mt-8">→
+                開始挑選教練吧！</button>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </section>
+
+
     <%- include('./layout/footer'); -%>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+      <script type="module" src="../main.js"></script>
+      <!-- flatpicker  -->
+      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+      <script>
+        flatpickr("#datepicker", {
+          onReady: function(selectedDates, dateStr, instance) {
+            const newDiv = document.createElement('div');
+            const newUl = document.createElement('ul');
+            
+
+            const timeItems = ['任何時段', '上午', '下午', '晚上'];
+
+            newUl.classList.add('flatpickr-custom-time', 'list-unstyled', 'd-flex', 'gap-2');
+
+            timeItems.forEach((timeText) => {
+              const newLi = document.createElement('li');
+              const newBtn = document.createElement('button');
+              newLi.classList.add("nav-item");
+              newBtn.classList.add("nav-link", "w-100");
+              newBtn.type = 'button'
+              newBtn.textContent = timeText;
+              newLi.append(newBtn);
+              newUl.appendChild(newLi);
+            })
+
+
+            newDiv.classList.add("flatpickr-custom-div")
+            // 建立自定義按鈕元素
+            const customButtonCancel = document.createElement('button');
+            customButtonCancel.type = 'button';
+            customButtonCancel.classList.add("btn", "btn-outline-secondary", "w-50", "rounded-0");
+            customButtonCancel.innerText = '清除';
+
+            const customButtonConfirm = document.createElement('button');
+            customButtonConfirm.type = 'button';
+            customButtonConfirm.classList.add("btn", "btn-primary", "w-50");
+            customButtonConfirm.innerText = '確定';
+
+            customButtonConfirm.addEventListener('click', function() {
+              instance.setDate(new Date());  // 設定為今天的日期
+            });
+            newDiv.append(customButtonCancel, customButtonConfirm)
+            instance.calendarContainer.append(newUl,newDiv);
+          }
+        });
+      </script>
+</body>
+
 </html>

@@ -1,0 +1,11 @@
+.nav-tabs .nav-link{
+  color: $black;
+  border-radius: 0;
+  border: 1px solid $gray-800;
+  &:hover{
+    border-color: inherit;
+  }
+  &.active{
+    border-color: $primary;
+  }
+}

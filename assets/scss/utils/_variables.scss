@@ -315,7 +315,9 @@ $gray-800:      #3C4A4B;
 $gray-700:      #78838E;
 $gray-600:      #979CA2;
 $gray-300:      #BCC7C8;
-$gray-100:      #E8E8E8;
+$gray-200:      #E8E8E8; // *custom
+// $gray-100:      #E8E8E8;
+$gray-100:      #F4F9F9;  // *custom 
 
 // scss-docs-end theme-color-variables
 
@@ -336,6 +338,7 @@ $theme-colors: (
   "gray-700":   $gray-700,
   "gray-600":   $gray-600,
   "gray-300":   $gray-300,
+  "gray-200":   $gray-200,  // *custom
   "gray-100":   $gray-100,
 
 ) !default;
@@ -400,7 +403,8 @@ $enable-cssgrid:              false !default;
 $enable-button-pointers:      true !default;
 $enable-rfs:                  false; // true !default;
 $enable-validation-icons:     true !default;
-$enable-negative-margins:     false !default;
+// $enable-negative-margins:     false !default;
+$enable-negative-margins:     true !default; // *custom
 $enable-deprecation-messages: true !default;
 $enable-important-utilities:  true !default;
 
@@ -669,14 +673,15 @@ $font-weight-bolder:          bolder !default;
 $font-weight-base:            $font-weight-medium; // $font-weight-normal !default;
 
 $line-height-base:            1.5 !default;
-$line-height-sm:              1.25 !default;
+// $line-height-sm:              1.25 !default;
+$line-height-sm:              1.2 !default;  // *custom
 $line-height-lg:              2 !default;
 
-$h1-font-size:                $font-size-base * 4 ; // $font-size-base * 2.5 !default;
-$h2-font-size:                $font-size-base * 2.5; // $font-size-base * 2 !default;
-$h3-font-size:                $font-size-base * 2; // $font-size-base * 1.75 !default;
-$h4-font-size:                $font-size-base * 1.5 !default;
-$h5-font-size:                $font-size-base * 1.25 !default;
+$h1-font-size:                $font-size-base * 4 ; // 64px $font-size-base * 2.5 !default;
+$h2-font-size:                $font-size-base * 2.5; // 40px $font-size-base * 2 !default;
+$h3-font-size:                $font-size-base * 2; // 32px $font-size-base * 1.75 !default;
+$h4-font-size:                $font-size-base * 1.5 !default; // 24px
+$h5-font-size:                $font-size-base * 1.25 !default;  // 20px
 $h6-font-size:                $font-size-base !default;
 // scss-docs-end font-variables
 
@@ -687,7 +692,9 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $font-size-base * .875, // *custom 14px
+  8: $font-size-base * .75, // *custom 12px
 ) !default;
 // scss-docs-end font-sizes
 
@@ -1212,7 +1219,8 @@ $nav-tabs-border-color:             var(--#{$prefix}border-color) !default;
 $nav-tabs-border-width:             var(--#{$prefix}border-width) !default;
 $nav-tabs-border-radius:            var(--#{$prefix}border-radius) !default;
 $nav-tabs-link-hover-border-color:  var(--#{$prefix}secondary-bg) var(--#{$prefix}secondary-bg) $nav-tabs-border-color !default;
-$nav-tabs-link-active-color:        var(--#{$prefix}emphasis-color) !default;
+// $nav-tabs-link-active-color:        var(--#{$prefix}emphasis-color) !default;
+$nav-tabs-link-active-color:        $primary !default; // *custom
 $nav-tabs-link-active-bg:           var(--#{$prefix}body-bg) !default;
 $nav-tabs-link-active-border-color: var(--#{$prefix}border-color) var(--#{$prefix}border-color) $nav-tabs-link-active-bg !default;
 
