@@ -505,6 +505,7 @@ $utilities: map-merge(
       values: (monospace: var(--#{$prefix}font-monospace))
     ),
     "font-size": (
+      responsive: true, //bymacy
       rfs: true,
       property: font-size,
       class: fs,
@@ -801,6 +802,7 @@ $utilities: map-merge(
       values: $zindex-levels,
     )
     // scss-docs-end utils-zindex
+    //Bymacy
   ),
   $utilities
 );

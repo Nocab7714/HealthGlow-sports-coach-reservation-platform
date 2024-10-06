@@ -306,6 +306,8 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+// 新增背景色
+$secondarydeep:     #035867; //$gray-600 !default;
 
 $accent:        #FECA00;
 $tint:          #FFFDCF;
@@ -337,6 +339,7 @@ $theme-colors: (
   "gray-600":   $gray-600,
   "gray-300":   $gray-300,
   "gray-100":   $gray-100,
+  "secondarydeep":$secondarydeep,
 
 ) !default;
 // scss-docs-end theme-colors-map
@@ -447,6 +450,10 @@ $spacers: (
   15: $spacer * 5,    //80x
   16: $spacer * 6.25, //100x
   17: $spacer * 7.5,  //120x 
+  18: $spacer * 9.25,  //148x
+  19: $spacer * 3.625,  //58x 
+  20: $spacer * 6,  //96x 
+  21: $spacer * 11.25,  //180x  
   // 如果需要額外新增其他的 spacer 數值，請在下方直接增加。
   // ex. 19: $spacer * 7,
 ) ;
@@ -678,6 +685,7 @@ $h3-font-size:                $font-size-base * 2; // $font-size-base * 1.75 !de
 $h4-font-size:                $font-size-base * 1.5 !default;
 $h5-font-size:                $font-size-base * 1.25 !default;
 $h6-font-size:                $font-size-base !default;
+$h7-font-size:                $font-size-base * 0.625 !default;// Bymacy
 // scss-docs-end font-variables
 
 // scss-docs-start font-sizes
@@ -687,7 +695,8 @@ $font-sizes: (
   3: $h3-font-size,
   4: $h4-font-size,
   5: $h5-font-size,
-  6: $h6-font-size
+  6: $h6-font-size,
+  7: $h7-font-size,// Bymacy
 ) !default;
 // scss-docs-end font-sizes
 
@@ -888,7 +897,8 @@ $btn-link-disabled-color:     $gray-600 !default;
 $btn-link-focus-shadow-rgb:   to-rgb(mix(color-contrast($link-color), $link-color, 15%)) !default;
 
 // Allows for customizing button radius independently from global border radius
-$btn-border-radius:           var(--#{$prefix}border-radius) !default;
+//$btn-border-radius:           var(--#{$prefix}border-radius) !default;
+$btn-border-radius:           0px !default;
 $btn-border-radius-sm:        var(--#{$prefix}border-radius-sm) !default;
 $btn-border-radius-lg:        var(--#{$prefix}border-radius-lg) !default;
 
