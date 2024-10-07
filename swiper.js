@@ -1,28 +1,24 @@
 // Swiper
-
 import Swiper from 'swiper/bundle';
-import './node_modules/swiper/swiper-bundle.min.css';
+import 'swiper/css/bundle';
 
 //首頁 swiper
-const swiper = new Swiper(".swiper", {
-  grid: {
-    // rows: ...
-    rows: 1,
-  },
-  spaceBetween: 16,
+
+const swiper = new Swiper(".mySwiper", {
   // 手機版顯示
   slidesPerView: 1.5,
+  spaceBetween: 16,
   centeredSlides: true,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  
   // 網頁版時
   breakpoints: {
     //... :{}
     768: {      
-      grid: {
-        // rows: ...
-        rows: 1,
-      },
-      //slidesPerView: ...
-      //spaceBetween: ...
       centeredSlides: false,
       slidesPerView: 3,
       spaceBetween: 24,
