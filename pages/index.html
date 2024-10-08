@@ -1,51 +1,11 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
   <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <%- include('./layout/head'); -%>
     <title>Health Glow | 首頁</title>
-
-    <!-- 差 title icon 和 OG img -->
-
-    <link
-      rel="icon"
-      href="../assets/images/icons/health-glow-icon-32x32.webp"
-      type="image/x-icon"
-    />
-    <!-- 網頁描述 -->
-    <meta
-      name="description"
-      content="Health Glow，透過我們的運動預約平台，輕鬆探索多元運動課程，預約專業教練，打造屬於你的個性化健身計劃。無論何時何地，都能快速預約並開始你的健康運動生活。"
-    />
-    <meta name="author" content="Sonia、Macy、Jason、Nocab" />
-    <meta
-      name="keywords"
-      content="運動預約, 教練課程, 健身課程, 線上預約, 私人教練, 課程管理, 運動平台, 健康運動, 運動場地預約, 團體課程, 健身房預約, 個人訓練, 健身計劃, 線上運動, 運動課程推薦, 運動健身, 課程報名, 課程評價, 運動教練, 運動學習, 健身預約系統, 瑜伽課程, 健身教練, 課程搜索, 訓練課程, 運動類型選擇, 健身目標, 課程時間表, 彈性取消, 線上支付運動課程"
-    />
-    <!-- OG -->
-    <meta property="og:title" content="Health Glow" />
-    <meta
-      property="og:description"
-      content="探索多元運動課程，輕鬆預約專業教練，隨時隨地開啟健康生活。立即加入，打造屬於你的個性化健身計劃！"
-    />
-    <meta property="og:image" content="" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Health Glow og" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:url"
-      content="https://nocab7714.github.io/HealthGlow-sports-coach-reservation-platform/"
-    />
-    <!-- Google Material Symbols -->
-    <link
-      rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
-    />
   </head>
   <body>
-    <%- include('./layout/header'); -%>
+    <%- include('./layout/header-sign-out.ejs'); -%>
     <!-- banner -->
     <section class="home-banner d-flex flex-column justify-content-center">
       <div class="container">
@@ -86,9 +46,10 @@
         </div>
       </div>
     </section>
+    <%- include('./components/scroll-to-top'); -%>
 
+    <div class="next-section bg-gray-100" style="height: 1000px"></div>
     <%- include('./layout/footer'); -%>
-
     <script type="module" src="../main.js"></script>
   </body>
 </html>
