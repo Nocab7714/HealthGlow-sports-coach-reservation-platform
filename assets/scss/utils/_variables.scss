@@ -451,7 +451,10 @@ $spacers: (
   17: $spacer * 7.5,  //120x 
   // 如果需要額外新增其他的 spacer 數值，請在下方直接增加。
   // ex. 19: $spacer * 7,
-  56: $spacer * 3.5   //56px
+  52: $spacer * 3.25,   //52px
+  56: $spacer * 3.5,   //56px
+  129: $spacer * 8.0625, //129px
+  165: $spacer * 10.3125   //165px
 ) ;
 // $spacers: (
 //   0: 0,

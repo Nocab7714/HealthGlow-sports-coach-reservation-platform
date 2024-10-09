@@ -24,15 +24,28 @@
   }
 }
 
+// .home-banner-input-btn{
+//   z-index: 900 !important;
+//   right: 3%;
+//   top: 25%;
+
+//   @include media-breakpoint-up(md) { 
+//     &{
+//       right: 4%;
+//       top: 22%;
+//     }
+//   }
+// }
+
 .home-banner-input-btn{
   z-index: 900 !important;
   right: 3%;
-  top: 25%;
+  top: 20%;
 
   @include media-breakpoint-up(md) { 
     &{
       right: 4%;
-      top: 22%;
+      top: 18%;
     }
   }
 }
