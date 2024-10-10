@@ -55,6 +55,7 @@
 @import "../scss/components/dropdown";
 @import "../scss/components/buttons";
 @import "../scss/components/flatpicker";
+@import "../scss/components/breadcrumb";
 
 // Helpers
 @import "../node_modules/bootstrap/scss/helpers";
@@ -74,6 +75,7 @@
 
 // pages
 @import './pages/index.scss';
+@import './pages/student.scss';
 
 // others
 @import "./vendors/swiper";

@@ -1,0 +1,19 @@
+
+.student-banner{
+  height: 252px;
+  background-image: url(/assets/images/img/banner-03-mobile.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media-breakpoint-up(md) { 
+    &{
+      background-image: url(/assets/images/img/banner-03-pc.webp);
+      height: 680px;
+      // height: 100vh;
+    }
+  }
+}
+.avatar{
+  
+}
