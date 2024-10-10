@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <%- include('./layout/head'); -%>
+    <title>Health Glow | 教練及課程介紹</title>
+  </head>
+  <body>
+    <%- include('./layout/header-sign-in-trainer.ejs'); -%>
+    <!--  -->
+    <div class="bg-gray-300 navbar-reserve-space"></div>
+    <div
+      class="fixed-top shadow-none shadow-md-sm bg-F9F9F9"
+      style="top: auto !important"
+    >
+      <ul
+        class="nav nav-underline container justify-content-center justify-content-md-start"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link fw-medium fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10 active"
+            href="#"
+          >
+            <span class="d-none d-md-block">教練介紹</span
+            ><span class="d-block d-md-none">教練</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            href="#"
+          >
+            <span class="d-none d-md-block">課程內容</span
+            ><span class="d-block d-md-none">課程</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            href="#"
+          >
+            <span class="d-none d-md-block">專業證照</span
+            ><span class="d-block d-md-none">證照</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            href="#"
+          >
+            <span class="d-none d-md-block">客戶評價</span
+            ><span class="d-block d-md-none">評價</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div style="height: 65px"></div>
+    <div class="bg-F9F9F9">
+      <div class="container">
+        <div class="row py-11 flex-column-reverse flex-md-row">
+          <div class="col-md-6">
+            <div class="d-flex pt-8">
+              <div class="flex-shrink-0">
+                <img
+                  src="../assets/images/img/avatar-03.webp"
+                  alt="..."
+                  class="me-8"
+                  width="120"
+                  height="120"
+                />
+              </div>
+              <div class="flex-grow-1">
+                <h2>林大壯 Jeremy</h2>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6">
+            <img
+              src="../assets/images/img/trainer-03.webp"
+              class="img-fluid"
+              width="636"
+              height="368"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="bg-gray-100" style="height: 1000px"></div>
+    <%- include('./components/scroll-to-top'); -%>
+    <!--  -->
+    <%- include('./layout/footer'); -%>
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+  .navbar-reserve-space{
+    height: 72px;
+
+    @include media-breakpoint-up(lg) { 
+      &{
+        height: 100px;
+      }
+    }
+  }
+
+.bg-F9F9F9{
+background-color: #F9F9F9;
+}

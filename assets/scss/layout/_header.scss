@@ -1,0 +1,33 @@
+.navbar-input{
+  &::placeholder{
+    font-weight: $font-weight-normal;
+  }
+}
+
+.link-line-white{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color: white;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+  }
+}
+
+.link-line-gray-800{
+  position: relative;
+  &::before{
+    content: "";
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background-color: $gray-800;
+    right: 0;
+    top: 50%;
+    transform: translate(-50%, -50%); 
+  }
+}

@@ -78,6 +78,7 @@ $utilities: map-merge(
     // scss-docs-start utils-shadow
     "shadow": (
       property: box-shadow,
+      responsive: true,
       class: shadow,
       values: (
         null: var(--#{$prefix}box-shadow),
@@ -512,6 +513,7 @@ $utilities: map-merge(
     "font-size": (
       responsive: true,  // *custom
       rfs: true,
+      responsive: true,
       property: font-size,
       class: fs,
       values: $font-sizes
@@ -574,6 +576,7 @@ $utilities: map-merge(
     ),
     "word-wrap": (
       property: word-wrap word-break,
+      responsive: true,
       class: text,
       values: (break: break-word),
       rtl: false
