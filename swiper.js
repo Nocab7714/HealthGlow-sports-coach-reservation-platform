@@ -14,10 +14,9 @@ const swiper = new Swiper(".mySwiper", {
     nextEl: ".swiper-button-next",
     prevEl: ".swiper-button-prev",
   },
-  
+
   // 網頁版時
   breakpoints: {
-    //... :{}
     768: {      
       centeredSlides: false,
       slidesPerView: 3,
@@ -29,6 +28,9 @@ const swiper = new Swiper(".mySwiper", {
     }
   } 
   });
+
+
+
   // slidesPerView: 1.5,
   // centeredSlides: true,
   // spaceBetween: 20,
@@ -50,7 +52,8 @@ const swiper = new Swiper(".mySwiper", {
   //     spaceBetween: 24,
   //     centeredSlides: false,
   //   },
-
+  // }
+  // });
 
 // init Swiper
 // const swiperHighlightedArticles = new Swiper('.swiperHighlightedArticles', {
