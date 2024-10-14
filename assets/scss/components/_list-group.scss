@@ -1,0 +1,29 @@
+.list-group{
+  border-radius: 0;
+}
+
+.list-group-item{
+  span{
+    color: $gray-300;
+    letter-spacing: 0.05em;
+  }
+  + .list-group-item{
+    border-width: 1px;
+  }
+  &:hover{
+    background-color: $gray-200;
+    border-color: $accent;
+    color: black;
+    span{
+      color: $accent;
+    }
+  }
+  &.active{
+    background-color: $tint;
+    border-color: $primary;
+    color: $gray-800;
+    span{
+      color: $primary;
+    }
+  }
+}

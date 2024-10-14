@@ -52,15 +52,18 @@ $utilities: map-merge(
     // scss-docs-start utils-overflow
     "overflow": (
       property: overflow,
-      values: auto hidden visible scroll,
+      // values: auto hidden visible scroll,
+      values: auto hidden visible scroll clip,  // *custom 
     ),
     "overflow-x": (
       property: overflow-x,
-      values: auto hidden visible scroll,
+      // values: auto hidden visible scroll,
+      values: auto hidden visible scroll clip,  // *custom 
     ),
     "overflow-y": (
       property: overflow-y,
-      values: auto hidden visible scroll,
+      // values: auto hidden visible scroll,
+      values: auto hidden visible scroll clip,  // *custom 
     ),
     // scss-docs-end utils-overflow
     // scss-docs-start utils-display
@@ -75,6 +78,7 @@ $utilities: map-merge(
     // scss-docs-start utils-shadow
     "shadow": (
       property: box-shadow,
+      responsive: true,
       class: shadow,
       values: (
         null: var(--#{$prefix}box-shadow),
@@ -166,6 +170,7 @@ $utilities: map-merge(
     "border-color": (
       property: border-color,
       class: border,
+      state: hover,  // *custom
       local-vars: (
         "border-opacity": 1
       ),
@@ -203,7 +208,8 @@ $utilities: map-merge(
         50: 50%,
         75: 75%,
         100: 100%,
-        auto: auto
+        auto: auto,
+        'fit-content': fit-content,  // *custom
       )
     ),
     "max-width": (
@@ -505,7 +511,7 @@ $utilities: map-merge(
       values: (monospace: var(--#{$prefix}font-monospace))
     ),
     "font-size": (
-      responsive: true, //bymacy
+      responsive: true,  // *custom
       rfs: true,
       property: font-size,
       class: fs,
@@ -530,6 +536,7 @@ $utilities: map-merge(
       )
     ),
     "line-height": (
+      responsive: true,  // *custom
       property: line-height,
       class: lh,
       values: (
@@ -568,6 +575,7 @@ $utilities: map-merge(
     ),
     "word-wrap": (
       property: word-wrap word-break,
+      responsive: true,
       class: text,
       values: (break: break-word),
       rtl: false
@@ -663,6 +671,7 @@ $utilities: map-merge(
     "background-color": (
       property: background-color,
       class: bg,
+      state: hover,  // *custom
       local-vars: (
         "bg-opacity": 1
       ),

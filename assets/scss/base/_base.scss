@@ -1,3 +1,10 @@
+*, *::before, *::after{
+  // outline: 1px solid red;
+}
+body{
+  line-height: 1.5;  // 滿足大部分內文內容行高
+  letter-spacing: 0.03em; // 滿足大部分內文 letter-spacing
+}
 a {
   color: inherit;
   display: inline-block;
@@ -14,7 +21,11 @@ p{
   letter-spacing: 0.03em;  
 }
 
-img{
-  max-width: 100%;
-  vertical-align: middle;
+
+.material-symbols-outlined {
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24
 }

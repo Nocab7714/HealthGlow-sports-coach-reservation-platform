@@ -80,3 +80,31 @@ const swiper = new Swiper(".swiper-students-review", {
 //     },
 //   },
 // });
+
+// Navigation 首頁課程推薦區塊
+var swiper = new Swiper(".mySwiper", {
+  slidesPerView: 1.5,
+  centeredSlides: true,
+  spaceBetween: 20,
+  loop: true,
+  navigation: {
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
+  },
+  breakpoints:{
+    768: {
+      slidesPerView: 2,
+      centeredSlides: false,
+    },
+    992: {
+      slidesPerView: 3,
+    },
+    1200: {
+      slidesPerView: 4,
+      spaceBetween: 24,
+      centeredSlides: false,
+    },
+
+  }
+
+});

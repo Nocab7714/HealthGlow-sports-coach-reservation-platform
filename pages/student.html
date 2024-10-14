@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>學員專區</title>
+</head>
+
+<body>
+  <main class="student">
+    <header class="student-banner">
+      <div class="container h-100">
+        <div class="h-100 d-flex flex-column justify-content-center align-items-md-center">
+          <h1 class="h3 fs-md-1 text-secondary">學員專區</h1>
+          <nav aria-label="breadcrumb">
+            <ol class="breadcrumb">
+              <li class="breadcrumb-item text-secondary"><a href="index.html">Home</a></li>
+              <li class="breadcrumb-item text-secondary active" aria-current="page">學員專區</li>
+            </ol>
+          </nav>
+        </div>
+      </div>
+    </header>
+    <section>
+      <div class="container">
+        <ul class="nav nav-tabs mb-4 mb-md-6" id="myTab" role="tablist">
+          <li class="nav-item" role="presentation">
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#recommend-course-tab-pane" type="button" role="tab" aria-controls="recommend-course-tab-pane" aria-selected="true">即時推薦可預約的課程</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" aria-selected="false">行事曆</button>
+          </li>
+          <li class="nav-item" role="presentation">
+            <button class="nav-link" id="all-booking-record-tab" data-bs-toggle="tab" data-bs-target="#all-booking-record-tab-pane" type="button" role="tab" aria-controls="all-booking-record-tab-pane" aria-selected="false">所有預約記錄</button>
+          </li>
+        </ul>
+        <div class="tab-content border border-2 border-primary mx-n3 mx-sm-0 py-4 px-3 p-md-6" id="myTabContent">
+          <div class="tab-pane fade show active" id="recommend-course-tab-pane" role="tabpanel" aria-labelledby="recommend-course-tab" tabindex="0">
+            <h2>即時推薦可預約的課程</h2>
+            <div class="row">
+              <div class="col-4">
+                <div class="list-group" id="list-tab" role="tablist">
+                  <a class="list-group-item list-group-item-action active" id="recommend-course-list" data-bs-toggle="list" href="#recommend-course" role="tab" aria-controls="recommend-course">即時推薦</a>
+                  <a class="list-group-item list-group-item-action" id="recommend-course-by-reviews-list" data-bs-toggle="list" href="#recommend-course-by-reviews" role="tab" aria-controls="recommend-course-by-reviews">最多評價</a>
+                  <a class="list-group-item list-group-item-action" id="recommend-course-by-popular-list" data-bs-toggle="list" href="#recommend-course-by-popular" role="tab" aria-controls="recommend-course-by-popular">熱門課程</a>
+                  <a class="list-group-item list-group-item-action" id="recommend-course-by-discount-list" data-bs-toggle="list" href="#recommend-course-by-discount" role="tab" aria-controls="recommend-course-by-discount">優惠課程</a>
+                </div>
+              </div>
+              <div class="col-8">
+                <div class="tab-content" id="nav-tabContent">
+                  <div class="tab-pane fade show active" id="recommend-course" role="tabpanel" aria-labelledby="recommend-course-list">
+                    <!-- card  -->
+                    <div class="card mb-3" style="max-width: 540px;">
+                      <div class="row g-0">
+                        <div class="col-md-4">
+                          <img src="../assets/images/img/avatar-02.webp" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-8">
+                          <div class="card-body">
+                            <h5 class="card-title">Card title</h5>
+                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <div class="tab-pane fade" id="recommend-course-by-reviews" role="tabpanel" aria-labelledby="recommend-course-by-reviews-list">最多評價</div>
+                  <div class="tab-pane fade" id="recommend-course-by-popular" role="tabpanel" aria-labelledby="recommend-course-by-popular-list">熱門課程</div>
+                  <div class="tab-pane fade" id="recommend-course-by-discount" role="tabpanel" aria-labelledby="recommend-course-by-discount-list">優惠課程</div>
+                </div>
+              </div>
+            </div>
+          
+          </div>
+          <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">行事曆</div>
+          <div class="tab-pane fade" id="all-booking-record-tab-pane" role="tabpanel" aria-labelledby="all-booking-record-tab" tabindex="0">所有預約記錄</div>
+        </div>
+      </div>
+    </section>
+  </main>
+  <script type="module" src="../main.js"></script>
+</body>
+
+</html>

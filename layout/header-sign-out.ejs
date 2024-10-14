@@ -1,0 +1,403 @@
+<!-- navbar-sign-out-bg-transparent -->
+<nav
+  class="navbar navbar-gsap-first navbar-expand-lg bg-transparent fixed-top py-4 py-lg-5"
+>
+  <div class="container">
+    <a class="navbar-brand" href="index.html">
+      <picture>
+        <source
+          srcset="../assets/images/logo/logo-primary-text.svg"
+          media="(min-width: 992px)"
+          alt="主色 health glow logo"
+          class="img-fluid"
+          height="60"
+          width="130"
+        />
+        <img
+          src="../assets/images/logo/logo-primary-text.svg"
+          alt="主色 health glow logo"
+          class="img-fluid"
+          height="30"
+          width="64"
+        />
+      </picture>
+    </a>
+    <button
+      class="navbar-toggler border-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbarSignOut01"
+      aria-controls="offcanvasNavbarSignOut01"
+    >
+      <span class="material-symbols-outlined text-white"> menu </span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav align-items-center ms-auto">
+        <li class="nav-item me-8">
+          <a class="btn btn-primary text-light fw-semibold" href="#"
+            >成為教練</a
+          >
+        </li>
+        <li class="nav-item me-8">
+          <a
+            class="nav-link link-light fw-semibold"
+            href="common-questions.html"
+            ><span class="material-symbols-outlined align-middle me-1">
+              help </span
+            >常見問答</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-light fw-semibold link-line-white" href="#"
+            >登入</a
+          >
+        </li>
+        <li class="nav-item">
+          <a class="nav-link link-light fw-semibold" href="#">註冊</a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+<!-- navbar-sign-out-bg-white -->
+<!-- 當視窗移動到 banner 底部，顯示切換為此 navbar -->
+<nav
+  class="navbar navbar-gsap-secondary navbar-expand-lg bg-white fixed-top py-2 py-lg-6 flex-nowrap"
+  style="display: none"
+>
+  <form class="container">
+    <a class="navbar-brand me-3 me-lg-8" href="index.html">
+      <picture>
+        <source
+          srcset="../assets/images/logo/logo-primary-text.svg"
+          media="(min-width: 991px)"
+          alt="主色 health glow logo"
+          height="48"
+          width="104"
+        />
+
+        <img
+          src="../assets/images/logo/logo-primary-text.svg"
+          alt="主色 health glow logo"
+          height="24"
+          width="52"
+        />
+      </picture>
+    </a>
+    <div class="rounded-0 position-relative d-block d-lg-none flex-grow-1">
+      <span
+        class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+        style="left: 24px"
+      >
+        search
+      </span>
+      <input
+        type="text"
+        class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10 pe-2"
+        placeholder="搜尋課程｜地點｜時間"
+        style="font-size: 12px"
+        data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbarSignOutMobileSearch"
+      />
+    </div>
+    <button
+      class="navbar-toggler border-0 ms-1 ms-lg-0"
+      type="button"
+      data-bs-toggle="offcanvas"
+      data-bs-target="#offcanvasNavbarSignOut02"
+      aria-controls="offcanvasNavbarSignOut02"
+    >
+      <span class="material-symbols-outlined text-gray-800"> menu </span>
+    </button>
+    <div class="collapse navbar-collapse">
+      <ul class="navbar-nav list-unstyled d-flex flex-row me-auto">
+        <li
+          class="nav-item rounded-0 position-relative me-3"
+          style="max-width: 290px"
+        >
+          <span
+            class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+            style="left: 24px"
+          >
+            search
+          </span>
+          <input
+            type="text"
+            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+            placeholder="搜尋課程，有氧、飛輪、瑜伽、"
+          />
+        </li>
+        <li
+          class="nav-item rounded-0 position-relative me-3"
+          style="max-width: 290px"
+        >
+          <span
+            class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+            style="left: 24px"
+          >
+            location_on
+          </span>
+          <input
+            type="text"
+            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+            placeholder="地點?"
+          />
+        </li>
+        <li
+          class="nav-item rounded-0 position-relative me-3"
+          style="max-width: 160px"
+        >
+          <span
+            class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+            style="left: 24px"
+          >
+            schedule
+          </span>
+          <input
+            type="text"
+            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+            placeholder="時間?"
+          />
+        </li>
+        <li class="nav-item">
+          <button
+            type="search"
+            class="btn btn-primary text-white fw-semibold text-nowrap"
+          >
+            搜尋
+          </button>
+        </li>
+      </ul>
+
+      <ul class="navbar-nav align-items-center ms-4">
+        <li class="nav-item">
+          <a
+            class="nav-link fw-semibold link-line-gray-800 text-nowrap"
+            href="#"
+            >登入</a
+          >
+        </li>
+        <li class="nav-item me-8">
+          <a class="nav-link fw-semibold text-nowrap" href="#">註冊</a>
+        </li>
+        <li class="nav-item">
+          <a class="btn btn-primary text-light fw-semibold text-nowrap" href="#"
+            >成為教練</a
+          >
+        </li>
+      </ul>
+    </div>
+  </form>
+</nav>
+<!-- offcanvas-navbar-sign-out-bg-transparent -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasNavbarSignOut01"
+  aria-labelledby="offcanvasNavbarSignOut01"
+>
+  <div class="offcanvas-header px-4 py-7">
+    <img
+      src="../assets/images/logo/logo-primary-text.svg"
+      alt="主色 health glow logo"
+      width="64"
+      height="30"
+    />
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body px-0 py-0">
+    <ul class="list-group rounded-0">
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="#"
+        >
+          <span class="fw-semibold text-primary">成為教練</span>
+          <img
+            src="../assets/images/icons/right Foward.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="common-questions.html"
+        >
+          <span>常見問答</span>
+          <img
+            src="../assets/images/icons/right Foward.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+    </ul>
+    <div class="py-8 px-6">
+      <button type="button" class="btn btn-primary text-white w-100 fs-5 mb-4">
+        登入
+      </button>
+      <button type="button" class="btn btn-outline-dark w-100 fs-5">
+        註冊
+      </button>
+    </div>
+  </div>
+</div>
+<!-- offcanvas-navbar-sign-out-bg-white -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasNavbarSignOut02"
+  aria-labelledby="offcanvasNavbarSignOut02"
+>
+  <div class="offcanvas-header px-4 py-7">
+    <img
+      src="../assets/images/logo/logo-primary-text.svg"
+      alt="主色 health glow logo"
+      width="64"
+      height="30"
+    />
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <div class="offcanvas-body px-0 py-0">
+    <ul class="list-group rounded-0">
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="#"
+        >
+          <span class="fw-semibold text-primary">成為教練</span>
+          <img
+            src="../assets/images/icons/right Foward.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+    </ul>
+    <div class="py-8 px-6">
+      <button type="button" class="btn btn-primary text-white w-100 fs-5 mb-4">
+        登入
+      </button>
+      <button type="button" class="btn btn-outline-dark w-100 fs-5">
+        註冊
+      </button>
+    </div>
+  </div>
+</div>
+<!-- offcanvas-navbar-sign-out-mobile-search -->
+<div
+  class="offcanvas offcanvas-end"
+  tabindex="-1"
+  id="offcanvasNavbarSignOutMobileSearch"
+  aria-labelledby="offcanvasNavbarSignOutMobileSearch"
+>
+  <div class="offcanvas-header px-4">
+    <img
+      src="../assets/images/logo/logo-primary-text.svg"
+      alt="主色 health glow logo"
+      width="64"
+      height="30"
+    />
+    <button
+      type="button"
+      class="btn-close"
+      data-bs-dismiss="offcanvas"
+      aria-label="Close"
+    ></button>
+  </div>
+  <form>
+    <div class="offcanvas-body px-0 py-0">
+      <ul class="accordion list-unstyled rounded-0" id="accordionSearch">
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              data-bs-target="#collapseCourseSearch"
+              aria-controls="collapseCourseSearch"
+            >
+              <span class="fw-semibold d-flex align-items-center text-secondary"
+                ><span class="material-symbols-outlined text-gray-800 me-1">
+                  search </span
+                >課程搜尋</span
+              >
+            </button>
+          </h2>
+          <div id="collapseCourseSearch" class="accordion-collapse collapse">
+            <div class="accordion-body bg-gray-100">課程搜尋內容</div>
+          </div>
+        </li>
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              data-bs-target="#collapseLocationSelection"
+              aria-controls="collapseLocationSelection"
+            >
+              <span class="fw-semibold d-flex align-items-center text-secondary"
+                ><span class="material-symbols-outlined text-gray-800 me-1">
+                  location_on </span
+                >選擇地點</span
+              >
+            </button>
+          </h2>
+          <div
+            id="collapseLocationSelection"
+            class="accordion-collapse collapse"
+          >
+            <div class="accordion-body bg-gray-100">選擇地點內容</div>
+          </div>
+        </li>
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button"
+              data-bs-toggle="collapse"
+              aria-expanded="false"
+              data-bs-target="#collapseDateSelection"
+              aria-controls="collapseDateSelection"
+            >
+              <span class="fw-semibold d-flex align-items-center text-secondary"
+                ><span class="material-symbols-outlined text-gray-800 me-1">
+                  schedule </span
+                >選擇時間</span
+              >
+            </button>
+          </h2>
+          <div id="collapseDateSelection" class="accordion-collapse collapse">
+            <div class="accordion-body bg-gray-100">選擇時間內容</div>
+          </div>
+        </li>
+      </ul>
+      <div class="py-6 text-center">
+        <button
+          type="search"
+          class="btn btn-primary text-white fs-6 fw-semibold px-56 py-3"
+        >
+          搜尋
+        </button>
+      </div>
+    </div>
+  </form>
+</div>
