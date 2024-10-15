@@ -4,7 +4,7 @@ import 'swiper/css/bundle';
 
 //首頁 swiper
 
-const swiper = new Swiper(".swiper-students-review", {
+const swiperStudent = new Swiper(".swiper-students-review", {
   // 手機版顯示
   slidesPerView: 1.5,
   spaceBetween: 16,
