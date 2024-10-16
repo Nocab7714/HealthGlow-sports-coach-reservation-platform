@@ -4,6 +4,7 @@
     <%- include('./layout/head'); -%>
     <title>Health Glow | 首頁</title>
   </head>
+
   <body>
     <%- include('./layout/header-sign-out.ejs'); -%>
     <!-- banner -->
@@ -21,19 +22,107 @@
         <div class="row">
           <div class="col-lg-4 col-md-8">
             <form class="position-relative">
-              <div class="mt-4 mb-3 border-1 rounded-0">
+              <div class="search dropdown mt-4 mb-3 border-1 rounded-0">
                 <span
                   class="position-absolute material-symbols-outlined fs-4 text-dark bg-white py-5 py-md-6 ps-3 ps-md-4 pe-1 pe-md-3"
                   >search
                 </span>
-
                 <input
                   type="search"
-                  class="form-control home-banner-input rounded-0 border-0 py-5 py-md-6 ps-10 ps-md-52 pe-129 pe-md-165"
+                  class="form-control dropdown-toggle home-banner-input rounded-0 border-0 py-5 py-md-6 ps-10 ps-md-52 pe-129 pe-md-165"
                   placeholder="有氧運動"
-                  aria-label="Username"
                   aria-describedby="basic-addon1"
+                  data-bs-toggle="dropdown"
+                  aria-label="Search"
+                  aria-expanded="false"
                 />
+                <!-- dropdown 開始區塊 -->
+                <div class="course-menu dropdown-menu">
+                  <div class="d-flex">
+                    <p
+                      class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
+                    >
+                      健身運動類別
+                    </p>
+                    <p
+                      class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2"
+                    >
+                      運動課程
+                    </p>
+                  </div>
+                  <div class="d-flex">
+                    <div
+                      class="course-dropdown-menu-level-one border border-primary"
+                    >
+                      <ul class="list-unstyled mb-0"></ul>
+                    </div>
+                    <!-- 運動課程 -->
+                    <div
+                      class="course-dropdown-menu-level-two border border-primary"
+                    >
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a class="dropdown-item undefined" href="#"
+                            >有氧運動 1</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item undefined" href="#"
+                            >有氧運動 2</a
+                          >
+                        </li>
+                        <li>
+                          <a class="dropdown-item undefined" href="#"
+                            >有氧運動 3</a
+                          >
+                        </li>
+                      </ul>
+                    </div>
+                    <div
+                      class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3"
+                    >
+                      <div>
+                        <div
+                          class="d-flex justify-content-center align-items-center"
+                        >
+                          <p class="text-primary font-anton-regular fs-5">
+                            5.0
+                          </p>
+                          <span class="material-symbols-rounded star"
+                            >star</span
+                          >
+                          <span class="text-gray-600 fs-8">(1,200評價)</span>
+                        </div>
+                        <button class="btn btn-primary w-100" type="button">
+                          找<span class="selected-exercise-type">瑜伽</span>教練
+                        </button>
+                      </div>
+                      <div>
+                        <p class="text-gray-700 fw-semibold">更多資訊</p>
+                        <ul class="list-unstyled fs-7 fw-normal mb-0">
+                          <li>
+                            <a href="#"
+                              ><span class="selected-exercise-type">瑜伽</span
+                              >課內容</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span class="selected-exercise-type">瑜伽</span
+                              >教練薪資行情</a
+                            >
+                          </li>
+                          <li>
+                            <a href="#"
+                              ><span class="selected-exercise-type">瑜伽</span
+                              >學生評價內容</a
+                            >
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               </div>
               <button
                 class="btn btn-primary-radial-gradient py-2 py-md-3 px-3 px-md-6 position-absolute home-banner-input-btn rounded-2"
@@ -46,187 +135,7 @@
         </div>
       </div>
     </section>
-    <div class="dropdown">
-      <input
-        class="form-control py-5 px-9 dropdown-toggle"
-        type="button"
-        data-bs-toggle="dropdown"
-        aria-expanded="false"
-        placeholder="Dropdown button"
-      />
-      <ul class="dropdown-menu">
-        <li><a class="dropdown-item" href="#">Action</a></li>
-        <li><a class="dropdown-item" href="#">Another action</a></li>
-        <li><a class="dropdown-item" href="#">Something else here</a></li>
-      </ul>
-    </div>
-    <!-- navbar dropdown menu  -->
-    <section class="search container">
-      <form class="d-flex gap-lg-3" role="search">
-        <!-- 課程搜尋 dropdown -->
-        <div class="dropdown">
-          <span
-            class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y ms-2"
-            >search</span
-          >
-          <input
-            class="form-control py-5 px-9 dropdown-toggle"
-            data-bs-toggle="dropdown"
-            type="search"
-            placeholder="搜尋課程，有氧、飛輪、瑜伽、"
-            aria-label="Search"
-            aria-expanded="false"
-          />
-          <!-- dropdown 開始區塊 -->
-          <div class="course-menu dropdown-menu">
-            <div class="d-flex">
-              <p
-                class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
-              >
-                健身運動類別
-              </p>
-              <p
-                class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2"
-              >
-                運動課程
-              </p>
-            </div>
-            <div class="d-flex">
-              <div class="course-dropdown-menu-level-one border border-primary">
-                <ul class="list-unstyled mb-0"></ul>
-              </div>
-              <!-- 運動課程 -->
-              <div class="course-dropdown-menu-level-two border border-primary">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a class="dropdown-item undefined" href="#">有氧運動 1</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item undefined" href="#">有氧運動 2</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item undefined" href="#">有氧運動 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div
-                class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3"
-              >
-                <div>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <p class="text-primary font-anton-regular fs-5">5.0</p>
-                    <span class="material-symbols-rounded star">star</span>
-                    <span class="text-gray-600 fs-8">(1,200評價)</span>
-                  </div>
-                  <button class="btn btn-primary w-100" type="button">
-                    找<span class="selected-exercise-type">瑜伽</span>教練
-                  </button>
-                </div>
-                <div>
-                  <p class="text-gray-700 fw-semibold">更多資訊</p>
-                  <ul class="list-unstyled fs-7 fw-normal mb-0">
-                    <li>
-                      <a href="#"
-                        ><span class="selected-exercise-type">瑜伽</span
-                        >課內容</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><span class="selected-exercise-type">瑜伽</span
-                        >教練薪資行情</a
-                      >
-                    </li>
-                    <li>
-                      <a href="#"
-                        ><span class="selected-exercise-type">瑜伽</span
-                        >學生評價內容</a
-                      >
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
 
-        <!-- 地點 dropdown  -->
-        <div class="dropdown">
-          <span
-            class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y ms-2"
-            >location_on</span
-          >
-          <input
-            class="form-control py-5 px-9 dropdown-toggle"
-            data-bs-toggle="dropdown"
-            type="search"
-            placeholder="地點？"
-            aria-label="Search"
-            aria-expanded="false"
-          />
-          <!-- dropdown 開始區塊 -->
-          <div class="location-menu dropdown-menu">
-            <div class="d-flex flex-column">
-              <p
-                class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
-              >
-                挑選地區
-              </p>
-              <div class="d-flex justify-content-between">
-                <span>已選擇 2/10</span>
-                <a
-                  href="#"
-                  class="link-gray-700 text-decoration-underline"
-                  role="button"
-                  >清除全部</a
-                >
-              </div>
-            </div>
-            <div class="d-flex">
-              <div
-                class="location-dropdown-menu-level-one border border-primary"
-              >
-                <ul class="list-unstyled mb-0"></ul>
-              </div>
-              <!-- 地點 Level Two -->
-              <div
-                class="location-dropdown-menu-level-two border border-primary"
-              >
-                <ul class="list-unstyled mb-0 d-block">
-                  <li><a class="dropdown-item" href="#">中正區</a></li>
-                  <li><a class="dropdown-item" href="#">大同區</a></li>
-                  <li><a class="dropdown-item" href="#">中山區</a></li>
-                  <li><a class="dropdown-item" href="#">松山區</a></li>
-                  <li><a class="dropdown-item" href="#">大安區</a></li>
-                  <li><a class="dropdown-item" href="#">萬華區</a></li>
-                  <li><a class="dropdown-item" href="#">信義區</a></li>
-                </ul>
-              </div>
-            </div>
-            <button class="btn btn-primary w-100 mt-10" type="button">
-              確認
-            </button>
-          </div>
-        </div>
-        <!-- 時間 dropdown  -->
-        <div class="dropdown">
-          <span
-            class="material-symbols-outlined position-absolute top-50 start-0 translate-middle-y ms-2"
-            >schedule</span
-          >
-          <input
-            id="datepicker"
-            class="form-control py-5 px-9 dropdown-toggle"
-            data-bs-toggle="dropdown"
-            type="search"
-            placeholder="時間？"
-            aria-label="Search"
-            aria-expanded="false"
-          />
-        </div>
-        <button type="submit" class="btn btn-primary">搜尋</button>
-      </form>
-    </section>
     <!-- 課程類別推薦 -->
     <section class="recommend-sport-type">
       <div class="mx-auto position-relative" style="max-width: 1500px">
@@ -1108,7 +1017,10 @@
       </div>
     </section>
     <!-- pain point 想要健身運動，卻找不到合適教練 -->
-    <section class="overflow-hidden" style="background-color: #fbfae8">
+    <section
+      class="pain-point overflow-hidden"
+      style="background-color: #fbfae8"
+    >
       <div class="container py-14 py-lg-16">
         <h2
           class="fs-3 fs-lg-1 fw-semibold text-primary text-center mb-11 mb-lg-8 text-lg-start"
@@ -1231,103 +1143,418 @@
       </div>
     </section>
 
+    <!-- 愛上的4個理由 -->
+    <section>
+      <div class="bg-banner-04-pc position-relative">
+        <div
+          class="bg-secondarydeep lovesection bg-opacity-75 pt-17 pb-md-18 pb-17"
+        >
+          <div class="container">
+            <div>
+              <div class="mb-19">
+                <div class="d-md-flex d-column align-items-center">
+                  <span class="pe-md-10 d-md-inline-block d-block text-center">
+                    <span class="font-anton-regular text-tint display-1"
+                      >4</span
+                    >
+                  </span>
+                  <div>
+                    <div>
+                      <div
+                        class="fs-md-1 fs-3 text-tint text-md-start text-center"
+                      >
+                        個愛上
+                      </div>
+                      <div
+                        class="fs-md-1 fs-3 text-tint text-md-start text-center"
+                      >
+                        HealthGlow的理由
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <!-- 卡片 -->
+                <div class="row row-cols-md-4 g-8 mt-1">
+                  <div class="col-md-3 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">任選上課時間</div>
+                      <div class="py-4">
+                        <div
+                          class="rounded-circle overflow-hidden d-inline-block bg-white"
+                        >
+                          <img
+                            src="../assets/images/icons/calendar-clock-icon-64x64.webp"
+                            class="p-4"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <p>Secondary Text</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">客製化的健身課程</div>
+                      <div class="py-4">
+                        <div
+                          class="rounded-circle overflow-hidden d-inline-block bg-white"
+                        >
+                          <img
+                            src="../assets/images/icons/exercise-icon-64x64.webp"
+                            class="p-4"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <p>Secondary Text</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">一堂也能買</div>
+                      <div class="py-4">
+                        <div
+                          class="rounded-circle overflow-hidden d-inline-block bg-white"
+                        >
+                          <img
+                            src="../assets/images/icons/person-check-icon-64x64.webp"
+                            class="p-4"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <p>Secondary Text</p>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">自選上課教練</div>
+                      <div class="py-4">
+                        <div
+                          class="rounded-circle overflow-hidden d-inline-block bg-white"
+                        >
+                          <img
+                            src="../assets/images/icons/add-reaction-icon-64x64.webp"
+                            class="p-4"
+                            alt=""
+                          />
+                        </div>
+                      </div>
+                      <p>Secondary Text</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 學生評價 -->
+    <section>
+      <div class="bg-secondarydeep position-relative">
+        <!-- GSAP -->
+        <div class="bg-white overflow-hidden pb-md-18 pb-21">
+          <div
+            class="text-tint runtxt d-inline-block whitespace-nowrap font-anton-700"
+            id="runtxt"
+          >
+            LOVE BY THE TRAINERS. LOVE BY THE TRAINERS. LOVE BY THE
+            TRAINERS.LOVE BY THE TRAINERS. LOVE BY THE TRAINERS. LOVE BY THE
+            TRAINERS.LOVE BY THE TRAINERS. LOVE BY THE TRAINERS. LOVE BY THE
+            TRAINERS.
+          </div>
+        </div>
+
+        <!-- Swiper -->
+        <div class="content-box" style="z-index: 100">
+          <!-- class="position-absolute translate-middle-x content-box start-50"
+        style="z-index: 100;"-->
+          <div>
+            <div class="container">
+              <div class="mobil-title text-secondary text-center">
+                <span class="h1">學生評價</span>
+              </div>
+            </div>
+            <div class="mt-md-20 mt-11 position-relative">
+              <div>
+                <div class="container">
+                  <div
+                    class="swiper swiper-students-review justify-content-center overflow-hidden"
+                  >
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide bg-white">
+                        <div
+                          class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center"
+                        >
+                          <div
+                            class="rounded-circle feedback-avatar1 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">陳小姐</div>
+                        </div>
+                        <div class="p-2">
+                          <img
+                            src="../assets/images/img/feedback-01.webp"
+                            alt="feedback-01"
+                          />
+                        </div>
+
+                        <div class="articleContent">
+                          <p class="fs-mobil-content">
+                            這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div
+                          class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center"
+                        >
+                          <div
+                            class="rounded-circle feedback-avatar2 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">李先生</div>
+                        </div>
+                        <div class="p-2">
+                          <img
+                            src="../assets/images/img/feedback-02.webp"
+                            alt="feedback-02"
+                          />
+                        </div>
+
+                        <div class="articleContent">
+                          <p class="fs-6">
+                            我特別喜歡這個平台的預約系統，簡單又直觀。教練的資歷和評價都一目了然，讓我可以做出最好的選擇。用了這個平台後，我的健身計劃變得更加有規律了。!
+                          </p>
+                        </div>
+                      </div>
+                      <div class="swiper-slide bg-white">
+                        <div
+                          class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center"
+                        >
+                          <div
+                            class="rounded-circle feedback-avatar3 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">王太太</div>
+                        </div>
+                        <div class="p-2">
+                          <img
+                            src="../assets/images/img/feedback-03.webp"
+                            alt="feedback-03"
+                          />
+                        </div>
+
+                        <div class="articleContent">
+                          <p class="fs-6">
+                            作為銀髮族,我一直擔心找不到合適的健身課程。這個平台提供的銀髮族體適能服務讓我感到很安心。教練非常專業,讓我在運動中感到安全和舒適。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div
+                    class="swiper-button-next d-md-inline-block border border-1 opacity-1 w-auto d-none"
+                  ></div>
+                  <div
+                    class="swiper-button-prev d-md-inline-block position-absolute border border-1 opacity-1 w-auto d-none"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <img
+          src="../assets/images/icons/logo_primary_64x64.webp"
+          class="position-absolute logo_primary d-md-inline-block d-none"
+          alt=""
+        />
+        <!-- 殿空間bg -->
+        <div class="bg-secondary position-relative bg-height">
+          <img
+            src="../assets/images/icons/logo_accent_64x64.webp"
+            class="position-absolute logo_accent d-md-inline-block d-none"
+            alt=""
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- 註冊教練或學員 -->
+    <section style="z-index: 5">
+      <div class="bg-secondary">
+        <div class="container pt-md-15 pb-17 pt-14">
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-6 col-12 d-flex align-items-center pe-md-0">
+                  <div class="py-mde-11 py-14 px-5">
+                    <h2 class="fs-md-2 text-tint fs-4">
+                      卡關了? 讓教練幫助你突破
+                    </h2>
+                    <div class="bar my-5 bg-tint"></div>
+                    <div class="text-white">
+                      <p>新手入門友善,從不會教到會</p>
+                      <p>一堂也能購買</p>
+                      <p>增肌減脂,幫助你效率化的完成目標</p>
+                    </div>
+                    <div class="mt-6">
+                      <button class="btn btn-primary-radial-gradient py-3 px-4">
+                        立即預約 →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 ps-md-0 px-0">
+                  <img src="../assets/images/img/trainer-01.webp" alt="" />
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row flex-md-row flex-column-reverse">
+                <div class="col-md-6 col-12 px-0">
+                  <img src="../assets/images/img/trainer-02.webp" alt="" />
+                </div>
+                <div class="col-md-6 col-12 d-flex align-items-center pe-md-0">
+                  <div class="py-mde-11 py-14 px-5">
+                    <h2 class="fs-md-2 text-tint fs-4fs-md-2 text-tint fs-4">
+                      卡成為 HealthGlow 教練
+                    </h2>
+                    <div class="bar my-5 bg-tint"></div>
+                    <div class="text-white">
+                      <p>簡單、快速、方便的預約系統</p>
+                      <p>自由安排 授課時間</p>
+                      <p>增加曝光和客源</p>
+                    </div>
+                    <div class="mt-6">
+                      <button
+                        type="button rounded-0"
+                        class="btn btn-primary text-white"
+                      >
+                        成為教練
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
     <%- include('./components/scroll-to-top'); -%>
     <!--  -->
     <%- include('./layout/footer'); -%>
 
     <script type="module" src="../main.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+    <script>
+      gsap.to('#runtxt', {
+        x: -1000,
+        duration: 10,
+        repeat: -1,
+        ease: 'none',
+      });
+    </script>
+    <script type="module" src="../main.js"></script>
     <!-- navbar 搜尋課程、地點 資料 -->
     <script>
       document.addEventListener('DOMContentLoaded', function () {
-        // 帶入 courseMenu 資料
-        const courseMenuLevelOne = document.querySelector(
+        // 選取所有 .course-dropdown-menu-level-one 和 .course-dropdown-menu-level-two 的 ul 元素
+        const courseMenuLevelOnes = document.querySelectorAll(
           '.course-dropdown-menu-level-one ul'
-        ); // 取得第一層區塊的 ul 標籤
-        const courseMenuLevelTwo = document.querySelector(
+        );
+        const courseMenuLevelTwos = document.querySelectorAll(
           '.course-dropdown-menu-level-two ul'
-        ); // 取得第二層區塊的 ul 標籤
+        );
 
-        courseData.forEach((element) => {
-          let menuItem = createMainMenuItem(element, courseMenuLevelTwo);
-          courseMenuLevelOne.append(menuItem);
+        // 迴圈處理每對第一層和第二層的課程選單
+        courseMenuLevelOnes.forEach((courseMenuLevelOne, index) => {
+          const courseMenuLevelTwo = courseMenuLevelTwos[index]; // 對應的第二層選單
+
+          // 將 courseData 資料加入每個選單
+          courseData.forEach((element) => {
+            let menuItem = createMainMenuItem(element, courseMenuLevelTwo); // 建立主選單項目
+            courseMenuLevelOne.append(menuItem); // 將主選單項目加入第一層選單
+          });
         });
-        // 帶入 locationMenu 資料
-        const locationMenuLevelOne = document.querySelector(
+
+        // 同樣處理 location (地點) 選單
+        const locationMenuLevelOnes = document.querySelectorAll(
           '.location-dropdown-menu-level-one ul'
         );
-        const locationMenuLevelTwo = document.querySelector(
+        const locationMenuLevelTwos = document.querySelectorAll(
           '.location-dropdown-menu-level-two ul'
         );
 
-        locationData.forEach((element) => {
-          let locationItem = createMainMenuItem(element, locationMenuLevelTwo);
-          locationMenuLevelOne.append(locationItem);
+        locationMenuLevelOnes.forEach((locationMenuLevelOne, index) => {
+          const locationMenuLevelTwo = locationMenuLevelTwos[index]; // 對應的第二層地點選單
+
+          locationData.forEach((element) => {
+            let locationItem = createMainMenuItem(
+              element,
+              locationMenuLevelTwo
+            ); // 建立地點選單項目
+            locationMenuLevelOne.append(locationItem); // 將地點選單項目加入第一層選單
+          });
         });
       });
-      function createMainMenuItem(element, whatToSearch) {
-        let mainMenuItem = createMenuItem(element.title, element.status); // 從 menu 物件中取得課程類別 title，並建立 li>a 結構的元素，該元素名稱為  mainMenuItem
+      // 建立主選單項目 (第一層選單)
+      function createMainMenuItem(element, menuLevelTwo) {
+        let mainMenuItem = createMenuItem(element.title, element.status); // 建立第一層選單項目
 
+        // 當滑鼠移入該選單項目時觸發的事件
         mainMenuItem.addEventListener('mouseover', () => {
-          // 以下為滑鼠滑過 mainMenuItem 時，會執行的內容
-          const menuLevelTwo = whatToSearch; // 取得第二層區塊的 ul 標籤區塊
-          menuLevelTwo.classList.add('d-block'); // 顯示第二層資料
-          [...menuLevelTwo.querySelectorAll('li')].forEach((item) =>
-            item.remove()
-          ); // 先將第二層的課程資料清空，但開頭的 「運動課程」不刪除。
+          menuLevelTwo.innerText = ''; // 清空之前的第二層選單項目
 
-          element.subject.forEach((element) => {
-            // 從 menu 物件中取得 subject 資料，每一筆都執行下方程式
-            menuLevelTwoItem = createMenuItem(element); // 建立 ul>a 結構的元素，並宣告為 menuLevelTwoItem
-            menuLevelTwo.append(menuLevelTwoItem); // 將新建立的 ul>a 結構加入 menuLevelTwo
+          // 將每個 subject (子選單) 加入第二層選單
+          element.subject.forEach((subject) => {
+            let menuLevelTwoItem = createMenuItem(subject); // 建立第二層選單項目
+            menuLevelTwo.append(menuLevelTwoItem); // 將該項目加入第二層選單
           });
 
-          let selectedMenuItem = document.querySelectorAll('.selected');
-          selectedMenuItem.forEach((item) => {
-            item.classList.remove('selected');
-          });
+          // 先移除所有已經被加上 selected 樣式的項目
+          const selectedItems = document.querySelectorAll(
+            '.dropdown-item.selected'
+          );
+          selectedItems.forEach((item) => item.classList.remove('selected'));
 
-          let link = mainMenuItem.querySelector('.dropdown-item');
-          link.classList.add('selected');
-
-          console.log(link);
+          // 將當前選項的項目加上 selected 樣式
+          mainMenuItem.querySelector('dropdown-item').classList.add('selected');
         });
-        // console.log(mainMenuItem);
-        return mainMenuItem;
+
+        return mainMenuItem; // 回船主選單項目
       }
+      // 建立選單項目 (通用，用於第一層和第二層選單)
       function createMenuItem(title, status) {
-        let menuItem = document.createElement('li');
-        let link = document.createElement('a');
+        let menuItem = document.createElement('li'); // 建立 li 元素
+        let link = document.createElement('a'); // 建立 a 元素
 
-        link.classList.add('dropdown-item', status);
-        link.href = '#';
-        link.textContent = title;
-        menuItem.append(link);
+        // 設定 a 標籤的 class 和屬性
+        link.classList.add('dropdown-item', status); // 加入樣式 class 和狀態
+        link.href = '#'; // 設定連結
+        link.textContent = title; // 設定顯式的文字
+        menuItem.append(link); // 將 a 標籤加入 li 元素中
 
-        return menuItem;
+        return menuItem; // 回傳 li 元素
       }
+
+      // 課程資料 (用於第一層和第二層選單的生成)
       const courseData = [
         {
           title: '有氧運動',
           subject: ['有氧 1', '有氧 2', '有氧 3'],
           status: 'selected',
         },
-        {
-          title: '肌力訓練',
-          subject: ['肌力 1', '肌力 2', '肌力 3'],
-        },
-        {
-          title: '核心訓練',
-          subject: ['核心 1', '核心 2', '核心 3'],
-        },
-        {
-          title: '舞蹈課程',
-          subject: ['舞蹈 1', '舞蹈 2', '舞蹈 3'],
-        },
-        {
-          title: '靜態課程',
-          subject: ['瑜珈', '皮拉提斯', '冥想', '太極'],
-        },
+        { title: '肌力訓練', subject: ['肌力 1', '肌力 2', '肌力 3'] },
+        { title: '核心訓練', subject: ['核心 1', '核心 2', '核心 3'] },
+        { title: '舞蹈課程', subject: ['舞蹈 1', '舞蹈 2', '舞蹈 3'] },
+        { title: '靜態課程', subject: ['瑜珈', '皮拉提斯', '冥想', '太極'] },
       ];
+      // 地點資料 (用於第一層和第二層選單的生成)
       const locationData = [
         {
           title: '台北市',
@@ -1342,23 +1569,14 @@
           ],
           status: 'selected',
         },
-        {
-          title: '宜蘭縣',
-          subject: ['宜蘭縣 1', '宜蘭縣 2', '宜蘭縣 3'],
-        },
-        {
-          title: '新北市',
-          subject: ['新北市 1', '新北市 2', '新北市 3'],
-        },
-        {
-          title: '基隆市',
-          subject: ['基隆市 1', '基隆市 2', '基隆市 3'],
-        },
+        { title: '宜蘭縣', subject: ['宜蘭縣 1', '宜蘭縣 2', '宜蘭縣 3'] },
+        { title: '新北市', subject: ['新北市 1', '新北市 2', '新北市 3'] },
+        { title: '基隆市', subject: ['基隆市 1', '基隆市 2', '基隆市 3'] },
       ];
     </script>
-    <!-- 載入 flatpicker  -->
+    <!-- 載入 flatpickr  -->
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-    <!-- flatpicker 客製 -->
+    <!-- flatpickr 客製 -->
     <script>
       flatpickr('#datepicker', {
         onReady: function (selectedDates, dateStr, instance) {

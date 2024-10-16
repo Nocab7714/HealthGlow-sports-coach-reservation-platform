@@ -47,6 +47,8 @@
 @import "../node_modules/bootstrap/scss/offcanvas";
 @import "../node_modules/bootstrap/scss/placeholders";
 
+// icon
+@import "bootstrap-icons/font/bootstrap-icons.css";
 
 // custom components
 @import "../scss/components/list-group";
@@ -77,6 +79,7 @@
 
 // pages
 @import './pages/index.scss';
+@import './pages/order.scss';
 @import './pages/student.scss';
 
 // others

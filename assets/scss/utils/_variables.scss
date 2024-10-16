@@ -306,6 +306,8 @@ $warning:       $yellow !default;
 $danger:        $red !default;
 $light:         $gray-100 !default;
 $dark:          $gray-900 !default;
+// 新增背景色
+$secondarydeep:     #035867; //$gray-600 !default;
 
 $accent:        #FECA00;
 $tint:          #FFFDCF;
@@ -349,6 +351,7 @@ $theme-colors: (
   "gray-custom-01" : $gray-custom-01,
   "gray-custom-02" : $gray-custom-02,
   "gray-custom-03" : $gray-custom-03,
+  "secondarydeep":$secondarydeep,
 
 ) !default;
 // scss-docs-end theme-colors-map
@@ -460,6 +463,10 @@ $spacers: (
   15: $spacer * 5,    //80x
   16: $spacer * 6.25, //100x
   17: $spacer * 7.5,  //120x 
+  18: $spacer * 9.25,  //148x
+  19: $spacer * 3.625,  //58x 
+  20: $spacer * 6,  //96x 
+  21: $spacer * 11.25,  //180x  
   // 如果需要額外新增其他的 spacer 數值，請在下方直接增加。
   // ex. 19: $spacer * 7,
   44: $spacer * 2.75,   //44px
@@ -1703,8 +1710,10 @@ $breadcrumb-padding-x:              0 !default;
 $breadcrumb-item-padding-x:         .5rem !default;
 $breadcrumb-margin-bottom:          1rem !default;
 $breadcrumb-bg:                     null !default;
-$breadcrumb-divider-color:          var(--#{$prefix}secondary-color) !default;
-$breadcrumb-active-color:           var(--#{$prefix}secondary-color) !default;
+// $breadcrumb-divider-color:          var(--#{$prefix}secondary-color) !default;
+$breadcrumb-divider-color:          $white !default;  //*custom Macy
+// $breadcrumb-active-color:           var(--#{$prefix}secondary-color) !default;
+$breadcrumb-active-color:           $white !default;//*custom Macy
 $breadcrumb-divider:                quote("/") !default;
 $breadcrumb-divider-flipped:        $breadcrumb-divider !default;
 $breadcrumb-border-radius:          null !default;
