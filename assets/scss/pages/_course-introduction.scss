@@ -126,3 +126,23 @@
     border-radius: 20px;
   }
 }
+
+// 文字超過 11 行進行截斷
+.multiline-ellipsis-11line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 11;
+  overflow: hidden;
+  word-break: break-word;     
+  white-space: normal;
+}
+
+// 文字超過 4 行進行截斷
+.multiline-ellipsis-4line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  word-break: break-word;     
+  white-space: normal;
+}
