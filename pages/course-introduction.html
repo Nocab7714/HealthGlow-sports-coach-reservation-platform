@@ -6,10 +6,11 @@
   </head>
   <body>
     <%- include('./layout/header-sign-in-trainer.ejs'); -%>
-    <!--  -->
     <div class="bg-gray-300 navbar-reserve-space"></div>
+    <!-- 導覽列 -->
+    <!-- 教練介紹、課程內容、專業證照、客戶評價 -->
     <div
-      class="fixed-top shadow-none shadow-md-sm bg-F9F9F9"
+      class="fixed-top shadow-none shadow-md-sm bg-gray-custom-03"
       style="top: auto !important"
     >
       <ul
@@ -18,7 +19,7 @@
         <li class="nav-item">
           <a
             class="nav-link fw-medium fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10 active"
-            href="#"
+            href="#coachIntroduction "
           >
             <span class="d-none d-md-block">教練介紹</span
             ><span class="d-block d-md-none">教練</span>
@@ -27,7 +28,7 @@
         <li class="nav-item">
           <a
             class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
-            href="#"
+            href="#courseContent"
           >
             <span class="d-none d-md-block">課程內容</span
             ><span class="d-block d-md-none">課程</span>
@@ -36,7 +37,7 @@
         <li class="nav-item">
           <a
             class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
-            href="#"
+            href="#professionalCertification"
           >
             <span class="d-none d-md-block">專業證照</span
             ><span class="d-block d-md-none">證照</span>
@@ -45,7 +46,7 @@
         <li class="nav-item">
           <a
             class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
-            href="#"
+            href="#customerReviews"
           >
             <span class="d-none d-md-block">客戶評價</span
             ><span class="d-block d-md-none">評價</span>
@@ -53,40 +54,1083 @@
         </li>
       </ul>
     </div>
-    <div style="height: 65px"></div>
-    <div class="bg-F9F9F9">
+    <div class="nav-reserve-space"></div>
+    <div class="bg-gray-custom-03">
       <div class="container">
-        <div class="row py-11 flex-column-reverse flex-md-row">
-          <div class="col-md-6">
-            <div class="d-flex pt-8">
+        <div class="row flex-column-reverse flex-lg-row py-0 py-lg-11">
+          <div class="col-lg-6">
+            <div class="d-flex pt-6 pb-6 pb-lg-56 pt-lg-8">
               <div class="flex-shrink-0">
                 <img
                   src="../assets/images/img/avatar-03.webp"
-                  alt="..."
-                  class="me-8"
+                  alt="一個帶著黑框眼鏡喝著咖啡的男人半身照"
+                  class="img-fluid d-none d-lg-block me-8"
                   width="120"
                   height="120"
                 />
+                <img
+                  src="../assets/images/img/avatar-03.webp"
+                  alt="一個帶著黑框眼鏡喝著咖啡的男人半身照"
+                  class="img-fluid d-block d-lg-none me-4"
+                  width="64"
+                  height="64"
+                />
               </div>
               <div class="flex-grow-1">
-                <h2>林大壯 Jeremy</h2>
+                <h2 class="fs-5 fs-lg-2 fw-semibold mb-1 mb-lg-2">
+                  林大壯 Jeremy
+                </h2>
+                <ul
+                  class="list-unstyled d-flex align-items-center mb-2 mb-lg-4"
+                >
+                  <li>
+                    <span
+                      class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                    >
+                      star
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                    >
+                      star
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                    >
+                      star
+                    </span>
+                  </li>
+                  <li>
+                    <span
+                      class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                    >
+                      star
+                    </span>
+                  </li>
+                  <li class="me-2">
+                    <span
+                      class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                    >
+                      star
+                    </span>
+                  </li>
+                  <li>
+                    <span class="text-gray-700 fw-normal fs-8 fs-lg-6"
+                      >(99+)</span
+                    >
+                  </li>
+                </ul>
+                <ul
+                  class="list-unstyled d-flex align-items-center flex-wrap gap-2 gap-lg-3"
+                >
+                  <li class="">
+                    <a
+                      href="#"
+                      class="badge bg-primary-light bg-hover-tint fs-lg-6 fw-lg-medium px-lg-4 py-2"
+                      >#增肌減脂</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="#"
+                      class="badge bg-primary-light bg-hover-tint fs-lg-6 fw-lg-medium px-lg-4 py-2"
+                      >#體態雕塑</a
+                    >
+                  </li>
+                  <li class="">
+                    <a
+                      href="#"
+                      class="badge bg-primary-light bg-hover-tint fs-lg-6 fw-lg-medium px-lg-4 py-2"
+                      >#運動表現</a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="d-none d-lg-block" style="max-width: 526px">
+              <div class="row g-0">
+                <div class="col-6 pe-5">
+                  <button
+                    type="button"
+                    class="btn btn-outline-primary w-100 py-3"
+                  >
+                    <i class="ti ti-message fs-6 me-2"></i>傳送訊息
+                  </button>
+                </div>
+                <div class="col-6">
+                  <button type="button" class="btn btn-primary w-100 py-3">
+                    <span
+                      class="material-symbols-outlined align-middle fs-6 me-2"
+                    >
+                      calendar_clock </span
+                    >查看可預約的時間
+                  </button>
+                </div>
               </div>
             </div>
           </div>
-          <div class="col-md-6">
-            <img
-              src="../assets/images/img/trainer-03.webp"
-              class="img-fluid"
-              width="636"
-              height="368"
-              alt=""
-            />
+          <!-- swiper 輪播 -->
+          <div class="col-lg-6 px-0 px-lg-3">
+            <div class="swiper swiperCourseIntroduction position-relative">
+              <div class="swiper-wrapper">
+                <a
+                  class="swiper-slide"
+                  href="../assets/images/img/trainer-03-light-box.webp"
+                  data-lightbox="course-introduction-light-box"
+                >
+                  <div
+                    class="swiper-bkg"
+                    style="
+                      background-image: url('../assets/images/img/trainer-03.webp');
+                    "
+                  ></div>
+                </a>
+                <a
+                  class="swiper-slide"
+                  href="../assets/images/img/trainer-02-light-box.webp"
+                  data-lightbox="course-introduction-light-box"
+                >
+                  <div
+                    class="swiper-bkg"
+                    style="
+                      background-image: url('../assets/images/img/trainer-02.webp');
+                    "
+                  ></div>
+                </a>
+                <a
+                  class="swiper-slide"
+                  href="../assets/images/img/trainer-01-light-box.webp"
+                  data-lightbox="course-introduction-light-box"
+                >
+                  <div
+                    class="swiper-bkg"
+                    style="
+                      background-image: url('../assets/images/img/trainer-01.webp');
+                    "
+                  ></div>
+                </a>
+              </div>
+              <div
+                class="swiper-pagination-CourseIntroduction position-absolute"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 教練介紹 -->
+      <div class="container bg-white mb-4 mb-lg-10" id="coachIntroduction">
+        <div class="row py-4 px-0 py-lg-6 px-lg-6">
+          <h2 class="fs-3 text-secondary d-none d-lg-block mb-6">教練介紹</h2>
+          <div class="col-lg-6">
+            <div class="content fw-normal mb-5 d-none d-lg-block">
+              <p>我的教練實務教學年資有4年，累積教學時數超過3000個小時。</p>
+              <br />
+              <p>
+                熟悉自由重量的教學，同時也知悉器材的操作與引導。
+                我積極參與各種不同的研習內容,目前經常性使用FMS精選功能性動作評估，來幫助學生進行初步評估，同時建立對該客戶的身體活動狀況的認識。
+              </p>
+              <br />
+              <p>
+                SFMA、關鍵點療法抑是我在上課中，若學生反應當日身體怪怪、不適，我會使用的工具，用以幫助學生能夠更為舒服適切的情況下,進行運動。
+              </p>
+              <br />
+              <p class="mb-5">
+                其餘一些矯正及運動表現的進修內容,也是我會在上課的過程中，根據客戶的需求及興趣愛好等分配在課程時間內...
+              </p>
+              <span
+                class="d-flex align-items-center text-primary fw-semibold"
+                style="cursor: pointer"
+                ><img
+                  src="../assets/images/icons/triangle.svg"
+                  alt="主色三角形 icon"
+                  class="me-1"
+                  width="20"
+                  height="20"
+                />
+                顯示更多
+              </span>
+            </div>
+            <div class="content fw-normal mb-3 d-block d-lg-none">
+              <h2 class="fs-5 text-secondary d-block d-lg-none mb-4">
+                教練介紹
+              </h2>
+              <p>我的教練實務教學年資有4年，累積教學時數超過3000個小時。</p>
+              <br />
+              <p>熟悉自由重量的教學，同時也知悉器材的操作與引導。</p>
+              <p class="mb-3">我積極參與各種不同的研習內容,目前經常性使...</p>
+              <span
+                class="d-flex align-items-center text-primary fw-semibold"
+                style="cursor: pointer"
+                ><img
+                  src="../assets/images/icons/triangle.svg"
+                  alt="主色三角形 icon"
+                  class="me-1"
+                  width="20"
+                  height="20"
+                />
+                顯示更多
+              </span>
+            </div>
+            <ul
+              class="list-unstyled d-flex flex-column align-items-start mb-8 mb-lg-0"
+            >
+              <li
+                class="badge bg-primary-light bg-hover-tint fw-bold text-gray-800 py-1 px-4 mb-3"
+              >
+                <div class="d-flex align-items-center">
+                  <i class="ti ti-tags-filled fs-4 me-1 text-primary"></i>滿 10
+                  堂,每堂折 200
+                </div>
+              </li>
+              <li
+                class="badge bg-primary-light bg-hover-tint fw-bold text-gray-800 py-1 px-4"
+              >
+                <div class="d-flex align-items-center">
+                  <i class="ti ti-tags-filled fs-4 me-1 text-primary"></i
+                  >預約滿五堂,贈送一堂
+                </div>
+              </li>
+            </ul>
+          </div>
+          <div class="col-lg-6">
+            <div
+              class="d-flex flex-wrap flex-column flex-xl-row justify-content-between align-items-xl-center mb-2 mb-lg-4"
+            >
+              <h3 class="fs-4 fw-semibold text-secondary mb-4 mb-xl-0">
+                <i class="ti ti-map-pin-filled me-2"></i>服務地區
+              </h3>
+              <ul
+                class="nav nav-pills area-of-service"
+                id="pills-tab-area-of-service"
+                role="tablist"
+              >
+                <li class="nav-item me-4" role="presentation">
+                  <button
+                    class="nav-link px-4 px-lg-8 py-2 active"
+                    id="pills-area01-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-area01"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-area01"
+                    aria-selected="true"
+                  >
+                    大安區
+                  </button>
+                </li>
+                <li class="nav-item me-4" role="presentation">
+                  <button
+                    class="nav-link px-4 px-lg-8 py-2"
+                    id="pills-area02-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-area02"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-area02"
+                    aria-selected="false"
+                  >
+                    信義區
+                  </button>
+                </li>
+                <li class="nav-item" role="presentation">
+                  <button
+                    class="nav-link px-4 px-lg-8 py-2"
+                    id="pills-area03-tab"
+                    data-bs-toggle="pill"
+                    data-bs-target="#pills-area03"
+                    type="button"
+                    role="tab"
+                    aria-controls="pills-area03"
+                    aria-selected="false"
+                  >
+                    中正區
+                  </button>
+                </li>
+              </ul>
+            </div>
+            <div class="tab-content" id="pills-tabContent-area-of-service">
+              <div
+                class="tab-pane fade show active"
+                id="pills-area01"
+                role="tabpanel"
+                aria-labelledby="pills-area01-tab"
+                tabindex="0"
+              >
+                <p class="text-secondary fw-normal fs-7 fs-lg-6 mb-2">
+                  地址：臺北市大安區新生南路2段86號8樓及9樓
+                </p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2255176934173!2d121.53193051123739!3d25.02641967772881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9871bffa62f%3A0x916dc06d6d031f7d!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5paw55Sf5Y2X6Lev5LqM5q61ODbomZ855qiT!5e0!3m2!1szh-TW!2stw!4v1728743831331!5m2!1szh-TW!2stw"
+                  width="100%"
+                  height="340"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                  class="google-map-height"
+                ></iframe>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-area02"
+                role="tabpanel"
+                aria-labelledby="pills-area02-tab"
+                tabindex="0"
+              >
+                <p class="text-secondary fw-normal fs-7 fs-lg-6 mb-2">
+                  地址：臺北市信義區松高路88號
+                </p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.858166424819!2d121.56905771123782!3d25.03888697772067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aba4ceac2fd5%3A0x17ca62d2a6cd55d1!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5p2-6auY6LevODjomZ8!5e0!3m2!1szh-TW!2stw!4v1728744050637!5m2!1szh-TW!2stw"
+                  width="100%"
+                  height="340"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+              <div
+                class="tab-pane fade"
+                id="pills-area03"
+                role="tabpanel"
+                aria-labelledby="pills-contact-area03"
+                tabindex="0"
+              >
+                <p class="text-secondary fw-normal fs-7 fs-lg-6 mb-2">
+                  地址：臺北市中正區杭州南路一段56號
+                </p>
+                <iframe
+                  src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.834087395073!2d121.52296851123789!3d25.03970397772005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9775ff550d1%3A0x91d8d500aaf7a616!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A5p2t5bee5Y2X6Lev5LiA5q61NTbomZ8!5e0!3m2!1szh-TW!2stw!4v1728744124371!5m2!1szh-TW!2stw"
+                  width="100%"
+                  height="340"
+                  style="border: 0"
+                  allowfullscreen=""
+                  loading="lazy"
+                  referrerpolicy="no-referrer-when-downgrade"
+                ></iframe>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 課程內容 -->
+      <div class="container bg-white mb-4 mb-lg-10" id="courseContent">
+        <div class="px-0 px-lg-6 py-4 py-lg-6">
+          <div class="d-flex flex-column flex-lg-row mb-6">
+            <h2 class="fs-5 fs-lg-3 text-secondary mb-2 mb-lg-0 me-0 me-lg-8">
+              課程內容
+            </h2>
+            <form class="position-relative course-search-input-width">
+              <span
+                class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+                style="left: 24px"
+              >
+                search
+              </span>
+              <input
+                type="search"
+                class="form-control rounded-0 border-2 border-gray-800 text-truncate py-2 ps-44 pe-3"
+                placeholder="肌力"
+              />
+            </form>
+          </div>
+          <!-- 課程內容 - 手風琴元件 -->
+          <div class="accordion accordion-flush" id="accordionFlushCourse">
+            <div class="border-0 mb-3 mb-lg-5">
+              <div
+                class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center bg-primary-light px-3 px-lg-6 py-3 py-lg-4"
+              >
+                <span class="fs-5 fs-lg-4 text-gray-800 fw-medium mb-4 mb-lg-0"
+                  >客製</span
+                >
+                <div class="d-flex align-items-center justify-content-between">
+                  <select
+                    class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                  >
+                    <option value="60" selected>60 分鐘</option>
+                    <option value="90">90 分鐘</option>
+                  </select>
+                  <div class="d-flex align-items-center">
+                    <span
+                      class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                      >NT$ 1,000</span
+                    >
+                    <a
+                      href="#"
+                      class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                      >預約</a
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0 mb-3 mb-lg-5">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button bg-primary-light bg-hover-tint px-3 px-lg-6 py-3 py-lg-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flushCollapseCourseItem01"
+                  aria-expanded="true"
+                  aria-controls="flushCollapseCourseItem01"
+                >
+                  <span class="fs-5 fs-lg-4 text-gray-800 fw-medium"
+                    >有氧運動</span
+                  >
+                </button>
+              </h2>
+              <div
+                id="flushCollapseCourseItem01"
+                class="accordion-collapse collapse show pt-0 pt-lg-3"
+                data-bs-parent="#accordionFlushCourse"
+              >
+                <div class="accordion-body bg-gray-100 bg-lg-white px-2 py-0">
+                  <ul class="list-unstyled mb-0">
+                    <li
+                      class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center px-3 px-lg-6 py-5 py-lg-4 border-bottom broder-gray-300"
+                    >
+                      <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                        <h3 class="text-secondary fs-5 mb-2">燃脂有氧挑戰班</h3>
+                        <p class="fw-normal fs-6">
+                          此課程專為想要提升體能與減脂的學員設計，透過多樣化的有氧運動組合，如跳繩、舞蹈與高強度間歇訓練，幫助你在短時間內燃燒更多熱量，同時增強心肺功能。
+                        </p>
+                      </div>
+
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <select
+                          class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                        >
+                          <option value="60" selected>60 分鐘</option>
+                          <option value="90">90 分鐘</option>
+                        </select>
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                            >NT$ 1,500</span
+                          >
+                          <a
+                            href="#"
+                            class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                            >預約</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center border-bottom-lg-0 border-bottom broder-gray-300 px-3 px-lg-6 py-5 py-lg-4"
+                    >
+                      <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                        <h3 class="text-secondary fs-5 mb-2">動感有氧活力班</h3>
+                        <p class="fw-normal fs-6">
+                          在這堂課中，結合音樂與節奏感強的動作，讓你在運動中享受樂趣，並逐步提升心肺耐力。適合任何運動經驗的學員，無論初學者或有經驗者都能輕鬆上手。
+                        </p>
+                      </div>
+
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <select
+                          class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                        >
+                          <option value="60" selected>60 分鐘</option>
+                          <option value="90">90 分鐘</option>
+                        </select>
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                            >NT$ 1,200</span
+                          >
+                          <a
+                            href="#"
+                            class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                            >預約</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item border-0">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed bg-primary-light bg-hover-tint px-3 px-lg-6 py-3 py-lg-4"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#flushCollapseCourseItem02"
+                  aria-expanded="false"
+                  aria-controls="flushCollapseCourseItem02"
+                >
+                  <span class="fs-5 fs-lg-4 text-gray-800 fw-medium"
+                    >肌力訓練</span
+                  >
+                </button>
+              </h2>
+              <div
+                id="flushCollapseCourseItem02"
+                class="accordion-collapse collapse pt-0 pt-lg-3"
+                data-bs-parent="#accordionFlushCourse"
+              >
+                <div class="accordion-body bg-gray-100 bg-lg-white px-2 py-0">
+                  <ul class="list-unstyled mb-0">
+                    <li
+                      class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center px-3 px-lg-6 py-5 py-lg-4 border-bottom broder-gray-300"
+                    >
+                      <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                        <h3 class="text-secondary fs-5 mb-2">爆發力鍛造工坊</h3>
+                        <p class="fw-normal fs-6">
+                          這個課程專注於提升全身的爆發力和力量，以高強度間歇訓練和動態肌力動作為核心，幫助你快速提升運動表現。
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <select
+                          class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                        >
+                          <option value="60" selected>60 分鐘</option>
+                          <option value="90">90 分鐘</option>
+                        </select>
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                            >NT$ 2,000</span
+                          >
+                          <a
+                            href="#"
+                            class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                            >預約</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center px-3 px-lg-6 py-5 py-lg-4 border-bottom broder-gray-300"
+                    >
+                      <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                        <h3 class="text-secondary fs-5 mb-2">
+                          力量鍊金術：從零到英雄
+                        </h3>
+                        <p class="fw-normal fs-6">
+                          從基礎開始，逐步鍛煉和轉化你的肌肉力量，這個課程結合了力量訓練和功能性運動，讓你在不知不覺中成為肌力英雄。
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <select
+                          class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                        >
+                          <option value="60">60 分鐘</option>
+                          <option value="90" selected>90 分鐘</option>
+                        </select>
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                            >NT$ 2,000</span
+                          >
+                          <a
+                            href="#"
+                            class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                            >預約</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                    <li
+                      class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center border-bottom-lg-0 border-bottom broder-gray-300 px-3 px-lg-6 py-5 py-lg-4"
+                    >
+                      <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                        <h3 class="text-secondary fs-5 mb-2">超越極限之旅</h3>
+                        <p class="fw-normal fs-6">
+                          這是一個挑戰自我極限的課程，通過強度逐漸增加的訓練計劃，鍛煉你每一塊肌肉，幫助你突破力量的巔峰。
+                        </p>
+                      </div>
+                      <div
+                        class="d-flex align-items-center justify-content-between"
+                      >
+                        <select
+                          class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                        >
+                          <option value="60" selected>60 分鐘</option>
+                          <option value="90">90 分鐘</option>
+                        </select>
+                        <div class="d-flex align-items-center">
+                          <span
+                            class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                            >NT$ 2,000</span
+                          >
+                          <a
+                            href="#"
+                            class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                            >預約</a
+                          >
+                        </div>
+                      </div>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 專業證照 -->
+      <div
+        class="container bg-white mb-4 mb-lg-10"
+        id="professionalCertification"
+      >
+        <div class="px-0 px-lg-6 py-4 py-lg-6">
+          <h2 class="fs-5 fs-lg-3 text-secondary mb-4 mb-lg-6">專業證照</h2>
+          <div class="row">
+            <div class="col-lg-8 col-xl-6">
+              <ul class="row list-unstyled mb-0">
+                <li class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li class="d-flex align-items-center mb-3 mb-lg-4">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >國家體育協會體能私人教練</span
+                      >
+                    </li>
+                    <li class="d-flex align-items-center mb-3 mb-lg-4">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >NSCA私人教練培訓</span
+                      >
+                    </li>
+                    <li class="d-flex align-items-center mb-3 mb-lg-4">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >FMS精選功能性動作評估</span
+                      >
+                    </li>
+                    <li class="d-flex align-items-center mb-3 mb-lg-0">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >SMFA選擇性功能動作評估</span
+                      >
+                    </li>
+                  </ul>
+                </li>
+                <li class="col-lg-6">
+                  <ul class="list-unstyled mb-0">
+                    <li class="d-flex align-items-center mb-3 mb-lg-4">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >IMT上下肢動作整合與訓練</span
+                      >
+                    </li>
+                    <li class="d-flex align-items-center mb-3 mb-lg-4">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >脊椎側彎與張⼒失衡—運動訓練整合</span
+                      >
+                    </li>
+                    <li class="d-flex align-items-center mb-3 mb-lg-4">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >KPM關鍵點療法</span
+                      >
+                    </li>
+                    <li class="d-flex align-items-center">
+                      <span
+                        class="material-symbols-outlined fs-4 text-primary me-1"
+                      >
+                        editor_choice
+                      </span>
+                      <span class="text-secondary fw-normal"
+                        >⼤腦腸道和營養研習</span
+                      >
+                    </li>
+                  </ul>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- 客戶評價 -->
+      <div class="container bg-white" id="customerReviews">
+        <div class="px-0 px-lg-6 pt-4 pt-lg-6 pb-10">
+          <div class="mb-4 mb-lg-10">
+            <div
+              class="d-flex flex-row flex-lg-column justify-content-between justify-content-lg-start align-items-center align-items-lg-start mb-4"
+            >
+              <h2 class="fs-5 fs-lg-3 text-secondary mb-0 mb-lg-6 me-0 me-lg-8">
+                客戶評價
+              </h2>
+              <div class="d-flex">
+                <span
+                  class="font-anton-regular text-primary fw-normal fs-3 fs-lg-2 me-2"
+                  >5.0</span
+                >
+                <div class="d-flex flex-column">
+                  <ul class="list-unstyled d-flex align-items-center mb-0">
+                    <li>
+                      <span
+                        class="material-symbols-rounded star align-middle fs-5"
+                      >
+                        star
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="material-symbols-rounded star align-middle fs-5"
+                      >
+                        star
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="material-symbols-rounded star align-middle fs-5"
+                      >
+                        star
+                      </span>
+                    </li>
+                    <li>
+                      <span
+                        class="material-symbols-rounded star align-middle fs-5"
+                      >
+                        star
+                      </span>
+                    </li>
+                    <li class="me-2">
+                      <span
+                        class="material-symbols-rounded star align-middle fs-5"
+                      >
+                        star
+                      </span>
+                    </li>
+                  </ul>
+                  <span
+                    class="fs-7 fs-lg-6 fw-normal fw-lg-medium text-gray-700"
+                    >20+ 課程評價</span
+                  >
+                </div>
+              </div>
+            </div>
+            <ul class="list-unstyled mb-4">
+              <li class="bg-gray-custom-03 d-flex p-3 mb-4 mb-lg-6">
+                <img
+                  src="../assets/images/img/avatar-05.webp"
+                  alt="一位裸上半身並且滿身肌肉背對者的男人半身照"
+                  class="d-none d-lg-block"
+                  width="56"
+                  height="56"
+                />
+                <img
+                  src="../assets/images/img/avatar-05.webp"
+                  alt="一位裸上半身並且滿身肌肉背對者的男人半身照"
+                  class="d-block d-lg-none"
+                  width="44"
+                  height="44"
+                />
+                <div class="ms-2">
+                  <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                    王Ｏ慶<span
+                      class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                      >2024 年 8 月 7 號</span
+                    >
+                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li class="me-2">
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                    </ul>
+                  </h3>
+                  <p class="text-gray-custom-01 fw-normal">
+                    Jeremy教練上課很認真，會提醒我訓練時候應該注意的事項，關心我訓練當天的狀況。
+                  </p>
+                  <p class="text-gray-custom-01 fw-normal">
+                    下課之餘也會開課表給我讓我能夠課後訓練。想要進步找Jeremy教練帶你飛上天。
+                  </p>
+                </div>
+              </li>
+              <li class="bg-gray-custom-03 d-flex p-3 mb-4 mb-lg-6">
+                <img
+                  src="../assets/images/img/avatar-06.webp"
+                  alt="一位穿著深色無袖體育服的男人在跑步"
+                  class="d-none d-lg-block"
+                  width="56"
+                  height="56"
+                />
+                <img
+                  src="../assets/images/img/avatar-06.webp"
+                  alt="一位穿著深色無袖體育服的男人在跑步"
+                  class="d-block d-lg-none"
+                  width="44"
+                  height="44"
+                />
+                <div class="ms-2">
+                  <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                    郭Ｏ銘<span
+                      class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                      >2024 年 8 月 8 號</span
+                    >
+                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li class="me-2">
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                    </ul>
+                  </h3>
+                  <p class="text-gray-custom-01 fw-normal">
+                    上課幽默風趣，給推。
+                  </p>
+                  <p class="text-gray-custom-01 fw-normal">
+                    請大家用新台幣教訓他！！！！😍
+                  </p>
+                </div>
+              </li>
+              <li class="bg-gray-custom-03 d-flex p-3 mb-4">
+                <img
+                  src="../assets/images/img/avatar-07.webp"
+                  alt="一位穿著綁著高馬尾穿深色運動內衣與瑜珈褲體的女人在做腿部伸展的運動"
+                  class="d-none d-lg-block"
+                  width="56"
+                  height="56"
+                />
+                <img
+                  src="../assets/images/img/avatar-07.webp"
+                  alt="一位穿著綁著高馬尾穿深色運動內衣與瑜珈褲體的女人在做腿部伸展的運動"
+                  class="d-block d-lg-none"
+                  width="44"
+                  height="44"
+                />
+                <div class="ms-2">
+                  <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                    蔡Ｏ文<span
+                      class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                      >2024 年 5 月 19 號</span
+                    >
+                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li class="me-2">
+                        <span
+                          class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                        >
+                          star
+                        </span>
+                      </li>
+                    </ul>
+                  </h3>
+                  <p class="text-gray-custom-01 fw-normal">
+                    因為工作關係、經常腰痠駝背。且因為簽署文件的原因，導致醫生說我有圓肩的狀況。
+                  </p>
+                  <p class="text-gray-custom-01 fw-normal">
+                    經過和教練的上課後，久坐腰痠的狀況居然不見了、同事們還說我變瘦很多！！
+                  </p>
+                  <p class="text-gray-custom-01 fw-normal">五星吹捧吹起來</p>
+                </div>
+              </li>
+              <li class="">
+                <span
+                  class="d-flex align-items-center text-primary fw-semibold"
+                  style="cursor: pointer"
+                  ><img
+                    src="../assets/images/icons/triangle.svg"
+                    alt="主色三角形 icon"
+                    class="me-1"
+                    width="20"
+                    height="20"
+                  />
+                  顯示更多
+                </span>
+              </li>
+            </ul>
+          </div>
+          <!-- 客戶留言 -->
+          <div
+            class="d-flex justify-content-center border-top broder-gray-300 px-3 px-lg-0 py-3 py-lg-4"
+          >
+            <div class="d-flex">
+              <img
+                src="../assets/images/img/sports-04.webp"
+                alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+                class="rounded-circle d-none d-lg-block me-4"
+                width="56"
+                height="56"
+              />
+              <img
+                src="../assets/images/img/sports-04.webp"
+                alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+                class="rounded-circle d-block d-lg-none me-3"
+                width="32"
+                height="32"
+              />
+              <form class="d-flex flex-column">
+                <label
+                  class="form-label text-gray-700 fs-7 fs-lg-6 fw-normal mb-1 mb-lg-3"
+                  for="customerComments"
+                >
+                  王小明
+                </label>
+                <textarea
+                  class="form-control customer-comments border-primary fs-6 fw-normal px-3 py-2 mb-4 mb-lg-5"
+                  id="customerComments"
+                  placeholder="請留下你對教練的評價...."
+                  style="resize: none"
+                ></textarea>
+                <div class="align-self-center">
+                  <button
+                    type="submit"
+                    class="btn btn-primary fw-medium px-6 py-2"
+                  >
+                    評價教練
+                  </button>
+                </div>
+              </form>
+            </div>
           </div>
         </div>
       </div>
     </div>
-
-    <div class="bg-gray-100" style="height: 1000px"></div>
+    <div class="d-block d-lg-none">
+      <ul
+        class="list-unstyled bg-white d-flex justify-content-center p-3 mb-0"
+        style="box-shadow: 0px -2px 4px 0px #0000001f"
+      >
+        <li class="me-6">
+          <button
+            type="button"
+            class="btn btn-outline-primary fw-medium px-4 py-2"
+          >
+            <i class="ti ti-message fs-6 me-2"></i>傳送訊息
+          </button>
+        </li>
+        <li>
+          <button type="button" class="btn btn-primary fw-medium py-2 px-7">
+            查看可預約的時間
+          </button>
+        </li>
+      </ul>
+    </div>
     <%- include('./components/scroll-to-top'); -%>
     <!--  -->
     <%- include('./layout/footer'); -%>
