@@ -146,3 +146,8 @@
   word-break: break-word;     
   white-space: normal;
 }
+
+// 修正顯示更多按鈕點擊範圍
+.hideMoreButton, .hideMoreMessagesButton{
+  display: inline-block;
+}
