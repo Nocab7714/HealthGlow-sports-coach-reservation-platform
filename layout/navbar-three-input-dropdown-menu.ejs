@@ -88,16 +88,15 @@
     />
     <!-- dropdown 開始區塊 -->
     <div class="location-menu dropdown-menu">
-      <div class="d-flex flex-column">
-        <p class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">
+      <p class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">
           挑選地區
-        </p>
-        <div class="d-flex justify-content-between">
-          <span>已選擇 2/10</span>
-          <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
-        </div>
+      </p>
+      <div class="d-flex justify-content-between">
+        <span>已選擇 2/10</span>
+        <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
       </div>
       <div class="d-flex">
+        <!-- 地點 Level One -->
         <div class="location-dropdown-menu-level-one border border-primary">
           <ul class="list-unstyled mb-0"></ul>
         </div>
@@ -133,7 +132,7 @@
     <input
       id="datepicker"
       type="search"
-      class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      class="datepicker form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
       data-bs-toggle="dropdown" type="search"
       placeholder="時間？" aria-label="Search" aria-expanded="false"
     />
@@ -199,7 +198,7 @@
       selectedItems.forEach((item) => item.classList.remove('selected'));
 
       // 將當前選項的項目加上 selected 樣式
-      mainMenuItem.querySelector('dropdown-item').classList.add('selected');
+      mainMenuItem.querySelector('.dropdown-item').classList.add('selected');
     });
 
     return mainMenuItem;  // 回船主選單項目
@@ -238,12 +237,12 @@
 <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
 <!-- flatpickr 客製 -->
 <script>
-  flatpickr('#datepicker', {
+  flatpickr('.datepicker', {
     onReady: function (selectedDates, dateStr, instance) {
       const newDiv = document.createElement('div');
       const newUl = document.createElement('ul');
 
-      const timeItems = ['任何時段', '上午', '下午', '晚上'];
+      const timeItems = ['底下JS', '上午', '下午', '晚上'];
 
       newUl.classList.add(
         'flatpickr-custom-time',

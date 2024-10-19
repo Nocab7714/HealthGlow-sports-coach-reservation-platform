@@ -469,14 +469,15 @@
             </button>
           </h2>
           <div id="collapseCourseSearch" class="accordion-collapse collapse">
-            <div class="accordion-body bg-gray-100">課程搜尋內容 TEST
+            <div class="accordion-body bg-gray-100">
+              <!-- 運動課程 dropdown menu -->
               <div class="search d-flex">
                 <!-- 運動課程 level one-->
-                <div class="course-dropdown-menu-level-one border border-primary">
+                <div class="course-dropdown-menu-level-one border border-primary flex-grow-1">
                   <ul class="list-unstyled mb-0"></ul>
                 </div>
                 <!-- 運動課程 level two-->
-                <div class="course-dropdown-menu-level-two border border-primary">
+                <div class="course-dropdown-menu-level-two border border-primary flex-grow-1">
                   <ul class="list-unstyled mb-0">
                     <li>
                       <a class="dropdown-item undefined" href="#">有氧運動 1</a>
@@ -514,7 +515,32 @@
             id="collapseLocationSelection"
             class="accordion-collapse collapse"
           >
-            <div class="accordion-body bg-gray-100">選擇地點內容</div>
+            <div class="search accordion-body bg-gray-100">
+              <!-- 地點 dropdown menu -->
+              <div class="d-flex justify-content-between">
+                <span>已選擇 2/10</span>
+                <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
+              </div>
+              <div class="d-flex">
+                <!-- 地點 Level One -->
+                <div class="location-dropdown-menu-level-one border border-primary">
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 地點 Level Two -->
+                <div class="location-dropdown-menu-level-two border border-primary">
+                  <ul class="list-unstyled mb-0 d-block">
+                    <li><a class="dropdown-item" href="#">中正區</a></li>
+                    <li><a class="dropdown-item" href="#">大同區</a></li>
+                    <li><a class="dropdown-item" href="#">中山區</a></li>
+                    <li><a class="dropdown-item" href="#">松山區</a></li>
+                    <li><a class="dropdown-item" href="#">大安區</a></li>
+                    <li><a class="dropdown-item" href="#">萬華區</a></li>
+                    <li><a class="dropdown-item" href="#">信義區</a></li>
+                  </ul>
+                </div>
+              </div>
+
+            </div>
           </div>
         </li>
         <li class="accordion-item border-0 rounded-0">
@@ -527,15 +553,16 @@
               data-bs-target="#collapseDateSelection"
               aria-controls="collapseDateSelection"
             >
-              <span class="fw-semibold d-flex align-items-center text-secondary"
-                ><span class="material-symbols-outlined text-gray-800 me-1">
-                  schedule </span
-                >選擇時間</span
-              >
+              <span class="fw-semibold d-flex align-items-center text-secondary">
+                <span class="material-symbols-outlined text-gray-800 me-1">schedule</span>
+                選擇時間
+              </span>
             </button>
           </h2>
           <div id="collapseDateSelection" class="accordion-collapse collapse">
-            <div class="accordion-body bg-gray-100">選擇時間內容</div>
+            <div class="accordion-body bg-gray-100">選擇時間內容
+              
+            </div>
           </div>
         </li>
       </ul>

@@ -7,9 +7,10 @@
 </head>
 
 <body>
-  <%- include('./layout/header-sign-in-trainer'); -%>
-
+  <%- include('./layout/header-sign-in-trainer.ejs'); -%>
+  
   <main class="student">
+    
     <header class="student-banner">
       <div class="container h-100">
         <div class="h-100 d-flex flex-column justify-content-center align-items-md-center">
@@ -23,6 +24,12 @@
         </div>
       </div>
     </header>
+    <input
+      type="search"
+      class="datepicker form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      data-bs-toggle="dropdown" type="search"
+      placeholder="時間？" aria-label="Search" aria-expanded="false"
+    />
     <section class="py-10 py-md-15">
       <div class="container">
         <ul class="nav nav-tabs mb-4 mb-md-6" id="myTab" role="tablist">
@@ -279,6 +286,7 @@
       </div>
     </section>
   </main>
+
   <script type="module" src="../main.js"></script>
 </body>
 
