@@ -15,3 +15,6 @@ AOS.init();
 
 // GSAP
 import './gsap.js';
+
+// flatpickr
+import './plugins/flatpickr.js';
