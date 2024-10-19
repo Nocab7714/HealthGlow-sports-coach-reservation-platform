@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <%- include('./layout/header-sign-out.ejs'); -%>
+  <%- include('./layout/header-sign-in-trainer.ejs'); -%>
     <!-- banner -->
     <section class="home-banner d-flex flex-column justify-content-center">
       <div class="container">
@@ -998,145 +998,7 @@
           });
         </script>
         <script type="module" src="../main.js"></script>
-      <!-- navbar 搜尋課程、地點 資料 -->
-      <script>
-        document.addEventListener('DOMContentLoaded', function () {
-          // 選取所有 .course-dropdown-menu-level-one 和 .course-dropdown-menu-level-two 的 ul 元素
-          const courseMenuLevelOnes = document.querySelectorAll('.course-dropdown-menu-level-one ul');
-          const courseMenuLevelTwos = document.querySelectorAll('.course-dropdown-menu-level-two ul');
-
-          // 迴圈處理每對第一層和第二層的課程選單
-          courseMenuLevelOnes.forEach((courseMenuLevelOne, index) => {
-            const courseMenuLevelTwo = courseMenuLevelTwos[index];  // 對應的第二層選單
-
-            // 將 courseData 資料加入每個選單
-            courseData.forEach((element) => {
-              let menuItem = createMainMenuItem(element, courseMenuLevelTwo);  // 建立主選單項目
-              courseMenuLevelOne.append(menuItem);  // 將主選單項目加入第一層選單
-            });
-          });
-
-          // 同樣處理 location (地點) 選單
-          const locationMenuLevelOnes = document.querySelectorAll('.location-dropdown-menu-level-one ul');
-          const locationMenuLevelTwos = document.querySelectorAll('.location-dropdown-menu-level-two ul');
-
-          locationMenuLevelOnes.forEach((locationMenuLevelOne, index) => {
-            const locationMenuLevelTwo = locationMenuLevelTwos[index];  // 對應的第二層地點選單
-
-            locationData.forEach((element) => {
-              let locationItem = createMainMenuItem(element, locationMenuLevelTwo);  // 建立地點選單項目
-              locationMenuLevelOne.append(locationItem);  // 將地點選單項目加入第一層選單
-            })
-          })
-        })
-        // 建立主選單項目 (第一層選單)
-        function createMainMenuItem(element, menuLevelTwo) {
-          let mainMenuItem = createMenuItem(element.title, element.status);  // 建立第一層選單項目
-
-          // 當滑鼠移入該選單項目時觸發的事件
-          mainMenuItem.addEventListener('mouseover', () => {
-            menuLevelTwo.innerText = '';  // 清空之前的第二層選單項目
-
-            // 將每個 subject (子選單) 加入第二層選單
-            element.subject.forEach((subject) => {
-              let menuLevelTwoItem = createMenuItem(subject);  // 建立第二層選單項目
-              menuLevelTwo.append(menuLevelTwoItem);  // 將該項目加入第二層選單
-            });
-
-            // 先移除所有已經被加上 selected 樣式的項目
-            const selectedItems = document.querySelectorAll('.dropdown-item.selected');
-            selectedItems.forEach((item) => item.classList.remove('selected'));
-
-            // 將當前選項的項目加上 selected 樣式
-            mainMenuItem.querySelector('dropdown-item').classList.add('selected');
-          });
-
-          return mainMenuItem;  // 回船主選單項目
-        }
-        // 建立選單項目 (通用，用於第一層和第二層選單)
-        function createMenuItem(title, status) {
-          let menuItem = document.createElement('li');  // 建立 li 元素
-          let link = document.createElement('a');  // 建立 a 元素
-
-          // 設定 a 標籤的 class 和屬性
-          link.classList.add('dropdown-item', status);  // 加入樣式 class 和狀態
-          link.href = '#';  // 設定連結
-          link.textContent = title; // 設定顯式的文字
-          menuItem.append(link);  // 將 a 標籤加入 li 元素中
-
-          return menuItem;  // 回傳 li 元素
-        }
-
-        // 課程資料 (用於第一層和第二層選單的生成)
-        const courseData = [
-          { title: '有氧運動', subject: ['有氧 1', '有氧 2', '有氧 3'], status: 'selected' },
-          { title: '肌力訓練', subject: ['肌力 1', '肌力 2', '肌力 3'] },
-          { title: '核心訓練', subject: ['核心 1', '核心 2', '核心 3'] },
-          { title: '舞蹈課程', subject: ['舞蹈 1', '舞蹈 2', '舞蹈 3'] },
-          { title: '靜態課程', subject: ['瑜珈', '皮拉提斯', '冥想', '太極'] },
-        ];
-        // 地點資料 (用於第一層和第二層選單的生成)
-        const locationData = [
-          { title: '台北市', subject: ['中正區', '大同區', '中山區', '松山區', '大安區', '萬華區', '信義區'], status: 'selected' },
-          { title: '宜蘭縣', subject: ['宜蘭縣 1', '宜蘭縣 2', '宜蘭縣 3'] },
-          { title: '新北市', subject: ['新北市 1', '新北市 2', '新北市 3'] },
-          { title: '基隆市', subject: ['基隆市 1', '基隆市 2', '基隆市 3'] },
-        ];
-      </script>
-      <!-- 載入 flatpickr  -->
-      <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-      <!-- flatpickr 客製 -->
-      <script>
-        flatpickr('#datepicker', {
-          onReady: function (selectedDates, dateStr, instance) {
-            const newDiv = document.createElement('div');
-            const newUl = document.createElement('ul');
-
-            const timeItems = ['任何時段', '上午', '下午', '晚上'];
-
-            newUl.classList.add(
-              'flatpickr-custom-time',
-              'list-unstyled',
-              'd-flex',
-              'gap-2'
-            );
-
-            timeItems.forEach((timeText) => {
-              const newLi = document.createElement('li');
-              const newBtn = document.createElement('button');
-              newLi.classList.add('nav-item');
-              newBtn.classList.add('nav-link', 'w-100');
-              newBtn.type = 'button';
-              newBtn.textContent = timeText;
-              newLi.append(newBtn);
-              newUl.appendChild(newLi);
-            });
-
-            newDiv.classList.add('flatpickr-custom-div');
-            // 建立自定義按鈕元素
-            const customButtonCancel = document.createElement('button');
-            customButtonCancel.type = 'button';
-            customButtonCancel.classList.add(
-              'btn',
-              'btn-outline-secondary',
-              'w-50',
-              'rounded-0'
-            );
-            customButtonCancel.innerText = '清除';
-
-            const customButtonConfirm = document.createElement('button');
-            customButtonConfirm.type = 'button';
-            customButtonConfirm.classList.add('btn', 'btn-primary', 'w-50');
-            customButtonConfirm.innerText = '確定';
-
-            customButtonConfirm.addEventListener('click', function () {
-              instance.setDate(new Date()); // 設定為今天的日期
-            });
-            newDiv.append(customButtonCancel, customButtonConfirm);
-            instance.calendarContainer.append(newUl, newDiv);
-          },
-        });
-      </script>     
+        
 </body>
 
 </html>

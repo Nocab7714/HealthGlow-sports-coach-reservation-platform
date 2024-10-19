@@ -155,64 +155,7 @@
     </ul>
     <div class="collapse navbar-collapse">
       <div class="d-flex align-items-center">
-        <ul class="navbar-nav list-unstyled d-flex flex-row me-auto me-xl-16">
-          <li
-            class="nav-item rounded-0 position-relative me-3"
-            style="max-width: 290px"
-          >
-            <span
-              class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-              style="left: 24px"
-            >
-              search
-            </span>
-            <input
-              type="text"
-              class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-              placeholder="搜尋課程，有氧、飛輪、瑜伽、"
-            />
-          </li>
-          <li
-            class="nav-item rounded-0 position-relative me-3"
-            style="max-width: 290px"
-          >
-            <span
-              class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-              style="left: 24px"
-            >
-              location_on
-            </span>
-            <input
-              type="text"
-              class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-              placeholder="地點?"
-            />
-          </li>
-          <li
-            class="nav-item rounded-0 position-relative me-3"
-            style="max-width: 160px"
-          >
-            <span
-              class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-              style="left: 24px"
-            >
-              schedule
-            </span>
-            <input
-              type="text"
-              class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-              placeholder="時間?"
-            />
-          </li>
-          <li class="nav-item">
-            <button
-              type="search"
-              class="btn btn-primary text-white fw-semibold text-nowrap"
-            >
-              搜尋
-            </button>
-          </li>
-        </ul>
+        <%- include('./layout/navbar-three-input-dropdown-menu.ejs'); -%>
         <ul class="navbar-nav align-items-center mx-8">
           <li class="nav-item me-5 p-0">
             <a class="nav-link p-0" href="common-questions.html"
@@ -526,7 +469,28 @@
             </button>
           </h2>
           <div id="collapseCourseSearch" class="accordion-collapse collapse">
-            <div class="accordion-body bg-gray-100">課程搜尋內容</div>
+            <div class="accordion-body bg-gray-100">課程搜尋內容 TEST
+              <div class="search d-flex">
+                <!-- 運動課程 level one-->
+                <div class="course-dropdown-menu-level-one border border-primary">
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 運動課程 level two-->
+                <div class="course-dropdown-menu-level-two border border-primary">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
         <li class="accordion-item border-0 rounded-0">
