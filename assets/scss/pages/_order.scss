@@ -11,3 +11,18 @@
         height: 252px;
     }
 }
+.breadcrumb-item + .breadcrumb-item::before {
+    color: $white;
+}
+.display-2{
+    @include media-breakpoint-down(md) {
+        font-size: 2rem;
+    }
+}
+
+.banner-mobil-position{
+    left: 50%;
+    @include media-breakpoint-down(md) {
+        left: 25%;
+    }
+}
