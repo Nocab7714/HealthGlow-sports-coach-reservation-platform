@@ -320,7 +320,7 @@ $gray-500:      #ACB1B7;
 $gray-300:      #BCC7C8;
 $gray-200:      #E8E8E8; // *custom
 // $gray-100:      #E8E8E8;
-$gray-100:      #F4F9F9;  // *custom 
+$gray-100:      #F9F9F9;  // *custom 
 
 // scss-docs-end theme-color-variables
 
@@ -397,7 +397,8 @@ $escaped-characters: (
 
 $enable-caret:                true !default;
 $enable-rounded:              true !default;
-$enable-shadows:              false !default;
+// $enable-shadows:              false !default;
+$enable-shadows:              true !default;  // *custom
 $enable-gradients:            false !default;
 $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
@@ -700,13 +701,15 @@ $h6-font-size:                $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size,
-  7: $font-size-sm,
+  1: $h1-font-size,  // 64px
+  2: $h2-font-size,  // 40px
+  3: $h3-font-size,  // 32px
+  '3-5': $font-size-base * 1.75, // *custom 28px
+  4: $h4-font-size,  // 24px
+  5: $h5-font-size,  // 20px
+  '5-5': $font-size-base * 1.125, // *custom 18px
+  6: $h6-font-size,  // 16px
+  7: $font-size-sm,  // 14px
   8: $font-size-base * .75, // *custom 12px
   72: $font-size-base * 4.5, // 72px
 ) !default;
