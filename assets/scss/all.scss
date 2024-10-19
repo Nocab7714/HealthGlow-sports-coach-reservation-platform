@@ -12,7 +12,10 @@
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "/assets/scss/utils/utilities";
+@import "/assets/scss/utils/utilities-custom";
 @import "/assets/scss/utils/gutter";
+@import "/assets/scss/utils/mixin";
+
 
 // Layout & components
 @import "/assets/scss/utils/root";
@@ -50,6 +53,7 @@
 // icon
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+
 // custom components
 @import "../scss/components/list-group";
 @import "../scss/components/nav-tabs";
@@ -58,6 +62,7 @@
 @import "../scss/components/buttons";
 @import "../scss/components/flatpicker";
 @import "../scss/components/breadcrumb";
+@import "../scss/components/badge";
 
 // Helpers
 @import "../node_modules/bootstrap/scss/helpers";
