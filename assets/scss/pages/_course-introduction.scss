@@ -1,11 +1,5 @@
-.navbar-reserve-space{
-    height: 72px;
-    
-    @include media-breakpoint-up(lg) { 
-        height: 100px;
-    }
-  }
-
+// 導覽列
+// 預留空間
 .nav-reserve-space{
   height: 44px;
   @include media-breakpoint-up(lg) { 
@@ -150,4 +144,18 @@
 // 修正顯示更多按鈕點擊範圍
 .hideMoreButton, .hideMoreMessagesButton{
   display: inline-block;
+}
+
+// 導覽列 - 樣式設定
+#courseIntroductionNav{
+  .nav-link{
+    color: $gray-700;
+
+    &:hover{
+      color: $primary;
+    }
+  }
+  .active{
+    color: $primary;
+  }
 }

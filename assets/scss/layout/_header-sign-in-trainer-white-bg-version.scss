@@ -1,0 +1,7 @@
+.navbar-reserve-space {
+  height: 52px;
+
+  @include media-breakpoint-up(lg) {
+    height: 104px;
+  }
+}

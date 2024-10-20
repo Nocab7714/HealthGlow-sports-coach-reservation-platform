@@ -5,13 +5,13 @@
     <title>Health Glow | 教練及課程介紹</title>
   </head>
   <body>
-    <%- include('./layout/header-sign-in-trainer.ejs'); -%>
-    <div class="bg-gray-300 navbar-reserve-space"></div>
+    <%- include('./layout/header-sign-in-trainer-white-bg-version.ejs'); -%>
+
     <!-- 導覽列 -->
     <!-- 教練介紹、課程內容、專業證照、客戶評價 -->
     <div
-      class="fixed-top shadow-none shadow-md-sm bg-gray-custom-03"
-      style="top: auto !important"
+      class="position-fixed shadow-none shadow-md-sm bg-gray-custom-03 w-100 z-5"
+      id="courseIntroductionNav"
     >
       <ul
         class="nav nav-underline container justify-content-center justify-content-md-start pe-0"
@@ -27,7 +27,7 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
             href="#courseContent"
           >
             <span class="d-none d-md-block">課程內容</span
@@ -36,7 +36,7 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
             href="#professionalCertification"
           >
             <span class="d-none d-md-block">專業證照</span
@@ -45,7 +45,7 @@
         </li>
         <li class="nav-item">
           <a
-            class="nav-link fw-normal link-gray-700 fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
             href="#customerReviews"
           >
             <span class="d-none d-md-block">客戶評價</span
@@ -1316,15 +1316,14 @@
           // 顯示被隱藏的評價內容
           $('.showMoreMessages').show();
         });
-      });
+        // 導覽列 - 樣式切換
+        $('.nav-link').click(function (e) {
+          // 移除其他連結的 active 樣式
+          $('.nav-link').removeClass('active');
 
-      // lightbox2
-      import 'lightbox2/dist/css/lightbox.css';
-      import 'lightbox2';
-      lightbox.option({
-        fitImagesInViewport: true, // 確保圖片在視窗中縮放以適應大小
-        imageFadeDuration: 300, // 圖片加載後淡入的時間（毫秒）。
-        fadeDuration: 300, // 圖片大小變換時的動畫時長
+          // 將 active 樣式加到當前點擊的連結上
+          $(this).addClass('active');
+        });
       });
     </script>
   </body>
