@@ -78,9 +78,7 @@
 .whitespace-nowrap{
     white-space:nowrap;
 }
-.content-box{
 
-}
 
 // swiper
 .feedback-avatar1{
@@ -99,81 +97,53 @@
     height: 24px;
 }
 
-  .swiper-slide {
-    // text-align: center;
-    // font-size: 18px;
-    // background: #fff;
-    // display: flex;
-    // justify-content: center;
-    // align-items: center;
+// swiper
+
+// font-family 修改
+// .swiper-students-review .swiper-button-prev:after, .swiper-rtl .swiper-button-next:after {
+//   content:'\e5c4' !important; 
+// }
+// .swiper-students-review .swiper-button-next:after{
+//   content:'\e5c8' !important; 
+// }
+.swiper-students-review .swiper-button-prev:after, .swiper-button-next:after {
+  font-family:'Material Icons' !important; 
+}
+
+.swiper-students-review .swiper-button-prev{
+  left: 13% ; 
+}
+.swiper-students-review .swiper-button-next{
+  right: 13% ; 
+}
+
+.swiper-students-review .swiper-button-prev::after{
+  content: "\e5c4";
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  color: #3C4A4B;
+  border: 2px solid #3C4A4B;
+  padding: 10px;
+  background-color: #fff;
+}
+.swiper-students-review .swiper-button-next::after{
+  content: "\e5c8";
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  color: #3C4A4B;
+  border: 2px solid #3C4A4B;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.swiper-students-review .swiper-slide{
+  height: 634px !important;  
+  @include media-breakpoint-down(md) {
+    height: 558px !important;  
   }
-
-  .swiper-slide img {
-    // display: block;
-    // width: 100%;
-    // height: 100%;
-    // object-fit: cover;
-  }
-
-  //
-.swiper{
-    // width: 100%;
-    // img{
-    //     @include media-breakpoint-down(md) {
-    //         max-width: 100%;
-    //     }
-    // }
-}
-// .swiper-slide{
-//     box-shadow: 0px 10px 40px 4px #0000000F;
-//     background-color: white;
-// }
-// .articleContent{
-//     padding: 20px 32px 32px 32px;
-//     @include media-breakpoint-down(md) {
-//          padding:12px 16px 16px 16px;
-//     }
-// }
-
-// 前後頁箭頭
-.swiper-button-next.swiper-button-disabled,
-.swiper-button-prev.swiper-button-disabled {
-     opacity: 1;
 }
 
-//前一頁樣式
-// .swiper-button-prev{
-//     left: -45px;
-//     top: 50%; 
-//     // @include mobil(){
-//     //     display: none;
-//     // }
-// }
-.swiper-button-prev::after{
-    content:'\e5c4';
-    font-family:'Material Icons';
-    border: 1px solid black;
-    color: black;
-    font-size: 24px;
-    padding: 8px;
-}
-// //下一頁樣式
-// .swiper-button-next{
-//     right: -45px;
-//     top: 50%;
-//     // @include mobil(){
-//     //     display: none;
-//     // }
-// }
-// .swiper-button-next::after{
-//     content:'\e5c8';
-//     font-family:'Material Icons';
-//     display: inline-block;
-//     border: 1px solid black;
-//     color: black;
-//     font-size: 24px;
-//     padding: 8px;
-// }
+
 
 .bg-height{
     height: 300px;
@@ -182,14 +152,16 @@
     }
 }
 
-// 背景logo圖案
+// 學員評價背景logo圖案
 .logo_primary{
-    top: 322px;
-    right: 210px;
+    top: 360px;
+    right: 220px;
+    z-index: 3;
 }
 .logo_accent{
-    top: 101px;
-    left: 200px;
+    bottom: 68px;
+    left: 215px;
+    z-index: 3;
 }
 
 // 註冊教練
@@ -261,4 +233,9 @@
       top: 18%;
     }
   }
+}
+
+// img max-width
+.img-max-width{
+  max-width: 100%;
 }
