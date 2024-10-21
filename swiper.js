@@ -4,9 +4,10 @@ import 'swiper/css/bundle';
 
 // init Swiper
 //首頁 swiper
+
 const swiperStudent = new Swiper('.swiper-students-review', {
   // 手機版顯示
-  slidesPerView: 1.5,
+  slidesPerView: 1.25,
   spaceBetween: 16,
   centeredSlides: true,
   loop: true,
