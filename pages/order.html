@@ -66,8 +66,9 @@
         <div class="bg-secondary">
             <div class="container">
                 <div class="py-md-15">
-                    <div>
-                       <ul class="d-flex align-items-center ">
+                    <div class="mb-10">
+                    <!-- 預約順序 -->
+                       <ul class="d-flex align-items-center mb-0 p-0">
                             <li class="d-flex align-items-center pe-5">
                                 <button
                                     type="button"
@@ -86,67 +87,198 @@
                             <li class="ps-5 d-flex align-items-center pe-5">
                                 <button
                                     type="button"
-                                    class="btn btn-sm btn-warning rounded-pill text-secondary fw-bold font-anton-700 fs-4"
+                                    class="btn btn-sm btn-gray-300 rounded-pill text-secondary fw-bold font-anton-700 fs-4"
                                     style="width: 44px; height: 44px; line-height: 0.4; cursor: default"
                                 >
                                 1
                                 </button>
-                                <a href="#" class="h5 text-warning ps-4">
+                                <a href="#" class="h5 text-gray-300 ps-4">
                                     預約時段
                                 </a>
                             </li>
                             <li>
-                                <i class="bi bi-chevron-right text-warning fw-bold h4"></i>
+                                <i class="bi bi-chevron-right text-gray-300 fw-bold h4"></i>
                             </li>
                             <li class="ps-5 d-flex align-items-center pe-5">
                                 <button
                                     type="button"
-                                    class="btn btn-sm btn-warning rounded-pill text-secondary fw-bold font-anton-700 fs-4"
+                                    class="btn btn-sm btn-gray-300 rounded-pill text-secondary fw-bold font-anton-700 fs-4"
                                     style="width: 44px; height: 44px; line-height: 0.4; cursor: default"
                                 >
                                 1
                                 </button>
-                                <a href="#" class="h5 text-warning ps-4">
+                                <a href="#" class="h5 text-gray-300 ps-4">
                                     預約時段
                                 </a>
                             </li>
                        </ul> 
                     </div>
-                    <!-- <div class="position-relative m-4 px-3">
-                        <div class="progress" style="height: 1px">
-                          <div
-                            class="progress-bar w-100"
-                            role="progressbar"
-                            aria-valuenow="50"
-                            aria-valuemin="0"
-                            aria-valuemax="100"
-                          ></div>
+                    <div class="bg-gray-200">
+                      <h3 class="h3 text-secondary text-center pt-56">
+                        挑選日期時段
+                      </h3>
+                      <div class="bar-80 mt-4 bg-secondary mx-auto">
+                      </div>
+                      <div class="pt-10">
+                        <div class="row">
+                          <div class="col-md-6 mx-auto px-44">
+                            <h5 class="h5 text-secondary pb-4">日期</h5>
+                            <div>
+                              <div class="calendar-header">
+                                <button class="prev-month" onclick="prevMonth()">&#10094;</button>
+                                <span id="calendar-month"></span>
+                                <button class="next-month" onclick="nextMonth()">&#10095;</button>
+                              </div>
+                              <table class="table canlender-table-style">
+                                <thead>
+                                  <tr class="text-center">
+                                    <th scope="col" class="border-0">
+                                      <span class="fs-7 text-gray-800">日</span>
+                                    </th>
+                                    <th scope="col" class="border-0">
+                                      <span class="fs-7 text-gray-800">一</span>
+                                    </th>
+                                    <th scope="col" class="border-0">
+                                      <span class="fs-7 text-gray-800">二</span>
+                                    </th>
+                                    <th scope="col" class="border-0">
+                                      <span class="fs-7 text-gray-800">三</span>
+                                    </th>
+                                    <th scope="col" class="border-0">
+                                      <span class="fs-7 text-gray-800">四</span>
+                                    </th>
+                                    <th scope="col" class="border-0">
+                                      <span class="fs-7 text-gray-800">五</span>
+                                    </th>
+                                    <th scope="col" class="border-0">
+                                      <span class="fs-7 text-gray-800">六</span>
+                                    </th>
+                                  </tr>
+                                </thead>
+                                <tbody>
+                                  <tr class="text-center">
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">1</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">2</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">3</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">4</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">5</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">6</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">7</span>
+                                    </td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">8</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">9</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">10</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">11</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">12</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">13</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">14</span>
+                                    </td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">15</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">16</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">17</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">18</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">19</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">20</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">21</span>
+                                    </td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">22</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">23</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">24</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">25</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">26</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">27</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">28</span>
+                                    </td>
+                                  </tr>
+                                  <tr class="text-center">
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">29</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      <span class="fs-5">30</span>
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      
+                                    </td>
+                                    <td scope="col" class="border-0">
+                                      
+                                    </td>
+                                  </tr>
+                                  
+                                </tbody>
+                              </table>
+                            </div>
+                          </div>
                         </div>
-                        <button
-                          type="button"
-                          class="position-absolute top-0 start-0 ms-3
-                          translate-middle btn btn-sm btn-primary rounded-pill text-white"
-                          style="width: 2rem; height: 2rem; cursor: default"
-                        >
-                          1
-                        </button>
-                        <button
-                          type="button"
-                          class="position-absolute top-0 start-50 translate-middle
-                          btn btn-sm btn-primary rounded-pill text-white"
-                          style="width: 2rem; height: 2rem; cursor: default"
-                        >
-                          2
-                        </button>
-                        <button
-                          type="button"
-                          class="position-absolute top-0 translate-middle
-                          btn btn-sm btn-primary rounded-pill text-white"
-                          style="width: 2rem; height: 2rem; left: 99%; cursor: default"
-                        >
-                          3
-                        </button>
-                    </div> -->
+                      </div>
+                    </div>
                 </div>
             </div>
         </div>

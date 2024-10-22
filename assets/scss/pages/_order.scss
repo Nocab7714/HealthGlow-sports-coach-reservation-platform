@@ -26,3 +26,31 @@
         left: 25%;
     }
 }
+
+.bg-light-gray{
+    background-color: $body-secondary-bg;
+}
+
+.bar-80{
+    width: 80px;
+    height: 8px;   
+}
+;
+.canlender-table-style{
+    span{
+        display: inline-block;
+        align-content: center;
+        width: 44px;
+        height: 44px;
+        text-align: center; /* 文字水平居中 */
+        line-height: 44px; /* 文字水平居中 */
+        color: $gray-800;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, color 0.3s ease; /* 動畫效果 */
+        &:hover, &:active{
+            background-color: #00B3BF;
+            border-radius: 50%;
+            color: #fff; 
+        }
+    }
+}
