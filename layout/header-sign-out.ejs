@@ -48,12 +48,22 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link link-light fw-semibold link-line-white" href="#"
+          <a
+            class="nav-link link-light fw-semibold link-line-white"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignInModal"
+            style="cursor: pointer"
             >登入</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link link-light fw-semibold" href="#">註冊</a>
+          <a
+            class="nav-link link-light fw-semibold"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignUpModal"
+            style="cursor: pointer"
+            >註冊</a
+          >
         </li>
       </ul>
     </div>
@@ -353,12 +363,20 @@
         <li class="nav-item">
           <a
             class="nav-link fw-semibold link-line-gray-800 text-nowrap"
-            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignInModal"
+            style="cursor: pointer"
             >登入</a
           >
         </li>
         <li class="nav-item me-8">
-          <a class="nav-link fw-semibold text-nowrap" href="#">註冊</a>
+          <a
+            class="nav-link fw-semibold text-nowrap"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignUpModal"
+            style="cursor: pointer"
+            >註冊</a
+          >
         </li>
         <li class="nav-item">
           <a class="btn btn-primary text-light fw-semibold text-nowrap" href="#"
@@ -422,10 +440,20 @@
       </li>
     </ul>
     <div class="py-8 px-6">
-      <button type="button" class="btn btn-primary text-white w-100 fs-5 mb-4">
+      <button
+        type="button"
+        class="btn btn-primary text-white w-100 fs-5 mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignInModal"
+      >
         登入
       </button>
-      <button type="button" class="btn btn-outline-dark w-100 fs-5">
+      <button
+        type="button"
+        class="btn btn-outline-dark w-100 fs-5"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignUpModal"
+      >
         註冊
       </button>
     </div>
@@ -470,10 +498,20 @@
       </li>
     </ul>
     <div class="py-8 px-6">
-      <button type="button" class="btn btn-primary text-white w-100 fs-5 mb-4">
+      <button
+        type="button"
+        class="btn btn-primary text-white w-100 fs-5 mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignInModal"
+      >
         登入
       </button>
-      <button type="button" class="btn btn-outline-dark w-100 fs-5">
+      <button
+        type="button"
+        class="btn btn-outline-dark w-100 fs-5"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignUpModal"
+      >
         註冊
       </button>
     </div>
@@ -581,3 +619,4 @@
     </div>
   </form>
 </div>
+<%- include('./components/sign-in-and-sign-up-modal.ejs'); -%>
