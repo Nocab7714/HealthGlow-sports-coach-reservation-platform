@@ -54,3 +54,13 @@
         }
     }
 }
+
+.time-btn{
+    padding: 8px 16px;
+    background-color: #fff;
+    border: 1px solid black;
+    &:hover, &:active{
+        background-color: #00B3BF;
+        color: white;
+    }
+}

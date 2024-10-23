@@ -123,11 +123,20 @@
                         <div class="row">
                           <div class="col-md-6 mx-auto px-44">
                             <h5 class="h5 text-secondary pb-4">日期</h5>
-                            <div>
-                              <div class="calendar-header">
-                                <button class="prev-month" onclick="prevMonth()">&#10094;</button>
-                                <span id="calendar-month"></span>
-                                <button class="next-month" onclick="nextMonth()">&#10095;</button>
+                            <div class="p-6 bg-white">
+                              <div class="calendar-header d-flex justify-content-between mb-2">
+                                <button class="prev-month btn" onclick="prevMonth()">
+                                  <i class="bi bi-chevron-left"></i>
+                                </button>
+
+                                <div id="calendar-month"
+                                      class="w-100 d-flex justify-content-center align-items-center fs-5">
+                                  2024年 9月
+                                </div>
+                                
+                                <button class="next-month btn" onclick="nextMonth()">
+                                  <i class="bi bi-chevron-right"></i>
+                                </button>
                               </div>
                               <table class="table canlender-table-style">
                                 <thead>
@@ -277,6 +286,49 @@
                             </div>
                           </div>
                         </div>
+                      </div>
+                      <!--  -->
+                      <div class="pt-56">
+                        <div class="row">
+                          <div class="col-6 px-44 mx-auto">
+                            <h5 class="h5 text-secondary pb-4">
+                              可選擇的開始時間
+                            </h5>
+                            
+                            <div class="row">
+                              <div class="col">
+                                <div class="d-flex justify-content-between mb-4">
+                                    <div class="btn time-btn">9:00</div>
+                                    <div class="btn time-btn">9:30</div>
+                                    <div class="btn time-btn">10:00</div>
+                                    <div class="btn time-btn">10:30</div>
+                                    <div class="btn time-btn">11:00</div>
+                                    <div class="btn time-btn">11:30</div>
+                                    <div class="btn time-btn">12:00</div>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                  <div class="btn time-btn">12:30</div>
+                                  <div class="btn time-btn">13:00</div>
+                                  <div class="btn time-btn">13:30</div>
+                                  <div class="btn time-btn">14:00</div>
+                                  <div class="btn time-btn">14:30</div>
+                                  <div class="btn time-btn">15:00</div>
+                                  <div class="btn time-btn">15:30</div>
+                                </div>
+                                <div class="d-flex justify-content-between mb-4">
+                                  <div class="btn time-btn">16:00</div>
+                                  <div class="btn time-btn">16:30</div>
+                                  <div class="btn time-btn">17:00</div>
+                                  <div class="btn time-btn">17:30</div>
+                                  <div class="btn time-btn">18:00</div>
+                                  <div class="btn time-btn">18:30</div>
+                                  <div class="btn time-btn">19:00</div>
+                              </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
                       </div>
                     </div>
                 </div>
