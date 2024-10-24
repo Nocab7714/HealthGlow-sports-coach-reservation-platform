@@ -29,3 +29,25 @@
     }
   }
 }
+.student{
+  .list-group{
+    padding: 16px;
+    background-color: white;
+    gap: 12px;
+    text-align: center;
+  }
+  .list-group-item{
+    color: $secondary;
+    border: 0;
+  }
+  .list-group-item{
+    &:first-child, &:last-child{
+      border-radius: 0;
+    }
+  }
+  .list-group-item.active{
+    background-color: #00B3BF33;
+    font-weight: 500;
+    
+  }
+}

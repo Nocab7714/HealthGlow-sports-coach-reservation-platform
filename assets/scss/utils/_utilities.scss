@@ -131,6 +131,7 @@ $utilities: map-merge(
     // scss-docs-end utils-position
     // scss-docs-start utils-borders
     "border": (
+      responsive: true,
       property: border,
       responsive: true,
       values: (
@@ -533,6 +534,7 @@ $utilities: map-merge(
       values: italic normal
     ),
     "font-weight": (
+      responsive: true,  // *custom
       property: font-weight,
       class: fw,
       values: (
@@ -700,6 +702,7 @@ $utilities: map-merge(
       class: bg-opacity,
       values: (
         10: .1,
+        20: .2, // *custom
         25: .25,
         50: .5,
         75: .75,
