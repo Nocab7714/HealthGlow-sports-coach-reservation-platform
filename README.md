@@ -47,8 +47,13 @@ npm run dev
 
 - Vite 4.5.3
 - Bootstrap 5.3.3
-- Bootstrap Icons 1.11.3
 - Swiper 11.1.10
-- Aos 3.0.0-beta.6
+- AOS 3.0.0-beta.6
+- GSAP 3.12.5
+- Lightbox2 2.11.5
+- jQuery 3.7.1
+- Bootstrap Icons 1.11.3
+- Tabler icons
+- Flatpickr.js
 
 ## 聯絡作者

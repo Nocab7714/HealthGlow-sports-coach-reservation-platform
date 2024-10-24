@@ -1,13 +1,148 @@
-  .navbar-reserve-space{
+.navbar-reserve-space{
     height: 72px;
-
+    
     @include media-breakpoint-up(lg) { 
-      &{
         height: 100px;
-      }
     }
   }
 
-.bg-F9F9F9{
-background-color: #F9F9F9;
+.nav-reserve-space{
+  height: 44px;
+  @include media-breakpoint-up(lg) { 
+    height: 65px;
+  }
+}
+
+// 服務地區-按鈕樣式
+.area-of-service{
+  .nav-item{
+    .nav-link{
+      background-color: $white;
+      border: 1px solid $gray-800;
+      color: $dark;
+      font-weight: $font-weight-normal;
+  
+      &:hover{
+        background-color: $primary;
+        border: 1px solid $primary;
+        font-weight: $font-weight-semibold;
+        color: $white;
+      }
+    }
+  }
+} 
+
+.area-of-service.nav-pills .nav-link.active, .nav-pills .show > .nav-link{
+  background-color: $white;
+  color: $primary;
+  border: 1px solid $primary;
+  font-weight: $font-weight-semibold;
+}
+
+// google 地圖崁入大小調整
+.google-map-height{
+  height: 194px ;
+  
+  @include media-breakpoint-up(sm) { 
+    height: 340px;
+  }
+}
+
+// 課程內容 - input 課程搜尋
+// 響應式寬度調整
+.course-search-input-width{
+  width: 100%; 
+
+  @include media-breakpoint-up(lg) { 
+    width: 240px;
+  }
+}
+
+// 課程內容 - 手風琴元件樣式
+// 清除 accordion 按鈕下方的灰色線條
+#courseContent .accordion-button:not(.collapsed){
+  box-shadow: none !important;
+}
+
+// 課程內容 - 手風琴元件中選單元件
+// select 響應式寬度調整
+.course-content-select-width{
+  min-width: 94px; 
+  max-width: 120px;
+
+  @include media-breakpoint-up(lg) { 
+    min-width: 120px;
+  }
+}
+
+// 客戶留言 - textarea
+// textarea 響應式寬度調整
+.customer-comments{
+  width: 283px;
+  height: 100px;
+
+  &::placeholder{
+    color: $gray-600;
+  }
+
+  @include media-breakpoint-up(lg){
+    min-width: 634px;
+    height: 152px;
+  }
+} 
+
+// swiper 輪播樣式設定
+.swiperCourseIntroduction{
+
+  .swiper-bkg{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 252px;
+
+    @include media-breakpoint-up(md){
+      height: 368px;
+    }
+  }
+
+  .swiper-pagination-CourseIntroduction{
+    z-index: 2;
+    width: 36px !important;
+    height: 22px !important; 
+    color: white !important;
+    font-weight: $font-weight-normal;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+  }
+  .swiper-pagination-fraction{
+
+    background-color: rgba($color: #000000, $alpha: 0.6);
+    left: auto !important;
+    bottom: 16px !important;
+    right: 16px !important;
+    border-radius: 20px;
+  }
+}
+
+// 文字超過 11 行進行截斷
+.multiline-ellipsis-11line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 11;
+  overflow: hidden;
+  word-break: break-word;     
+  white-space: normal;
+}
+
+// 文字超過 4 行進行截斷
+.multiline-ellipsis-4line {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 4;
+  overflow: hidden;
+  word-break: break-word;     
+  white-space: normal;
 }

@@ -133,6 +133,7 @@ $utilities: map-merge(
     "border": (
       responsive: true,
       property: border,
+      responsive: true,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -140,6 +141,7 @@ $utilities: map-merge(
     ),
     "border-top": (
       property: border-top,
+      responsive: true,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -147,6 +149,7 @@ $utilities: map-merge(
     ),
     "border-end": (
       property: border-right,
+      responsive: true,
       class: border-end,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
@@ -155,6 +158,7 @@ $utilities: map-merge(
     ),
     "border-bottom": (
       property: border-bottom,
+      responsive: true,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -162,6 +166,7 @@ $utilities: map-merge(
     ),
     "border-start": (
       property: border-left,
+      responsive: true,
       class: border-start,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
@@ -170,6 +175,7 @@ $utilities: map-merge(
     ),
     "border-color": (
       property: border-color,
+      responsive: true,
       class: border,
       state: hover,  // *custom
       local-vars: (
@@ -179,16 +185,19 @@ $utilities: map-merge(
     ),
     "subtle-border-color": (
       property: border-color,
+      responsive: true,
       class: border,
       values: $utilities-border-subtle
     ),
     "border-width": (
       property: border-width,
+      responsive: true,
       class: border,
       values: $border-widths
     ),
     "border-opacity": (
       css-var: true,
+      responsive: true,
       class: border-opacity,
       values: (
         10: .1,
@@ -203,6 +212,7 @@ $utilities: map-merge(
     // scss-docs-start utils-sizing
     "width": (
       property: width,
+      responsive: true,
       class: w,
       values: (
         25: 25%,
@@ -672,6 +682,7 @@ $utilities: map-merge(
     // scss-docs-start utils-bg-color
     "background-color": (
       property: background-color,
+      responsive: true,
       class: bg,
       state: hover,  // *custom
       local-vars: (
