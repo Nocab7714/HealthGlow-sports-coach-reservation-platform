@@ -1,0 +1,4 @@
+// 修正 input floating 套用背景顏色
+.form-floating >label:after{
+  background-color: transparent !important;
+}
