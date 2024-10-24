@@ -124,7 +124,7 @@
     style="max-width: 160px"
   >
     <span
-      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle z-1"
       style="left: 24px"
     >
       schedule
@@ -146,7 +146,6 @@
     </button>
   </li>
 </ul>
-
 
 <!-- navbar 搜尋課程、地點 資料 -->
 <script>
@@ -234,9 +233,9 @@
   ];
 </script>
 <!-- 載入 flatpickr  -->
-<script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
 <!-- flatpickr 客製 -->
-<script>
+<!-- <script>
   flatpickr('.datepicker', {
     onReady: function (selectedDates, dateStr, instance) {
       const newDiv = document.createElement('div');
@@ -286,4 +285,4 @@
       instance.calendarContainer.append(newUl, newDiv);
     },
   });
-</script>   
+</script>    -->

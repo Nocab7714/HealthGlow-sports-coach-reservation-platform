@@ -7,7 +7,7 @@
 </head>
 
 <body>
-  <%- include('./layout/header-sign-in-trainer.ejs'); -%>
+  <%- include('./layout/header-sign-out.ejs'); -%>
     <!-- banner -->
     <section class="home-banner d-flex flex-column justify-content-center">
       <div class="container">
@@ -99,7 +99,15 @@
         </div>
       </div>
     </section>
-
+    <div>
+      <input
+      id="datepicker"
+      type="search"
+      class="datepicker form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      data-bs-toggle="dropdown" type="search"
+      placeholder="時間？" aria-label="Search" aria-expanded="false"
+    />
+    </div>
     <!-- 課程類別推薦 -->
     <section class="recommend-sport-type">
       <div class="mx-auto position-relative" style="max-width: 1500px">
