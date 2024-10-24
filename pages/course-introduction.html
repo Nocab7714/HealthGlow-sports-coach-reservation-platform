@@ -17,7 +17,7 @@
       >
         <li class="nav-item">
           <a
-            class="nav-link fw-medium fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10 active"
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10 active"
             href="#coachIntroduction "
           >
             <span class="d-none d-md-block">教練介紹</span
@@ -53,13 +53,14 @@
         </li>
       </ul>
     </div>
-    <div class="nav-reserve-space"></div>
     <div
       data-bs-spy="scroll"
       data-bs-target="#courseIntroductionNav"
       data-bs-smooth-scroll="true"
       tabindex="0"
     >
+      <div class="nav-reserve-space"></div>
+
       <div class="bg-gray-custom-03">
         <div class="py-0 py-lg-11">
           <div class="container">
@@ -1344,14 +1345,6 @@
           $('.hideMoreMessagesButton').hide();
           // 顯示被隱藏的評價內容
           $('.showMoreMessages').show();
-        });
-        // 導覽列 - 樣式切換
-        $('.nav-link').click(function (e) {
-          // 移除其他連結的 active 樣式
-          $('.nav-link').removeClass('active');
-
-          // 將 active 樣式加到當前點擊的連結上
-          $(this).addClass('active');
         });
       });
     </script>

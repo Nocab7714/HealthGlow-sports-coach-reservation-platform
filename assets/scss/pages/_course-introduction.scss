@@ -157,6 +157,7 @@
   }
   .active{
     color: $primary;
+    font-weight: $font-weight-medium !important; 
   }
 }
 
@@ -165,6 +166,6 @@
   scroll-margin-top: 100px;
 
   @include media-breakpoint-up(md){
-    scroll-margin-top: 200px;
+    scroll-margin-top: 180px;
   }
 }
