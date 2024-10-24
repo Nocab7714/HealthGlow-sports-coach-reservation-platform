@@ -7,7 +7,10 @@
 </head>
 
 <body>
+  <%- include('./layout/header-sign-in-trainer.ejs'); -%>
+  
   <main class="student">
+    
     <header class="student-banner">
       <div class="container h-100">
         <div class="h-100 d-flex flex-column justify-content-center align-items-md-center">
@@ -21,66 +24,266 @@
         </div>
       </div>
     </header>
-    <section>
+    <section class="py-10 py-md-15">
       <div class="container">
         <ul class="nav nav-tabs mb-4 mb-md-6" id="myTab" role="tablist">
           <li class="nav-item" role="presentation">
-            <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#recommend-course-tab-pane" type="button" role="tab" aria-controls="recommend-course-tab-pane" aria-selected="true">即時推薦可預約的課程</button>
+            <button class="nav-link active" id="home-tab" data-bs-toggle="tab"
+              data-bs-target="#recommend-course-tab-pane" type="button" role="tab"
+              aria-controls="recommend-course-tab-pane" aria-selected="true"><span
+                class="d-none d-md-inline">即時推薦</span>可預約的課程</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane" type="button" role="tab" aria-controls="calendar-tab-pane" aria-selected="false">行事曆</button>
+            <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#calendar-tab-pane"
+              type="button" role="tab" aria-controls="calendar-tab-pane" aria-selected="false">行事曆</button>
           </li>
           <li class="nav-item" role="presentation">
-            <button class="nav-link" id="all-booking-record-tab" data-bs-toggle="tab" data-bs-target="#all-booking-record-tab-pane" type="button" role="tab" aria-controls="all-booking-record-tab-pane" aria-selected="false">所有預約記錄</button>
+            <button class="nav-link" id="all-booking-record-tab" data-bs-toggle="tab"
+              data-bs-target="#all-booking-record-tab-pane" type="button" role="tab"
+              aria-controls="all-booking-record-tab-pane" aria-selected="false"><span
+                class="d-none d-md-inline">所有</span>預約記錄</button>
           </li>
         </ul>
-        <div class="tab-content border border-2 border-primary mx-n3 mx-sm-0 py-4 px-3 p-md-6" id="myTabContent">
-          <div class="tab-pane fade show active" id="recommend-course-tab-pane" role="tabpanel" aria-labelledby="recommend-course-tab" tabindex="0">
-            <h2>即時推薦可預約的課程</h2>
+        <div class="tab-content border border-2 border-primary mx-n3 mx-sm-0 py-4 px-3 p-md-6 bg-gray-100" id="myTabContent">
+          <div class="tab-pane fade show active" id="recommend-course-tab-pane" role="tabpanel"
+            aria-labelledby="recommend-course-tab" tabindex="0">
+            <h2 class="text-secondary fs-5 fs-md-3 mb-6 text-center text-md-start">即時推薦可預約的課程</h2>
             <div class="row">
-              <div class="col-4">
+              <div class="col-md-2">
                 <div class="list-group" id="list-tab" role="tablist">
-                  <a class="list-group-item list-group-item-action active" id="recommend-course-list" data-bs-toggle="list" href="#recommend-course" role="tab" aria-controls="recommend-course">即時推薦</a>
-                  <a class="list-group-item list-group-item-action" id="recommend-course-by-reviews-list" data-bs-toggle="list" href="#recommend-course-by-reviews" role="tab" aria-controls="recommend-course-by-reviews">最多評價</a>
-                  <a class="list-group-item list-group-item-action" id="recommend-course-by-popular-list" data-bs-toggle="list" href="#recommend-course-by-popular" role="tab" aria-controls="recommend-course-by-popular">熱門課程</a>
-                  <a class="list-group-item list-group-item-action" id="recommend-course-by-discount-list" data-bs-toggle="list" href="#recommend-course-by-discount" role="tab" aria-controls="recommend-course-by-discount">優惠課程</a>
+                  <a class="list-group-item list-group-item-action active" id="recommend-course-list"
+                    data-bs-toggle="list" href="#recommend-course" role="tab" aria-controls="recommend-course">即時推薦</a>
+                  <a class="list-group-item list-group-item-action" id="recommend-course-by-reviews-list"
+                    data-bs-toggle="list" href="#recommend-course-by-reviews" role="tab"
+                    aria-controls="recommend-course-by-reviews">最多評價</a>
+                  <a class="list-group-item list-group-item-action" id="recommend-course-by-popular-list"
+                    data-bs-toggle="list" href="#recommend-course-by-popular" role="tab"
+                    aria-controls="recommend-course-by-popular">熱門課程</a>
+                  <a class="list-group-item list-group-item-action" id="recommend-course-by-discount-list"
+                    data-bs-toggle="list" href="#recommend-course-by-discount" role="tab"
+                    aria-controls="recommend-course-by-discount">優惠課程</a>
                 </div>
               </div>
-              <div class="col-8">
+              <div class="col-md-10">
                 <div class="tab-content" id="nav-tabContent">
-                  <div class="tab-pane fade show active" id="recommend-course" role="tabpanel" aria-labelledby="recommend-course-list">
-                    <!-- card  -->
-                    <div class="card mb-3" style="max-width: 540px;">
-                      <div class="row g-0">
-                        <div class="col-md-4">
-                          <img src="../assets/images/img/avatar-02.webp" class="img-fluid rounded-start" alt="...">
+                  <div class="tab-pane fade show active" id="recommend-course" role="tabpanel"
+                    aria-labelledby="recommend-course-list">
+                    <!-- card 1 -->
+                    <div class="card mb-6 p-0 py-md-6 px-md-8">
+                      <div class="d-flex gap-md-10 align-items-center">
+                        <div class="text-center d-none d-md-block">
+                          <img src="../assets/images/img/avatar-02.webp" class="img-fluid rounded-start mb-1 mb-md-2"
+                            alt="coach Chole profile photo">
+                          <h5 class="text-secondary fs-6 fs-md-5">Chole</h5>
                         </div>
-                        <div class="col-md-8">
-                          <div class="card-body">
-                            <h5 class="card-title">Card title</h5>
-                            <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
-                            <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+                          <div class="card-body d-md-flex gap-md-15 p-md-0">
+                            <div style="max-width: 598px;">
+                              <div class="d-flex gap-5 mb-4 mb-md-5">
+                                <div class="d-md-none text-center" style="max-width: 64px;">
+                                  <img src="../assets/images/img/avatar-02.webp"
+                                    class="img-fluid rounded-start mb-1 mb-md-2" alt="coach Chole profile photo">
+                                  <h5 class="text-secondary fs-6 fs-md-5">Chole</h5>
+                                </div>
+                                <div>
+                                  <a href="#">
+                                    <h5 class="card-title text-secondary link-primary fs-6 fs-md-5 mb-3 ">有氧 TRX 瑜伽課程 - 不需自備器材，人來就練！</h5>
+                                  </a>
+                                  <div class="d-flex gap-3 mb-2 mb-md-3">
+                                    <span
+                                      class="badge text-secondary text-bg-primary bg-opacity-20 fs-8 fs-md-6 fw-normal fw-md-medium">#TRX
+                                      教練</span>
+                                    <span
+                                      class="badge text-secondary text-bg-primary bg-opacity-20 fs-8 fs-md-6 fw-normal fw-md-medium">#打造完美曲線</span>
+                                  </div>
+                                  <div class="d-flex align-items-center gap-2">
+                                    <p class="text-primary font-anton-regular fs-5-5 fs-md-5">5.0</p>
+                                    <div class="d-flex align-items-center">
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                    </div>
+                                    <span class="text-gray-600 fs-7">(1,200評價)</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <p class="card-text mb-2 text-gray-700">
+                                TRX也可以和瑜伽合再一起？想要打造良好運動習慣,擔心器材不會使用?還是擔心沒有專人教學容易受傷?擁有多張證照,專業認證。兼具營養師背景,讓你除了維持良好運動習慣,更可以有效針對你的問題,對症...
+                              </p>
+                              <a href="#" class="card-text d-flex align-items-center text-primary fw-semibold mb-3 mb-md-0">
+                                <span class="material-symbols-outlined">arrow_drop_down</span>瀏覽更多</small>
+                              </a>
+                            </div>
+                            <div
+                              class="d-flex flex-md-column gap-8 gap-md-6 justify-content-md-start align-items-md-end border-top border-2 border-gray-200 pt-3 border-md-0 pt-md-0 lh-sm">
+                              <div class="text-md-end">
+                                <span class="text-gray-600 fw-normal fs-7 fs-md-6 lh-base">60 分鐘</span>
+                                <p class="font-anton-regular text-secondary fs-5 fs-md-3-5 lh-sm">NT$ 2,000</p>
+                              </div>
+                              <a href="#" role="button"
+                                class="btn btn-primary-radial-gradient py-2 py-md-3 px-3 px-md-6 home-banner-input-btn flex-grow-1 flex-md-grow-0"
+                                type="search">
+                                我要預約
+                              </a>
+                            </div>
                           </div>
-                        </div>
                       </div>
                     </div>
-
+                    <!-- card 2 -->
+                    <div class="card mb-6 p-0 py-md-6 px-md-8">
+                      <div class="d-flex gap-md-10 align-items-center">
+                        <div class="text-center d-none d-md-block">
+                          <img src="../assets/images/img/avatar-01.webp" class="img-fluid rounded-start mb-1 mb-md-2"
+                            alt="coach Jason profile photo">
+                          <h5 class="text-secondary fs-6 fs-md-5">Jason</h5>
+                        </div>
+                          <div class="card-body d-md-flex gap-md-15 p-md-0">
+                            <div style="max-width: 598px;">
+                              <div class="d-flex gap-5 mb-4 mb-md-5">
+                                <div class="d-md-none text-center" style="max-width: 64px;">
+                                  <img src="../assets/images/img/avatar-01.webp"
+                                    class="img-fluid rounded-start mb-1 mb-md-2" alt="coach Jason profile photo">
+                                  <h5 class="text-secondary fs-6 fs-md-5">Jason</h5>
+                                </div>
+                                <div>
+                                  <a href="#">
+                                    <h5 class="card-title text-secondary link-primary fs-6 fs-md-5 mb-3">有氧 TRX 瑜伽課程 - 不需自備器材，人來就練！</h5>
+                                  </a>
+                                  <div class="d-flex gap-3 mb-2 mb-md-3">
+                                    <span
+                                      class="badge text-secondary text-bg-primary bg-opacity-20 fs-8 fs-md-6 fw-normal fw-md-medium">#TRX
+                                      教練</span>
+                                    <span
+                                      class="badge text-secondary text-bg-primary bg-opacity-20 fs-8 fs-md-6 fw-normal fw-md-medium">#打造完美曲線</span>
+                                  </div>
+                                  <div class="d-flex align-items-center gap-2">
+                                    <p class="text-primary font-anton-regular fs-5-5 fs-md-5">5.0</p>
+                                    <div class="d-flex align-items-center">
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                    </div>
+                                    <span class="text-gray-600 fs-7">(1,200評價)</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <p class="card-text mb-2 text-gray-700">
+                                TRX也可以和瑜伽合再一起？想要打造良好運動習慣,擔心器材不會使用?還是擔心沒有專人教學容易受傷?擁有多張證照,專業認證。兼具營養師背景,讓你除了維持良好運動習慣,更可以有效針對你的問題,對症...
+                              </p>
+                              <a href="#" class="card-text d-flex align-items-center text-primary fw-semibold mb-3 mb-md-0">
+                                <span class="material-symbols-outlined">arrow_drop_down</span>瀏覽更多</small>
+                              </a>
+                            </div>
+                            <div
+                              class="d-flex flex-md-column gap-8 gap-md-6 justify-content-md-start align-items-md-end border-top border-2 border-gray-200 pt-3 border-md-0 pt-md-0 lh-sm">
+                              <div class="text-md-end">
+                                <span class="text-gray-600 fw-normal fs-7 fs-md-6 lh-base">60 分鐘</span>
+                                <p class="font-anton-regular text-secondary fs-5 fs-md-3-5 lh-sm">NT$ 2,000</p>
+                              </div>
+                              <a href="#" role="button"
+                                class="btn btn-primary-radial-gradient py-2 py-md-3 px-3 px-md-6 home-banner-input-btn flex-grow-1 flex-md-grow-0"
+                                type="search">
+                                我要預約
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- card 3 -->
+                    <div class="card mb-6 p-0 py-md-6 px-md-8">
+                      <div class="d-flex gap-md-10 align-items-center">
+                        <div class="text-center d-none d-md-block">
+                          <img src="../assets/images/img/avatar-04.webp" class="img-fluid rounded-start mb-1 mb-md-2"
+                            alt="coach Mark profile photo">
+                          <h5 class="text-secondary fs-6 fs-md-5">Mark</h5>
+                        </div>
+                          <div class="card-body d-md-flex gap-md-15 p-md-0">
+                            <div style="max-width: 598px;">
+                              <div class="d-flex gap-5 mb-4 mb-md-5">
+                                <div class="d-md-none text-center" style="max-width: 64px;">
+                                  <img src="../assets/images/img/avatar-04.webp"
+                                    class="img-fluid rounded-start mb-1 mb-md-2" alt="coach Mark profile photo">
+                                  <h5 class="text-secondary fs-6 fs-md-5">Mark</h5>
+                                </div>
+                                <div>
+                                  <a href="#">
+                                    <h5 class="card-title text-secondary link-primary fs-6 fs-md-5 mb-3">有氧 TRX 瑜伽課程 - 不需自備器材，人來就練！</h5>
+                                  </a>
+                                  <div class="d-flex gap-3 mb-2 mb-md-3">
+                                    <span
+                                      class="badge text-secondary text-bg-primary bg-opacity-20 fs-8 fs-md-6 fw-normal fw-md-medium">#TRX
+                                      教練</span>
+                                    <span
+                                      class="badge text-secondary text-bg-primary bg-opacity-20 fs-8 fs-md-6 fw-normal fw-md-medium">#打造完美曲線</span>
+                                  </div>
+                                  <div class="d-flex align-items-center gap-2">
+                                    <p class="text-primary font-anton-regular fs-5-5 fs-md-5">5.0</p>
+                                    <div class="d-flex align-items-center">
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                      <span class="material-symbols-rounded star fs-6">star</span>
+                                    </div>
+                                    <span class="text-gray-600 fs-7">(1,200評價)</span>
+                                  </div>
+                                </div>
+                              </div>
+                              <p class="card-text mb-2 text-gray-700">
+                                TRX也可以和瑜伽合再一起？想要打造良好運動習慣,擔心器材不會使用?還是擔心沒有專人教學容易受傷?擁有多張證照,專業認證。兼具營養師背景,讓你除了維持良好運動習慣,更可以有效針對你的問題,對症...
+                              </p>
+                              <a href="#" class="card-text d-flex align-items-center text-primary fw-semibold mb-3 mb-md-0">
+                                <span class="material-symbols-outlined">arrow_drop_down</span>瀏覽更多</small>
+                              </a>
+                            </div>
+                            <div
+                              class="d-flex flex-md-column gap-8 gap-md-6 justify-content-md-start align-items-md-end border-top border-2 border-gray-200 pt-3 border-md-0 pt-md-0 lh-sm">
+                              <div class="text-md-end">
+                                <span class="text-gray-600 fw-normal fs-7 fs-md-6 lh-base">60 分鐘</span>
+                                <p class="font-anton-regular text-secondary fs-5 fs-md-3-5 lh-sm">NT$ 2,000</p>
+                              </div>
+                              <a href="#" role="button"
+                                class="btn btn-primary-radial-gradient py-2 py-md-3 px-3 px-md-6 home-banner-input-btn flex-grow-1 flex-md-grow-0"
+                                type="search">
+                                我要預約
+                              </a>
+                            </div>
+                          </div>
+                      </div>
+                    </div>
+                    <!-- pagination  -->
+                    <div class="d-flex align-items-center justify-content-center">
+                      <a href="#" role="button" class="pagination d-inline-block"></a>
+                      <span class="text-secondary">1/25</span>
+                      <a href="#" role="button" class="pagination d-inline-block rotate-180"></a>
+                    </div>
                   </div>
-                  <div class="tab-pane fade" id="recommend-course-by-reviews" role="tabpanel" aria-labelledby="recommend-course-by-reviews-list">最多評價</div>
-                  <div class="tab-pane fade" id="recommend-course-by-popular" role="tabpanel" aria-labelledby="recommend-course-by-popular-list">熱門課程</div>
-                  <div class="tab-pane fade" id="recommend-course-by-discount" role="tabpanel" aria-labelledby="recommend-course-by-discount-list">優惠課程</div>
+                  <div class="tab-pane fade" id="recommend-course-by-reviews" role="tabpanel"
+                    aria-labelledby="recommend-course-by-reviews-list">最多評價</div>
+                  <div class="tab-pane fade" id="recommend-course-by-popular" role="tabpanel"
+                    aria-labelledby="recommend-course-by-popular-list">熱門課程</div>
+                  <div class="tab-pane fade" id="recommend-course-by-discount" role="tabpanel"
+                    aria-labelledby="recommend-course-by-discount-list">優惠課程</div>
                 </div>
               </div>
             </div>
-          
+
           </div>
-          <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">行事曆</div>
-          <div class="tab-pane fade" id="all-booking-record-tab-pane" role="tabpanel" aria-labelledby="all-booking-record-tab" tabindex="0">所有預約記錄</div>
+          <div class="tab-pane fade" id="calendar-tab-pane" role="tabpanel" aria-labelledby="calendar-tab" tabindex="0">
+            行事曆</div>
+          <div class="tab-pane fade" id="all-booking-record-tab-pane" role="tabpanel"
+            aria-labelledby="all-booking-record-tab" tabindex="0">所有預約記錄</div>
         </div>
       </div>
     </section>
   </main>
+  
+  <%- include('./layout/footer'); -%>
   <script type="module" src="../main.js"></script>
+  
 </body>
 
 </html>

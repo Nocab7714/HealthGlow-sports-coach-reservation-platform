@@ -1,0 +1,9 @@
+.student{
+  .badge{
+    line-height: 1.5;
+    padding: 4px 8px;
+    @include media-breakpoint-up(md){
+      padding: 4px 16px;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+@mixin paginationButtonStyles {
+  content: "\e5c4";
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  color: $gray-800;
+  border: 2px solid $gray-800;
+  padding: 10px;
+  background-color: #fff;
+}

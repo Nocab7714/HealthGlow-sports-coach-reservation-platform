@@ -13,6 +13,9 @@ import 'aos/dist/aos.css'; // You can also use <link> for styles
 // AOS init
 AOS.init();
 
+// flatpickr
+import './plugins/flatpickr.js';
+
 // GSAP
 import './gsap.js';
 
