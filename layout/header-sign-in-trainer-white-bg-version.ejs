@@ -1,79 +1,8 @@
-<!-- navbar-sign-out-bg-transparent -->
+<!-- 導覽列預留空間，避免其他內容被 fixed-top 吃掉 -->
+<div class="navbar-reserve-space"></div>
+<!-- navbar-sign-in-trainer-bg-white -->
 <nav
-  class="navbar navbar-gsap-first navbar-expand-lg bg-transparent fixed-top py-4 py-lg-5"
->
-  <div class="container">
-    <a class="navbar-brand" href="index.html">
-      <picture>
-        <source
-          srcset="../assets/images/logo/logo-primary-text.svg"
-          media="(min-width: 992px)"
-          alt="主色 health glow logo"
-          class="img-fluid"
-          height="60"
-          width="130"
-        />
-        <img
-          src="../assets/images/logo/logo-primary-text.svg"
-          alt="主色 health glow logo"
-          class="img-fluid"
-          height="30"
-          width="64"
-        />
-      </picture>
-    </a>
-    <button
-      class="navbar-toggler border-0"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbarSignOut01"
-      aria-controls="offcanvasNavbarSignOut01"
-    >
-      <span class="material-symbols-outlined text-white"> menu </span>
-    </button>
-    <div class="collapse navbar-collapse">
-      <ul class="navbar-nav align-items-center ms-auto">
-        <li class="nav-item me-8">
-          <a class="btn btn-primary text-light fw-semibold" href="#"
-            >成為教練</a
-          >
-        </li>
-        <li class="nav-item me-8">
-          <a
-            class="nav-link link-light link-opacity-75-hover fw-semibold"
-            href="common-questions.html"
-            ><span class="material-symbols-outlined align-middle me-1">
-              help </span
-            >常見問答</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link link-light link-opacity-75-hover fw-semibold link-line-white"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignInModal"
-            style="cursor: pointer"
-            >登入</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link link-light link-opacity-75-hover fw-semibold"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignUpModal"
-            style="cursor: pointer"
-            >註冊</a
-          >
-        </li>
-      </ul>
-    </div>
-  </div>
-</nav>
-<!-- navbar-sign-out-bg-white -->
-<!-- 當視窗移動到 banner 底部，顯示切換為此 navbar -->
-<nav
-  class="navbar navbar-gsap-secondary navbar-expand-lg bg-white fixed-top py-2 py-lg-6 flex-nowrap"
-  style="display: none"
+  class="navbar navbar-expand-lg bg-white fixed-top py-2 py-lg-6 flex-nowrap"
 >
   <form class="container">
     <a class="navbar-brand me-3 me-lg-8" href="index.html">
@@ -107,62 +36,123 @@
         placeholder="搜尋課程｜地點｜時間"
         style="font-size: 12px"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbarSignOutMobileSearch"
+        data-bs-target="#offcanvasNavbarSignInTrainerMobileSearch"
       />
     </div>
-    <button
-      class="navbar-toggler border-0 ms-1 ms-lg-0"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbarSignOut02"
-      aria-controls="offcanvasNavbarSignOut02"
+    <ul
+      class="navbar-nav align-items-center d-flex flex-row ms-2 d-block d-lg-none"
     >
-      <span class="material-symbols-outlined text-gray-800"> menu </span>
-    </button>
+      <li class="nav-item me-2 p-0">
+        <a
+          class="nav-link link-img-opacity-75-hover p-0"
+          href="common-questions.html"
+          ><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle"
+          >
+            help
+          </span></a
+        >
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="#"
+          ><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle"
+          >
+            notifications
+          </span></a
+        >
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="#"
+          ><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle"
+          >
+            mail
+          </span></a
+        >
+      </li>
+      <li class="nav-item">
+        <img
+          src="../assets/images/img/sports-04.webp "
+          alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+          width="32"
+          height="32"
+          class="rounded-circle link-img-opacity-75-hover border-1 border border-white d-block d-lg-none"
+          style="cursor: pointer"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbarSignInTrainer02"
+          aria-controls="offcanvasNavbarSignInTrainer02"
+        />
+      </li>
+    </ul>
     <div class="collapse navbar-collapse">
-      <%- include('./layout/navbar-three-input-dropdown-menu.ejs'); -%>
-      <ul class="navbar-nav align-items-center ms-4">
-        <li class="nav-item">
-          <a
-            class="nav-link fw-semibold link-line-gray-800 text-nowrap"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignInModal"
-            style="cursor: pointer"
-            >登入</a
-          >
-        </li>
-        <li class="nav-item me-8">
-          <a
-            class="nav-link fw-semibold text-nowrap"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignUpModal"
-            style="cursor: pointer"
-            >註冊</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary text-light fw-semibold text-nowrap" href="#"
-            >成為教練</a
-          >
-        </li>
-      </ul>
+      <div class="d-flex align-items-center">
+        <%- include('./layout/navbar-three-input-dropdown-menu.ejs'); -%>
+
+        <ul class="navbar-nav align-items-center mx-8">
+          <li class="nav-item me-5 p-0">
+            <a
+              class="nav-link link-img-opacity-75-hover p-0"
+              href="common-questions.html"
+              ><span
+                class="material-symbols-outlined fs-3 text-gray-800 align-middle"
+              >
+                help
+              </span></a
+            >
+          </li>
+          <li class="nav-item me-5 p-0">
+            <a class="nav-link link-img-opacity-75-hover p-0" href="#"
+              ><span
+                class="material-symbols-outlined fs-3 text-gray-800 align-middle"
+              >
+                notifications
+              </span></a
+            >
+          </li>
+          <li class="nav-item me-5 p-0">
+            <a class="nav-link link-img-opacity-75-hover p-0" href="#"
+              ><span
+                class="material-symbols-outlined fs-3 text-gray-800 align-middle"
+              >
+                mail
+              </span></a
+            >
+          </li>
+        </ul>
+        <img
+          src="../assets/images/img/sports-04.webp"
+          alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+          width="56"
+          height="56"
+          class="rounded-circle link-img-opacity-75-hover border-2 border border-white"
+          style="cursor: pointer"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbarSignInTrainer02"
+          aria-controls="offcanvasNavbarSignInTrainer02"
+        />
+      </div>
     </div>
   </form>
 </nav>
-<!-- offcanvas-navbar-sign-out-bg-transparent -->
+<!-- offcanvas-navbar-sign-in-trainer-bg-white -->
 <div
   class="offcanvas offcanvas-end"
   tabindex="-1"
-  id="offcanvasNavbarSignOut01"
-  aria-labelledby="offcanvasNavbarSignOut01"
+  id="offcanvasNavbarSignInTrainer02"
+  aria-labelledby="offcanvasNavbarSignInTrainer02"
 >
   <div class="offcanvas-header px-4 py-7">
-    <img
-      src="../assets/images/logo/logo-primary-text.svg"
-      alt="主色 health glow logo"
-      width="64"
-      height="30"
-    />
+    <div class="d-flex justify-content-center align-items-center">
+      <img
+        src="../assets/images/img/sports-04.webp"
+        alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+        width="36"
+        height="36"
+        class="rounded-circle me-3"
+      />
+      <span>王小明</span>
+    </div>
     <button
       type="button"
       class="btn-close"
@@ -177,7 +167,10 @@
           class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
           href="#"
         >
-          <span class="fw-semibold text-primary">成為教練</span>
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_clock </span>
+            <span>預約課程 | 預約、上課</span>
+          </div>
           <img
             src="../assets/images/icons/right Foward.svg"
             alt="向右 icon"
@@ -186,70 +179,49 @@
           />
         </a>
       </li>
-      <li>
-        <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
-          href="common-questions.html"
-        >
-          <span>常見問答</span>
-          <img
-            src="../assets/images/icons/right Foward.svg"
-            alt="向右 icon"
-            width="20"
-            height="20"
-          />
-        </a>
-      </li>
-    </ul>
-    <div class="py-8 px-6">
-      <button
-        type="button"
-        class="btn btn-primary text-white w-100 fs-5 mb-4"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignInModal"
-      >
-        登入
-      </button>
-      <button
-        type="button"
-        class="btn btn-outline-dark w-100 fs-5"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignUpModal"
-      >
-        註冊
-      </button>
-    </div>
-  </div>
-</div>
-<!-- offcanvas-navbar-sign-out-bg-white -->
-<div
-  class="offcanvas offcanvas-end"
-  tabindex="-1"
-  id="offcanvasNavbarSignOut02"
-  aria-labelledby="offcanvasNavbarSignOut02"
->
-  <div class="offcanvas-header px-4 py-7">
-    <img
-      src="../assets/images/logo/logo-primary-text.svg"
-      alt="主色 health glow logo"
-      width="64"
-      height="30"
-    />
-    <button
-      type="button"
-      class="btn-close"
-      data-bs-dismiss="offcanvas"
-      aria-label="Close"
-    ></button>
-  </div>
-  <div class="offcanvas-body px-0 py-0">
-    <ul class="list-group rounded-0">
       <li>
         <a
           class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
           href="#"
         >
-          <span class="fw-semibold text-primary">成為教練</span>
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_month </span>
+            <span>行事曆 | 課程明細</span>
+          </div>
+          <img
+            src="../assets/images/icons/right Foward.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="#"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> settings </span>
+            <span>帳號設定</span>
+          </div>
+          <img
+            src="../assets/images/icons/right Foward.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="index.html"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> logout </span>
+            <span>登出</span>
+          </div>
           <img
             src="../assets/images/icons/right Foward.svg"
             alt="向右 icon"
@@ -259,32 +231,14 @@
         </a>
       </li>
     </ul>
-    <div class="py-8 px-6">
-      <button
-        type="button"
-        class="btn btn-primary text-white w-100 fs-5 mb-4"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignInModal"
-      >
-        登入
-      </button>
-      <button
-        type="button"
-        class="btn btn-outline-dark w-100 fs-5"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignUpModal"
-      >
-        註冊
-      </button>
-    </div>
   </div>
 </div>
-<!-- offcanvas-navbar-sign-out-mobile-search -->
+<!-- offcanvas-navbar-sign-in-trainer-bg-white-mobile-search -->
 <div
   class="offcanvas offcanvas-end overflow-y-auto"
   tabindex="-1"
-  id="offcanvasNavbarSignOutMobileSearch"
-  aria-labelledby="offcanvasNavbarSignOutMobileSearch"
+  id="offcanvasNavbarSignInTrainerMobileSearch"
+  aria-labelledby="offcanvasNavbarSignInTrainerMobileSearch"
 >
   <div class="offcanvas-header px-4">
     <img
@@ -456,4 +410,3 @@
     </div>
   </form>
 </div>
-<%- include('./components/sign-in-and-sign-up-modal.ejs'); -%>
