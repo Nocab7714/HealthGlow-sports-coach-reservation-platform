@@ -33,7 +33,11 @@
 
 .bar-80{
     width: 80px;
-    height: 8px;   
+    height: 8px;
+    @include media-breakpoint-down(md) {
+        width: 40px;
+        height: 6px;
+    }   
 }
 
 .step-icon-style{
@@ -73,6 +77,10 @@
     tbody span{
         cursor: pointer;
     }
+    th, td{
+        text-align: center; /* 文字水平居中 */
+        vertical-align: middle; /* 文字垂直居中 */
+    }
     @include media-breakpoint-down(md) {
         width: 100%; /* 确保表格充满容器 */
         table-layout: fixed; /* 固定表格布局 */
@@ -80,8 +88,6 @@
         th, td {
             width: 36px; /* 固定宽度 */
             height: 36px; /* 固定高度 */
-            text-align: center; /* 文字水平居中 */
-            vertical-align: middle; /* 文字垂直居中 */
             padding: 0px 8px 0px 0px ; /* 移除内边距，确保高度生效 */
         }
         span {
@@ -111,4 +117,7 @@
     color: $gray-500;
     border: 1px solid $gray-500;
     background-color: #fff;
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
 }
