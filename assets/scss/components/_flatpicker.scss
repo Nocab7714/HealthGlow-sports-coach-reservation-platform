@@ -1,4 +1,4 @@
-.flatpickr-calendar{
+.flatpickr-calendar.animate{
   padding: 16px;
   width: 359px;
   border-radius: 0;
@@ -10,6 +10,10 @@
 .flatpickr-custom-time{
   width: 100%;
   justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  border-top: 2px solid $gray-200;
   li{
     width: 25%;
     border: 1px solid $gray-800;
@@ -18,6 +22,17 @@
     &:nth-child(1){
       color: $primary;
       border-color: $primary;
+      button{
+        color: $primary;
+      }
     }
+  }
+}
+.flatpickr-day.today{
+  color: white;
+  border: 0px;
+  background-color: $primary;
+  &:hover{
+    background-color: $accent;
   }
 }

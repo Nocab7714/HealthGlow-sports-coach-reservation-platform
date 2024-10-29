@@ -12,7 +12,10 @@
 @import "../node_modules/bootstrap/scss/maps";
 @import "../node_modules/bootstrap/scss/mixins";
 @import "/assets/scss/utils/utilities";
+@import "/assets/scss/utils/utilities-custom";
 @import "/assets/scss/utils/gutter";
+@import "/assets/scss/utils/mixin";
+
 
 // Layout & components
 @import "/assets/scss/utils/root";
@@ -50,6 +53,7 @@
 // icon
 @import "bootstrap-icons/font/bootstrap-icons.css";
 
+
 // custom components
 @import "../scss/components/list-group";
 @import "../scss/components/nav-tabs";
@@ -58,7 +62,10 @@
 @import "../scss/components/buttons";
 @import "../scss/components/flatpicker";
 @import "../scss/components/breadcrumb";
+@import "../scss/components/badge";
 @import "../scss/components/badges";
+@import "../scss/components/sign-in-and-sign-up-modal";
+
 
 // Helpers
 @import "../node_modules/bootstrap/scss/helpers";
@@ -75,7 +82,9 @@
 // layout
 @import './layout/header';
 @import './layout/footer';
+@import './layout/header-sign-in-trainer-white-bg-version';
 @import './components/scroll-to-top';
+
 
 // pages
 @import './pages/index.scss';

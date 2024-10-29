@@ -7,7 +7,7 @@
   pointer-events: none; /* 初始無法點擊 */
   transition:  background-color 0.2s ease-in-out;
   opacity: 0 ;
-  
+  z-index: 100;
 
   &:hover{
     background-color: darken($tint, 10%) !important ;

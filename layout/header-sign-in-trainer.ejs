@@ -155,64 +155,7 @@
     </ul>
     <div class="collapse navbar-collapse">
       <div class="d-flex align-items-center">
-        <ul class="navbar-nav list-unstyled d-flex flex-row me-auto me-xl-16">
-          <li
-            class="nav-item rounded-0 position-relative me-3"
-            style="max-width: 290px"
-          >
-            <span
-              class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-              style="left: 24px"
-            >
-              search
-            </span>
-            <input
-              type="text"
-              class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-              placeholder="搜尋課程，有氧、飛輪、瑜伽、"
-            />
-          </li>
-          <li
-            class="nav-item rounded-0 position-relative me-3"
-            style="max-width: 290px"
-          >
-            <span
-              class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-              style="left: 24px"
-            >
-              location_on
-            </span>
-            <input
-              type="text"
-              class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-              placeholder="地點?"
-            />
-          </li>
-          <li
-            class="nav-item rounded-0 position-relative me-3"
-            style="max-width: 160px"
-          >
-            <span
-              class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-              style="left: 24px"
-            >
-              schedule
-            </span>
-            <input
-              type="text"
-              class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-              placeholder="時間?"
-            />
-          </li>
-          <li class="nav-item">
-            <button
-              type="search"
-              class="btn btn-primary text-white fw-semibold text-nowrap"
-            >
-              搜尋
-            </button>
-          </li>
-        </ul>
+        <%- include('./layout/navbar-three-input-dropdown-menu.ejs'); -%>
         <ul class="navbar-nav align-items-center mx-8">
           <li class="nav-item me-5 p-0">
             <a class="nav-link p-0" href="common-questions.html"
@@ -287,7 +230,7 @@
     <ul class="list-group rounded-0 mb-3">
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <span class="fw-semibold text-primary">成為教練</span>
@@ -301,7 +244,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="common-questions.html"
         >
           <span>常見問答</span>
@@ -317,7 +260,7 @@
     <ul class="list-group rounded-0">
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <div class="d-flex align-items-center">
@@ -334,7 +277,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <div class="d-flex align-items-center">
@@ -351,7 +294,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <div class="d-flex align-items-center">
@@ -368,7 +311,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="index.html"
         >
           <div class="d-flex align-items-center">
@@ -415,7 +358,7 @@
     <ul class="list-group rounded-0">
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <div class="d-flex align-items-center">
@@ -432,7 +375,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <div class="d-flex align-items-center">
@@ -449,7 +392,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <div class="d-flex align-items-center">
@@ -466,7 +409,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="index.html"
         >
           <div class="d-flex align-items-center">
@@ -486,7 +429,7 @@
 </div>
 <!-- offcanvas-navbar-sign-in-trainer-bg-white-mobile-search -->
 <div
-  class="offcanvas offcanvas-end"
+  class="offcanvas offcanvas-end overflow-y-auto"
   tabindex="-1"
   id="offcanvasNavbarSignInTrainerMobileSearch"
   aria-labelledby="offcanvasNavbarSignInTrainerMobileSearch"
@@ -511,7 +454,7 @@
         <li class="accordion-item border-0 rounded-0">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200 rounded-0"
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
               type="button"
               data-bs-toggle="collapse"
               aria-expanded="false"
@@ -526,13 +469,39 @@
             </button>
           </h2>
           <div id="collapseCourseSearch" class="accordion-collapse collapse">
-            <div class="accordion-body bg-gray-200">課程搜尋內容</div>
+            <div class="accordion-body bg-gray-200">
+              <!-- 運動課程 dropdown menu -->
+              <div class="search d-flex bg-white">
+                <!-- 運動課程 level one-->
+                <div
+                  class="course-dropdown-menu-level-one border border-primary flex-grow-1"
+                >
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 運動課程 level two-->
+                <div
+                  class="course-dropdown-menu-level-two border border-primary flex-grow-1"
+                >
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
         <li class="accordion-item border-0 rounded-0">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200 rounded-0"
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
               type="button"
               data-bs-toggle="collapse"
               aria-expanded="false"
@@ -550,35 +519,84 @@
             id="collapseLocationSelection"
             class="accordion-collapse collapse"
           >
-            <div class="accordion-body bg-gray-200">選擇地點內容</div>
+            <div class="search accordion-body bg-gray-200">
+              <!-- 地點 dropdown menu -->
+              <div class="d-flex justify-content-between">
+                <span>已選擇 2/10</span>
+                <a
+                  href="#"
+                  class="link-gray-700 text-decoration-underline"
+                  role="button"
+                  >清除全部</a
+                >
+              </div>
+              <div class="d-flex bg-white">
+                <!-- 地點 Level One -->
+                <div
+                  class="location-dropdown-menu-level-one border border-primary"
+                >
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 地點 Level Two -->
+                <div
+                  class="location-dropdown-menu-level-two border border-primary"
+                >
+                  <ul class="list-unstyled mb-0 d-block">
+                    <li><a class="dropdown-item" href="#">中正區</a></li>
+                    <li><a class="dropdown-item" href="#">大同區</a></li>
+                    <li><a class="dropdown-item" href="#">中山區</a></li>
+                    <li><a class="dropdown-item" href="#">松山區</a></li>
+                    <li><a class="dropdown-item" href="#">大安區</a></li>
+                    <li><a class="dropdown-item" href="#">萬華區</a></li>
+                    <li><a class="dropdown-item" href="#">信義區</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
         <li class="accordion-item border-0 rounded-0">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200 rounded-0"
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
               type="button"
               data-bs-toggle="collapse"
               aria-expanded="false"
               data-bs-target="#collapseDateSelection"
               aria-controls="collapseDateSelection"
             >
-              <span class="fw-semibold d-flex align-items-center text-secondary"
-                ><span class="material-symbols-outlined text-gray-800 me-1">
-                  schedule </span
-                >選擇時間</span
+              <span
+                class="fw-semibold d-flex align-items-center text-secondary"
               >
+                <span class="material-symbols-outlined text-gray-800 me-1"
+                  >schedule</span
+                >
+                選擇時間
+              </span>
             </button>
           </h2>
-          <div id="collapseDateSelection" class="accordion-collapse collapse">
-            <div class="accordion-body bg-gray-200">選擇時間內容</div>
+          <div
+            id="collapseDateSelection"
+            class="accordion-collapse collapse text-center"
+          >
+            <div
+              class="accordion-body bg-gray-200 d-flex justify-content-center"
+            >
+              <div class="datepicker-inline"></div>
+            </div>
           </div>
         </li>
       </ul>
-      <div class="py-6 text-center">
+      <div class="p-6 d-flex gap-4">
         <button
           type="search"
-          class="btn btn-primary text-white fs-6 fw-semibold px-56 py-3"
+          class="btn btn-outline-dark fs-6 fw-semibold px-56 py-3 w-50"
+        >
+          重置
+        </button>
+        <button
+          type="search"
+          class="btn btn-primary text-white fs-6 fw-semibold px-56 py-3 w-50"
         >
           搜尋
         </button>
