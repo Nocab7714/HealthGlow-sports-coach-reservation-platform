@@ -28,3 +28,4 @@ lightbox.option({
   imageFadeDuration: 300, // 圖片加載後淡入的時間（毫秒）。
   fadeDuration: 300, // 圖片大小變換時的動畫時長
 });
+
