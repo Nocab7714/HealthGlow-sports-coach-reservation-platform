@@ -10,10 +10,6 @@
     &{
       background-image: url(/assets/images/img/banner-03-pc.webp);
       height: 680px;
-      // height: 100vh;
     }
   }
-}
-.pagination::after{
-  @include paginationButtonStyles;
 }
