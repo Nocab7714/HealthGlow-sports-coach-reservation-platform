@@ -1,24 +1,10 @@
 .mySwiper {
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    content: "\e5c4";
-    font-family: "Material Symbols Outlined";
-    font-size: 24px;
-    color: $gray-800;
-    border: 2px solid $gray-800;
-    padding: 10px;
-    background-color: #fff;
-  }
-
-  .swiper-button-prev {
+  .swiper-button-prev{
     left: 2%;
+    @include paginationButtonStylesPrev;
   }
-
-  .swiper-button-next {
+  .swiper-button-next{
     right: 2%;
-    &::after {
-      rotate: 180deg;
-    }
+    @include paginationButtonStylesNext;
   }
-
 }

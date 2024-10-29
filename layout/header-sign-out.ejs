@@ -40,7 +40,7 @@
         </li>
         <li class="nav-item me-8">
           <a
-            class="nav-link link-light fw-semibold"
+            class="nav-link link-light link-opacity-75-hover fw-semibold"
             href="common-questions.html"
             ><span class="material-symbols-outlined align-middle me-1">
               help </span
@@ -48,12 +48,22 @@
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link link-light fw-semibold link-line-white" href="#"
+          <a
+            class="nav-link link-light link-opacity-75-hover fw-semibold link-line-white"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignInModal"
+            style="cursor: pointer"
             >登入</a
           >
         </li>
         <li class="nav-item">
-          <a class="nav-link link-light fw-semibold" href="#">註冊</a>
+          <a
+            class="nav-link link-light link-opacity-75-hover fw-semibold"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignUpModal"
+            style="cursor: pointer"
+            >註冊</a
+          >
         </li>
       </ul>
     </div>
@@ -110,217 +120,25 @@
       <span class="material-symbols-outlined text-gray-800"> menu </span>
     </button>
     <div class="collapse navbar-collapse">
-      <!-- <ul class="navbar-nav list-unstyled d-flex flex-row me-auto">
-        <li
-          class="nav-item rounded-0 position-relative me-3"
-          style="max-width: 290px">
-          <span class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-            style="left: 24px">search</span>
-          <input
-            type="text"
-            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-            placeholder="搜尋課程，有氧、飛輪、瑜伽、"/>
-        </li>
-        <li
-          class="nav-item rounded-0 position-relative me-3"
-          style="max-width: 290px"
-        >
-          <span
-            class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-            style="left: 24px"
-          >
-            location_on
-          </span>
-          <input
-            type="text"
-            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-            placeholder="地點?"
-          />
-        </li>
-        <li
-          class="nav-item rounded-0 position-relative me-3"
-          style="max-width: 160px"
-        >
-          <span
-            class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-            style="left: 24px"
-          >
-            schedule
-          </span>
-          <input
-            type="text"
-            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-            placeholder="時間?"
-          />
-        </li>
-        <li class="nav-item">
-          <button
-            type="search"
-            class="btn btn-primary text-white fw-semibold text-nowrap"
-          >
-            搜尋
-          </button>
-        </li>
-      </ul> -->
-      <ul class="search navbar-nav list-unstyled d-flex flex-row me-auto">
-        <!-- 課程搜尋 dropdown -->
-        <li
-          class="dropdown nav-item rounded-0 position-relative me-3"
-          style="max-width: 290px">
-          <span class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-            style="left: 24px">search</span>
-          <input
-            type="text"
-            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-            placeholder="搜尋課程，有氧、飛輪、瑜伽、"
-            data-bs-toggle="dropdown" type="search"
-            aria-label="Search" aria-expanded="false"/>
-          <!-- dropdown 開始區塊 -->
-          <div class="course-menu dropdown-menu">
-            <div class="d-flex">
-              <p class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">
-                健身運動類別
-              </p>
-              <p class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2">
-                運動課程
-              </p>
-            </div>
-            <div class="d-flex">
-              <div class="course-dropdown-menu-level-one border border-primary">
-                <ul class="list-unstyled mb-0"></ul>
-              </div>
-              <!-- 運動課程 -->
-              <div class="course-dropdown-menu-level-two border border-primary">
-                <ul class="list-unstyled mb-0">
-                  <li>
-                    <a class="dropdown-item undefined" href="#">有氧運動 1</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item undefined" href="#">有氧運動 2</a>
-                  </li>
-                  <li>
-                    <a class="dropdown-item undefined" href="#">有氧運動 3</a>
-                  </li>
-                </ul>
-              </div>
-              <div class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3">
-                <div>
-                  <div class="d-flex justify-content-center align-items-center">
-                    <p class="text-primary font-anton-regular fs-5">5.0</p>
-                    <span class="material-symbols-rounded star">star</span>
-                    <span class="text-gray-600 fs-8">(1,200評價)</span>
-                  </div>
-                  <button class="btn btn-primary w-100" type="button">
-                    找<span class="selected-exercise-type">瑜伽</span>教練
-                  </button>
-                </div>
-                <div>
-                  <p class="text-gray-700 fw-semibold">更多資訊</p>
-                  <ul class="list-unstyled fs-7 fw-normal mb-0">
-                    <li>
-                      <a href="#"><span class="selected-exercise-type">瑜伽</span>課內容</a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="selected-exercise-type">瑜伽</span>教練薪資行情</a>
-                    </li>
-                    <li>
-                      <a href="#"><span class="selected-exercise-type">瑜伽</span>學生評價內容</a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-            </div>
-          </div>  
-        </li>
-        <!-- 地點 dropdown  -->
-        <li
-          class="dropdown nav-item rounded-0 position-relative me-3"
-          style="max-width: 290px"
-        >
-          <span
-            class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-            style="left: 24px"
-          >
-            location_on
-          </span>
-          <input
-            type="text"
-            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-            placeholder="地點?"
-            data-bs-toggle="dropdown" type="search"
-            aria-label="Search" aria-expanded="false"
-          />
-          <!-- dropdown 開始區塊 -->
-          <div class="location-menu dropdown-menu">
-            <div class="d-flex flex-column">
-              <p class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">
-                挑選地區
-              </p>
-              <div class="d-flex justify-content-between">
-                <span>已選擇 2/10</span>
-                <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
-              </div>
-            </div>
-            <div class="d-flex">
-              <div class="location-dropdown-menu-level-one border border-primary">
-                <ul class="list-unstyled mb-0"></ul>
-              </div>
-              <!-- 地點 Level Two -->
-              <div class="location-dropdown-menu-level-two border border-primary">
-                <ul class="list-unstyled mb-0 d-block">
-                  <li><a class="dropdown-item" href="#">中正區</a></li>
-                  <li><a class="dropdown-item" href="#">大同區</a></li>
-                  <li><a class="dropdown-item" href="#">中山區</a></li>
-                  <li><a class="dropdown-item" href="#">松山區</a></li>
-                  <li><a class="dropdown-item" href="#">大安區</a></li>
-                  <li><a class="dropdown-item" href="#">萬華區</a></li>
-                  <li><a class="dropdown-item" href="#">信義區</a></li>
-                </ul>
-              </div>
-            </div>
-            <button class="btn btn-primary w-100 mt-10" type="button">
-              確認
-            </button>
-          </div>
-        </li>
-        <!-- 時間 dropdown  -->
-        <li
-          class="dropdown nav-item rounded-0 position-relative me-3"
-          style="max-width: 160px"
-        >
-          <span
-            class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-            style="left: 24px"
-          >
-            schedule
-          </span>
-          <input
-            id="datepicker"
-            type="search"
-            class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-            data-bs-toggle="dropdown" type="search"
-            placeholder="時間？" aria-label="Search" aria-expanded="false"
-          />
-        </li>
-        <li class="nav-item">
-          <button
-            type="search"
-            class="btn btn-primary text-white fw-semibold text-nowrap"
-          >
-            搜尋
-          </button>
-        </li>
-      </ul>
+      <%- include('./layout/navbar-three-input-dropdown-menu.ejs'); -%>
       <ul class="navbar-nav align-items-center ms-4">
         <li class="nav-item">
           <a
             class="nav-link fw-semibold link-line-gray-800 text-nowrap"
-            href="#"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignInModal"
+            style="cursor: pointer"
             >登入</a
           >
         </li>
         <li class="nav-item me-8">
-          <a class="nav-link fw-semibold text-nowrap" href="#">註冊</a>
+          <a
+            class="nav-link fw-semibold text-nowrap"
+            data-bs-toggle="modal"
+            data-bs-target="#userCategorySignUpModal"
+            style="cursor: pointer"
+            >註冊</a
+          >
         </li>
         <li class="nav-item">
           <a class="btn btn-primary text-light fw-semibold text-nowrap" href="#"
@@ -384,10 +202,20 @@
       </li>
     </ul>
     <div class="py-8 px-6">
-      <button type="button" class="btn btn-primary text-white w-100 fs-5 mb-4">
+      <button
+        type="button"
+        class="btn btn-primary text-white w-100 fs-5 mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignInModal"
+      >
         登入
       </button>
-      <button type="button" class="btn btn-outline-dark w-100 fs-5">
+      <button
+        type="button"
+        class="btn btn-outline-dark w-100 fs-5"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignUpModal"
+      >
         註冊
       </button>
     </div>
@@ -432,10 +260,20 @@
       </li>
     </ul>
     <div class="py-8 px-6">
-      <button type="button" class="btn btn-primary text-white w-100 fs-5 mb-4">
+      <button
+        type="button"
+        class="btn btn-primary text-white w-100 fs-5 mb-4"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignInModal"
+      >
         登入
       </button>
-      <button type="button" class="btn btn-outline-dark w-100 fs-5">
+      <button
+        type="button"
+        class="btn btn-outline-dark w-100 fs-5"
+        data-bs-toggle="modal"
+        data-bs-target="#userCategorySignUpModal"
+      >
         註冊
       </button>
     </div>
@@ -443,7 +281,7 @@
 </div>
 <!-- offcanvas-navbar-sign-out-mobile-search -->
 <div
-  class="offcanvas offcanvas-end"
+  class="offcanvas offcanvas-end overflow-y-auto"
   tabindex="-1"
   id="offcanvasNavbarSignOutMobileSearch"
   aria-labelledby="offcanvasNavbarSignOutMobileSearch"
@@ -468,7 +306,7 @@
         <li class="accordion-item border-0 rounded-0">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200 rounded-0"
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
               type="button"
               data-bs-toggle="collapse"
               aria-expanded="false"
@@ -483,13 +321,39 @@
             </button>
           </h2>
           <div id="collapseCourseSearch" class="accordion-collapse collapse">
-            <div class="accordion-body bg-gray-200">課程搜尋內容</div>
+            <div class="accordion-body bg-gray-200">
+              <!-- 運動課程 dropdown menu -->
+              <div class="search d-flex bg-white">
+                <!-- 運動課程 level one-->
+                <div
+                  class="course-dropdown-menu-level-one border border-primary flex-grow-1"
+                >
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 運動課程 level two-->
+                <div
+                  class="course-dropdown-menu-level-two border border-primary flex-grow-1"
+                >
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
         <li class="accordion-item border-0 rounded-0">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200 rounded-0"
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
               type="button"
               data-bs-toggle="collapse"
               aria-expanded="false"
@@ -507,35 +371,84 @@
             id="collapseLocationSelection"
             class="accordion-collapse collapse"
           >
-            <div class="accordion-body bg-gray-200">選擇地點內容</div>
+            <div class="search accordion-body bg-gray-200">
+              <!-- 地點 dropdown menu -->
+              <div class="d-flex justify-content-between">
+                <span>已選擇 2/10</span>
+                <a
+                  href="#"
+                  class="link-gray-700 text-decoration-underline"
+                  role="button"
+                  >清除全部</a
+                >
+              </div>
+              <div class="d-flex bg-white">
+                <!-- 地點 Level One -->
+                <div
+                  class="location-dropdown-menu-level-one border border-primary"
+                >
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 地點 Level Two -->
+                <div
+                  class="location-dropdown-menu-level-two border border-primary"
+                >
+                  <ul class="list-unstyled mb-0 d-block">
+                    <li><a class="dropdown-item" href="#">中正區</a></li>
+                    <li><a class="dropdown-item" href="#">大同區</a></li>
+                    <li><a class="dropdown-item" href="#">中山區</a></li>
+                    <li><a class="dropdown-item" href="#">松山區</a></li>
+                    <li><a class="dropdown-item" href="#">大安區</a></li>
+                    <li><a class="dropdown-item" href="#">萬華區</a></li>
+                    <li><a class="dropdown-item" href="#">信義區</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
           </div>
         </li>
         <li class="accordion-item border-0 rounded-0">
           <h2 class="accordion-header">
             <button
-              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200 rounded-0"
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
               type="button"
               data-bs-toggle="collapse"
               aria-expanded="false"
               data-bs-target="#collapseDateSelection"
               aria-controls="collapseDateSelection"
             >
-              <span class="fw-semibold d-flex align-items-center text-secondary"
-                ><span class="material-symbols-outlined text-gray-800 me-1">
-                  schedule </span
-                >選擇時間</span
+              <span
+                class="fw-semibold d-flex align-items-center text-secondary"
               >
+                <span class="material-symbols-outlined text-gray-800 me-1"
+                  >schedule</span
+                >
+                選擇時間
+              </span>
             </button>
           </h2>
-          <div id="collapseDateSelection" class="accordion-collapse collapse">
-            <div class="accordion-body bg-gray-200">選擇時間內容</div>
+          <div
+            id="collapseDateSelection"
+            class="accordion-collapse collapse text-center"
+          >
+            <div
+              class="accordion-body bg-gray-200 d-flex justify-content-center"
+            >
+              <div class="flatpickr-inline"></div>
+            </div>
           </div>
         </li>
       </ul>
-      <div class="py-6 text-center">
+      <div class="p-6 d-flex gap-4">
         <button
           type="search"
-          class="btn btn-primary text-white fs-6 fw-semibold px-56 py-3"
+          class="btn btn-outline-dark fs-6 fw-semibold px-56 py-3 w-50"
+        >
+          重置
+        </button>
+        <button
+          type="search"
+          class="btn btn-primary text-white fs-6 fw-semibold px-56 py-3 w-50"
         >
           搜尋
         </button>
@@ -543,3 +456,4 @@
     </div>
   </form>
 </div>
+<%- include('./components/sign-in-and-sign-up-modal.ejs'); -%>

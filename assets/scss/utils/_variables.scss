@@ -319,7 +319,8 @@ $gray-600:      #979CA2;
 $gray-500:      #ACB1B7;
 $gray-300:      #BCC7C8;
 $gray-200:      #E8E8E8; // *custom
-$gray-100:      #F4F9F9;  // *custom 
+$gray-100:      #F9F9F9;  // *custom 
+
 $gray-custom-01: #5F5E5E;
 $gray-custom-02: #979797;
 $gray-custom-03: #F9F9F9;
@@ -404,7 +405,8 @@ $escaped-characters: (
 
 $enable-caret:                true !default;
 $enable-rounded:              true !default;
-$enable-shadows:              false !default;
+// $enable-shadows:              false !default;
+$enable-shadows:              true !default;  // *custom
 $enable-gradients:            false !default;
 $enable-transitions:          true !default;
 $enable-reduced-motion:       true !default;
@@ -446,6 +448,7 @@ $gradient: linear-gradient(180deg, rgba($white, .15), rgba($white, 0)) !default;
 $spacer: 1rem !default;
 $spacers: (
   0: 0,
+  '0-5': $spacer * .125,   // *custom 2px
   1: $spacer * .25,   //4px
   2: $spacer * .5,    //8px 
   3: $spacer * .75,   //12px
@@ -709,14 +712,17 @@ $h6-font-size:                $font-size-base !default;
 
 // scss-docs-start font-sizes
 $font-sizes: (
-  1: $h1-font-size,
-  2: $h2-font-size,
-  3: $h3-font-size,
-  4: $h4-font-size,
-  5: $h5-font-size,
-  6: $h6-font-size,
-  7: $font-size-sm, // 14px
+  1: $h1-font-size,  // 64px
+  2: $h2-font-size,  // 40px
+  3: $h3-font-size,  // 32px
+  '3-5': $font-size-base * 1.75, // *custom 28px
+  4: $h4-font-size,  // 24px
+  5: $h5-font-size,  // 20px
+  '5-5': $font-size-base * 1.125, // *custom 18px
+  6: $h6-font-size,  // 16px
+  7: $font-size-sm,  // 14px
   8: $font-size-base * .75, // *custom 12px
+  10: $font-size-base * .625, // *custom 10px
   28: $font-size-base * 1.75, // 28px
   72: $font-size-base * 4.5, // 72px
 ) !default;
@@ -1221,7 +1227,9 @@ $zindex-levels: (
   0: 0,
   1: 1,
   2: 2,
-  3: 3
+  3: 3,
+  4: 4,
+  5: 5
 ) !default;
 // scss-docs-end zindex-levels-map
 

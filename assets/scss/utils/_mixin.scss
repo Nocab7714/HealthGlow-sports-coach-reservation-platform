@@ -1,0 +1,46 @@
+@mixin paginationButtonStylesPrev {
+  &::after {
+    content: "\e5c4";
+    font-family: "Material Symbols Outlined";
+    font-size: 24px;
+    color: $gray-800;
+    border: 2px solid $gray-800;
+    padding: 10px;
+    background-color: #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    &::after {
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+
+}
+
+@mixin paginationButtonStylesNext {
+  &::after {
+    content: "\e5c8";
+    font-family: "Material Symbols Outlined";
+    font-size: 24px;
+    color: $gray-800;
+    border: 2px solid $gray-800;
+    padding: 10px;
+    background-color: #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &:hover {
+    &::after {
+      color: $primary;
+      border-color: $primary;
+    }
+  }
+}

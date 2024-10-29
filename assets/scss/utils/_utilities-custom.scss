@@ -1,0 +1,15 @@
+$utilities: map-merge(
+  $utilities,
+  (
+    "rotate": (
+      property: transform,
+      class: rotate,
+      responsive: true,
+      values: (
+        45: rotate(45deg),
+        90: rotate(90deg),
+        180: rotate(180deg),
+      ),
+    )
+  )
+);
