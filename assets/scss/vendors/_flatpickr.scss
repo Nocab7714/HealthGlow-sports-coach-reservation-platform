@@ -1,0 +1,143 @@
+.flatpickr-calendar.animate {
+  padding: 8px;
+  width: 327px;
+  border-radius: 0;
+
+  @include media-breakpoint-up(lg) {
+    width: 359px;
+  }
+}
+
+.flatpickr-custom-div {
+  display: flex;
+  gap: 16px;
+}
+
+.flatpickr-custom-time {
+  width: 100%;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 40px;
+  padding-top: 20px;
+  border-top: 2px solid $gray-200;
+
+  li {
+    white-space: nowrap;
+    width: 100%;
+    padding: 8px 0;
+    font-size: 14px;
+
+  }
+
+  .btn-check:checked+label {
+    border-color: $primary;
+    color: $primary;
+    background-color: white;
+    box-shadow: none;
+  }
+}
+
+.flatpickr-day.today {
+  color: white;
+  border: none;
+  background-color: $primary;
+  &:hover {
+    background-color: $accent;
+    border-color: $primary;
+  }
+}
+
+.flatpickr-innerContainer {
+  justify-content: center;
+}
+
+
+.student {
+  .flatpickr-wrapper{
+    width: 100%;
+  }
+  .flatpickr-calendar{
+    background: transparent;
+    box-shadow: none;
+    width: 100%;
+    &.inline{
+      max-height: 100%;
+    }
+  }
+  .flatpickr-rContainer{
+    width: 100%;
+    margin-top: 16px;
+    @include media-breakpoint-up(lg){
+      margin-top: 28px;
+    }
+  }
+  .flatpickr-weekdays{
+    background-color: rgba(0, 179, 191, 0.1);
+    ;
+  }
+  .flatpickr-days{
+    width: 100%;
+    border-right: 1px solid $primary;
+    border-bottom: 1px solid $primary;
+    // background-color: white;
+  }
+  .dayContainer{
+    min-width: 100%;
+    max-width: 100%;
+  }
+  .flatpickr-day{
+    font-size: 20px;
+    text-align: start;
+    line-height: 1.5;
+    padding: 0;
+    text-align: center;
+    &:not(.prevMonthDay):not(.nextMonthDay):not(.selected){
+      background-color: #fff;
+      &:hover{
+        background-color: #e6e6e6;
+      }
+    }
+    @include media-breakpoint-up(lg){
+      padding-left: 14px;
+      padding-top: 4px;
+      text-align: left;
+    }
+  }
+  .flatpickr-day, .flatpickr-day.prevMonthDay, .flatpickr-day.nextMonthDay{
+    max-width: 15%;
+    height: 60px;
+    border-radius: 0;
+    border-left: 1px solid $primary; /* 左邊框 */
+    border-top: 1px solid $primary; /* 上邊框 */
+    @include media-breakpoint-up(lg){
+      height: 120px;
+    }
+  }
+  .flatpickr-day.today{
+    background: transparent;
+    .date{
+      background: $primary;
+      display: block;
+      width: 32px;
+      height: 32px;
+      border-radius: 100px;
+      text-align: center;
+    }
+  }
+  .flatpickr-months{
+    gap: 32px;
+  }
+  .flatpickr-prev-month,
+  .flatpickr-next-month{
+    position: relative;
+    width: 36px;
+    height: 36px;
+  }
+  .flatpickr-month{
+    flex: initial;
+  }
+  .flatpickr-current-month{
+    position: static;
+    width: auto;
+  }
+}
