@@ -1,0 +1,83 @@
+.order-banner{
+    background-image: url('../assets/images/img/banner-02-pc.webp');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 680px;
+    @include media-breakpoint-down(md) {
+        background-image: url('../assets/images/img/banner-02-mobile.webp');
+        background-size: contain;
+        background-position: center;
+        height: 252px;
+    }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: $white;
+}
+.display-2{
+    @include media-breakpoint-down(md) {
+        font-size: 2rem;
+    }
+}
+
+.banner-mobil-position{
+    left: 50%;
+    @include media-breakpoint-down(md) {
+        left: 25%;
+    }
+}
+
+.bg-light-gray{
+    background-color: $body-secondary-bg;
+}
+
+.bar-80{
+    width: 80px;
+    height: 8px;
+    @include media-breakpoint-down(md) {
+        width: 40px;
+        height: 6px;
+    }   
+}
+
+.step-icon-style{
+    width: 44px;
+    height: 44px;
+    line-height: 0.4;
+    cursor: default;
+    @include media-breakpoint-down(md) {
+        width: 32px;
+        height: 32px;
+    }
+}
+
+//avatar尺寸
+.avatar-64{
+    width: 64px;
+    height: 64px;
+    @include media-breakpoint-down(md) {
+        width: 56px;
+        height: 56px;
+    }
+}
+
+.select-button-size{
+    max-width: 180px;
+    @include media-breakpoint-down(md) {
+        max-width: 100%;
+    }
+}
+
+//drop down
+.form-control:focus{
+    border: 2px solid $primary;
+}
+
+.avatar-40{
+    width: 40px;
+    height: 40px;
+    @include media-breakpoint-down(md) {
+        width: 32px;
+        height: 32px;
+    }
+}

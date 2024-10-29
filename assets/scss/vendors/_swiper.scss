@@ -1,18 +1,10 @@
 .mySwiper {
-  .swiper-button-prev::after,
-  .swiper-button-next::after {
-    @include paginationButtonStyles;
-  }
-
-  .swiper-button-prev {
+  .swiper-button-prev{
     left: 2%;
+    @include paginationButtonStylesPrev;
   }
-
-  .swiper-button-next {
+  .swiper-button-next{
     right: 2%;
-    &::after {
-      rotate: 180deg;
-    }
+    @include paginationButtonStylesNext;
   }
-
 }

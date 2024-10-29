@@ -1,154 +1,162 @@
 // 引入 Flatpickr 主程式及其樣式
 import flatpickr from "flatpickr";
-import "flatpickr/dist/flatpickr.min.css";
+// import "flatpickr/dist/flatpickr.min.css";
 
 // flatpickr 客製
-// flatpickr('.datepicker', {
-//   static: true,
-//   onReady: function (selectedDates, dateStr, instance) {
-//     // 開始建立元件在 calendar 上
-//     const newDiv = document.createElement('div');
-//     const newUl = document.createElement('ul');
+flatpickr(".flatpickr", {
+  static: true,
+  onReady: function (selectedDates, dateStr, instance) {
+    const timeDiv = document.createElement("div");
+    instance.calendarContainer.append(timeDiv);
 
-//     const timeItems = ['任何時段', '上午', '下午', '晚上'];
+    createTimeSelection(timeDiv);
 
-//     newUl.classList.add(
-//       'flatpickr-custom-time',
-//       'list-unstyled',
-//       'd-flex',
-//       'gap-2'
-//     );
+    // 開始新增「清除」、「確定」按鈕
+    const btnDiv = document.createElement("div");
+    btnDiv.classList.add("d-flex", "gap-4");
+    let str = `
+    <button type="button" class="btn btn-outline-secondary w-50 rounded-0">清除</button>
+    <button type="button" class="btn btn-primary w-50">確定</button>`;
 
-//     timeItems.forEach((timeText) => {
-//       const newLi = document.createElement('li');
-//       const newBtn = document.createElement('button');
-//       newLi.classList.add('nav-item');
-//       newBtn.classList.add('nav-link', 'w-100');
-//       newBtn.type = 'button';
-//       newBtn.textContent = timeText;
-//       newLi.append(newBtn);
-//       newUl.appendChild(newLi);
-//     });
+    btnDiv.innerHTML += str;
 
-//     newDiv.classList.add('flatpickr-custom-div');
-//     // 建立自定義按鈕元素
-//     const customButtonCancel = document.createElement('button');
-//     customButtonCancel.type = 'button';
-//     customButtonCancel.classList.add(
-//       'btn',
-//       'btn-outline-secondary',
-//       'w-50',
-//       'rounded-0'
-//     );
-//     customButtonCancel.innerText = '清除';
+    instance.calendarContainer.append(btnDiv);
+  },
+});
+// ==========================================================================
+// offcanvas 中 accordion 內的 行事曆
+flatpickr(".flatpickr-inline", {
+  inline: true,
+  onReady: function (selectedDates, dateStr, instance) {
+    const timeDiv = document.createElement("div");
+    instance.calendarContainer.append(timeDiv);
 
-//     const customButtonConfirm = document.createElement('button');
-//     customButtonConfirm.type = 'button';
-//     customButtonConfirm.classList.add('btn', 'btn-primary', 'w-50');
-//     customButtonConfirm.innerText = '確定';
+    createTimeSelection(timeDiv);
+  },
+});
+// ==========================================================================
+// 建立時間選擇區塊 (任何時段、上午、下午、晚上)
+function createTimeSelection(parentElement) {
+  const newUl = document.createElement("ul");
+  newUl.classList.add(
+    "flatpickr-custom-time",
+    "list-unstyled",
+    "d-flex",
+    "gap-2"
+  );
 
-//     customButtonConfirm.addEventListener('click', function () {
-//       instance.setDate(new Date()); // 設定為今天的日期
-//     });
-//     newDiv.append(customButtonCancel, customButtonConfirm);
-//     instance.calendarContainer.append(newUl, newDiv);
-//   },
-
-// }); 
-
-// flatpickr('.datepicker-inline', {
-//   inline: true,
-//   onReady: function (selectedDates, dateStr, instance) {
-
-//     // 開始建立元件在 calendar 上
-//     const newDiv = document.createElement('div');
-//     const newUl = document.createElement('ul');
-
-//     const timeItems = ['任何時段', '上午', '下午', '晚上'];
-
-//     newUl.classList.add(
-//       'flatpickr-custom-time',
-//       'list-unstyled',
-//       'd-flex',
-//       'gap-2'
-//     );
-
-//     timeItems.forEach((timeText) => {
-//       const newLi = document.createElement('li');
-//       const newBtn = document.createElement('button');
-//       newLi.classList.add('nav-item');
-//       newBtn.classList.add('nav-link', 'w-100');
-//       newBtn.type = 'button';
-//       newBtn.textContent = timeText;
-//       newLi.append(newBtn);
-//       newUl.appendChild(newLi);
-//     });
-
-//     newDiv.classList.add('flatpickr-custom-div');
-
-//     instance.calendarContainer.append(newUl, newDiv);
-//   },
-// }); 
-
-
-// 函數：創建時間選擇按鈕列表
-function createTimeButtons(timeItems) {
-  const newUl = document.createElement('ul');
-  newUl.classList.add('flatpickr-custom-time', 'list-unstyled', 'd-flex', 'gap-2');
-
-  timeItems.forEach((timeText) => {
-    const newLi = document.createElement('li');
-    const newBtn = document.createElement('button');
-    newLi.classList.add('nav-item', 'p-0');
-    newBtn.classList.add('nav-link', 'w-100', 'p-2');
-    newBtn.type = 'button';
-    newBtn.textContent = timeText;
-    newLi.append(newBtn);
-    newUl.appendChild(newLi);
-  });
-
-  return newUl;
-}
-
-// 函數：創建自定義按鈕
-function createCustomButtons(instance) {
-  const newDiv = document.createElement('div');
-  newDiv.classList.add('flatpickr-custom-div');
-
-  const customButtonCancel = document.createElement('button');
-  customButtonCancel.type = 'button';
-  customButtonCancel.classList.add('btn', 'btn-outline-secondary', 'w-50', 'rounded-0');
-  customButtonCancel.innerText = '清除';
-
-  const customButtonConfirm = document.createElement('button');
-  customButtonConfirm.type = 'button';
-  customButtonConfirm.classList.add('btn', 'btn-primary', 'w-50');
-  customButtonConfirm.innerText = '確定';
-  customButtonConfirm.addEventListener('click', () => {
-    instance.setDate(new Date()); // 設定為今天的日期
-  });
-
-  newDiv.append(customButtonCancel, customButtonConfirm);
-  return newDiv;
-}
-
-// 函數：初始化 flatpickr
-function initFlatpickr(selector, options = {}) {
-  flatpickr(selector, {
-    ...options,
-    onReady: function (selectedDates, dateStr, instance) {
-      const timeItems = ['任何時段', '上午', '下午', '晚上'];
-      const timeButtons = createTimeButtons(timeItems);
-      const customButtons = !options.inline ? createCustomButtons(instance) : null;
-
-      instance.calendarContainer.append(timeButtons);
-      if (customButtons) {
-        instance.calendarContainer.append(customButtons);
-      }
+  const timeItems = [
+    {
+      text: "任何時段",
+      id: "anytime",
     },
+    {
+      text: "上午",
+      id: "morning",
+    },
+    {
+      text: "下午",
+      id: "afternoon",
+    },
+    {
+      text: "晚上",
+      id: "evening",
+    },
+  ];
+  let str = "";
+  timeItems.forEach(function (time, index) {
+    str += `<li><input class="btn-check" type="checkbox" id="btn-check-${time.id}"><label class="btn btn-outline-gray-800 p-2 w-100" for="btn-check-${time.id}">${time.text}</label></li>`;
   });
+  newUl.innerHTML += str;
+
+  parentElement.appendChild(newUl);
+
+  newUl.querySelector("input").checked = true;
 }
 
-// 初始化兩個不同模式的 flatpickr
-initFlatpickr('.datepicker', { static: true });
-initFlatpickr('.datepicker-inline', { inline: true });
+// ========================================================================
+// 學員專區 行事曆
+flatpickr(".flatpickr-student", {
+  inline: true,
+  static: true,
+
+  prevArrow: `<span class="material-symbols-outlined border border-gray-800 border-primary-hover p-2 text-gray-800 link-primary position-absolute top-0 start-0">chevron_left</span>`, // 使用自定義 HTML
+  nextArrow: `<span class="material-symbols-outlined border border-gray-800 border-primary-hover p-2 text-gray-800 link-primary position-absolute top-0 start-0">chevron_right</span>`, // 使用自定義 HTML
+  onChange: addEventModalAttribute,
+  onReady: function (selectedDates, dateStr, instance) {
+    wrapTodayDate();
+    addEventModalAttribute();
+  },
+  onDayCreate: function (dObj, dStr, fp, dayElem) {
+    // 假設有事件的日期
+    const eventDates = [
+      "October 14, 2024",
+      "October 20, 2024",
+      "October 28, 2024",
+    ];
+    // 格式化 dayElem 日期為 yyyy-mm-dd
+    const dateStr = dayElem.getAttribute("aria-label");
+
+    // 如果日期符合事件日期，則加入區塊
+    if (eventDates.includes(dateStr)) {
+      if (dayElem.classList.contains("today")) {
+        const selectedDaySpan = document.createElement("span");
+        selectedDaySpan.classList.add("date"); // 添加 class
+
+        // 將原有的文本添加到新的 <span> 中
+        selectedDaySpan.textContent = dayElem.textContent; // 將文本設置為原有的內容
+
+        // 清空原有的 <span> 並將新的 <span> 添加進去
+        dayElem.textContent = ""; // 清空原有的內容
+        dayElem.appendChild(selectedDaySpan); // 將新的 <span> 添加到原有的 <span> 中
+      }
+
+      // 創建一個自定義區塊
+      const eventBlock = document.createElement("div");
+      eventBlock.innerHTML = `<span class="fs-10" style="color: #FF5E1F">●</span><span class='text-secondary d-none d-lg-inline fs-8'>Jeremy 教練｜1對1課程</span>`;
+
+      // 將自定義區塊加入到日期元素中
+      dayElem.appendChild(eventBlock);
+
+      // 加上樣式
+      dayElem.classList.add("has-event");
+    }
+  },
+});
+// ====================================================================
+// 為「今天」日期「數字」外層再包一個 <span>，以便對數字本身套用樣式，而不是整個日期方框
+function wrapTodayDate() {
+  // 獲取所有符合條件的 <span> 元素
+  const dayElements = document.querySelectorAll(".today");
+
+  // 遍歷每個 <span> 元素
+  dayElements.forEach((today) => {
+    // 創建新的 <span> 元素
+    // console.log(today);
+    // console.log(today.childNodes.length);
+
+    if (today.childNodes.length > 1) {
+      return;
+    }
+
+    const selectedDaySpan = document.createElement("span");
+    selectedDaySpan.classList.add("date"); // 添加 class
+
+    // 將原有的文本添加到新的 <span> 中
+    selectedDaySpan.textContent = today.textContent; // 將文本設置為原有的內容
+
+    // 清空原有的 <span> 並將新的 <span> 添加進去
+    today.textContent = ""; // 清空原有的內容
+    today.appendChild(selectedDaySpan); // 將新的 <span> 添加到原有的 <span> 中
+  });
+}
+// ====================================================================
+// 點擊出現 modal 視窗
+function addEventModalAttribute() {
+  const events = document.querySelectorAll(".has-event");
+  console.log(events);
+  events.forEach((event, index) => {
+    event.setAttribute("data-bs-toggle", "modal");
+    event.setAttribute("data-bs-target", `#eventModal-${index}`);
+  });
+}

@@ -1,0 +1,6 @@
+.pagination-prev{
+  @include paginationButtonStylesPrev;
+}
+.pagination-next{
+  @include paginationButtonStylesNext;
+}

@@ -60,11 +60,11 @@
 @import "../scss/components/card";
 @import "../scss/components/dropdown";
 @import "../scss/components/buttons";
-@import "../scss/components/flatpicker";
 @import "../scss/components/breadcrumb";
 @import "../scss/components/badge";
 @import "../scss/components/badges";
 @import "../scss/components/sign-in-and-sign-up-modal";
+@import "../scss/components/pagination";
 
 
 // Helpers
@@ -88,10 +88,13 @@
 
 // pages
 @import './pages/index.scss';
-@import './pages/order.scss';
+@import './pages/order-place.scss';
+@import './pages/order-time.scss';
+@import './pages/order-success.scss';
 @import './pages/student.scss';
 
 // others
 @import "./vendors/swiper";
+@import "./vendors/flatpickr";
 @import './pages/index';
 @import './pages/course-introduction';
