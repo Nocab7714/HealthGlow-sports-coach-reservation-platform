@@ -73,22 +73,29 @@ import bootstrap from "bootstrap/dist/js/bootstrap.min.js";
 // flatpickr 客製
 flatpickr(".flatpickr", {
   static: true,
+  closeOnSelect: false, // 點選後不會自動關閉行事曆
   onReady: function (selectedDates, dateStr, instance) {
     const timeDiv = document.createElement("div");
     instance.calendarContainer.append(timeDiv);
 
     createTimeSelection(timeDiv);
+    assignCheckboxUniqueIds();
 
     // 開始新增「清除」、「確定」按鈕
     const btnDiv = document.createElement("div");
     btnDiv.classList.add("d-flex", "gap-4");
     let str = `
     <button type="button" class="btn btn-outline-secondary w-50 rounded-0">清除</button>
-    <button type="button" class="btn btn-primary w-50">確定</button>`;
+    <button type="button" class="flatpickr-confirm-btn btn btn-primary w-50">確定</button>`;
 
     btnDiv.innerHTML += str;
 
     instance.calendarContainer.append(btnDiv);
+
+    // 手動關閉行事曆
+    document.querySelector(".flatpickr-confirm-btn").addEventListener("click", function() {
+      instance.close(); // 手動關閉行事曆
+  });
   },
 });
 // ==========================================================================
@@ -100,6 +107,7 @@ flatpickr(".flatpickr-inline", {
     instance.calendarContainer.append(timeDiv);
 
     createTimeSelection(timeDiv);
+    assignCheckboxUniqueIds();
   },
 });
 // ==========================================================================
@@ -133,13 +141,26 @@ function createTimeSelection(parentElement) {
   ];
   let str = "";
   timeItems.forEach(function (time, index) {
-    str += `<li><input class="btn-check" type="checkbox" id="btn-check-${time.id}"><label class="btn btn-outline-gray-800 p-2 w-100" for="btn-check-${time.id}">${time.text}</label></li>`;
+    str += `<li class="checkbox-group"><input class="btn-check" type="checkbox"><label class="btn btn-outline-gray-800 p-2 w-100">${time.text}</label></li>`;
   });
   newUl.innerHTML += str;
 
   parentElement.appendChild(newUl);
 
   newUl.querySelector("input").checked = true;
+}
+// ========================================================================
+// 為每個 checkbox input & label 加上獨有的 id
+function assignCheckboxUniqueIds(){
+  document.querySelectorAll('.checkbox-group').forEach((group, index) => {
+    
+    const checkbox = group.querySelector('input[type="checkbox"]');
+    const label = group.querySelector('label')
+    const uniqueId = `btn-check-${index}`;
+
+    checkbox.id = uniqueId;
+    label.setAttribute('for', uniqueId);
+  })
 }
 
 // ========================================================================
@@ -167,7 +188,7 @@ flatpickr(".flatpickr-student", {
     updateMonthYearDisplay(instance);
     wrapTodayDate();
 
-    // 開始新增「清除」、「確定」按鈕
+    // 開始新增「篩選顯示」、「預約狀態」select
     const btnDiv = document.createElement("div");
     btnDiv.classList.add("d-none", "d-lg-flex", "gap-8", "ms-auto");
     let str = `
