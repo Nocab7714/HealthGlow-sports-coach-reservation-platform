@@ -1,14 +1,7 @@
 
-// @mixin mobil{
-    
-//     @media screen and (max-width:576px) {
-//         @content;
-//     };
-// }
-
 /* 4個理由 */
 .bg-banner-04-pc{
-    background-image:  url('../assets/images/img/banner-04-pc.webp');
+    background-image:  url('/assets/images/img/banner-04-pc.webp');
     background-size: cover;
     background-position: center;
 }
