@@ -4,7 +4,10 @@
     padding: 16px;
   }
   .course-menu{
-    width: 525px;
+    width: 100%;
+    @include media-breakpoint-up(sm){
+      width: 525px;
+    }
   }
   .location-menu{
     width: 359px;
