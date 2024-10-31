@@ -2,22 +2,33 @@
   <!-- 課程搜尋 dropdown -->
   <li
     class="dropdown nav-item rounded-0 position-relative me-3"
-    style="max-width: 290px">
-    <span class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
-      style="left: 24px">search</span>
+    style="max-width: 290px"
+  >
+    <span
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+      style="left: 24px"
+      >search</span
+    >
     <input
       type="text"
       class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
       placeholder="搜尋課程，有氧、飛輪、瑜伽、"
-      data-bs-toggle="dropdown" type="search"
-      aria-label="Search" aria-expanded="false"/>
+      data-bs-toggle="dropdown"
+      type="search"
+      aria-label="Search"
+      aria-expanded="false"
+    />
     <!-- dropdown 開始區塊 -->
     <div class="course-menu dropdown-menu">
       <div class="d-flex">
-        <p class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">
+        <p
+          class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
+        >
           健身運動類別
         </p>
-        <p class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2">
+        <p
+          class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2"
+        >
           運動課程
         </p>
       </div>
@@ -39,7 +50,9 @@
             </li>
           </ul>
         </div>
-        <div class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3">
+        <div
+          class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3"
+        >
           <div>
             <div class="d-flex justify-content-center align-items-center">
               <p class="text-primary font-anton-regular fs-5">5.0</p>
@@ -54,19 +67,27 @@
             <p class="text-gray-700 fw-semibold">更多資訊</p>
             <ul class="list-unstyled fs-7 fw-normal mb-0">
               <li>
-                <a href="#"><span class="selected-exercise-type">瑜伽</span>課內容</a>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span>課內容</a
+                >
               </li>
               <li>
-                <a href="#"><span class="selected-exercise-type">瑜伽</span>教練薪資行情</a>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span
+                  >教練薪資行情</a
+                >
               </li>
               <li>
-                <a href="#"><span class="selected-exercise-type">瑜伽</span>學生評價內容</a>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span
+                  >學生評價內容</a
+                >
               </li>
             </ul>
           </div>
         </div>
       </div>
-    </div>  
+    </div>
   </li>
   <!-- 地點 dropdown  -->
   <li
@@ -83,17 +104,26 @@
       type="text"
       class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
       placeholder="地點?"
-      data-bs-toggle="dropdown" type="search"
-      aria-label="Search" aria-expanded="false"
+      data-bs-toggle="dropdown"
+      type="search"
+      aria-label="Search"
+      aria-expanded="false"
     />
     <!-- dropdown 開始區塊 -->
     <div class="location-menu dropdown-menu">
-      <p class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2">
-          挑選地區
+      <p
+        class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
+      >
+        挑選地區
       </p>
       <div class="d-flex justify-content-between">
         <span>已選擇 2/10</span>
-        <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
+        <a
+          href="#"
+          class="link-gray-700 text-decoration-underline"
+          role="button"
+          >清除全部</a
+        >
       </div>
       <div class="d-flex">
         <!-- 地點 Level One -->
@@ -113,9 +143,7 @@
           </ul>
         </div>
       </div>
-      <button class="btn btn-primary w-100 mt-10" type="button">
-        確認
-      </button>
+      <button class="btn btn-primary w-100 mt-10" type="button">確認</button>
     </div>
   </li>
   <!-- 時間 dropdown  -->
@@ -133,8 +161,11 @@
       id="flatpickr"
       type="search"
       class="flatpickr form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
-      data-bs-toggle="dropdown" type="search"
-      placeholder="時間？" aria-label="Search" aria-expanded="false"
+      data-bs-toggle="dropdown"
+      type="search"
+      placeholder="時間？"
+      aria-label="Search"
+      aria-expanded="false"
     />
   </li>
   <li class="nav-item">
@@ -151,74 +182,88 @@
 <script>
   document.addEventListener('DOMContentLoaded', function () {
     // 選取所有 .course-dropdown-menu-level-one 和 .course-dropdown-menu-level-two 的 ul 元素
-    const courseMenuLevelOnes = document.querySelectorAll('.course-dropdown-menu-level-one ul');
-    const courseMenuLevelTwos = document.querySelectorAll('.course-dropdown-menu-level-two ul');
+    const courseMenuLevelOnes = document.querySelectorAll(
+      '.course-dropdown-menu-level-one ul'
+    );
+    const courseMenuLevelTwos = document.querySelectorAll(
+      '.course-dropdown-menu-level-two ul'
+    );
 
     // 迴圈處理每對第一層和第二層的課程選單
     courseMenuLevelOnes.forEach((courseMenuLevelOne, index) => {
-      const courseMenuLevelTwo = courseMenuLevelTwos[index];  // 對應的第二層選單
+      const courseMenuLevelTwo = courseMenuLevelTwos[index]; // 對應的第二層選單
 
       // 將 courseData 資料加入每個選單
       courseData.forEach((element) => {
-        let menuItem = createMainMenuItem(element, courseMenuLevelTwo);  // 建立主選單項目
-        courseMenuLevelOne.append(menuItem);  // 將主選單項目加入第一層選單
+        let menuItem = createMainMenuItem(element, courseMenuLevelTwo); // 建立主選單項目
+        courseMenuLevelOne.append(menuItem); // 將主選單項目加入第一層選單
       });
     });
 
     // 同樣處理 location (地點) 選單
-    const locationMenuLevelOnes = document.querySelectorAll('.location-dropdown-menu-level-one ul');
-    const locationMenuLevelTwos = document.querySelectorAll('.location-dropdown-menu-level-two ul');
+    const locationMenuLevelOnes = document.querySelectorAll(
+      '.location-dropdown-menu-level-one ul'
+    );
+    const locationMenuLevelTwos = document.querySelectorAll(
+      '.location-dropdown-menu-level-two ul'
+    );
 
     locationMenuLevelOnes.forEach((locationMenuLevelOne, index) => {
-      const locationMenuLevelTwo = locationMenuLevelTwos[index];  // 對應的第二層地點選單
+      const locationMenuLevelTwo = locationMenuLevelTwos[index]; // 對應的第二層地點選單
 
       locationData.forEach((element) => {
-        let locationItem = createMainMenuItem(element, locationMenuLevelTwo);  // 建立地點選單項目
-        locationMenuLevelOne.append(locationItem);  // 將地點選單項目加入第一層選單
-      })
-    })
-  })
+        let locationItem = createMainMenuItem(element, locationMenuLevelTwo); // 建立地點選單項目
+        locationMenuLevelOne.append(locationItem); // 將地點選單項目加入第一層選單
+      });
+    });
+  });
   // 建立主選單項目 (第一層選單)
   function createMainMenuItem(element, menuLevelTwo) {
-    let mainMenuItem = createMenuItem(element.title, element.status);  // 建立第一層選單項目
+    let mainMenuItem = createMenuItem(element.title, element.status); // 建立第一層選單項目
 
     // 當滑鼠移入該選單項目時觸發的事件
     mainMenuItem.addEventListener('mouseover', () => {
-      menuLevelTwo.innerText = '';  // 清空之前的第二層選單項目
+      menuLevelTwo.innerText = ''; // 清空之前的第二層選單項目
 
       // 將每個 subject (子選單) 加入第二層選單
       element.subject.forEach((subject) => {
-        let menuLevelTwoItem = createMenuItem(subject);  // 建立第二層選單項目
-        menuLevelTwo.append(menuLevelTwoItem);  // 將該項目加入第二層選單
+        let menuLevelTwoItem = createMenuItem(subject); // 建立第二層選單項目
+        menuLevelTwo.append(menuLevelTwoItem); // 將該項目加入第二層選單
       });
 
       // 先移除所有已經被加上 selected 樣式的項目
-      const selectedItems = document.querySelectorAll('.dropdown-item.selected');
+      const selectedItems = document.querySelectorAll(
+        '.dropdown-item.selected'
+      );
       selectedItems.forEach((item) => item.classList.remove('selected'));
 
       // 將當前選項的項目加上 selected 樣式
       mainMenuItem.querySelector('.dropdown-item').classList.add('selected');
     });
 
-    return mainMenuItem;  // 回船主選單項目
+    return mainMenuItem; // 回船主選單項目
   }
   // 建立選單項目 (通用，用於第一層和第二層選單)
   function createMenuItem(title, status) {
-    let menuItem = document.createElement('li');  // 建立 li 元素
-    let link = document.createElement('a');  // 建立 a 元素
+    let menuItem = document.createElement('li'); // 建立 li 元素
+    let link = document.createElement('a'); // 建立 a 元素
 
     // 設定 a 標籤的 class 和屬性
-    link.classList.add('dropdown-item', status);  // 加入樣式 class 和狀態
-    link.href = '#';  // 設定連結
+    link.classList.add('dropdown-item', status); // 加入樣式 class 和狀態
+    link.href = '#'; // 設定連結
     link.textContent = title; // 設定顯式的文字
-    menuItem.append(link);  // 將 a 標籤加入 li 元素中
+    menuItem.append(link); // 將 a 標籤加入 li 元素中
 
-    return menuItem;  // 回傳 li 元素
+    return menuItem; // 回傳 li 元素
   }
 
   // 課程資料 (用於第一層和第二層選單的生成)
   const courseData = [
-    { title: '有氧運動', subject: ['有氧 1', '有氧 2', '有氧 3'], status: 'selected' },
+    {
+      title: '有氧運動',
+      subject: ['有氧 1', '有氧 2', '有氧 3'],
+      status: 'selected',
+    },
     { title: '肌力訓練', subject: ['肌力 1', '肌力 2', '肌力 3'] },
     { title: '核心訓練', subject: ['核心 1', '核心 2', '核心 3'] },
     { title: '舞蹈課程', subject: ['舞蹈 1', '舞蹈 2', '舞蹈 3'] },
@@ -226,7 +271,19 @@
   ];
   // 地點資料 (用於第一層和第二層選單的生成)
   const locationData = [
-    { title: '台北市', subject: ['中正區', '大同區', '中山區', '松山區', '大安區', '萬華區', '信義區'], status: 'selected' },
+    {
+      title: '台北市',
+      subject: [
+        '中正區',
+        '大同區',
+        '中山區',
+        '松山區',
+        '大安區',
+        '萬華區',
+        '信義區',
+      ],
+      status: 'selected',
+    },
     { title: '宜蘭縣', subject: ['宜蘭縣 1', '宜蘭縣 2', '宜蘭縣 3'] },
     { title: '新北市', subject: ['新北市 1', '新北市 2', '新北市 3'] },
     { title: '基隆市', subject: ['基隆市 1', '基隆市 2', '基隆市 3'] },
