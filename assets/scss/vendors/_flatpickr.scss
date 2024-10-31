@@ -37,7 +37,8 @@
   }
 }
 
-.dropdown .flatpickr-day.selected{
+.dropdown .flatpickr-day.selected,
+.accordion-body .flatpickr-day.selected{
   background: $primary;
   border-color: $primary;
 }
