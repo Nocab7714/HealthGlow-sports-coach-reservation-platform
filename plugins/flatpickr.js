@@ -24,7 +24,7 @@ let bookedCourses = [
     timeStart: "21:00",
     timeEnd: "22:00",
     location: "中山體育館-2樓健身房",
-    hasFinished: false,
+    hasFinished: true,
   },
   {
     calendarDate: "October 22, 2024",
@@ -42,7 +42,7 @@ let bookedCourses = [
     timeStart: "20:00",
     timeEnd: "21:00",
     location: "中山體育館-2樓健身房",
-    hasFinished: false,
+    hasFinished: true,
   },
   {
     calendarDate: "November 4, 2024",
