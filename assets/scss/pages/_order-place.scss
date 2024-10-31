@@ -62,8 +62,21 @@
 }
 
 .select-button-size{
-    max-width: 180px;
+    width: 180px;
+    @include media-breakpoint-down(lg) {
+       width: 100%;
+    }
+}
+
+.oreder-train-infor{
+    max-width: 297px;
     @include media-breakpoint-down(md) {
+        max-width: 100%;
+    }
+}
+.oreder-selected{
+    max-width: 581px;
+    @include media-breakpoint-down(lg) {
         max-width: 100%;
     }
 }
@@ -79,5 +92,12 @@
     @include media-breakpoint-down(md) {
         width: 32px;
         height: 32px;
+    }
+}
+
+.map-container{
+    height: 300px;
+    @include media-breakpoint-down(md) {
+     height: 168px;
     }
 }
