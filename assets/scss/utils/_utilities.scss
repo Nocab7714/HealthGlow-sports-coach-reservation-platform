@@ -52,15 +52,18 @@ $utilities: map-merge(
     // scss-docs-start utils-overflow
     "overflow": (
       property: overflow,
-      values: auto hidden visible scroll,
+      // values: auto hidden visible scroll,
+      values: auto hidden visible scroll clip,  // *custom 
     ),
     "overflow-x": (
       property: overflow-x,
-      values: auto hidden visible scroll,
+      // values: auto hidden visible scroll,
+      values: auto hidden visible scroll clip,  // *custom 
     ),
     "overflow-y": (
       property: overflow-y,
-      values: auto hidden visible scroll,
+      // values: auto hidden visible scroll,
+      values: auto hidden visible scroll clip,  // *custom 
     ),
     // scss-docs-end utils-overflow
     // scss-docs-start utils-display
@@ -75,6 +78,7 @@ $utilities: map-merge(
     // scss-docs-start utils-shadow
     "shadow": (
       property: box-shadow,
+      responsive: true,
       class: shadow,
       values: (
         null: var(--#{$prefix}box-shadow),
@@ -127,6 +131,7 @@ $utilities: map-merge(
     // scss-docs-end utils-position
     // scss-docs-start utils-borders
     "border": (
+      responsive: true,
       property: border,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
@@ -135,6 +140,7 @@ $utilities: map-merge(
     ),
     "border-top": (
       property: border-top,
+      responsive: true,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -142,6 +148,7 @@ $utilities: map-merge(
     ),
     "border-end": (
       property: border-right,
+      responsive: true,
       class: border-end,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
@@ -150,6 +157,7 @@ $utilities: map-merge(
     ),
     "border-bottom": (
       property: border-bottom,
+      responsive: true,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
         0: 0,
@@ -157,6 +165,7 @@ $utilities: map-merge(
     ),
     "border-start": (
       property: border-left,
+      responsive: true,
       class: border-start,
       values: (
         null: var(--#{$prefix}border-width) var(--#{$prefix}border-style) var(--#{$prefix}border-color),
@@ -165,7 +174,9 @@ $utilities: map-merge(
     ),
     "border-color": (
       property: border-color,
+      responsive: true,
       class: border,
+      state: hover,  // *custom
       local-vars: (
         "border-opacity": 1
       ),
@@ -173,16 +184,19 @@ $utilities: map-merge(
     ),
     "subtle-border-color": (
       property: border-color,
+      responsive: true,
       class: border,
       values: $utilities-border-subtle
     ),
     "border-width": (
       property: border-width,
+      responsive: true,
       class: border,
       values: $border-widths
     ),
     "border-opacity": (
       css-var: true,
+      responsive: true,
       class: border-opacity,
       values: (
         10: .1,
@@ -197,13 +211,15 @@ $utilities: map-merge(
     // scss-docs-start utils-sizing
     "width": (
       property: width,
+      responsive: true,
       class: w,
       values: (
         25: 25%,
         50: 50%,
         75: 75%,
         100: 100%,
-        auto: auto
+        auto: auto,
+        'fit-content': fit-content,  // *custom
       )
     ),
     "max-width": (
@@ -505,6 +521,7 @@ $utilities: map-merge(
       values: (monospace: var(--#{$prefix}font-monospace))
     ),
     "font-size": (
+      responsive: true,  // *custom
       rfs: true,
       property: font-size,
       class: fs,
@@ -516,6 +533,7 @@ $utilities: map-merge(
       values: italic normal
     ),
     "font-weight": (
+      responsive: true,  // *custom
       property: font-weight,
       class: fw,
       values: (
@@ -529,6 +547,7 @@ $utilities: map-merge(
       )
     ),
     "line-height": (
+      responsive: true,  // *custom
       property: line-height,
       class: lh,
       values: (
@@ -567,6 +586,7 @@ $utilities: map-merge(
     ),
     "word-wrap": (
       property: word-wrap word-break,
+      responsive: true,
       class: text,
       values: (break: break-word),
       rtl: false
@@ -661,7 +681,9 @@ $utilities: map-merge(
     // scss-docs-start utils-bg-color
     "background-color": (
       property: background-color,
+      responsive: true,
       class: bg,
+      state: hover,  // *custom
       local-vars: (
         "bg-opacity": 1
       ),
@@ -679,6 +701,7 @@ $utilities: map-merge(
       class: bg-opacity,
       values: (
         10: .1,
+        20: .2, // *custom
         25: .25,
         50: .5,
         75: .75,
@@ -801,6 +824,7 @@ $utilities: map-merge(
       values: $zindex-levels,
     )
     // scss-docs-end utils-zindex
+    //Bymacy
   ),
   $utilities
 );

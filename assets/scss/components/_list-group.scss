@@ -1,0 +1,53 @@
+.pain-point{
+  .list-group{
+    border-radius: 0;
+  }
+  
+  .list-group-item{
+    span{
+      color: $gray-300;
+      letter-spacing: 0.05em;
+    }
+    + .list-group-item{
+      border-width: 1px;
+    }
+    &:hover{
+      background-color: $gray-200;
+      border-color: $accent;
+      color: black;
+      span{
+        color: $accent;
+      }
+    }
+    &.active{
+      background-color: $tint;
+      border-color: $primary;
+      color: $gray-800;
+      span{
+        color: $primary;
+      }
+    }
+  }
+}
+.student{
+  .list-group{
+    padding: 16px;
+    background-color: white;
+    gap: 12px;
+    text-align: center;
+  }
+  .list-group-item{
+    color: $secondary;
+    border: 0;
+  }
+  .list-group-item{
+    &:first-child, &:last-child{
+      border-radius: 0;
+    }
+  }
+  .list-group-item.active{
+    background-color: #00B3BF33;
+    font-weight: 500;
+    
+  }
+}

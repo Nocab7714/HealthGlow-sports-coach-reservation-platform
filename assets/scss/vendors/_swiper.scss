@@ -1,0 +1,10 @@
+.mySwiper {
+  .swiper-button-prev{
+    left: 2%;
+    @include paginationButtonStylesPrev;
+  }
+  .swiper-button-next{
+    right: 2%;
+    @include paginationButtonStylesNext;
+  }
+}

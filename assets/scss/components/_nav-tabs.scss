@@ -1,0 +1,35 @@
+.nav-tabs .nav-link{
+  color: $black;
+  border-radius: 0;
+  border: 1px solid $gray-800;
+  &:hover{
+    border-color: inherit;
+  }
+  &.active{
+    border-color: $primary;
+  }
+}
+.student{
+  .nav-tabs{
+    border-bottom: 0;
+    .nav-link.active{
+      background-color: $gray-100;
+    }
+  }
+  .nav-item{
+    background-color: $gray-100;
+    flex-grow: 1;
+    @include media-breakpoint-up(md){
+      flex-grow: 0;
+    }
+  }
+  .nav-link{
+    width: 100%;
+    font-size: 16px;
+    padding: 8px 12px;
+    @include media-breakpoint-up(md){
+      font-size: 20px;
+      padding: 20px 32px;
+    }
+  }
+}

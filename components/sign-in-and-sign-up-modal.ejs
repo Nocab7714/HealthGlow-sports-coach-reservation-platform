@@ -1,0 +1,511 @@
+<!-- 流程圖 -->
+<!-- 登入 > 我是學員 > 教練登入頁面 > 我沒帳號 ( 學員註冊 )
+    > 我是教練 > 教練登入頁面 > 我沒帳號 ( 教練註冊 )
+
+登入完畢 > 學員登入的跳到學員專區
+        > 教練登入的跳到教練專區
+
+註冊 > 我是學員 > 學員註冊 > 我有帳號 ( 學員登入 )
+    > 我是教練 > 教練註冊 > 我有帳號 ( 教練登入 )
+
+註冊完畢 > 學員註冊玩跳到學員登入 modal
+	> 教練註冊玩跳到教練登入 modal -->
+
+<!-- 身分選擇 - 登入 ( 我是教練 / 學員 ) -->
+<div
+  class="modal fade"
+  id="userCategorySignInModal"
+  tabindex="-1"
+  aria-labelledby="userCategorySignInModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-0">
+      <div class="modal-header border-bottom-0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-8 mb-10">
+        <h2 class="text-center fs-3 mb-8">歡迎來到 HealthGlow！</h2>
+        <div class="d-flex flex-column align-items-center">
+          <div>
+            <button
+              class="btn btn-primary mb-3 px-12 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#traineeSignInModal"
+            >
+              我是學生
+            </button>
+          </div>
+          <div>
+            <button
+              class="btn btn-outline-primary px-12 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#coachSignInModal"
+            >
+              我是教練
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 身分選擇 - 註冊 ( 我是教練 / 學員 ) -->
+<div
+  class="modal fade"
+  id="userCategorySignUpModal"
+  tabindex="-1"
+  aria-labelledby="userCategorySignUpModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content rounded-0">
+      <div class="modal-header border-bottom-0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body p-8 mb-10">
+        <h2 class="text-center fs-3 mb-8">歡迎來到 HealthGlow！</h2>
+        <div class="d-flex flex-column align-items-center">
+          <div>
+            <button
+              class="btn btn-primary mb-3 px-12 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#traineeSignUpModal"
+            >
+              我是學生
+            </button>
+          </div>
+          <div>
+            <button
+              class="btn btn-outline-primary px-12 py-3"
+              data-bs-toggle="modal"
+              data-bs-target="#coachSignUpModal"
+            >
+              我是教練
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 學員登入 -->
+<div
+  class="modal fade"
+  id="traineeSignInModal"
+  tabindex="-1"
+  aria-labelledby="traineeSignInModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-0">
+      <div class="modal-header border-bottom-0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body px-8 pb-8 pt-0 mb-10">
+        <h2 class="fs-4 text-center mb-10">學員登入</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <form class="mb-8 mb-lg-0">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-0"
+                  id="traineeSignInEmailFloatingInput"
+                  placeholder="請輸入您的信箱"
+                  value="trainee01@gmail.com"
+                />
+                <label for="traineeSignInEmailFloatingInput"
+                  >請輸入您的信箱</label
+                >
+              </div>
+              <div class="form-floating mb-2">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="traineeSignInPasswordFloatingInput"
+                  placeholder="請輸入您的密碼"
+                  value="abced1234567"
+                />
+                <label for="traineeSignInPasswordFloatingInput"
+                  >請輸入您的密碼</label
+                >
+              </div>
+              <span class="d-flex justify-content-end fs-7 mb-5"
+                ><a href="#" class="link-gray-700">忘記密碼?</a></span
+              >
+              <!-- 正式登入表單提交按鈕 -->
+              <!-- <button type="submit" class="btn btn-primary w-100">登入</button> -->
+              <!-- 切版登入展示按鈕 -->
+              <a href="student.html" class="btn btn-primary w-100 mb-5">登入</a>
+              <span class="d-flex justify-content-center fs-7"
+                >還沒有帳號嗎?<a
+                  class="link-gray-700 ms-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#traineeSignUpModal"
+                  style="cursor: pointer"
+                  >點此註冊帳號</a
+                ></span
+              >
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div>
+              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
+                — &nbsp; 其他登入方式 &nbsp;—
+              </h3>
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100 mb-3"
+              >
+                <i class="bi bi-google me-2"></i>Google 登入
+              </button>
+              <button type="button" class="btn btn-outline-secondary w-100">
+                <i class="bi bi-facebook me-2"></i>Facebook 登入
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 教練登入 -->
+<div
+  class="modal fade"
+  id="coachSignInModal"
+  tabindex="-1"
+  aria-labelledby="coachSignInModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-0">
+      <div class="modal-header border-bottom-0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body px-8 pb-8 pt-0 mb-10">
+        <h2 class="fs-4 text-center mb-10">教練登入</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <form class="mb-8 mb-lg-0">
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-0"
+                  id="coachSignInEmailFloatingInput"
+                  placeholder="請輸入您的信箱"
+                  value="coach01@gmail.com"
+                />
+                <label for="coachSignInEmailFloatingInput"
+                  >請輸入您的信箱</label
+                >
+              </div>
+              <div class="form-floating mb-2">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="coachSignInPasswordFloatingInput"
+                  placeholder="請輸入您的密碼"
+                  value="abced1234567"
+                />
+                <label for="coachSignInPasswordFloatingInput"
+                  >請輸入您的密碼</label
+                >
+              </div>
+              <span class="d-flex justify-content-end fs-7 mb-5"
+                ><a href="#" class="link-gray-700">忘記密碼?</a></span
+              >
+              <!-- 正式登入表單提交按鈕 -->
+              <!-- <button type="submit" class="btn btn-primary w-100">登入</button> -->
+              <!-- 切版登入展示按鈕 -->
+              <a href="#" class="btn btn-primary w-100 mb-5">登入</a>
+              <span class="d-flex justify-content-center fs-7"
+                >還沒有帳號嗎?<a
+                  class="link-gray-700 ms-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#coachSignUpModal"
+                  style="cursor: pointer"
+                  >點此註冊帳號</a
+                ></span
+              >
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div>
+              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
+                — &nbsp; 其他登入方式 &nbsp;—
+              </h3>
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100 mb-3"
+              >
+                <i class="bi bi-google me-2"></i>Google 登入
+              </button>
+              <button type="button" class="btn btn-outline-secondary w-100">
+                <i class="bi bi-facebook me-2"></i>Facebook 登入
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 學員註冊 -->
+<div
+  class="modal fade"
+  id="traineeSignUpModal"
+  tabindex="-1"
+  aria-labelledby="traineeSignUpModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-0">
+      <div class="modal-header border-bottom-0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body px-8 pb-8 pt-0 mb-10">
+        <h2 class="fs-4 text-center mb-10">學員註冊</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <form class="mb-8 mb-lg-0">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="traineeSignUpNameFloatingInput"
+                  placeholder="請輸入您的姓名"
+                  value="王大明"
+                />
+                <label for="traineeSignUpNameFloatingInput"
+                  >請輸入您的姓名</label
+                >
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-0"
+                  id="traineeSignUpEmailFloatingInput"
+                  placeholder="請輸入您的信箱"
+                  value="trainee01@gmail.com"
+                />
+                <label for="traineeSignUpEmailFloatingInput"
+                  >請輸入您的信箱</label
+                >
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="traineeSignUpPasswordFloatingInput"
+                  placeholder="請輸入您設定的密碼"
+                  value="abced1234567"
+                />
+                <label for="traineeSignUpPasswordFloatingInput"
+                  >請輸入您設定的密碼</label
+                >
+              </div>
+              <div class="form-floating mb-2">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="traineeSignUpConfirmPasswordFloatingInput"
+                  placeholder="請再次輸入您所設定的密碼"
+                  value="abced1234567"
+                />
+                <label for="traineeSignUpConfirmPasswordFloatingInput"
+                  >請再次輸入您所設定的密碼</label
+                >
+              </div>
+              <span class="fs-8 mb-5 d-block"
+                >*點擊「註冊」即表示你同意我們的<a
+                  href="privacy-policy.html"
+                  class="link-gray-700"
+                  >服務條款與隱私政策</a
+                ></span
+              >
+              <!-- 正式登入表單提交按鈕 -->
+              <!-- <button type="submit" class="btn btn-primary w-100">註冊</button> -->
+              <!-- 切版註冊展示按鈕 -->
+              <a
+                class="btn btn-primary w-100 mb-5"
+                data-bs-toggle="modal"
+                data-bs-target="#traineeSignInModal"
+                style="cursor: pointer"
+                >註冊</a
+              >
+              <span class="d-flex justify-content-center fs-7"
+                >已經有帳號了?<a
+                  class="link-gray-700 ms-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#traineeSignInModal"
+                  style="cursor: pointer"
+                  >登入</a
+                ></span
+              >
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div>
+              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
+                — &nbsp; 其他註冊方式 &nbsp;—
+              </h3>
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100 mb-3"
+              >
+                <i class="bi bi-google me-2"></i>Google 註冊
+              </button>
+              <button type="button" class="btn btn-outline-secondary w-100">
+                <i class="bi bi-facebook me-2"></i>Facebook 註冊
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- 教練註冊 -->
+<div
+  class="modal fade"
+  id="coachSignUpModal"
+  tabindex="-1"
+  aria-labelledby="coachSignUpModal"
+  aria-hidden="true"
+>
+  <div class="modal-dialog modal-dialog-centered modal-lg">
+    <div class="modal-content rounded-0">
+      <div class="modal-header border-bottom-0">
+        <button
+          type="button"
+          class="btn-close"
+          data-bs-dismiss="modal"
+          aria-label="Close"
+        ></button>
+      </div>
+      <div class="modal-body px-8 pb-8 pt-0 mb-10">
+        <h2 class="fs-4 text-center mb-10">教練註冊</h2>
+        <div class="row">
+          <div class="col-lg-6">
+            <form class="mb-8 mb-lg-0">
+              <div class="form-floating mb-3">
+                <input
+                  type="text"
+                  class="form-control rounded-0"
+                  id="coachSignUpNameFloatingInput"
+                  placeholder="請輸入您的姓名"
+                  value="王大明"
+                />
+                <label for="coachSignUpNameFloatingInput">請輸入您的姓名</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="email"
+                  class="form-control rounded-0"
+                  id="coachSignUpEmailFloatingInput"
+                  placeholder="請輸入您的信箱"
+                  value="coach01@gmail.com"
+                />
+                <label for="coachSignUpEmailFloatingInput"
+                  >請輸入您的信箱</label
+                >
+              </div>
+              <div class="form-floating mb-3">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="coachSignUpPasswordFloatingInput"
+                  placeholder="請輸入您設定的密碼"
+                  value="abced1234567"
+                />
+                <label for="coachSignUpPasswordFloatingInput"
+                  >請輸入您設定的密碼</label
+                >
+              </div>
+              <div class="form-floating mb-2">
+                <input
+                  type="password"
+                  class="form-control rounded-0"
+                  id="coachSignUpConfirmPasswordFloatingInput"
+                  placeholder="請再次輸入您所設定的密碼"
+                  value="abced1234567"
+                />
+                <label for="coachSignUpConfirmPasswordFloatingInput"
+                  >請再次輸入您所設定的密碼</label
+                >
+              </div>
+              <span class="fs-8 mb-5 d-block"
+                >*點擊「註冊」即表示你同意我們的<a
+                  href="privacy-policy.html"
+                  class="link-gray-700"
+                  >服務條款與隱私政策</a
+                ></span
+              >
+              <!-- 正式登入表單提交按鈕 -->
+              <!-- <button type="submit" class="btn btn-primary w-100">註冊</button> -->
+              <!-- 切版註冊展示按鈕 -->
+              <a
+                class="btn btn-primary w-100 mb-5"
+                data-bs-toggle="modal"
+                data-bs-target="#coachSignInModal"
+                style="cursor: pointer"
+                >註冊</a
+              >
+              <span class="d-flex justify-content-center fs-7"
+                >已經有帳號了?<a
+                  class="link-gray-700 ms-2"
+                  data-bs-toggle="modal"
+                  data-bs-target="#coachSignInModal"
+                  style="cursor: pointer"
+                  >登入</a
+                ></span
+              >
+            </form>
+          </div>
+          <div class="col-lg-6">
+            <div>
+              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
+                — &nbsp; 其他註冊方式 &nbsp;—
+              </h3>
+              <button
+                type="button"
+                class="btn btn-outline-secondary w-100 mb-3"
+              >
+                <i class="bi bi-google me-2"></i>Google 註冊
+              </button>
+              <button type="button" class="btn btn-outline-secondary w-100">
+                <i class="bi bi-facebook me-2"></i>Facebook 註冊
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

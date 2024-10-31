@@ -1,0 +1,30 @@
+.scroll-to-top{
+  width: 48px;
+  height: 48px;
+  right: 20px ;
+  bottom: 15px;
+  cursor: pointer;
+  pointer-events: none; /* 初始無法點擊 */
+  transition:  background-color 0.2s ease-in-out;
+  opacity: 0 ;
+  z-index: 100;
+
+  &:hover{
+    background-color: darken($tint, 10%) !important ;
+  }
+
+  img{
+    width: 28px;
+    height: 28px;
+  }
+
+  @include media-breakpoint-up(md) {
+    width: 64px;
+    height: 64px;
+
+    img{
+      width: 32px;
+      height: 32px;
+    }
+  }
+}

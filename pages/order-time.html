@@ -1,0 +1,423 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <%- include('./layout/head'); -%>
+    <title>Health Glow | 預約課程 </title>
+  </head>
+  <body>
+    <%- include('./layout/header-sign-in-trainer-white-bg-version.ejs'); -%>
+    <!-- banner -->
+    <section>
+        <div class="order-banner position-relative ">
+            <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="position-absolute top-50 translate-middle banner-mobil-position">
+                    <h1 class="display-2 text-white fw-bold">預約課程</h1>
+                    <div class="mt-2 d-flex justify-md-content-center justify-content-md-center justify-content-start">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item text-white"><a href="student.html">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">預約課程</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+    
+    <section>
+        <div class="bg-secondary">
+            <div class="container pb-md-15">
+                <div class="py-md-15 py-10">
+                    <div class="mb-md-10 mb-6">
+                    <!-- 預約順序 -->
+                       <ul class="d-flex align-items-center justify-content-md-start justify-content-center mb-md-0 p-md-0">
+                            <li class="d-flex flex-md-row flex-column align-items-center pe-3">
+                                <a
+                                    type="button"
+                                    class="btn btn-sm btn-warning rounded-pill text-secondary fw-bold font-anton-700 fs-md-4 fs-6 lh-base step-icon-style font-anton-700"
+                                    href="order-time.html"
+                                    >
+                                    1
+                                </a>
+                                <a href="order-time.html" class="fs-md-5 fs-6 text-warning ps-md-4">
+                                    預約時段
+                                </a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right text-warning fw-bold fs-md-4 fs-6 fw-bold"></i>
+                            </li>
+                            <li class="ps-5 d-flex flex-md-row flex-column  align-items-center pe-md-5 pe-3">
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-gray-300 rounded-pill text-secondary fw-bold font-anton-700 fs-4 step-icon-style font-anton-700"
+                                >
+                                <span class="font-anton-700 fs-md-4 fs-6 lh-base">
+                                  2
+                                </span>
+                                </button>
+                                <a href="#" class="fs-md-5 fs-6 text-gray-300 ps-md-4">
+                                    選擇課程
+                                </a>
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right text-gray-300 fw-bold fs-md-4 fs-6 fw-bold"></i>
+                            </li>
+                            <li class="ps-5 d-flex align-items-center flex-md-row flex-column pe-md-5 pe-3">
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-gray-300 rounded-pill text-secondary fw-bold font-anton-700 step-icon-style"
+                                >
+                                <span class="font-anton-700 fs-md-4 fs-6 lh-base">
+                                  3
+                                </span>
+                                </button>
+                                <a href="#" class="fs-md-5 fs-6 text-gray-300 ps-md-4">
+                                    預約成功
+                                </a>
+                            </li>
+                       </ul> 
+                    </div>
+                    <div class="bg-gray-200 calender-rounded">
+                      <h3 class="fs-md-3 fs-5 text-secondary text-center pt-md-56 pt-4">
+                        挑選日期時段
+                      </h3>
+                      <div class="bar-80 mt-md-4 mt-2 bg-secondary mx-auto">
+                      </div>
+                      <div class="pt-md-10 pt-5">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-lg-6 col-12 mx-auto">
+                              <h5 class="fs-md-5 fs-6 text-secondary pb-md-4 pb-3">日期</h5>
+                              <div class="p-md-6 p-3 bg-white rounded-2">
+                                <!-- 前後月份 -->
+                                <div class="calendar-header d-flex justify-content-between mb-2">
+                                  <button class="prev-month btn p-0" onclick="prevMonth()">
+                                    <i class="bi bi-chevron-left"></i>
+                                  </button>
+  
+                                  <div id="calendar-month"
+                                        class="w-100 d-flex justify-content-center align-items-center fs-5">
+                                    2024年 9月
+                                  </div>
+                                  
+                                  <button class="next-month btn p-0" onclick="nextMonth()">
+                                    <i class="bi bi-chevron-right"></i>
+                                  </button>
+                                </div>
+                                <!-- 月曆 -->
+                                <table class="table canlender-table-style">
+                                  <thead>
+                                    <tr class="text-center">
+                                      <th scope="col" class="border-0">
+                                        <span class="fs-7 text-gray-800">日</span>
+                                      </th>
+                                      <th scope="col" class="border-0">
+                                        <span class="fs-7 text-gray-800">一</span>
+                                      </th>
+                                      <th scope="col" class="border-0">
+                                        <span class="fs-7 text-gray-800">二</span>
+                                      </th>
+                                      <th scope="col" class="border-0">
+                                        <span class="fs-7 text-gray-800">三</span>
+                                      </th>
+                                      <th scope="col" class="border-0">
+                                        <span class="fs-7 text-gray-800">四</span>
+                                      </th>
+                                      <th scope="col" class="border-0">
+                                        <span class="fs-7 text-gray-800">五</span>
+                                      </th>
+                                      <th scope="col" class="border-0">
+                                        <span class="fs-7 text-gray-800">六</span>
+                                      </th>
+                                    </tr>
+                                  </thead>
+                                  <tbody>
+                                    <tr class="text-center">
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">1</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">2</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">3</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">4</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">5</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">6</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">7</span>
+                                      </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">8</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">9</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">10</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">11</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">12</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">13</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">14</span>
+                                      </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">15</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">16</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">17</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">18</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">19</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">20</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">21</span>
+                                      </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">22</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">23</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">24</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">25</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">26</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">27</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">28</span>
+                                      </td>
+                                    </tr>
+                                    <tr class="text-center">
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">29</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        <span class="fs-md-5 fs-6">30</span>
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        
+                                      </td>
+                                      <td scope="col" class="border-0">
+                                        
+                                      </td>
+                                    </tr>
+                                    
+                                  </tbody>
+                                </table>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- 月曆＋上下頁按鈕 -->
+                      <div class="py-md-56 pt-8 pb-4">
+                        <div class="container">
+                          <div class="row">
+                            <div class="col-xxl-6 col-lg-7 col-md-9 col-12 px-xxl-44 px-lg-0 px-md-0 px-3 mx-auto  pb-md-0 pb-15col-xxl-6 col-lg-7 col-md-9 col-12 px-xxl-44 px-lg-0 px-md-0 px-3 mx-auto  pb-md-0 pb-15">
+                              <h5 class="h5 text-secondary pb-4">
+                                可選擇的開始時間
+                              </h5>
+                              <!-- 月曆 -->
+                              <div class="row">
+                                <div class="col pb-md-15">
+                                  <div class="row row-cols-md-7 g-2 g-lg-3">
+                                    <div class="col ">
+                                      <button type="button" class="time-btn py-2 px-4">
+                                        9:00
+                                      </button>
+                                    </div>
+                                    <div class="col d-md-block d-none">
+                                      <div class="time-btn-disable py-2 px-4">
+                                      9:30
+                                      </div>
+                                    </div>
+                                    <div class="col d-md-block d-none">
+                                      <div class="time-btn-disable py-2 px-3">
+                                        10:00
+                                      </div>
+                                    </div>
+                                    <div class="col d-md-block d-none">
+                                      <div class="time-btn-disable py-2 px-3">
+                                        10:30
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        11:00
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        11:30
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        12:00
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        12:30
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        13:00
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        13:30
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        14:00
+                                      </button>
+                                    </div>
+                                    <div class="col d-md-block d-none">
+                                      <div class="time-btn-disable py-2 px-3">
+                                        14:30
+                                      </div>
+                                    </div>
+                                    <div class="col d-md-block d-none">
+                                      <div class="time-btn-disable py-2 px-3">
+                                        15:00
+                                      </div>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        15:30
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                      16:00
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                      16:30
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        17:00
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        17:30
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        18:00
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        18:30
+                                      </button>
+                                    </div>
+                                    <div class="col">
+                                      <button type="button" class="time-btn py-2 px-3">
+                                        19:00
+                                      </button>
+                                    </div>  
+                                  </div>
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                        </div>
+                        
+                        <div class="container">
+                          <div class="row px-md-15 justify-content-between">
+                            <div class="col-md-4 col-6">
+                              <a type="button" class="btn btn-outline-dark bg-white p-3"
+                              href="course-introduction.html">
+                                <div class=" d-flex align-items-center ">
+                                  <i class="bi bi-arrow-left-short fs-4" style="line-height: 0.8;"></i>
+                                  <div class="fs-md-5 fs-6 ps-2 lh-sm">上一頁</div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="col-md-4 col-6 text-end">
+                                <a type="button" class="btn btn-outline-dark bg-white  p-3"
+                                href="order-place.html"
+                                >
+                                  <div class="d-flex align-items-center">
+                                    <div class="fs-md-5 fs-6 pe-2 lh-sm">下一步</div>
+                                    <i class="bi bi-arrow-right-short fs-4" style="line-height: 0.8;"></i>
+                                  </div>
+                                </a>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <%- include('./components/scroll-to-top'); -%>
+    <!--  -->
+    <%- include('./layout/footer'); -%>
+
+    
+    <script type="module" src="../main.js"></script>
+  </body>
+</html>

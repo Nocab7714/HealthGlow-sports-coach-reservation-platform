@@ -1,0 +1,122 @@
+.order-banner{
+    background-image: url('../assets/images/img/banner-02-pc.webp');
+    background-size: cover;
+    background-position: center;
+    max-width: 100%;
+    height: 680px;
+    @include media-breakpoint-down(md) {
+        background-image: url('../assets/images/img/banner-02-mobile.webp');
+        background-repeat: no-repeat;
+        height: 252px;
+    }
+}
+.breadcrumb-item + .breadcrumb-item::before {
+    color: $white;
+}
+.display-2{
+    @include media-breakpoint-down(md) {
+        font-size: 2rem;
+    }
+}
+
+.banner-mobil-position{
+    left: 50%;
+    @include media-breakpoint-down(md) {
+        left: 25%;
+    }
+}
+
+.bg-light-gray{
+    background-color: $body-secondary-bg;
+}
+
+.bar-80{
+    width: 80px;
+    height: 8px;
+    @include media-breakpoint-down(md) {
+        width: 40px;
+        height: 6px;
+    }   
+}
+
+.step-icon-style{
+    width: 44px;
+    height: 44px;
+    line-height: 0.4;
+    cursor: default;
+    @include media-breakpoint-down(md) {
+        width: 32px;
+        height: 32px;
+    }
+}
+.calender-rounded{
+    border-radius: 8px;
+    @include media-breakpoint-down(md) {
+        border-radius: 16px;
+    }
+}
+
+.canlender-table-style{
+    span{
+        display: inline-block;
+        align-content: center;
+        width: 44px;
+        height: 44px;
+        text-align: center; 
+        line-height: 44px;
+        color: $gray-800;
+        border-radius: 50%;
+        transition: background-color 0.3s ease, color 0.3s ease; /* 動畫效果 */
+        &:hover, &:active{
+            background-color: #00B3BF;
+            border-radius: 50%;
+            color: #fff; 
+        }
+    };
+    tbody span{
+        cursor: pointer;
+    }
+    th, td{
+        text-align: center;
+        vertical-align: middle;
+    }
+    @include media-breakpoint-down(md) {
+        width: 100%; /* 确保表格充满容器 */
+        table-layout: fixed; /* 固定表格布局，要再確認為什麼這樣可以固定 */
+
+        th, td {
+            width: 36px; /* 固定宽度 */
+            height: 36px; /* 固定高度 */
+            padding: 0px 8px 0px 0px ; /* 移除内边距，确保高度生效 */
+        }
+        span {
+            display: inline-block;
+            width: 100%;
+            height: 100%;
+            line-height: 36px; /* 确保文本与单元格高度一致，這樣才能填滿圓圈 */
+        }
+    }
+}
+
+.time-btn{
+    max-width:68px;
+    cursor: pointer;
+    background-color: #fff;
+    border: 1px solid black;
+    &:hover, &:active{
+        background-color: #00B3BF;
+        color: white;
+        border-color: #00B3BF;
+    }
+}
+
+.time-btn-disable{
+    max-width:68px;
+    cursor:auto;
+    color: $gray-500;
+    border: 1px solid $gray-500;
+    background-color: #fff;
+    @include media-breakpoint-down(md) {
+        display: none;
+    }
+}

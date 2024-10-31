@@ -1,0 +1,62 @@
+.search{
+  .dropdown-menu{
+    border-radius: 0;
+    padding: 16px;
+  }
+  .course-menu{
+    width: 100%;
+    @include media-breakpoint-up(sm){
+      width: 525px;
+    }
+  }
+  .location-menu{
+    width: 359px;
+  }
+  .dropdown-item{
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    
+    &:hover, &.selected{
+      background-color: rgba(0, 179, 191, 0.2);
+      color: $secondary;
+      font-weight: 600;
+    }
+    &:nth-child(2){
+      background-color: rgba(0, 179, 191, 0.2);
+        color: $secondary;
+        font-weight: 600;
+    }
+    &-all{
+      color: $secondary;
+      font-weight: 600;
+    }
+  }
+}
+.course-dropdown-menu-level-one,
+.location-dropdown-menu-level-one{
+  .dropdown-item{
+    &::after{
+      content: "\e5cc";
+      font-family: "Material Symbols Outlined";
+    }
+  }
+}
+.course-dropdown-menu{
+  &-level-one, &-level-two, &-level-three{
+    width: 33.333%;
+  }
+}
+.location-dropdown-menu{
+  &-level-one, &-level-two{
+    width: 50%;
+  }
+}
+.location-dropdown-menu-level-one{
+  .dropdown-item{
+    &::after{
+      content: "\e5cc";
+      font-family: "Material Symbols Outlined";
+    }
+  }
+}

@@ -38,17 +38,31 @@ npm run dev
   - images - 圖片資源放置處
   - scss - scss 資源放置處
     - base - 基礎設定資源放置處
+    - components - 元件樣式資源放置處
     - layout - 佈局資源放置處
     - pages - 頁面資源放置處
     - utils - 變數、通用類別資源放置處
+    - vendors - 插件樣式資源放置處
+- components 元件資源放置處
 - layout - 佈局資源放置處
+- pages - 頁面資源放置處
+- plugins - 插件資源放置處
 
 ## 專案技術
 
 - Vite 4.5.3
 - Bootstrap 5.3.3
-- Bootstrap Icons 1.11.3
 - Swiper 11.1.10
-- Aos 3.0.0-beta.6
+- AOS 3.0.0-beta.6
+- GSAP 3.12.5
+- Lightbox2 2.11.5
+- jQuery 3.7.1
+- Bootstrap Icons 1.11.3
+- Tabler icons
+- Flatpickr.js
 
 ## 聯絡作者
+
+- [Huang Macy](https://github.com/macy1215)
+- [yujouwu](https://github.com/yujouwu)
+- [Nocab Wang](https://github.com/Nocab7714)

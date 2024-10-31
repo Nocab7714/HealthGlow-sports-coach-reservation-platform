@@ -1,0 +1,266 @@
+
+// @mixin mobil{
+    
+//     @media screen and (max-width:576px) {
+//         @content;
+//     };
+// }
+
+/* 4個理由 */
+.bg-banner-04-pc{
+    background-image:  url('../assets/images/img/banner-04-pc.webp');
+    background-size: cover;
+    background-position: center;
+}
+
+
+.lovesection::before{
+    content: "++++";
+    position: absolute;
+    font-size: 40px;
+    top: 55%;
+    left: 6%;
+    color: #FFFDCF;
+    writing-mode: vertical-lr;
+    letter-spacing: 25px;
+    transform: translate(-50%, -50%) !important;
+    @media screen and (max-width:1600px) {
+      left: 2%;
+    };
+    @include media-breakpoint-down(xxl) {
+      display: none;
+    }
+    // @include media-breakpoint-down(lg) {
+    //   left: 20px;
+    // }
+    // @include media-breakpoint-down(md) {
+    //     display: none;
+    // }
+}
+.lovesection::after{
+    content: "++++";
+    position: absolute;
+    font-size: 40px;
+    top: 55%;
+    right: 3%;
+    color: #FFFDCF;
+    writing-mode: vertical-lr;
+    letter-spacing: 25px;
+    transform: translate(-50%, -50%) !important;
+    @media screen and (max-width:1600px) {
+      right: -2%;
+    };
+    @include media-breakpoint-down(xxl) {
+      display: none;
+    };
+    // @include media-breakpoint-down(lg) {
+    //   right: 10px;
+    // }
+    // @include media-breakpoint-down(md) {
+    //     display: none;
+    // }
+}
+.bg-deep-primary{
+    background-color: #035867;
+}
+
+.display-1{
+    font-size: 180px;
+    @include media-breakpoint-down(md) {
+        font-size: 120px;
+    }
+}
+
+.fs-mobil-content{
+    @include media-breakpoint-down(md) {
+        font-size: 14px;
+    }
+}
+
+.runtxt{
+    font-size: 400px;
+    line-height: 1.5;
+    @include media-breakpoint-down(md) {
+        font-size: 180px;
+    }
+}
+.whitespace-nowrap{
+    white-space:nowrap;
+}
+
+
+// swiper
+.feedback-avatar1{
+    background-image: url("../assets/images/img/feedback-01.webp");
+}
+.feedback-avatar2{
+    background-image: url("../assets/images/img/feedback-02.webp");
+}
+.feedback-avatar3{
+    background-image: url("../assets/images/img/feedback-03.webp");
+}
+.feedback-style{
+    background-size: 235%;
+    background-position: top right 50px;
+    width: 24px;
+    height: 24px;
+}
+
+// swiper
+
+.swiper-students-review .swiper-button-prev:after, .swiper-button-next:after {
+  font-family:'Material Icons' !important; 
+}
+
+.swiper-students-review .swiper-button-prev{
+  left: 13% ; 
+  @media screen and (max-width:1900px) {
+    left: 8%;
+  };
+  @media screen and (max-width:1670px) {
+    left: 5%;
+  };
+  @media screen and (max-width:1550px) {
+    left: 3%;
+  };
+  @media screen and (max-width:1470px) {
+    left: 1%;
+  };
+  @include media-breakpoint-down(lg) {
+    left: 4%;
+  }
+}
+.swiper-students-review .swiper-button-next{
+  right: 13% ; 
+  @media screen and (max-width:1900px) {
+    right: 8%;
+  };
+  @media screen and (max-width:1670px) {
+    right: 5%;
+  };
+  @media screen and (max-width:1550px) {
+    right: 3%;
+  };
+  @media screen and (max-width:1470px) {
+    right: 1%;
+  };
+  @include media-breakpoint-down(lg) {
+    right: 4%;
+  }
+}
+
+.swiper-students-review .swiper-button-prev::after{
+  content: "\e5c4";
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  color: #3C4A4B;
+  border: 2px solid #3C4A4B;
+  padding: 10px;
+  background-color: #fff;
+}
+.swiper-students-review .swiper-button-next::after{
+  content: "\e5c8";
+  font-family: "Material Symbols Outlined";
+  font-size: 24px;
+  color: #3C4A4B;
+  border: 2px solid #3C4A4B;
+  padding: 10px;
+  background-color: #fff;
+}
+
+.swiper-students-review .swiper-slide{
+  height: 634px !important;  
+  @include media-breakpoint-down(md) {
+    height: 558px !important;  
+  }
+}
+
+
+
+.bg-height{
+    height: 300px;
+    @include media-breakpoint-down(md) {
+        height: 316px;  
+    }
+}
+
+// 學員評價背景logo圖案
+.logo_primary{
+    top: 360px;
+    right: 220px;
+    z-index: 3;
+}
+.logo_accent{
+    bottom: 68px;
+    left: 215px;
+    z-index: 3;
+}
+
+// 註冊教練
+.bar{
+    width: 80px;
+    height: 8px;
+}
+
+.recommend-sport-type{
+  overflow-x: auto;
+  white-space: nowrap;
+  background-color: #F9F9F9;
+}
+.material-symbols-rounded.star {
+  font-variation-settings:
+  'FILL' 1,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 24;
+  color: $accent;
+}
+.home-banner{
+  // height: 700px;
+  height: 100vh;
+  background-image: url(/assets/images/img/banner-01-mobile.webp);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+
+  @include media-breakpoint-up(md) { 
+    &{
+      background-image: url(/assets/images/img/banner-01-pc.webp);
+      // height: 1050px;
+      
+    }
+  }
+}
+
+.text-shadow{
+  text-shadow: 4px 4px 26px #0000004D;
+}
+
+.home-banner-input{
+  &::placeholder{
+    font-weight: $font-weight-normal;
+  }
+}
+
+.home-banner-input-btn{
+  z-index: 900 !important;
+  right: 3%;
+  top: 20%;
+
+  @include media-breakpoint-up(md) { 
+    &{
+      right: 4%;
+      top: 18%;
+    }
+  }
+}
+
+.bg-img-style{
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 100%;
+  @include media-breakpoint-down(md) { 
+    height: 198px;
+  }
+}

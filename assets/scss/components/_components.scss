@@ -1,0 +1,22 @@
+.btn-primary-radial-gradient{
+  color: white;
+  border: 0px;
+  font-weight: $font-weight-semibold;
+  background: radial-gradient(40.5% 70% at 85% 80%, #09A460 34.5%, #02B3BE 100%);
+
+  &:hover{
+    color: white ;
+    background: radial-gradient(35.5% 80% at 60% 75%, #09A460 34.5%, #02B3BE 100%);
+    font-weight: $font-weight-normal;
+  }
+  &:active{
+    color: white !important;
+    font-weight: $font-weight-normal;
+    background: radial-gradient(50% 80% at 85% 70%, #09A460 34.5%, #02B3BE 100%);
+  }
+  &:focus{
+    color: white !important;
+    font-weight: $font-weight-normal;
+    background: radial-gradient(50% 80% at 85% 70%, #09A460 34.5%, #02B3BE 100%);
+  }
+}

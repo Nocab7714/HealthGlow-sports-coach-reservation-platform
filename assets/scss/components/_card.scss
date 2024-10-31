@@ -1,0 +1,39 @@
+.recommend-sport-type .card{
+  border-radius: 0;
+  box-shadow: 0px 10px 40px 4px #0000000F;
+  &-img-top{
+    border-radius: 0;
+    height: 240px;
+    object-fit: cover;
+    @include media-breakpoint-up(lg){
+      height: 286px;
+    }
+
+  }
+  &-title{
+    display: inline-block;
+    line-height: $line-height-base;
+    font-weight: $font-weight-medium;
+    position: relative;
+    white-space: normal;
+    &::after{
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: -3px;
+      height: 3px;
+      background-color: $primary;
+    }
+  }
+  &-text{
+    color: $gray-600;
+  }
+}
+.student{
+  .card{
+    box-shadow: 0px 10px 20px 4px #0000001F;
+    border-radius: 0;
+    border: 0;
+  }
+}

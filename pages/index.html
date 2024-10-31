@@ -1,52 +1,696 @@
 <!DOCTYPE html>
 <html lang="zh-Hant-TW">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+<head>
+  <%- include('./layout/head'); -%>
     <title>Health Glow | 首頁</title>
+</head>
 
-    <!-- 差 title icon 和 OG img -->
+<body>
+  <%- include('./layout/header-sign-out.ejs'); -%>
+    <!-- banner -->
+    <section class="home-banner d-flex flex-column justify-content-center">
+      <div class="container">
+        <h1 class="font-anton-regular fs-2 fs-md-72 text-tint text-shadow mb-2">
+          TRAIN TODAY, <span class="d-inline-block">STRONG TOMORROW</span>
+        </h1>
+        <p class="text-white fs-6 fs-md-4 text-shadow">
+          簡單註冊、免費聯絡教練，一對一為你量身打造健身課程！
+        </p>
+        <p class="text-white fs-6 fs-md-4 text-shadow mb-2">
+          您想上什麼課？立即預約健康
+        </p>
+        <div class="row">
+          <div class="col-lg-4 col-md-8">
+            <form class="position-relative">
+              <div class="search dropdown mt-4 mb-3 border-1 rounded-0">
+                <span
+                  class="position-absolute material-symbols-outlined fs-4 text-dark bg-white py-5 py-md-6 ps-3 ps-md-4 pe-1 pe-md-3">search
+                </span>
+                <input type="search"
+                  class="form-control dropdown-toggle home-banner-input rounded-0 border-0 py-5 py-md-6 ps-10 ps-md-52 pe-129 pe-md-165"
+                  placeholder="有氧運動" aria-describedby="basic-addon1" data-bs-toggle="dropdown" aria-label="Search"
+                  aria-expanded="false" />
+                <!-- banner dropdown 開始區塊 -->
+                <div class="course-menu dropdown-menu">
+                  <div class="d-flex">
+                    <p class="course-dropdown-menu-level-one text-center text-lg-start ps-lg-4 fw-semibold text-secondary mb-2">
+                      健身運動類別
+                    </p>
+                    <p class="course-dropdown-menu-level-two text-center text-lg-start ps-lg-4 fw-semibold text-secondary mb-2">
+                      運動課程
+                    </p>
+                  </div>
+                  <div class="d-flex">
+                    <div class="course-dropdown-menu-level-one border border-primary">
+                      <ul class="list-unstyled mb-0"></ul>
+                    </div>
+                    <!-- 運動課程 -->
+                    <div class="course-dropdown-menu-level-two border border-primary">
+                      <ul class="list-unstyled mb-0">
+                        <li>
+                          <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+                        </li>
+                        <li>
+                          <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+                        </li>
+                      </ul>
+                    </div>
+                    <div class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3">
+                      <div>
+                        <div class="d-flex justify-content-center align-items-center">
+                          <p class="text-primary font-anton-regular fs-5">
+                            5.0
+                          </p>
+                          <span class="material-symbols-rounded star">star</span>
+                          <span class="text-gray-600 fs-8">(1,200評價)</span>
+                        </div>
+                        <button class="btn btn-primary w-100 px-1 px-lg-6" type="button">
+                          找<span class="selected-exercise-type">瑜伽</span>教練
+                        </button>
+                      </div>
+                      <div>
+                        <p class="text-gray-700 fw-semibold">更多資訊</p>
+                        <ul class="list-unstyled fs-7 fw-normal mb-0">
+                          <li>
+                            <a href="#"><span class="selected-exercise-type">瑜伽</span>課內容</a>
+                          </li>
+                          <li>
+                            <a href="#"><span class="selected-exercise-type">瑜伽</span>教練薪資行情</a>
+                          </li>
+                          <li>
+                            <a href="#"><span class="selected-exercise-type">瑜伽</span>學生評價內容</a>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="btn btn-primary-radial-gradient py-2 py-md-3 px-3 px-md-6 position-absolute home-banner-input-btn rounded-2"
+                type="search">
+                立即預約 →
+              </button>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <link
-      rel="icon"
-      href="../assets/images/Health-Glow.webp"
-      type="image/x-icon"
-    />
-    <!-- 網頁描述 -->
-    <meta
-      name="description"
-      content="Health Glow，透過我們的運動預約平台，輕鬆探索多元運動課程，預約專業教練，打造屬於你的個性化健身計劃。無論何時何地，都能快速預約並開始你的健康運動生活。"
-    />
-    <meta name="author" content="Sonia、Macy、Jason、Nocab" />
-    <meta
-      name="keywords"
-      content="運動預約, 教練課程, 健身課程, 線上預約, 私人教練, 課程管理, 運動平台, 健康運動, 運動場地預約, 團體課程, 健身房預約, 個人訓練, 健身計劃, 線上運動, 運動課程推薦, 運動健身, 課程報名, 課程評價, 運動教練, 運動學習, 健身預約系統, 瑜伽課程, 健身教練, 課程搜索, 訓練課程, 運動類型選擇, 健身目標, 課程時間表, 彈性取消, 線上支付運動課程"
-    />
-    <!-- OG -->
-    <meta property="og:title" content="Health Glow" />
-    <meta
-      property="og:description"
-      content="探索多元運動課程，輕鬆預約專業教練，隨時隨地開啟健康生活。立即加入，打造屬於你的個性化健身計劃！"
-    />
-    <meta property="og:image" content="" />
-    <meta property="og:image:type" content="image/png" />
-    <meta property="og:image:alt" content="Health Glow og" />
-    <meta property="og:image:width" content="1200" />
-    <meta property="og:image:height" content="630" />
-    <meta
-      property="og:url"
-      content="https://nocab7714.github.io/HealthGlow-sports-coach-reservation-platform/"
-    />
-  </head>
-  <body>
-    <%- include('./layout/header'); -%>
+    <!-- 課程類別推薦 -->
+    <section class="recommend-sport-type">
+      <div class="mx-auto position-relative" style="max-width: 1500px">
+        <div class="container pt-16">
+          <ul class="nav nav-tabs border-0 gap-lg-5 gap-2 flex-nowrap flex-lg-wrap pb-1 mb-5 overflow-x-auto me-n3"
+            id="myTab" role="tablist">
+            <li class="nav-item" role="presentation">
+              <button class="nav-link active" id="type1-tab" data-bs-toggle="tab" data-bs-target="#type1-tab-pane"
+                type="button" role="tab" aria-controls="type1-tab-pane" aria-selected="true">
+                有氧運動
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type2-tab" data-bs-toggle="tab" data-bs-target="#type2-tab-pane"
+                type="button" role="tab" aria-controls="type2-tab-pane" aria-selected="false">
+                肌力訓練
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type3-tab" data-bs-toggle="tab" data-bs-target="#type3-tab-pane"
+                type="button" role="tab" aria-controls="type3-tab-pane" aria-selected="false">
+                核心訓練
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type4-tab" data-bs-toggle="tab" data-bs-target="#type4-tab-pane"
+                type="button" role="tab" aria-controls="type4-tab-pane" aria-selected="false">
+                舞蹈課程
+              </button>
+            </li>
+            <li class="nav-item" role="presentation">
+              <button class="nav-link" id="type5-tab" data-bs-toggle="tab" data-bs-target="#type5-tab-pane"
+                type="button" role="tab" aria-controls="type5-tab-pane" aria-selected="false">
+                靜態課程
+              </button>
+            </li>
+          </ul>
+          <div class="tab-content" id="myTabContent">
+            <!-- 有氧運動 -->
+            <div class="tab-pane fade show active" id="type1-tab-pane" role="tabpanel" aria-labelledby="type1-tab"
+              tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-1-1.webp', course: '舞蹈有氧'}); -%>
+                      <!-- slide 2 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-1-2.webp', course: '高強度間歇訓練(HIIT)'}); -%>
+                      <!-- slide 3 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-1-3.webp', course: '拳擊有氧'}); -%>
+                      <!-- slide 4 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-1-4.webp', course: '健身操'}); -%>
+                      <!-- slide 5 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-1-5.jpg', course: '飛輪課程'}); -%>
+                      <!-- slide 6 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-1-6.jpg', course: '跳繩有氧'}); -%>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex"></div>
+                    <div class="swiper-button-prev d-none d-md-flex"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 肌力訓練 -->
+            <div class="tab-pane fade" id="type2-tab-pane" role="tabpanel" aria-labelledby="type2-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-2-1.jpg', course: '全身增肌'}); -%>
+                      <!-- slide 2 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-2-2.jpg', course: '壺鈴訓練'}); -%>
+                      <!-- slide 3 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-2-3.jpg', course: '自由重量訓練'}); -%>
+                      <!-- slide 4 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-2-4.jpg', course: 'TRX 懸吊訓練'}); -%>
+                      <!-- slide 5 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-2-5.jpg', course: '啞鈴深蹲'}); -%>
+                      <!-- slide 6 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-2-6.jpg', course: '上肢強化訓練'}); -%>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex"></div>
+                    <div class="swiper-button-prev d-none d-md-flex"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 核心訓練 -->
+            <div class="tab-pane fade" id="type3-tab-pane" role="tabpanel" aria-labelledby="type3-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-3-1.jpg', course: '核心穩定課'}); -%>
+                      <!-- slide 2 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-3-2.jpg', course: '普拉提訓練'}); -%>
+                      <!-- slide 3 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-3-3.jpg', course: '進階核心雕塑'}); -%>
+                      <!-- slide 4 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-3-4.jpg', course: '動力平衡'}); -%>
+                      <!-- slide 5 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-3-5.jpg', course: '核心瑜伽'}); -%>
+                      <!-- slide 6 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-3-6.jpg', course: '側腹強化訓練'}); -%>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex"></div>
+                    <div class="swiper-button-prev d-none d-md-flex"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 舞蹈課程 -->
+            <div class="tab-pane fade" id="type4-tab-pane" role="tabpanel" aria-labelledby="type4-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                      <!-- slide 1 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-4-1.jpg', course: '爵士舞'}); -%>
+                      <!-- slide 2 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-4-2.jpg', course: 'Zumba'}); -%>
+                      <!-- slide 3 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-4-3.jpg', course: '嘻哈街舞'}); -%>
+                      <!-- slide 4 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-4-4.jpg', course: '芭蕾塑形'}); -%>
+                      <!-- slide 5 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-4-5.jpg', course: '拉丁有氧'}); -%>
+                      <!-- slide 6 -->
+                      <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-4-6.jpg', course: 'K-Pop 舞蹈'}); -%>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex"></div>
+                    <div class="swiper-button-prev d-none d-md-flex"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <!-- 靜態課程 -->
+            <div class="tab-pane fade" id="type5-tab-pane" role="tabpanel" aria-labelledby="type5-tab" tabindex="0">
+              <div class="row">
+                <div class="col">
+                  <!-- Swiper -->
+                  <div class="swiper mySwiper h-100 position-static mx-n3 mx-md-0 pb-16">
+                    <div class="swiper-wrapper">
+                       <!-- slide 1 -->
+                       <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-5-1.jpg', course: '初級瑜伽'}); -%>
+                       <!-- slide 2 -->
+                       <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-5-2.jpg', course: '冥想課程'}); -%>
+                       <!-- slide 3 -->
+                       <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-5-3.jpg', course: '太極課程'}); -%>
+                       <!-- slide 4 -->
+                       <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-5-4.jpg', course: '拉伸放鬆'}); -%>
+                       <!-- slide 5 -->
+                       <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-5-5.jpg', course: '身心平衡'}); -%>
+                       <!-- slide 6 -->
+                       <%- include('./layout/index-course-card-swiper.ejs', {img: '../assets/images/img/sport-5-6.jpg', course: '伸展瑜伽'}); -%>
+                    </div>
+                    <div class="swiper-button-next d-none d-md-flex"></div>
+                    <div class="swiper-button-prev d-none d-md-flex"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- pain point 想要健身運動，卻找不到合適教練 -->
+    <section class="pain-point overflow-hidden" style="background-color: #fbfae8">
+      <div class="container py-14 py-lg-16">
+        <h2 class="fs-3 fs-lg-1 fw-semibold text-primary text-center mb-11 mb-lg-8 text-lg-start">
+          想要健身運動，<br />卻找不到合適教練
+        </h2>
+        <div class="row gap-4 gap-lg-0">
+          <div class="col-lg-7 order-lg-2">
+            <div class="tab-content" id="nav-tabContent">
+              <div class="tab-pane fade show active" id="list-pain-point-1" role="tabpanel"
+                aria-labelledby="list-pain-point-1-list">
+                <img class="img-fluid" src="../assets/images/img/pain-points-01-circular.png" alt="pain-points-01"
+                  data-aos="fade-left" />
+              </div>
+              <div class="tab-pane fade" id="list-pain-point-2" role="tabpanel"
+                aria-labelledby="list-pain-point-2-list">
+                <img class="img-fluid" src="../assets/images/img/pain-points-02-circular.png" alt="pain-points-02" />
+              </div>
+              <div class="tab-pane fade" id="list-pain-point-3" role="tabpanel"
+                aria-labelledby="list-pain-point-3-list">
+                <img class="img-fluid" src="../assets/images/img/pain-points-03-circular.png" alt="pain-points-03" />
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-5">
+            <div class="list-group gap-3 gap-lg-4" id="list-tab" role="tablist">
+              <a class="list-group-item list-group-item-action py-4 px-6 p-lg-8 active" id="list-pain-point-1-list"
+                data-bs-toggle="list" href="#list-pain-point-1" role="tab" aria-controls="list-pain-point-1">
+                <div class="d-flex align-items-center align-items-lg-start gap-5">
+                  <span class="font-anton-regular fs-3 fs-lg-2 lh-base lh-lg-sm">01</span>
+                  <p class="fw-medium fs-6 fs-lg-5">
+                    訂閱了整年度健身房課程卻發現實際只去了幾堂
+                  </p>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action py-4 px-6 p-lg-8" id="list-pain-point-2-list"
+                data-bs-toggle="list" href="#list-pain-point-2" role="tab" aria-controls="list-pain-point-2">
+                <div class="d-flex align-items-center align-items-lg-start gap-5">
+                  <span class="font-anton-regular fs-3 fs-lg-2 lh-base lh-lg-sm">02</span>
+                  <p class="fw-medium fs-6 fs-lg-5">
+                    特定時間段,健身教練的資源可能有限,導致難以找到符合特定需求和期望的教練
+                  </p>
+                </div>
+              </a>
+              <a class="list-group-item list-group-item-action py-4 px-6 p-lg-8" id="list-pain-point-3-list"
+                data-bs-toggle="list" href="#list-pain-point-3" role="tab" aria-controls="list-pain-point-3">
+                <div class="d-flex align-items-center align-items-lg-start gap-5">
+                  <span class="font-anton-regular fs-3 fs-lg-2 lh-base lh-lg-sm">03</span>
+                  <p class="fw-medium fs-6 fs-lg-5">
+                    個人和教練的時間安排不匹配<br />
+                    繁忙的工作和生活日程可能使人無法與教練的可用時間對接
+                  </p>
+                </div>
+              </a>
+            </div>
+            <div class="text-center">
+              <button type="button"
+                class="btn btn-primary-radial-gradient lh-sm py-3 px-6 py-lg-6 px-lg-8 fs-5 fs-lg-3 mt-8">
+                → 開始挑選教練吧！
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <!-- 使用 Anton 字體的方法 -->
-    <h1 style="font-family: var(--bs-font-Anton)">index</h1>
+    <!-- 愛上的4個理由 -->
+    <section>
+      <div class="bg-banner-04-pc position-relative">
+        <div
+          class="bg-secondarydeep bg-opacity-75 pt-17 pb-md-18 pb-17"
+        >
+          <div class="container">
+            <div>
+              <div class="mb-19">
+                <div class="d-md-flex d-column align-items-center lovesection">
+                  <span class="pe-md-10 d-md-inline-block d-block text-center">
+                    <span class="font-anton-regular text-tint display-1">4</span>
+                  </span>
+                  <div>
+                    <div>
+                      <div class="fs-md-1 fs-3 text-tint text-md-start text-center">
+                        個愛上
+                      </div>
+                      <div class="fs-md-1 fs-3 text-tint text-md-start text-center">
+                        HealthGlow的理由
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="container">
+                <!-- 卡片 -->
+                <div class="row g-8 mt-1">
+                  <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">任選上課時間</div>
+                      <div class="py-4">
+                        <div class="rounded-circle overflow-hidden d-inline-block bg-white">
+                          <img src="../assets/images/icons/calendar-clock-icon-64x64.webp" class="p-4" alt="" />
+                        </div>
+                      </div>
+                      <!-- <p>Secondary Text</p> -->
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">客製化的健身課程</div>
+                      <div class="py-4">
+                        <div class="rounded-circle overflow-hidden d-inline-block bg-white">
+                          <img src="../assets/images/icons/exercise-icon-64x64.webp" class="p-4" alt="" />
+                        </div>
+                      </div>
+                      <!-- <p>Secondary Text</p> -->
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">一堂也能買</div>
+                      <div class="py-4">
+                        <div class="rounded-circle overflow-hidden d-inline-block bg-white">
+                          <img src="../assets/images/icons/person-check-icon-64x64.webp" class="p-4" alt="" />
+                        </div>
+                      </div>
+                      <!-- <p>Secondary Text</p> -->
+                    </div>
+                  </div>
+                  <div class="col-xl-3 col-lg-6 col-12">
+                    <div class="bg-tint text-center py-11">
+                      <div class="fs-4">自選上課教練</div>
+                      <div class="py-4">
+                        <div class="rounded-circle overflow-hidden d-inline-block bg-white">
+                          <img src="../assets/images/icons/add-reaction-icon-64x64.webp" class="p-4" alt="" />
+                        </div>
+                      </div>
+                      <!-- <p>Secondary Text</p> -->
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-    <%- include('./layout/footer'); -%>
+    <!-- 學生評價 -->
+    <section>
+      <div class="bg-secondary position-relative">
+        <!-- Swiper -->
+        <div class="content-box py-124" style="z-index: 100">
+          <!-- class="position-absolute translate-middle-x content-box start-50"
+        style="z-index: 100;"-->
+          <div class="position-relative">
+            <div class="container">
+              <div class="mobil-title text-secondary text-center position-relative" style="z-index: 5;">
+                <span class="h1">學生評價</span>
+              </div>
+            </div>
+            <div class="mt-md-20 mt-11 position-relative" style="z-index: 5;">
+              <div class="container px-md-3 px-0">
+                <div class="swiper swiper-students-review justify-content-center position-static">
+                  <div class="swiper-wrapper">
+                    <!-- <div class="swiper-slide bg-white shadow">
+                      <div
+                        class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center"
+                      >
+                        <div
+                          class="rounded-circle feedback-avatar1 feedback-style me-2"
+                        ></div>
+                        <div class="fs-5">陳小姐</div>
+                      </div>
+                      <div class="p-2">
+                        <img src="../assets/images/img/feedback-01.webp" alt="feedback-01" class="img-max-width" />
+                      </div>
 
-    <script type="module" src="../main.js"></script>
-  </body>
+                      <div class="pt-6 px-8 pb-8">
+                        <p class="fs-mobil-content">
+                          這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
+                        </p>
+                      </div>
+                    </div> -->
+                    <div class="swiper-slide bg-white shadow">
+                      <div class="h-100 card py-md-5 px-3 py-3">
+                        <div class="d-flex align-items-center">
+                          <div class="rounded-circle feedback-avatar1 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">陳小姐</div>
+                        </div>
+
+                        <img
+                            src="../assets/images/img/feedback-01.webp"
+                            alt="feedback-03"
+                            class="card-img-top py-md-3"
+                          />
+                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
+                          <p class="fs-6">
+                            這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide bg-white shadow">
+                      <div class="h-100 card py-md-5 px-3 py-3">
+                        <div class="d-flex align-items-center">
+                          <div class="rounded-circle feedback-avatar2 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">李先生</div>
+                        </div>
+
+                        <img
+                            src="../assets/images/img/feedback-02.webp"
+                            alt="feedback-03"
+                            class="card-img-top py-md-3"
+                          />
+                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
+                          <p class="fs-6">
+                            我特別喜歡這個平台的預約系統，簡單又直觀。教練的資歷和評價都一目了然，讓我可以做出最好的選擇。用了這個平台後，我的健身計劃變得更加有規律了。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide bg-white shadow">
+                      <div class="h-100 card py-md-5 px-3 py-3">
+                        <div class="d-flex align-items-center">
+                          <div class="rounded-circle feedback-avatar3 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">王太太</div>
+                        </div>
+
+                        <img
+                            src="../assets/images/img/feedback-03.webp"
+                            alt="feedback-03"
+                            class="card-img-top py-md-3"
+                          />
+                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
+                          <p class="fs-6">
+                            作為銀髮族,我一直擔心找不到合適的健身課程。這個平台提供的銀髮族體適能服務讓我感到很安心。教練非常專業,讓我在運動中感到安全和舒適。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide bg-white shadow">
+                      <div class="h-100 card py-md-5 px-3 py-3">
+                        <div class="d-flex align-items-center">
+                          <div class="rounded-circle feedback-avatar1 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">陳小姐</div>
+                        </div>
+
+                        <img
+                            src="../assets/images/img/feedback-01.webp"
+                            alt="feedback-03"
+                            class="card-img-top py-md-3"
+                          />
+                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
+                          <p class="fs-6">
+                            這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide bg-white shadow">
+                      <div class="h-100 card py-md-5 px-3 py-3">
+                        <div class="d-flex align-items-center">
+                          <div class="rounded-circle feedback-avatar2 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">李先生</div>
+                        </div>
+
+                        <img
+                            src="../assets/images/img/feedback-02.webp"
+                            alt="feedback-03"
+                            class="card-img-top py-md-3"
+                          />
+                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
+                          <p class="fs-6">
+                            我特別喜歡這個平台的預約系統，簡單又直觀。教練的資歷和評價都一目了然，讓我可以做出最好的選擇。用了這個平台後，我的健身計劃變得更加有規律了。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="swiper-slide bg-white shadow">
+                      <div class="h-100 card py-md-5 px-3 py-3">
+                        <div class="d-flex align-items-center">
+                          <div class="rounded-circle feedback-avatar3 feedback-style me-2"
+                          ></div>
+                          <div class="fs-5">王太太</div>
+                        </div>
+
+                        <img
+                            src="../assets/images/img/feedback-03.webp"
+                            alt="feedback-03"
+                            class="card-img-top py-md-3"
+                          />
+                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
+                          <p class="fs-6">
+                            作為銀髮族,我一直擔心找不到合適的健身課程。這個平台提供的銀髮族體適能服務讓我感到很安心。教練非常專業,讓我在運動中感到安全和舒適。
+                          </p>
+                        </div>
+                      </div>
+                    </div>
+
+                  </div>
+                  <!-- 左右箭頭 -->
+                  <div class="swiper-button-next d-lg-none d-md-none d-none d-xxl-flex"></div>
+                  <div class="swiper-button-prev d-lg-none d-md-none d-none d-xxl-flex"></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 背景圖案 -->
+        <img src="../assets/images/icons/logo_primary_64x64.webp"
+          class="position-absolute logo_primary d-md-inline-block d-none" alt="" />
+        <img src="../assets/images/icons/logo_accent_64x64.webp"
+          class="position-absolute logo_accent d-md-inline-block d-none" alt="" />
+        <!-- GSAP -->
+        <div class="position-absolute top-0 w-100">
+          <div class="bg-white overflow-hidden pb-md-18 pb-21 pt-2">
+            <div class="text-tint runtxt d-inline-block whitespace-nowrap font-anton-700" id="runtxt">
+              LOVE BY THE TRAINERS. LOVE BY THE TRAINERS. LOVE BY THE
+              TRAINERS.LOVE BY THE TRAINERS. LOVE BY THE TRAINERS. LOVE BY THE
+              TRAINERS.LOVE BY THE TRAINERS. LOVE BY THE TRAINERS. LOVE BY THE
+              TRAINERS.LOVE BY THE TRAINERS.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 註冊教練或學員 -->
+    <section style="z-index: 5">
+      <div class="bg-secondary">
+        <div class="container pt-md-15 pb-17 pt-14">
+          <div class="row">
+            <div class="col-12">
+              <div class="row">
+                <div class="col-md-6 col-12 d-flex align-items-center pe-md-0">
+                  <div class="py-mde-11 py-14 px-5">
+                    <h2 class="fs-md-2 text-tint fs-4">
+                      卡關了? 讓教練幫助你突破
+                    </h2>
+                    <div class="bar my-5 bg-tint"></div>
+                    <div class="text-white">
+                      <p>新手入門友善,從不會教到會</p>
+                      <p>一堂也能購買</p>
+                      <p>增肌減脂,幫助你效率化的完成目標</p>
+                    </div>
+                    <div class="mt-6">
+                      <button class="btn btn-primary-radial-gradient py-3 px-4">
+                        立即預約 →
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6 col-12 ps-md-0 px-0">
+                  <div class="bg-img-style w-100"
+                    style="background-image:url(../assets/images/img/trainer-01.webp);" >
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-12">
+              <div class="row flex-md-row flex-column-reverse">
+                <div class="col-md-6 col-12 ps-md-0 px-0">
+                  <div class="bg-img-style w-100"
+                    style="background-image:url(../assets/images/img/trainer-02.webp);" >
+                  </div>
+                </div>
+
+                <div class="col-md-6 col-12 d-flex align-items-center pe-md-0">
+                  <div class="py-mde-11 py-14 px-5">
+                    <h2 class="fs-md-2 text-tint fs-4fs-md-2 text-tint fs-4">
+                      成為 HealthGlow 教練
+                    </h2>
+                    <div class="bar my-5 bg-tint"></div>
+                    <div class="text-white">
+                      <p>簡單、快速、方便的預約系統</p>
+                      <p>自由安排 授課時間</p>
+                      <p>增加曝光和客源</p>
+                    </div>
+                    <div class="mt-6">
+                      <button type="button rounded-0" class="btn btn-primary text-white">
+                        成為教練
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--  -->
+    <%- include('./components/scroll-to-top'); -%>
+      <!--  -->
+
+      <%- include('./layout/footer'); -%>
+
+        <script type="module" src="../main.js"></script>
+        <!-- GSAP -->
+        <script src="https://cdn.jsdelivr.net/npm/gsap@3.12.5/dist/gsap.min.js"></script>
+        <script>
+          gsap.to('#runtxt', {
+            x: -1000,
+            duration: 10,
+            repeat: -1,
+            ease: 'none',
+          });
+        </script>
+</body>
+
 </html>
