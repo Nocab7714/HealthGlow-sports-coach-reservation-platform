@@ -1,0 +1,1016 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+    <head>
+        <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  rel="icon"
+  href="data:image/webp;base64,UklGRhACAABXRUJQVlA4IAQCAACQCwCdASogACAAPiUOhkIhhgGABgCRLYAXZecvGPxN/G69DJQM4A7AHkZ9YB6AH6Z9Yp+2/oyUbdvjP8lpDX9k1G3+79FvOk8yewR+rCHadU5J+DfiPX20y9iapj47Pzk80T6cgAD9Bi9Vv7PlcBVJDu8As4etz9uw43hr/Zmj8fQW8R+998hmoKtQH8mFx3JxSN/9Vw8gr+rKJ8n//+QzLgNX8fpYcLi4eZ/kVYw4Rf/3sEqDFLpkqoL9QJy/5PF//87ledyu6vV7+MyrkmU1/9xCieMWaQ48GcXxTvZ38SXbTlOulhf86eKHTBKM6r1ShzoVt30VluZAE2+6Q80X0QH7jG/alWmACw/vZb1I2wTftYvif4pU9qnXvc/7bLY646J662kMGHsR8bPiUxiryLJo/euENyywpb/j3DyZeMuOPIi5TKOsyIg4ie3/O8byN4lffRCP3JmLv+L7cSfrL6/f5/voRHUyhtS78VGSbDZNlu5mD/vrVfP0hUvA78Bi/qBppzlvKixLrlxmmDocj5gn/+V1xhl5Sgn7crf4rAufP6T3nMVxEuRudjxQ8j3VTnCoLl/3ae5p8Rph/uDPdo4c7xvbynv+mC2ftXbduZroxhbgGj/IjI+SQ7mj0RZO+KAiIBMxJ9vhOzfT/qrNx9pH61Jx+dRJ56zi6ueeOtLeQAA="
+  type="image/x-icon"
+/>
+<!-- 網頁描述 -->
+<meta
+  name="description"
+  content="Health Glow，透過我們的運動預約平台，輕鬆探索多元運動課程，預約專業教練，打造屬於你的個性化健身計劃。無論何時何地，都能快速預約並開始你的健康運動生活。"
+/>
+<meta name="author" content="Sonia、Macy、Jason、Nocab" />
+<meta
+  name="keywords"
+  content="運動預約, 教練課程, 健身課程, 線上預約, 私人教練, 課程管理, 運動平台, 健康運動, 運動場地預約, 團體課程, 健身房預約, 個人訓練, 健身計劃, 線上運動, 運動課程推薦, 運動健身, 課程報名, 課程評價, 運動教練, 運動學習, 健身預約系統, 瑜伽課程, 健身教練, 課程搜索, 訓練課程, 運動類型選擇, 健身目標, 課程時間表, 彈性取消, 線上支付運動課程"
+/>
+<!-- OG -->
+<meta property="og:title" content="Health Glow" />
+<meta
+  property="og:description"
+  content="探索多元運動課程，輕鬆預約專業教練，隨時隨地開啟健康生活。立即加入，打造屬於你的個性化健身計劃！"
+/>
+<meta
+  property="og:image"
+  content="https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/nocab/assets/images/img/health-glow-og.webp"
+/>
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:alt" content="Health Glow og" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:url"
+  content="https://nocab7714.github.io/HealthGlow-sports-coach-reservation-platform/"
+/>
+<!-- Google Material Symbols -->
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<!-- tabler-icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+/>
+<!-- flatpickr  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+/>
+        <title>Health Glow | 預約課程 </title>
+      <script type="module" crossorigin src="/HealthGlow-sports-coach-reservation-platform/assets/main-c8d50098.js"></script>
+      <link rel="stylesheet" href="/HealthGlow-sports-coach-reservation-platform/assets/main-d26481fb.css">
+    </head>
+  <body>
+    <!-- 導覽列預留空間，避免其他內容被 fixed-top 吃掉 -->
+<div class="navbar-reserve-space"></div>
+<!-- navbar-sign-in-trainer-bg-white -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top py-2 py-lg-6 flex-nowrap">
+  <form class="container">
+    <a class="navbar-brand me-3 me-lg-8" href="index.html">
+      <picture>
+        <source srcset="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg " media="(min-width: 991px)"
+          alt="主色 health glow logo" height="48" width="104" />
+
+        <img src="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg" alt="主色 health glow logo" height="24" width="52" />
+      </picture>
+    </a>
+    <div class="rounded-0 position-relative d-block d-lg-none flex-grow-1">
+      <span class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle" style="left: 24px">
+        search
+      </span>
+      <input type="text" class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10 pe-2"
+        placeholder="搜尋課程｜地點｜時間" style="font-size: 12px" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbarSignInTrainerMobileSearch" />
+    </div>
+    <ul class="navbar-nav align-items-center d-flex flex-row ms-2 d-block d-lg-none">
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="common-questions.html"><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle">
+            help
+          </span></a>
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle">
+            notifications
+          </span></a>
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle">
+            mail
+          </span></a>
+      </li>
+      <li class="nav-item">
+        <img src="../assets/images/img/sports-04.webp " alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步" width="32" height="32"
+          class="rounded-circle link-img-opacity-75-hover border-1 border border-white d-block d-lg-none"
+          style="cursor: pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSignInTrainer02"
+          aria-controls="offcanvasNavbarSignInTrainer02" />
+      </li>
+    </ul>
+    <div class="collapse navbar-collapse">
+      <div class="d-flex align-items-center">
+        <ul class="search navbar-nav list-unstyled d-flex flex-row me-auto">
+  <!-- 課程搜尋 dropdown -->
+  <li
+    class="dropdown nav-item rounded-0 position-relative me-3"
+    style="max-width: 290px"
+  >
+    <span
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+      style="left: 24px"
+      >search</span
+    >
+    <input
+      type="text"
+      class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      placeholder="搜尋課程，有氧、飛輪、瑜伽、"
+      data-bs-toggle="dropdown"
+      type="search"
+      aria-label="Search"
+      aria-expanded="false"
+    />
+    <!-- dropdown 開始區塊 -->
+    <div class="course-menu dropdown-menu">
+      <div class="d-flex">
+        <p
+          class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
+        >
+          健身運動類別
+        </p>
+        <p
+          class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2"
+        >
+          運動課程
+        </p>
+      </div>
+      <div class="d-flex">
+        <div class="course-dropdown-menu-level-one border border-primary">
+          <ul class="list-unstyled mb-0"></ul>
+        </div>
+        <!-- 運動課程 -->
+        <div class="course-dropdown-menu-level-two border border-primary">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+            </li>
+            <li>
+              <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+            </li>
+            <li>
+              <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3"
+        >
+          <div>
+            <div class="d-flex justify-content-center align-items-center">
+              <p class="text-primary font-anton-regular fs-5">5.0</p>
+              <span class="material-symbols-rounded star">star</span>
+              <span class="text-gray-600 fs-8">(1,200評價)</span>
+            </div>
+            <button class="btn btn-primary w-100" type="button">
+              找<span class="selected-exercise-type">瑜伽</span>教練
+            </button>
+          </div>
+          <div>
+            <p class="text-gray-700 fw-semibold">更多資訊</p>
+            <ul class="list-unstyled fs-7 fw-normal mb-0">
+              <li>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span>課內容</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span
+                  >教練薪資行情</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span
+                  >學生評價內容</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <!-- 地點 dropdown  -->
+  <li
+    class="dropdown nav-item rounded-0 position-relative me-3"
+    style="max-width: 290px"
+  >
+    <span
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+      style="left: 24px"
+    >
+      location_on
+    </span>
+    <input
+      type="text"
+      class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      placeholder="地點?"
+      data-bs-toggle="dropdown"
+      type="search"
+      aria-label="Search"
+      aria-expanded="false"
+    />
+    <!-- dropdown 開始區塊 -->
+    <div class="location-menu dropdown-menu">
+      <p
+        class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
+      >
+        挑選地區
+      </p>
+      <div class="d-flex justify-content-between">
+        <span>已選擇 2/10</span>
+        <a
+          href="#"
+          class="link-gray-700 text-decoration-underline"
+          role="button"
+          >清除全部</a
+        >
+      </div>
+      <div class="d-flex">
+        <!-- 地點 Level One -->
+        <div class="location-dropdown-menu-level-one border border-primary">
+          <ul class="list-unstyled mb-0"></ul>
+        </div>
+        <!-- 地點 Level Two -->
+        <div class="location-dropdown-menu-level-two border border-primary">
+          <ul class="list-unstyled mb-0 d-block">
+            <li><a class="dropdown-item" href="#">中正區</a></li>
+            <li><a class="dropdown-item" href="#">大同區</a></li>
+            <li><a class="dropdown-item" href="#">中山區</a></li>
+            <li><a class="dropdown-item" href="#">松山區</a></li>
+            <li><a class="dropdown-item" href="#">大安區</a></li>
+            <li><a class="dropdown-item" href="#">萬華區</a></li>
+            <li><a class="dropdown-item" href="#">信義區</a></li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-primary w-100 mt-10" type="button">確認</button>
+    </div>
+  </li>
+  <!-- 時間 dropdown  -->
+  <li
+    class="dropdown nav-item rounded-0 position-relative me-3"
+    style="max-width: 160px"
+  >
+    <span
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle z-1"
+      style="left: 24px"
+    >
+      schedule
+    </span>
+    <input
+      id="flatpickr"
+      type="search"
+      class="flatpickr form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      data-bs-toggle="dropdown"
+      type="search"
+      placeholder="時間？"
+      aria-label="Search"
+      aria-expanded="false"
+    />
+  </li>
+  <li class="nav-item">
+    <button
+      type="search"
+      class="btn btn-primary text-white fw-semibold text-nowrap"
+    >
+      搜尋
+    </button>
+  </li>
+</ul>
+
+<!-- navbar 搜尋課程、地點 資料 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 選取所有 .course-dropdown-menu-level-one 和 .course-dropdown-menu-level-two 的 ul 元素
+    const courseMenuLevelOnes = document.querySelectorAll(
+      '.course-dropdown-menu-level-one ul'
+    );
+    const courseMenuLevelTwos = document.querySelectorAll(
+      '.course-dropdown-menu-level-two ul'
+    );
+
+    // 迴圈處理每對第一層和第二層的課程選單
+    courseMenuLevelOnes.forEach((courseMenuLevelOne, index) => {
+      const courseMenuLevelTwo = courseMenuLevelTwos[index]; // 對應的第二層選單
+
+      // 將 courseData 資料加入每個選單
+      courseData.forEach((element) => {
+        let menuItem = createMainMenuItem(element, courseMenuLevelTwo); // 建立主選單項目
+        courseMenuLevelOne.append(menuItem); // 將主選單項目加入第一層選單
+      });
+    });
+
+    // 同樣處理 location (地點) 選單
+    const locationMenuLevelOnes = document.querySelectorAll(
+      '.location-dropdown-menu-level-one ul'
+    );
+    const locationMenuLevelTwos = document.querySelectorAll(
+      '.location-dropdown-menu-level-two ul'
+    );
+
+    locationMenuLevelOnes.forEach((locationMenuLevelOne, index) => {
+      const locationMenuLevelTwo = locationMenuLevelTwos[index]; // 對應的第二層地點選單
+
+      locationData.forEach((element) => {
+        let locationItem = createMainMenuItem(element, locationMenuLevelTwo); // 建立地點選單項目
+        locationMenuLevelOne.append(locationItem); // 將地點選單項目加入第一層選單
+      });
+    });
+  });
+  // 建立主選單項目 (第一層選單)
+  function createMainMenuItem(element, menuLevelTwo) {
+    let mainMenuItem = createMenuItem(element.title, element.status); // 建立第一層選單項目
+
+    // 當滑鼠移入該選單項目時觸發的事件
+    mainMenuItem.addEventListener('mouseover', () => {
+      menuLevelTwo.innerText = ''; // 清空之前的第二層選單項目
+
+      // 將每個 subject (子選單) 加入第二層選單
+      element.subject.forEach((subject) => {
+        let menuLevelTwoItem = createMenuItem(subject); // 建立第二層選單項目
+        menuLevelTwo.append(menuLevelTwoItem); // 將該項目加入第二層選單
+      });
+
+      // 先移除所有已經被加上 selected 樣式的項目
+      const selectedItems = document.querySelectorAll(
+        '.dropdown-item.selected'
+      );
+      selectedItems.forEach((item) => item.classList.remove('selected'));
+
+      // 將當前選項的項目加上 selected 樣式
+      mainMenuItem.querySelector('.dropdown-item').classList.add('selected');
+    });
+
+    return mainMenuItem; // 回船主選單項目
+  }
+  // 建立選單項目 (通用，用於第一層和第二層選單)
+  function createMenuItem(title, status) {
+    let menuItem = document.createElement('li'); // 建立 li 元素
+    let link = document.createElement('a'); // 建立 a 元素
+
+    // 設定 a 標籤的 class 和屬性
+    link.classList.add('dropdown-item', status); // 加入樣式 class 和狀態
+    link.href = '#'; // 設定連結
+    link.textContent = title; // 設定顯式的文字
+    menuItem.append(link); // 將 a 標籤加入 li 元素中
+
+    return menuItem; // 回傳 li 元素
+  }
+
+  // 課程資料 (用於第一層和第二層選單的生成)
+  const courseData = [
+    {
+      title: '有氧運動',
+      subject: ['有氧 1', '有氧 2', '有氧 3'],
+      status: 'selected',
+    },
+    { title: '肌力訓練', subject: ['肌力 1', '肌力 2', '肌力 3'] },
+    { title: '核心訓練', subject: ['核心 1', '核心 2', '核心 3'] },
+    { title: '舞蹈課程', subject: ['舞蹈 1', '舞蹈 2', '舞蹈 3'] },
+    { title: '靜態課程', subject: ['瑜珈', '皮拉提斯', '冥想', '太極'] },
+  ];
+  // 地點資料 (用於第一層和第二層選單的生成)
+  const locationData = [
+    {
+      title: '台北市',
+      subject: [
+        '中正區',
+        '大同區',
+        '中山區',
+        '松山區',
+        '大安區',
+        '萬華區',
+        '信義區',
+      ],
+      status: 'selected',
+    },
+    { title: '宜蘭縣', subject: ['宜蘭縣 1', '宜蘭縣 2', '宜蘭縣 3'] },
+    { title: '新北市', subject: ['新北市 1', '新北市 2', '新北市 3'] },
+    { title: '基隆市', subject: ['基隆市 1', '基隆市 2', '基隆市 3'] },
+  ];
+</script>
+<!-- 載入 flatpickr  -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+<!-- flatpickr 客製 -->
+<!-- <script>
+  flatpickr('.flatpickr', {
+    onReady: function (selectedDates, dateStr, instance) {
+      const newDiv = document.createElement('div');
+      const newUl = document.createElement('ul');
+
+      const timeItems = ['底下JS', '上午', '下午', '晚上'];
+
+      newUl.classList.add(
+        'flatpickr-custom-time',
+        'list-unstyled',
+        'd-flex',
+        'gap-2'
+      );
+
+      timeItems.forEach((timeText) => {
+        const newLi = document.createElement('li');
+        const newBtn = document.createElement('button');
+        newLi.classList.add('nav-item');
+        newBtn.classList.add('nav-link', 'w-100');
+        newBtn.type = 'button';
+        newBtn.textContent = timeText;
+        newLi.append(newBtn);
+        newUl.appendChild(newLi);
+      });
+
+      newDiv.classList.add('flatpickr-custom-div');
+      // 建立自定義按鈕元素
+      const customButtonCancel = document.createElement('button');
+      customButtonCancel.type = 'button';
+      customButtonCancel.classList.add(
+        'btn',
+        'btn-outline-secondary',
+        'w-50',
+        'rounded-0'
+      );
+      customButtonCancel.innerText = '清除';
+
+      const customButtonConfirm = document.createElement('button');
+      customButtonConfirm.type = 'button';
+      customButtonConfirm.classList.add('btn', 'btn-primary', 'w-50');
+      customButtonConfirm.innerText = '確定';
+
+      customButtonConfirm.addEventListener('click', function () {
+        instance.setDate(new Date()); // 設定為今天的日期
+      });
+      newDiv.append(customButtonCancel, customButtonConfirm);
+      instance.calendarContainer.append(newUl, newDiv);
+    },
+  });
+</script>    -->
+
+          <ul class="navbar-nav align-items-center mx-8">
+            <li class="nav-item me-5 p-0">
+              <a class="nav-link link-img-opacity-75-hover p-0" href="common-questions.html"><span
+                  class="material-symbols-outlined fs-3 text-gray-800 align-middle">
+                  help
+                </span></a>
+            </li>
+            <li class="nav-item me-5 p-0">
+              <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+                  class="material-symbols-outlined fs-3 text-gray-800 align-middle">
+                  notifications
+                </span></a>
+            </li>
+            <li class="nav-item me-5 p-0">
+              <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+                  class="material-symbols-outlined fs-3 text-gray-800 align-middle">
+                  mail
+                </span></a>
+            </li>
+          </ul>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp" alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步" width="56" height="56"
+            class="rounded-circle link-img-opacity-75-hover border-2 border border-white" style="cursor: pointer"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSignInTrainer02"
+            aria-controls="offcanvasNavbarSignInTrainer02" />
+      </div>
+    </div>
+  </form>
+</nav>
+<!-- offcanvas-navbar-sign-in-trainer-bg-white -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarSignInTrainer02"
+  aria-labelledby="offcanvasNavbarSignInTrainer02">
+  <div class="offcanvas-header px-4 py-7">
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp" alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步" width="36" height="36"
+        class="rounded-circle me-3" />
+      <span>王小明</span>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body px-0 py-0">
+    <ul class="list-group rounded-0">
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="#">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_clock </span>
+            <span>預約課程 | 預約、上課</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="#">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_month </span>
+            <span>行事曆 | 課程明細</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="#">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> settings </span>
+            <span>帳號設定</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="index.html">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> logout </span>
+            <span>登出</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- offcanvas-navbar-sign-in-trainer-bg-white-mobile-search -->
+<div class="offcanvas offcanvas-end overflow-y-auto" tabindex="-1" id="offcanvasNavbarSignInTrainerMobileSearch"
+  aria-labelledby="offcanvasNavbarSignInTrainerMobileSearch">
+  <div class="offcanvas-header px-4">
+    <img src="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg" alt="主色 health glow logo" width="64" height="30" />
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <form>
+    <div class="offcanvas-body px-0 py-0">
+      <ul class="accordion list-unstyled rounded-0" id="accordionSearch">
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseCourseSearch"
+              aria-controls="collapseCourseSearch">
+              <span class="fw-semibold d-flex align-items-center text-secondary"><span
+                  class="material-symbols-outlined text-gray-800 me-1">
+                  search </span>課程搜尋</span>
+            </button>
+          </h2>
+          <div id="collapseCourseSearch" class="accordion-collapse collapse">
+            <div class="accordion-body bg-gray-200">
+              <!-- 運動課程 dropdown menu -->
+              <div class="search d-flex bg-white">
+                <!-- 運動課程 level one-->
+                <div class="course-dropdown-menu-level-one border border-primary flex-grow-1">
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 運動課程 level two-->
+                <div class="course-dropdown-menu-level-two border border-primary flex-grow-1">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseLocationSelection"
+              aria-controls="collapseLocationSelection">
+              <span class="fw-semibold d-flex align-items-center text-secondary"><span
+                  class="material-symbols-outlined text-gray-800 me-1">
+                  location_on </span>選擇地點</span>
+            </button>
+          </h2>
+          <div id="collapseLocationSelection" class="accordion-collapse collapse">
+            <div class="search accordion-body bg-gray-200">
+              <!-- 地點 dropdown menu -->
+              <div class="d-flex justify-content-between">
+                <span>已選擇 2/10</span>
+                <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
+              </div>
+              <div class="d-flex bg-white">
+                <!-- 地點 Level One -->
+                <div class="location-dropdown-menu-level-one border border-primary">
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 地點 Level Two -->
+                <div class="location-dropdown-menu-level-two border border-primary">
+                  <ul class="list-unstyled mb-0 d-block">
+                    <li><a class="dropdown-item" href="#">中正區</a></li>
+                    <li><a class="dropdown-item" href="#">大同區</a></li>
+                    <li><a class="dropdown-item" href="#">中山區</a></li>
+                    <li><a class="dropdown-item" href="#">松山區</a></li>
+                    <li><a class="dropdown-item" href="#">大安區</a></li>
+                    <li><a class="dropdown-item" href="#">萬華區</a></li>
+                    <li><a class="dropdown-item" href="#">信義區</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseDateSelection"
+              aria-controls="collapseDateSelection">
+              <span class="fw-semibold d-flex align-items-center text-secondary">
+                <span class="material-symbols-outlined text-gray-800 me-1">schedule</span>
+                選擇時間
+              </span>
+            </button>
+          </h2>
+          <div id="collapseDateSelection" class="accordion-collapse collapse text-center">
+            <div class="accordion-body bg-gray-200 d-flex justify-content-center">
+              <div class="flatpickr-inline"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="p-6 d-flex gap-4">
+        <button type="search" class="btn btn-outline-dark fs-6 fw-semibold px-56 py-3 w-50">
+          重置
+        </button>
+        <button type="search" class="btn btn-primary text-white fs-6 fw-semibold px-56 py-3 w-50">
+          搜尋
+        </button>
+      </div>
+    </div>
+  </form>
+</div>    <!-- banner -->
+    <section>
+        <div class="order-banner position-relative ">
+            <div class="container">
+            <div class="d-flex justify-content-center h-100">
+                <div class="position-absolute top-50 translate-middle banner-mobil-position">
+                    <h1 class="display-2 text-white fw-bold">預約課程</h1>
+                    <div class="mt-2 d-flex justify-md-content-center justify-content-md-center justify-content-start">
+                        <nav aria-label="breadcrumb">
+                            <ol class="breadcrumb">
+                              <li class="breadcrumb-item text-white"><a href="student.html">Home</a></li>
+                              <li class="breadcrumb-item active" aria-current="page">預約課程</li>
+                            </ol>
+                          </nav>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- 內容 -->
+    <section>
+        <div class="bg-secondary">
+            <div class="container pb-md-15">
+                <div class="py-md-15 py-10">
+                    <div class="mb-md-10 mb-6">
+                    <!-- 預約順序 -->
+                       <ul class="d-flex align-items-center justify-content-md-start justify-content-center b-md-0 p-md-0">
+                            <li class="d-flex flex-md-row flex-column align-items-center pe-3">
+                                <a
+                                    type="button"
+                                    class="btn btn-sm btn-warning rounded-pill text-secondary fw-bold font-anton-700 fs-md-4 fs-6 lh-sm step-icon-style font-anton-700"
+                                    href="order-time.html"
+                                    >
+                                    <span class="font-anton-700 lh-base">1</span>
+                                </a>
+                                <a href="order-time.html" class="fs-md-5 fs-6 text-warning ps-md-4">
+                                    預約時段
+                                </a>
+                            </li>
+                            <li>
+                                <i class="bi bi-chevron-right text-warning fw-bold fs-md-4 fs-6 fw-bold"></i>
+                            </li>
+                            <li class="d-flex flex-md-row flex-column align-items-center pe-3">
+                                <a
+                                    type="button"
+                                    class="btn btn-sm btn-warning rounded-pill text-secondary fw-bold fs-md-4 fs-6 lh-sm step-icon-style font-anton-700"
+                                    href="order-time.html"
+                                    >
+                                    <span class="font-anton-700 lh-base">2</span>
+                                </a>
+                                <a href="order-time.html" class="fs-md-5 fs-6 text-warning ps-md-4">
+                                    選擇課程
+                                </a>
+                            </li>
+                            <li>
+                              <i class="bi bi-chevron-right text-warning fw-bold fs-md-4 fs-6 fw-bold"></i>
+                            </li>
+                            <li class="ps-5 d-flex align-items-center flex-md-row flex-column pe-md-5 pe-3">
+                                <button
+                                    type="button"
+                                    class="btn btn-sm btn-gray-300 rounded-pill text-secondary fw-bold font-anton-700 step-icon-style"
+                                >
+                                <span class="font-anton-700 fs-md-4 fs-6 lh-base">
+                                  3
+                                </span>
+                                </button>
+                                <a href="#" class="fs-md-5 fs-6 text-gray-300 ps-md-4">
+                                    預約成功
+                                </a>
+                            </li>
+                       </ul> 
+                    </div>
+                    <div class="bg-gray-200 calender-rounded px-md-15 px-3">
+                      <h3 class="fs-md-3 fs-5 text-secondary text-center pt-md-56 pt-4">
+                        選擇地點
+                      </h3>
+                      <div class="bar-80 mt-md-4 mt-2 bg-secondary mx-auto">
+                      </div>
+                      <!-- 地點選擇內容 -->
+                      <div class="mt-md-10 mt-4 rounded-2 bg-white">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="px-3">
+                                        <div class="px-md-5 py-lg-11 py-lg-6 px-3 py-4 rounded-2">
+                                            <div class="row d-md-flex align-items-center justify-content-lg-between gx-lg-6 gy-lg-4 g-md-4 flex-md-wrap flex-lg-row flex-column mb-md-0 mb-6">
+                                                <div class="col p-0">
+                                                    <div class="oreder-train-infor p-lg-0">
+                                                        <div class="d-flex justify-content-between mb-md-0 mb-6">
+                                                            <div class="d-flex">
+                                                                <div class="pe-3">
+                                                                    <img src="/HealthGlow-sports-coach-reservation-platform/assets/avatar-03-38942572.webp" alt="頭像" class="avatar-64">
+                                                                </div>
+                                                                <div>
+                                                                    <div class="text-secondary fs-md-4 fs-5">
+                                                                        林大壯 Jeremy
+                                                                    </div>
+                                                                    <div class="d-flex text-secondary">
+                                                                        <span class="fs-7 pe-2">#增肌減脂</span>
+                                                                        <span class="fs-7 pe-2">#體態雕塑</span>
+                                                                        <span class="fs-7">#運動表現</span>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                            <div class="d-md-none d-block" style="max-width: 16px;">
+                                                                <button type="button" class="text-gray-600 fs-6 p-0 border-0 bg-white">
+                                                                    <i class="bi bi-x"></i>
+                                                                </button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col p-0">
+                                                    <div class="oreder-selected">
+                                                        <div>
+                                                            <form>
+                                                                <ul class="search navbar-nav list-unstyled d-md-flex flex-md-row d-column me-auto"
+                                                                    >
+                                                                    <!-- 地點搜尋 dropdown -->
+                                                                    <li
+                                                                    class="dropdown nav-item rounded-0 position-relative me-md-3 mb-md-0 mb-5 select-button-size"
+                                                                    >
+                                                                    
+                                                                    <div class="dropdown">
+                                                                        <button class="dropdown-toggle form-control navbar-input rounded-0 border-2 border-gray-800 px-3 py-2 text-start focus-primary
+                                                                        d-flex align-items-center justify-content-between" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                            <span class="text-truncate text-gray-800 pe-md-6 d-inline-block"
+                                                                            style="width: 100%;">
+                                                                                請選擇上課地點
+                                                                            </span>
+                                                                        </button>
+                                                                        <ul class="course-menu dropdown-menu p-0 border-2 border-gray-800 select-button-size" aria-labelledby="dropdownMenuButton1"
+                                                                        >
+                                                                            <li><a class="dropdown-item" href="#">大安區</a></li>
+                                                                            <li><a class="dropdown-item" href="#">信義區</a></li>
+                                                                            <li><a class="dropdown-item" href="#">中正區</a></li>
+                                                                        </ul>
+                                                                    </div>
+                                                                    </li>
+                                                                    <!-- 課程方式 dropdown  -->
+                                                                    <li
+                                                                    class="dropdown nav-item rounded-0 position-relative me-md-3 mb-md-0 mb-5 select-button-size"
+                                                                    >
+                                                                        <button class="dropdown-toggle form-control navbar-input rounded-0 border-2 border-gray-800 px-3 py-2 text-start focus-primary d-flex align-items-center justify-content-between" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false"
+                                                                        style="width: 100%;"
+                                                                        >
+                                                                        <span class="text-truncate text-gray-800 d-inline-block" style="width: 100%;">
+                                                                            客製
+                                                                        </span>
+                                                                        </button>
+                                                                    
+                                                                    </li>
+                                                                    <!-- 時間 dropdown  -->
+                                                                    <li
+                                                                    class="dropdown nav-item rounded-0 position-relative me-md-3 mb-md-0 select-button-size"
+                                                                    >
+                                                                    <div class="dropdown">
+                                                                    <button class="dropdown-toggle form-control navbar-input rounded-0 border-2 border-gray-800 px-3 py-2 text-start focus-primary d-flex align-items-center justify-content-between" type="button" id="dropdownMenuButton1" data-bs-toggle="dropdown" aria-expanded="false">
+                                                                        <span class="text-truncate text-gray-800 pe-6">
+                                                                        請選擇上課時間
+                                                                        </span>
+                                                                    </button>
+                                                                    <ul class="course-menu dropdown-menu p-0 border-2 border-gray-800 select-button-size" aria-labelledby="dropdownMenuButton1"
+                                                                    >
+                                                                        <li><a class="dropdown-item" href="#">60分鐘</a></li>
+                                                                        <li><a class="dropdown-item" href="#">90分鐘</a></li>
+                                                                        <li><a class="dropdown-item" href="#">120分鐘</a></li>
+                                                                    </ul>
+                                                                    </div>
+                                                                    </li>
+                                                                </ul>
+                                                            </form>  
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="col-xxl-2 col-xl-4 col-md-12 p-0">
+                                                    <div class="d-flex align-items-center justify-content-md-start justify-content-end">
+                                                        <div class="font-anton-700 text-secondary fs-md-28 fs-4  text-md-center text-end mt-md-0 mt-6 pe-6">
+                                                            NT$ 2,000
+                                                        </div>
+                                                        <div class="d-md-block d-none ">
+                                                            <button type="button" class="btn-close text-gray-600"></button>
+                                                        </div> 
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                      </div>
+                      <!-- 課程明細 -->
+                       <div class="py-md-15 py-8">
+                        <h3 class="fs-md-3 fs-5 text-secondary text-center">
+                            課程明細
+                        </h3>
+                        <div class="bar-80 mt-md-4 mt-2 bg-secondary mx-auto">
+                        </div>
+                        <div class="mt-md-10 mt-5 px-md-0 px-3">
+                            <div class="row">
+                                <div class="col-12">
+                                    <div class="row justify-content-md-between d-flex-column
+                                    bg-white rounded-2 px-md-8 py-md-6 px-3 py-4">
+                                        <div class="col-lg-6 col-12">
+                                            <div>
+                                                <div class="d-flex align-items-center">
+                                                    <img src="/HealthGlow-sports-coach-reservation-platform/assets/avatar-03-38942572.webp" alt="頭像" class="avatar-40 ">
+                                                    <div class="ps-3 text-secondary fs-md-5 fs-6">
+                                                        林大壯 Jeremy
+                                                    </div>
+                                                </div>
+                                                <div class="ps-lg-56 ps-md-0 ps-0">
+                                                    <ul class="mt-5 list-unstyled">
+                                                        <li class="pb-1 fs-md-5 fs-7">
+                                                            課程內容: 客製 | 60 分鐘
+                                                        </li>
+                                                        <li class="fs-md-5 fs-7">
+                                                            上課地點:台北市中山區南京東路25巷2-1號
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="col-lg-6 col-12">
+                                            <!-- map -->
+                                            <div class="map-container position-relative overflow-hidden">
+                                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.458381194189!2d121.52652511033189!3d25.052448437456977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a966f6fc092d%3A0x9f740ea896779b57!2zMTA0OTHlj7DljJfluILkuK3lsbHljYDljZfkuqzmnbHot6_kuozmrrUyNeiZnw!5e0!3m2!1szh-TW!2stw!4v1730043772361!5m2!1szh-TW!2stw" width="540" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" class="position-absolute"></iframe>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                       </div>
+                      <!-- 月曆＋上下頁按鈕 -->
+                      <div class="pb-md-56 pb-4">
+                        <div class="container">
+                          <div class="row justify-content-between">
+                            <div class="col-md-4 col-6">
+                              <a type="button" class="btn btn-outline-dark bg-white p-3" href="order-time.html">
+                                <div class=" d-flex align-items-center ">
+                                    <i class="bi bi-arrow-left-short fs-4" style="line-height: 0.8;"></i>
+                                    <div class="fs-md-5 fs-6 ps-2 lh-sm">回上一步</div>
+                                </div>
+                              </a>
+                            </div>
+                            <div class="col-md-4 col-6 text-end">
+                              <a href="order-success.html" class="d-flex justify-content-end">
+                                <button type="button" class="btn-dark bg-white  p-3 d-flex align-items-center"
+                                >
+                                  <div class="fs-md-5 fs-6 pe-2 lh-sm">下一步</div>
+                                  <i class="bi bi-arrow-right-short fs-4" style="line-height: 0.8;"></i>
+                                </button>
+                              </a>
+                            </div>
+                          </div>
+                        </div>
+                        
+                      </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <div
+  id="scrollToTop"
+  class="scroll-to-top position-fixed d-block border border-1 border-md-2 border-primary rounded-circle bg-tint text-center d-flex justify-content-center align-items-center"
+>
+  <img
+    src="/HealthGlow-sports-coach-reservation-platform/assets/arrow Up-9f74bfd6.svg"
+    alt="向上的 icon"
+    width="32"
+    height="32"
+  />
+</div>
+    <!--  -->
+    <footer class="bg-primary pt-10 pb-6 pb-lg-10">
+  <div class="container">
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-between align-items-center mb-6 mb-lg-3"
+    >
+      <img
+        src="/HealthGlow-sports-coach-reservation-platform/assets/logo-white-text-e2206eee.svg"
+        alt="health glow 白色 logo"
+        class="img-fluid mb-6 mb-lg-0"
+        width="190"
+        height="88"
+      />
+      <ul
+        class="list-unstyled fs-4 d-flex flex-wrap justify-content-center order-first order-lg-0 pb-10 pb-lg-0 mb-6 mb-lg-0"
+      >
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="about-us.html"
+            >關於我們</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="common-questions.html"
+            >常見問題</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="privacy-policy.html"
+            >隱私政策</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="terms-of-service.html"
+            >服務條款</a
+          >
+        </li>
+      </ul>
+      <ul class="list-unstyled d-flex py-2 py-lg-0 mb-0">
+        <li class="me-4">
+          <a href="#" class="link-img-opacity-75-hover"
+            ><img
+              src="/HealthGlow-sports-coach-reservation-platform/assets/instagram-458c9a70.svg"
+              alt="instagram icon"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li class="me-4">
+          <a href="#" class="link-img-opacity-75-hover"
+            ><img
+              src="/HealthGlow-sports-coach-reservation-platform/assets/facebook-db6a5aa7.svg"
+              alt="facebook icon"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li>
+          <a href="#" class="link-img-opacity-75-hover"
+            ><img
+              src="/HealthGlow-sports-coach-reservation-platform/assets/line-5a9ec259.svg"
+              alt="line icon"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-white text-center text-lg-start fs-7 fw-normal">
+      <p class="mb-1">© 2024 Health Glow Inc. All rights reserved</p>
+      <p>僅個人作品練習,無任何商業用途</p>
+    </div>
+  </div>
+</footer>
+
+    
+  </body>
+</html>

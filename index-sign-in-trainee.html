@@ -59,7 +59,7 @@
 </head>
 
 <body>
-  <!-- navbar-sign-out-bg-transparent -->
+  <!-- navbar-sign-in-trainer-bg-transparent -->
 <nav
   class="navbar navbar-gsap-first navbar-expand-lg bg-transparent fixed-top py-4 py-lg-5"
 >
@@ -83,15 +83,17 @@
         />
       </picture>
     </a>
-    <button
-      class="navbar-toggler border-0"
-      type="button"
+    <img
+      src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp"
+      alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+      width="40"
+      height="40"
+      class="rounded-circle border-1 border border-white d-block d-lg-none"
       data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbarSignOut01"
-      aria-controls="offcanvasNavbarSignOut01"
-    >
-      <span class="material-symbols-outlined text-white"> menu </span>
-    </button>
+      data-bs-target="#offcanvasNavbarSignInTrainer01"
+      aria-controls="offcanvasNavbarSignInTrainer01"
+      style="cursor: pointer"
+    />
     <div class="collapse navbar-collapse">
       <ul class="navbar-nav align-items-center ms-auto">
         <li class="nav-item me-8">
@@ -101,36 +103,33 @@
         </li>
         <li class="nav-item me-8">
           <a
-            class="nav-link link-light link-opacity-75-hover fw-semibold"
+            class="nav-link link-light fw-semibold"
             href="common-questions.html"
             ><span class="material-symbols-outlined align-middle me-1">
               help </span
             >常見問答</a
           >
         </li>
-        <li class="nav-item">
-          <a
-            class="nav-link link-light link-opacity-75-hover fw-semibold link-line-white"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignInModal"
-            style="cursor: pointer"
-            >登入</a
-          >
-        </li>
-        <li class="nav-item">
-          <a
-            class="nav-link link-light link-opacity-75-hover fw-semibold"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignUpModal"
-            style="cursor: pointer"
-            >註冊</a
-          >
+        <li
+          class="nav-item"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbarSignInTrainer01"
+          aria-controls="offcanvasNavbarSignInTrainer01"
+          style="cursor: pointer"
+        >
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp"
+            alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+            width="56"
+            height="56"
+            class="rounded-circle border-2 border border-white"
+          />
         </li>
       </ul>
     </div>
   </div>
 </nav>
-<!-- navbar-sign-out-bg-white -->
+<!-- navbar-sign-in-trainer-bg-white -->
 <!-- 當視窗移動到 banner 底部，顯示切換為此 navbar -->
 <nav
   class="navbar navbar-gsap-secondary navbar-expand-lg bg-white fixed-top py-2 py-lg-6 flex-nowrap"
@@ -168,20 +167,56 @@
         placeholder="搜尋課程｜地點｜時間"
         style="font-size: 12px"
         data-bs-toggle="offcanvas"
-        data-bs-target="#offcanvasNavbarSignOutMobileSearch"
+        data-bs-target="#offcanvasNavbarSignInTrainerMobileSearch"
       />
     </div>
-    <button
-      class="navbar-toggler border-0 ms-1 ms-lg-0"
-      type="button"
-      data-bs-toggle="offcanvas"
-      data-bs-target="#offcanvasNavbarSignOut02"
-      aria-controls="offcanvasNavbarSignOut02"
+    <ul
+      class="navbar-nav align-items-center d-flex flex-row ms-2 d-block d-lg-none"
     >
-      <span class="material-symbols-outlined text-gray-800"> menu </span>
-    </button>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link p-0" href="common-questions.html"
+          ><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle"
+          >
+            help
+          </span></a
+        >
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link p-0" href="#"
+          ><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle"
+          >
+            notifications
+          </span></a
+        >
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link p-0" href="#"
+          ><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle"
+          >
+            mail
+          </span></a
+        >
+      </li>
+      <li class="nav-item">
+        <img
+          src="../assets/images/img/sports-04.webp "
+          alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+          width="32"
+          height="32"
+          class="rounded-circle border-1 border border-white d-block d-lg-none"
+          style="cursor: pointer"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbarSignInTrainer02"
+          aria-controls="offcanvasNavbarSignInTrainer02"
+        />
+      </li>
+    </ul>
     <div class="collapse navbar-collapse">
-      <ul class="search navbar-nav list-unstyled d-flex flex-row me-auto">
+      <div class="d-flex align-items-center">
+        <ul class="search navbar-nav list-unstyled d-flex flex-row me-auto">
   <!-- 課程搜尋 dropdown -->
   <li
     class="dropdown nav-item rounded-0 position-relative me-3"
@@ -526,48 +561,69 @@
     },
   });
 </script>    -->
-      <ul class="navbar-nav align-items-center ms-4">
-        <li class="nav-item">
-          <a
-            class="nav-link fw-semibold link-line-gray-800 text-nowrap"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignInModal"
-            style="cursor: pointer"
-            >登入</a
-          >
-        </li>
-        <li class="nav-item me-8">
-          <a
-            class="nav-link fw-semibold text-nowrap"
-            data-bs-toggle="modal"
-            data-bs-target="#userCategorySignUpModal"
-            style="cursor: pointer"
-            >註冊</a
-          >
-        </li>
-        <li class="nav-item">
-          <a class="btn btn-primary text-light fw-semibold text-nowrap" href="#"
-            >成為教練</a
-          >
-        </li>
-      </ul>
+        <ul class="navbar-nav align-items-center mx-8">
+          <li class="nav-item me-5 p-0">
+            <a class="nav-link p-0" href="common-questions.html"
+              ><span
+                class="material-symbols-outlined fs-3 text-gray-800 align-middle"
+              >
+                help
+              </span></a
+            >
+          </li>
+          <li class="nav-item me-5 p-0">
+            <a class="nav-link p-0" href="#"
+              ><span
+                class="material-symbols-outlined fs-3 text-gray-800 align-middle"
+              >
+                notifications
+              </span></a
+            >
+          </li>
+          <li class="nav-item me-5 p-0">
+            <a class="nav-link p-0" href="#"
+              ><span
+                class="material-symbols-outlined fs-3 text-gray-800 align-middle"
+              >
+                mail
+              </span></a
+            >
+          </li>
+        </ul>
+        <img
+          src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp"
+          alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+          width="56"
+          height="56"
+          class="rounded-circle border-2 border border-white"
+          style="cursor: pointer"
+          data-bs-toggle="offcanvas"
+          data-bs-target="#offcanvasNavbarSignInTrainer02"
+          aria-controls="offcanvasNavbarSignInTrainer02"
+        />
+      </div>
     </div>
   </form>
 </nav>
-<!-- offcanvas-navbar-sign-out-bg-transparent -->
+<!-- offcanvas-navbar-sign-in-trainer-bg-transparent -->
 <div
   class="offcanvas offcanvas-end"
   tabindex="-1"
-  id="offcanvasNavbarSignOut01"
-  aria-labelledby="offcanvasNavbarSignOut01"
+  id="offcanvasNavbarSignInTrainer01"
+  aria-labelledby="offcanvasNavbarSignInTrainer01"
 >
   <div class="offcanvas-header px-4 py-7">
-    <img
-      src="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg"
-      alt="主色 health glow logo"
-      width="64"
-      height="30"
-    />
+    <div class="d-flex justify-content-center align-items-center">
+      <img
+        src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp"
+        alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+        width="36"
+        height="36"
+        class="rounded-circle me-3"
+      />
+      <span>王小明</span>
+    </div>
+
     <button
       type="button"
       class="btn-close"
@@ -576,10 +632,10 @@
     ></button>
   </div>
   <div class="offcanvas-body px-0 py-0">
-    <ul class="list-group rounded-0">
+    <ul class="list-group rounded-0 mb-3">
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
           <span class="fw-semibold text-primary">成為教練</span>
@@ -593,7 +649,7 @@
       </li>
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="common-questions.html"
         >
           <span>常見問答</span>
@@ -606,40 +662,96 @@
         </a>
       </li>
     </ul>
-    <div class="py-8 px-6">
-      <button
-        type="button"
-        class="btn btn-primary text-white w-100 fs-5 mb-4"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignInModal"
-      >
-        登入
-      </button>
-      <button
-        type="button"
-        class="btn btn-outline-dark w-100 fs-5"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignUpModal"
-      >
-        註冊
-      </button>
-    </div>
+    <ul class="list-group rounded-0">
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="#"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_clock </span>
+            <span>預約課程 | 預約、上課</span>
+          </div>
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="#"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_month </span>
+            <span>行事曆 | 課程明細</span>
+          </div>
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="#"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> settings </span>
+            <span>帳號設定</span>
+          </div>
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="index.html"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> logout </span>
+            <span>登出</span>
+          </div>
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+    </ul>
   </div>
 </div>
-<!-- offcanvas-navbar-sign-out-bg-white -->
+<!-- offcanvas-navbar-sign-in-trainer-bg-white -->
 <div
   class="offcanvas offcanvas-end"
   tabindex="-1"
-  id="offcanvasNavbarSignOut02"
-  aria-labelledby="offcanvasNavbarSignOut02"
+  id="offcanvasNavbarSignInTrainer02"
+  aria-labelledby="offcanvasNavbarSignInTrainer02"
 >
   <div class="offcanvas-header px-4 py-7">
-    <img
-      src="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg"
-      alt="主色 health glow logo"
-      width="64"
-      height="30"
-    />
+    <div class="d-flex justify-content-center align-items-center">
+      <img
+        src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp"
+        alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+        width="36"
+        height="36"
+        class="rounded-circle me-3"
+      />
+      <span>王小明</span>
+    </div>
     <button
       type="button"
       class="btn-close"
@@ -651,10 +763,64 @@
     <ul class="list-group rounded-0">
       <li>
         <a
-          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
           href="#"
         >
-          <span class="fw-semibold text-primary">成為教練</span>
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_clock </span>
+            <span>預約課程 | 預約、上課</span>
+          </div>
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="#"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_month </span>
+            <span>行事曆 | 課程明細</span>
+          </div>
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="#"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> settings </span>
+            <span>帳號設定</span>
+          </div>
+          <img
+            src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
+            alt="向右 icon"
+            width="20"
+            height="20"
+          />
+        </a>
+      </li>
+      <li>
+        <a
+          class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100"
+          href="index.html"
+        >
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> logout </span>
+            <span>登出</span>
+          </div>
           <img
             src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg"
             alt="向右 icon"
@@ -664,32 +830,14 @@
         </a>
       </li>
     </ul>
-    <div class="py-8 px-6">
-      <button
-        type="button"
-        class="btn btn-primary text-white w-100 fs-5 mb-4"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignInModal"
-      >
-        登入
-      </button>
-      <button
-        type="button"
-        class="btn btn-outline-dark w-100 fs-5"
-        data-bs-toggle="modal"
-        data-bs-target="#userCategorySignUpModal"
-      >
-        註冊
-      </button>
-    </div>
   </div>
 </div>
-<!-- offcanvas-navbar-sign-out-mobile-search -->
+<!-- offcanvas-navbar-sign-in-trainer-bg-white-mobile-search -->
 <div
   class="offcanvas offcanvas-end overflow-y-auto"
   tabindex="-1"
-  id="offcanvasNavbarSignOutMobileSearch"
-  aria-labelledby="offcanvasNavbarSignOutMobileSearch"
+  id="offcanvasNavbarSignInTrainerMobileSearch"
+  aria-labelledby="offcanvasNavbarSignInTrainerMobileSearch"
 >
   <div class="offcanvas-header px-4">
     <img
@@ -860,517 +1008,6 @@
       </div>
     </div>
   </form>
-</div>
-<!-- 流程圖 -->
-<!-- 登入 > 我是學員 > 教練登入頁面 > 我沒帳號 ( 學員註冊 )
-    > 我是教練 > 教練登入頁面 > 我沒帳號 ( 教練註冊 )
-
-登入完畢 > 學員登入的跳到學員專區
-        > 教練登入的跳到教練專區
-
-註冊 > 我是學員 > 學員註冊 > 我有帳號 ( 學員登入 )
-    > 我是教練 > 教練註冊 > 我有帳號 ( 教練登入 )
-
-註冊完畢 > 學員註冊玩跳到學員登入 modal
-	> 教練註冊玩跳到教練登入 modal -->
-
-<!-- 身分選擇 - 登入 ( 我是教練 / 學員 ) -->
-<div
-  class="modal fade"
-  id="userCategorySignInModal"
-  tabindex="-1"
-  aria-labelledby="userCategorySignInModal"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-0">
-      <div class="modal-header border-bottom-0">
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body p-8 mb-10">
-        <h2 class="text-center fs-3 mb-8">歡迎來到 HealthGlow！</h2>
-        <div class="d-flex flex-column align-items-center">
-          <div>
-            <button
-              class="btn btn-primary mb-3 px-12 py-3"
-              data-bs-toggle="modal"
-              data-bs-target="#traineeSignInModal"
-            >
-              我是學生
-            </button>
-          </div>
-          <div>
-            <button
-              class="btn btn-outline-primary px-12 py-3"
-              data-bs-toggle="modal"
-              data-bs-target="#coachSignInModal"
-            >
-              我是教練
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- 身分選擇 - 註冊 ( 我是教練 / 學員 ) -->
-<div
-  class="modal fade"
-  id="userCategorySignUpModal"
-  tabindex="-1"
-  aria-labelledby="userCategorySignUpModal"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content rounded-0">
-      <div class="modal-header border-bottom-0">
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body p-8 mb-10">
-        <h2 class="text-center fs-3 mb-8">歡迎來到 HealthGlow！</h2>
-        <div class="d-flex flex-column align-items-center">
-          <div>
-            <button
-              class="btn btn-primary mb-3 px-12 py-3"
-              data-bs-toggle="modal"
-              data-bs-target="#traineeSignUpModal"
-            >
-              我是學生
-            </button>
-          </div>
-          <div>
-            <button
-              class="btn btn-outline-primary px-12 py-3"
-              data-bs-toggle="modal"
-              data-bs-target="#coachSignUpModal"
-            >
-              我是教練
-            </button>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- 學員登入 -->
-<div
-  class="modal fade"
-  id="traineeSignInModal"
-  tabindex="-1"
-  aria-labelledby="traineeSignInModal"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content rounded-0">
-      <div class="modal-header border-bottom-0">
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body px-8 pb-8 pt-0 mb-10">
-        <h2 class="fs-4 text-center mb-10">學員登入</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <form class="mb-8 mb-lg-0">
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control rounded-0"
-                  id="traineeSignInEmailFloatingInput"
-                  placeholder="請輸入您的信箱"
-                  value="trainee01@gmail.com"
-                />
-                <label for="traineeSignInEmailFloatingInput"
-                  >請輸入您的信箱</label
-                >
-              </div>
-              <div class="form-floating mb-2">
-                <input
-                  type="password"
-                  class="form-control rounded-0"
-                  id="traineeSignInPasswordFloatingInput"
-                  placeholder="請輸入您的密碼"
-                  value="abced1234567"
-                />
-                <label for="traineeSignInPasswordFloatingInput"
-                  >請輸入您的密碼</label
-                >
-              </div>
-              <span class="d-flex justify-content-end fs-7 mb-5"
-                ><a href="#" class="link-gray-700">忘記密碼?</a></span
-              >
-              <!-- 正式登入表單提交按鈕 -->
-              <!-- <button type="submit" class="btn btn-primary w-100">登入</button> -->
-              <!-- 切版登入展示按鈕 -->
-              <a href="student.html" class="btn btn-primary w-100 mb-5">登入</a>
-              <span class="d-flex justify-content-center fs-7"
-                >還沒有帳號嗎?<a
-                  class="link-gray-700 ms-2"
-                  data-bs-toggle="modal"
-                  data-bs-target="#traineeSignUpModal"
-                  style="cursor: pointer"
-                  >點此註冊帳號</a
-                ></span
-              >
-            </form>
-          </div>
-          <div class="col-lg-6">
-            <div>
-              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
-                — &nbsp; 其他登入方式 &nbsp;—
-              </h3>
-              <button
-                type="button"
-                class="btn btn-outline-secondary w-100 mb-3"
-              >
-                <i class="bi bi-google me-2"></i>Google 登入
-              </button>
-              <button type="button" class="btn btn-outline-secondary w-100">
-                <i class="bi bi-facebook me-2"></i>Facebook 登入
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- 教練登入 -->
-<div
-  class="modal fade"
-  id="coachSignInModal"
-  tabindex="-1"
-  aria-labelledby="coachSignInModal"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content rounded-0">
-      <div class="modal-header border-bottom-0">
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body px-8 pb-8 pt-0 mb-10">
-        <h2 class="fs-4 text-center mb-10">教練登入</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <form class="mb-8 mb-lg-0">
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control rounded-0"
-                  id="coachSignInEmailFloatingInput"
-                  placeholder="請輸入您的信箱"
-                  value="coach01@gmail.com"
-                />
-                <label for="coachSignInEmailFloatingInput"
-                  >請輸入您的信箱</label
-                >
-              </div>
-              <div class="form-floating mb-2">
-                <input
-                  type="password"
-                  class="form-control rounded-0"
-                  id="coachSignInPasswordFloatingInput"
-                  placeholder="請輸入您的密碼"
-                  value="abced1234567"
-                />
-                <label for="coachSignInPasswordFloatingInput"
-                  >請輸入您的密碼</label
-                >
-              </div>
-              <span class="d-flex justify-content-end fs-7 mb-5"
-                ><a href="#" class="link-gray-700">忘記密碼?</a></span
-              >
-              <!-- 正式登入表單提交按鈕 -->
-              <!-- <button type="submit" class="btn btn-primary w-100">登入</button> -->
-              <!-- 切版登入展示按鈕 -->
-              <a href="#" class="btn btn-primary w-100 mb-5">登入</a>
-              <span class="d-flex justify-content-center fs-7"
-                >還沒有帳號嗎?<a
-                  class="link-gray-700 ms-2"
-                  data-bs-toggle="modal"
-                  data-bs-target="#coachSignUpModal"
-                  style="cursor: pointer"
-                  >點此註冊帳號</a
-                ></span
-              >
-            </form>
-          </div>
-          <div class="col-lg-6">
-            <div>
-              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
-                — &nbsp; 其他登入方式 &nbsp;—
-              </h3>
-              <button
-                type="button"
-                class="btn btn-outline-secondary w-100 mb-3"
-              >
-                <i class="bi bi-google me-2"></i>Google 登入
-              </button>
-              <button type="button" class="btn btn-outline-secondary w-100">
-                <i class="bi bi-facebook me-2"></i>Facebook 登入
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- 學員註冊 -->
-<div
-  class="modal fade"
-  id="traineeSignUpModal"
-  tabindex="-1"
-  aria-labelledby="traineeSignUpModal"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content rounded-0">
-      <div class="modal-header border-bottom-0">
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body px-8 pb-8 pt-0 mb-10">
-        <h2 class="fs-4 text-center mb-10">學員註冊</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <form class="mb-8 mb-lg-0">
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control rounded-0"
-                  id="traineeSignUpNameFloatingInput"
-                  placeholder="請輸入您的姓名"
-                  value="王大明"
-                />
-                <label for="traineeSignUpNameFloatingInput"
-                  >請輸入您的姓名</label
-                >
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control rounded-0"
-                  id="traineeSignUpEmailFloatingInput"
-                  placeholder="請輸入您的信箱"
-                  value="trainee01@gmail.com"
-                />
-                <label for="traineeSignUpEmailFloatingInput"
-                  >請輸入您的信箱</label
-                >
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="password"
-                  class="form-control rounded-0"
-                  id="traineeSignUpPasswordFloatingInput"
-                  placeholder="請輸入您設定的密碼"
-                  value="abced1234567"
-                />
-                <label for="traineeSignUpPasswordFloatingInput"
-                  >請輸入您設定的密碼</label
-                >
-              </div>
-              <div class="form-floating mb-2">
-                <input
-                  type="password"
-                  class="form-control rounded-0"
-                  id="traineeSignUpConfirmPasswordFloatingInput"
-                  placeholder="請再次輸入您所設定的密碼"
-                  value="abced1234567"
-                />
-                <label for="traineeSignUpConfirmPasswordFloatingInput"
-                  >請再次輸入您所設定的密碼</label
-                >
-              </div>
-              <span class="fs-8 mb-5 d-block"
-                >*點擊「註冊」即表示你同意我們的<a
-                  href="privacy-policy.html"
-                  class="link-gray-700"
-                  >服務條款與隱私政策</a
-                ></span
-              >
-              <!-- 正式登入表單提交按鈕 -->
-              <!-- <button type="submit" class="btn btn-primary w-100">註冊</button> -->
-              <!-- 切版註冊展示按鈕 -->
-              <a
-                class="btn btn-primary w-100 mb-5"
-                data-bs-toggle="modal"
-                data-bs-target="#traineeSignInModal"
-                style="cursor: pointer"
-                >註冊</a
-              >
-              <span class="d-flex justify-content-center fs-7"
-                >已經有帳號了?<a
-                  class="link-gray-700 ms-2"
-                  data-bs-toggle="modal"
-                  data-bs-target="#traineeSignInModal"
-                  style="cursor: pointer"
-                  >登入</a
-                ></span
-              >
-            </form>
-          </div>
-          <div class="col-lg-6">
-            <div>
-              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
-                — &nbsp; 其他註冊方式 &nbsp;—
-              </h3>
-              <button
-                type="button"
-                class="btn btn-outline-secondary w-100 mb-3"
-              >
-                <i class="bi bi-google me-2"></i>Google 註冊
-              </button>
-              <button type="button" class="btn btn-outline-secondary w-100">
-                <i class="bi bi-facebook me-2"></i>Facebook 註冊
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<!-- 教練註冊 -->
-<div
-  class="modal fade"
-  id="coachSignUpModal"
-  tabindex="-1"
-  aria-labelledby="coachSignUpModal"
-  aria-hidden="true"
->
-  <div class="modal-dialog modal-dialog-centered modal-lg">
-    <div class="modal-content rounded-0">
-      <div class="modal-header border-bottom-0">
-        <button
-          type="button"
-          class="btn-close"
-          data-bs-dismiss="modal"
-          aria-label="Close"
-        ></button>
-      </div>
-      <div class="modal-body px-8 pb-8 pt-0 mb-10">
-        <h2 class="fs-4 text-center mb-10">教練註冊</h2>
-        <div class="row">
-          <div class="col-lg-6">
-            <form class="mb-8 mb-lg-0">
-              <div class="form-floating mb-3">
-                <input
-                  type="text"
-                  class="form-control rounded-0"
-                  id="coachSignUpNameFloatingInput"
-                  placeholder="請輸入您的姓名"
-                  value="王大明"
-                />
-                <label for="coachSignUpNameFloatingInput">請輸入您的姓名</label>
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="email"
-                  class="form-control rounded-0"
-                  id="coachSignUpEmailFloatingInput"
-                  placeholder="請輸入您的信箱"
-                  value="coach01@gmail.com"
-                />
-                <label for="coachSignUpEmailFloatingInput"
-                  >請輸入您的信箱</label
-                >
-              </div>
-              <div class="form-floating mb-3">
-                <input
-                  type="password"
-                  class="form-control rounded-0"
-                  id="coachSignUpPasswordFloatingInput"
-                  placeholder="請輸入您設定的密碼"
-                  value="abced1234567"
-                />
-                <label for="coachSignUpPasswordFloatingInput"
-                  >請輸入您設定的密碼</label
-                >
-              </div>
-              <div class="form-floating mb-2">
-                <input
-                  type="password"
-                  class="form-control rounded-0"
-                  id="coachSignUpConfirmPasswordFloatingInput"
-                  placeholder="請再次輸入您所設定的密碼"
-                  value="abced1234567"
-                />
-                <label for="coachSignUpConfirmPasswordFloatingInput"
-                  >請再次輸入您所設定的密碼</label
-                >
-              </div>
-              <span class="fs-8 mb-5 d-block"
-                >*點擊「註冊」即表示你同意我們的<a
-                  href="privacy-policy.html"
-                  class="link-gray-700"
-                  >服務條款與隱私政策</a
-                ></span
-              >
-              <!-- 正式登入表單提交按鈕 -->
-              <!-- <button type="submit" class="btn btn-primary w-100">註冊</button> -->
-              <!-- 切版註冊展示按鈕 -->
-              <a
-                class="btn btn-primary w-100 mb-5"
-                data-bs-toggle="modal"
-                data-bs-target="#coachSignInModal"
-                style="cursor: pointer"
-                >註冊</a
-              >
-              <span class="d-flex justify-content-center fs-7"
-                >已經有帳號了?<a
-                  class="link-gray-700 ms-2"
-                  data-bs-toggle="modal"
-                  data-bs-target="#coachSignInModal"
-                  style="cursor: pointer"
-                  >登入</a
-                ></span
-              >
-            </form>
-          </div>
-          <div class="col-lg-6">
-            <div>
-              <h3 class="fs-7 fw-normal text-center text-gray-700 mb-4">
-                — &nbsp; 其他註冊方式 &nbsp;—
-              </h3>
-              <button
-                type="button"
-                class="btn btn-outline-secondary w-100 mb-3"
-              >
-                <i class="bi bi-google me-2"></i>Google 註冊
-              </button>
-              <button type="button" class="btn btn-outline-secondary w-100">
-                <i class="bi bi-facebook me-2"></i>Facebook 註冊
-              </button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
 </div>
     <!-- banner -->
     <section class="home-banner d-flex flex-column justify-content-center">
@@ -2097,13 +1734,11 @@
     <!-- 愛上的4個理由 -->
     <section>
       <div class="bg-banner-04-pc position-relative">
-        <div
-          class="bg-secondarydeep bg-opacity-75 pt-17 pb-md-18 pb-17"
-        >
+        <div class="bg-secondarydeep lovesection bg-opacity-75 pt-17 pb-md-18 pb-17">
           <div class="container">
             <div>
               <div class="mb-19">
-                <div class="d-md-flex d-column align-items-center lovesection">
+                <div class="d-md-flex d-column align-items-center">
                   <span class="pe-md-10 d-md-inline-block d-block text-center">
                     <span class="font-anton-regular text-tint display-1">4</span>
                   </span>
@@ -2121,8 +1756,8 @@
               </div>
               <div class="container">
                 <!-- 卡片 -->
-                <div class="row g-8 mt-1">
-                  <div class="col-xl-3 col-lg-6 col-12">
+                <div class="row row-cols-md-4 g-8 mt-1">
+                  <div class="col-md-3 col-12">
                     <div class="bg-tint text-center py-11">
                       <div class="fs-4">任選上課時間</div>
                       <div class="py-4">
@@ -2133,7 +1768,7 @@
                       <!-- <p>Secondary Text</p> -->
                     </div>
                   </div>
-                  <div class="col-xl-3 col-lg-6 col-12">
+                  <div class="col-md-3 col-12">
                     <div class="bg-tint text-center py-11">
                       <div class="fs-4">客製化的健身課程</div>
                       <div class="py-4">
@@ -2144,7 +1779,7 @@
                       <!-- <p>Secondary Text</p> -->
                     </div>
                   </div>
-                  <div class="col-xl-3 col-lg-6 col-12">
+                  <div class="col-md-3 col-12">
                     <div class="bg-tint text-center py-11">
                       <div class="fs-4">一堂也能買</div>
                       <div class="py-4">
@@ -2155,7 +1790,7 @@
                       <!-- <p>Secondary Text</p> -->
                     </div>
                   </div>
-                  <div class="col-xl-3 col-lg-6 col-12">
+                  <div class="col-md-3 col-12">
                     <div class="bg-tint text-center py-11">
                       <div class="fs-4">自選上課教練</div>
                       <div class="py-4">
@@ -2191,17 +1826,13 @@
               <div class="container px-md-3 px-0">
                 <div class="swiper swiper-students-review justify-content-center position-static">
                   <div class="swiper-wrapper">
-                    <!-- <div class="swiper-slide bg-white shadow">
-                      <div
-                        class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center"
-                      >
-                        <div
-                          class="rounded-circle feedback-avatar1 feedback-style me-2"
-                        ></div>
+                    <div class="swiper-slide bg-white shadow">
+                      <div class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center">
+                        <div class="rounded-circle feedback-avatar1 feedback-style me-2"></div>
                         <div class="fs-5">陳小姐</div>
                       </div>
                       <div class="p-2">
-                        <img src="../assets/images/img/feedback-01.webp" alt="feedback-01" class="img-max-width" />
+                        <img src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-01-a7f8347b.webp" alt="feedback-01" class="img-max-width" />
                       </div>
 
                       <div class="pt-6 px-8 pb-8">
@@ -2209,137 +1840,86 @@
                           這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
                         </p>
                       </div>
-                    </div> -->
+                    </div>
                     <div class="swiper-slide bg-white shadow">
-                      <div class="h-100 card py-md-5 px-3 py-3">
-                        <div class="d-flex align-items-center">
-                          <div class="rounded-circle feedback-avatar1 feedback-style me-2"
-                          ></div>
-                          <div class="fs-5">陳小姐</div>
-                        </div>
+                      <div class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center">
+                        <div class="rounded-circle feedback-avatar2 feedback-style me-2"></div>
+                        <div class="fs-5">李先生</div>
+                      </div>
+                      <div class="p-2">
+                        <img src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-02-3dd17773.webp" alt="feedback-02" class="img-max-width" />
+                      </div>
 
-                        <img
-                            src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-01-a7f8347b.webp"
-                            alt="feedback-03"
-                            class="card-img-top py-md-3"
-                          />
-                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
-                          <p class="fs-6">
-                            這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
-                          </p>
-                        </div>
+                      <div class="pt-6 px-8 pb-8">
+                        <p class="fs-6">
+                          我特別喜歡這個平台的預約系統，簡單又直觀。教練的資歷和評價都一目了然，讓我可以做出最好的選擇。用了這個平台後，我的健身計劃變得更加有規律了。!
+                        </p>
                       </div>
                     </div>
-
                     <div class="swiper-slide bg-white shadow">
-                      <div class="h-100 card py-md-5 px-3 py-3">
-                        <div class="d-flex align-items-center">
-                          <div class="rounded-circle feedback-avatar2 feedback-style me-2"
-                          ></div>
-                          <div class="fs-5">李先生</div>
-                        </div>
+                      <div class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center">
+                        <div class="rounded-circle feedback-avatar3 feedback-style me-2"></div>
+                        <div class="fs-5">王太太</div>
+                      </div>
+                      <div class="p-2">
+                        <img src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-03-b3c45424.webp" alt="feedback-03" class="img-max-width" />
+                      </div>
 
-                        <img
-                            src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-02-3dd17773.webp"
-                            alt="feedback-03"
-                            class="card-img-top py-md-3"
-                          />
-                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
-                          <p class="fs-6">
-                            我特別喜歡這個平台的預約系統，簡單又直觀。教練的資歷和評價都一目了然，讓我可以做出最好的選擇。用了這個平台後，我的健身計劃變得更加有規律了。
-                          </p>
-                        </div>
+                      <div class="pt-6 px-8 pb-8">
+                        <p class="fs-6">
+                          作為銀髮族,我一直擔心找不到合適的健身課程。這個平台提供的銀髮族體適能服務讓我感到很安心。教練非常專業,讓我在運動中感到安全和舒適。
+                        </p>
                       </div>
                     </div>
-
                     <div class="swiper-slide bg-white shadow">
-                      <div class="h-100 card py-md-5 px-3 py-3">
-                        <div class="d-flex align-items-center">
-                          <div class="rounded-circle feedback-avatar3 feedback-style me-2"
-                          ></div>
-                          <div class="fs-5">王太太</div>
-                        </div>
+                      <div class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center">
+                        <div class="rounded-circle feedback-avatar1 feedback-style me-2"></div>
+                        <div class="fs-5">陳小姐</div>
+                      </div>
+                      <div class="p-2">
+                        <img src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-01-a7f8347b.webp" alt="feedback-01" class="img-max-width" />
+                      </div>
 
-                        <img
-                            src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-03-b3c45424.webp"
-                            alt="feedback-03"
-                            class="card-img-top py-md-3"
-                          />
-                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
-                          <p class="fs-6">
-                            作為銀髮族,我一直擔心找不到合適的健身課程。這個平台提供的銀髮族體適能服務讓我感到很安心。教練非常專業,讓我在運動中感到安全和舒適。
-                          </p>
-                        </div>
+                      <div class="pt-6 px-8 pb-8">
+                        <p class="fs-mobil-content">
+                          這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
+                        </p>
                       </div>
                     </div>
-
                     <div class="swiper-slide bg-white shadow">
-                      <div class="h-100 card py-md-5 px-3 py-3">
-                        <div class="d-flex align-items-center">
-                          <div class="rounded-circle feedback-avatar1 feedback-style me-2"
-                          ></div>
-                          <div class="fs-5">陳小姐</div>
-                        </div>
+                      <div class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center">
+                        <div class="rounded-circle feedback-avatar2 feedback-style me-2"></div>
+                        <div class="fs-5">李先生</div>
+                      </div>
+                      <div class="p-2">
+                        <img src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-02-3dd17773.webp" alt="feedback-02" class="img-max-width" />
+                      </div>
 
-                        <img
-                            src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-01-a7f8347b.webp"
-                            alt="feedback-03"
-                            class="card-img-top py-md-3"
-                          />
-                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
-                          <p class="fs-6">
-                            這個預約平台真是太方便了!不僅能輕鬆找到適合我的教練，還可以靈活安排時間，非常適合我這種忙碌的上班族。強烈推薦給每一位健身愛好者!
-                          </p>
-                        </div>
+                      <div class="pt-6 px-8 pb-8">
+                        <p class="fs-6">
+                          我特別喜歡這個平台的預約系統，簡單又直觀。教練的資歷和評價都一目了然，讓我可以做出最好的選擇。用了這個平台後，我的健身計劃變得更加有規律了。!
+                        </p>
                       </div>
                     </div>
-
                     <div class="swiper-slide bg-white shadow">
-                      <div class="h-100 card py-md-5 px-3 py-3">
-                        <div class="d-flex align-items-center">
-                          <div class="rounded-circle feedback-avatar2 feedback-style me-2"
-                          ></div>
-                          <div class="fs-5">李先生</div>
-                        </div>
+                      <div class="ps-md-5 ps-4 mt-md-5 mt-4 mb-2 d-flex align-items-center">
+                        <div class="rounded-circle feedback-avatar3 feedback-style me-2"></div>
+                        <div class="fs-5">王太太</div>
+                      </div>
+                      <div class="p-2">
+                        <img src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-03-b3c45424.webp" alt="feedback-03" class="img-max-width" />
+                      </div>
 
-                        <img
-                            src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-02-3dd17773.webp"
-                            alt="feedback-03"
-                            class="card-img-top py-md-3"
-                          />
-                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
-                          <p class="fs-6">
-                            我特別喜歡這個平台的預約系統，簡單又直觀。教練的資歷和評價都一目了然，讓我可以做出最好的選擇。用了這個平台後，我的健身計劃變得更加有規律了。
-                          </p>
-                        </div>
+                      <div class="pt-6 px-8 pb-8">
+                        <p class="fs-6">
+                          作為銀髮族,我一直擔心找不到合適的健身課程。這個平台提供的銀髮族體適能服務讓我感到很安心。教練非常專業,讓我在運動中感到安全和舒適。
+                        </p>
                       </div>
                     </div>
-
-                    <div class="swiper-slide bg-white shadow">
-                      <div class="h-100 card py-md-5 px-3 py-3">
-                        <div class="d-flex align-items-center">
-                          <div class="rounded-circle feedback-avatar3 feedback-style me-2"
-                          ></div>
-                          <div class="fs-5">王太太</div>
-                        </div>
-
-                        <img
-                            src="/HealthGlow-sports-coach-reservation-platform/assets/feedback-03-b3c45424.webp"
-                            alt="feedback-03"
-                            class="card-img-top py-md-3"
-                          />
-                        <div class="pt-md-2 px-md-6 pb-md-5 pt-3 py-4">
-                          <p class="fs-6">
-                            作為銀髮族,我一直擔心找不到合適的健身課程。這個平台提供的銀髮族體適能服務讓我感到很安心。教練非常專業,讓我在運動中感到安全和舒適。
-                          </p>
-                        </div>
-                      </div>
-                    </div>
-
                   </div>
                   <!-- 左右箭頭 -->
-                  <div class="swiper-button-next d-lg-none d-md-none d-none d-xxl-flex"></div>
-                  <div class="swiper-button-prev d-lg-none d-md-none d-none d-xxl-flex"></div>
+                  <div class="swiper-button-next d-none d-md-flex"></div>
+                  <div class="swiper-button-prev d-none d-md-flex"></div>
                 </div>
               </div>
             </div>
@@ -2390,24 +1970,19 @@
                   </div>
                 </div>
                 <div class="col-md-6 col-12 ps-md-0 px-0">
-                  <div class="bg-img-style w-100"
-                    style="background-image:url(/HealthGlow-sports-coach-reservation-platform/assets/trainer-01-33dc096c.webp);" >
-                  </div>
+                  <img src="/HealthGlow-sports-coach-reservation-platform/assets/trainer-01-33dc096c.webp" alt="" class="img-fluid overflow-hidden h-100" />
                 </div>
               </div>
             </div>
             <div class="col-12">
               <div class="row flex-md-row flex-column-reverse">
-                <div class="col-md-6 col-12 ps-md-0 px-0">
-                  <div class="bg-img-style w-100"
-                    style="background-image:url(/HealthGlow-sports-coach-reservation-platform/assets/trainer-02-87f6d9de.webp);" >
-                  </div>
+                <div class="col-md-6 col-12 px-0">
+                  <img src="/HealthGlow-sports-coach-reservation-platform/assets/trainer-02-87f6d9de.webp" alt="" class="img-fluid overflow-hidden h-100" />
                 </div>
-
                 <div class="col-md-6 col-12 d-flex align-items-center pe-md-0">
                   <div class="py-mde-11 py-14 px-5">
                     <h2 class="fs-md-2 text-tint fs-4fs-md-2 text-tint fs-4">
-                      成為 HealthGlow 教練
+                      卡成為 HealthGlow 教練
                     </h2>
                     <div class="bar my-5 bg-tint"></div>
                     <div class="text-white">

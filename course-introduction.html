@@ -1,0 +1,2062 @@
+<!DOCTYPE html>
+<html lang="zh-Hant-TW">
+  <head>
+    <meta charset="UTF-8" />
+<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<link
+  rel="icon"
+  href="data:image/webp;base64,UklGRhACAABXRUJQVlA4IAQCAACQCwCdASogACAAPiUOhkIhhgGABgCRLYAXZecvGPxN/G69DJQM4A7AHkZ9YB6AH6Z9Yp+2/oyUbdvjP8lpDX9k1G3+79FvOk8yewR+rCHadU5J+DfiPX20y9iapj47Pzk80T6cgAD9Bi9Vv7PlcBVJDu8As4etz9uw43hr/Zmj8fQW8R+998hmoKtQH8mFx3JxSN/9Vw8gr+rKJ8n//+QzLgNX8fpYcLi4eZ/kVYw4Rf/3sEqDFLpkqoL9QJy/5PF//87ledyu6vV7+MyrkmU1/9xCieMWaQ48GcXxTvZ38SXbTlOulhf86eKHTBKM6r1ShzoVt30VluZAE2+6Q80X0QH7jG/alWmACw/vZb1I2wTftYvif4pU9qnXvc/7bLY646J662kMGHsR8bPiUxiryLJo/euENyywpb/j3DyZeMuOPIi5TKOsyIg4ie3/O8byN4lffRCP3JmLv+L7cSfrL6/f5/voRHUyhtS78VGSbDZNlu5mD/vrVfP0hUvA78Bi/qBppzlvKixLrlxmmDocj5gn/+V1xhl5Sgn7crf4rAufP6T3nMVxEuRudjxQ8j3VTnCoLl/3ae5p8Rph/uDPdo4c7xvbynv+mC2ftXbduZroxhbgGj/IjI+SQ7mj0RZO+KAiIBMxJ9vhOzfT/qrNx9pH61Jx+dRJ56zi6ueeOtLeQAA="
+  type="image/x-icon"
+/>
+<!-- 網頁描述 -->
+<meta
+  name="description"
+  content="Health Glow，透過我們的運動預約平台，輕鬆探索多元運動課程，預約專業教練，打造屬於你的個性化健身計劃。無論何時何地，都能快速預約並開始你的健康運動生活。"
+/>
+<meta name="author" content="Sonia、Macy、Jason、Nocab" />
+<meta
+  name="keywords"
+  content="運動預約, 教練課程, 健身課程, 線上預約, 私人教練, 課程管理, 運動平台, 健康運動, 運動場地預約, 團體課程, 健身房預約, 個人訓練, 健身計劃, 線上運動, 運動課程推薦, 運動健身, 課程報名, 課程評價, 運動教練, 運動學習, 健身預約系統, 瑜伽課程, 健身教練, 課程搜索, 訓練課程, 運動類型選擇, 健身目標, 課程時間表, 彈性取消, 線上支付運動課程"
+/>
+<!-- OG -->
+<meta property="og:title" content="Health Glow" />
+<meta
+  property="og:description"
+  content="探索多元運動課程，輕鬆預約專業教練，隨時隨地開啟健康生活。立即加入，打造屬於你的個性化健身計劃！"
+/>
+<meta
+  property="og:image"
+  content="https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/nocab/assets/images/img/health-glow-og.webp"
+/>
+<meta property="og:image:type" content="image/png" />
+<meta property="og:image:alt" content="Health Glow og" />
+<meta property="og:image:width" content="1200" />
+<meta property="og:image:height" content="630" />
+<meta
+  property="og:url"
+  content="https://nocab7714.github.io/HealthGlow-sports-coach-reservation-platform/"
+/>
+<!-- Google Material Symbols -->
+<link
+  rel="stylesheet"
+  href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+/>
+<!-- tabler-icons -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@latest/dist/tabler-icons.min.css"
+/>
+<!-- flatpickr  -->
+<link
+  rel="stylesheet"
+  href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css"
+/>
+    <title>Health Glow | 教練及課程介紹</title>
+    <script type="module" crossorigin src="/HealthGlow-sports-coach-reservation-platform/assets/course-introduction-ceab6c13.js"></script>
+    <link rel="modulepreload" crossorigin href="/HealthGlow-sports-coach-reservation-platform/assets/main-c8d50098.js">
+    <link rel="stylesheet" href="/HealthGlow-sports-coach-reservation-platform/assets/main-d26481fb.css">
+  </head>
+  <body>
+    <!-- 導覽列預留空間，避免其他內容被 fixed-top 吃掉 -->
+<div class="navbar-reserve-space"></div>
+<!-- navbar-sign-in-trainer-bg-white -->
+<nav class="navbar navbar-expand-lg bg-white fixed-top py-2 py-lg-6 flex-nowrap">
+  <form class="container">
+    <a class="navbar-brand me-3 me-lg-8" href="index.html">
+      <picture>
+        <source srcset="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg " media="(min-width: 991px)"
+          alt="主色 health glow logo" height="48" width="104" />
+
+        <img src="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg" alt="主色 health glow logo" height="24" width="52" />
+      </picture>
+    </a>
+    <div class="rounded-0 position-relative d-block d-lg-none flex-grow-1">
+      <span class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle" style="left: 24px">
+        search
+      </span>
+      <input type="text" class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10 pe-2"
+        placeholder="搜尋課程｜地點｜時間" style="font-size: 12px" data-bs-toggle="offcanvas"
+        data-bs-target="#offcanvasNavbarSignInTrainerMobileSearch" />
+    </div>
+    <ul class="navbar-nav align-items-center d-flex flex-row ms-2 d-block d-lg-none">
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="common-questions.html"><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle">
+            help
+          </span></a>
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle">
+            notifications
+          </span></a>
+      </li>
+      <li class="nav-item me-2 p-0">
+        <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+            class="material-symbols-outlined fs-5 text-gray-800 align-middle">
+            mail
+          </span></a>
+      </li>
+      <li class="nav-item">
+        <img src="../assets/images/img/sports-04.webp " alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步" width="32" height="32"
+          class="rounded-circle link-img-opacity-75-hover border-1 border border-white d-block d-lg-none"
+          style="cursor: pointer" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSignInTrainer02"
+          aria-controls="offcanvasNavbarSignInTrainer02" />
+      </li>
+    </ul>
+    <div class="collapse navbar-collapse">
+      <div class="d-flex align-items-center">
+        <ul class="search navbar-nav list-unstyled d-flex flex-row me-auto">
+  <!-- 課程搜尋 dropdown -->
+  <li
+    class="dropdown nav-item rounded-0 position-relative me-3"
+    style="max-width: 290px"
+  >
+    <span
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+      style="left: 24px"
+      >search</span
+    >
+    <input
+      type="text"
+      class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      placeholder="搜尋課程，有氧、飛輪、瑜伽、"
+      data-bs-toggle="dropdown"
+      type="search"
+      aria-label="Search"
+      aria-expanded="false"
+    />
+    <!-- dropdown 開始區塊 -->
+    <div class="course-menu dropdown-menu">
+      <div class="d-flex">
+        <p
+          class="course-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
+        >
+          健身運動類別
+        </p>
+        <p
+          class="course-dropdown-menu-level-two ps-4 fw-semibold text-secondary mb-2"
+        >
+          運動課程
+        </p>
+      </div>
+      <div class="d-flex">
+        <div class="course-dropdown-menu-level-one border border-primary">
+          <ul class="list-unstyled mb-0"></ul>
+        </div>
+        <!-- 運動課程 -->
+        <div class="course-dropdown-menu-level-two border border-primary">
+          <ul class="list-unstyled mb-0">
+            <li>
+              <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+            </li>
+            <li>
+              <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+            </li>
+            <li>
+              <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+            </li>
+          </ul>
+        </div>
+        <div
+          class="course-dropdown-menu-level-three d-flex flex-column justify-content-between ms-3"
+        >
+          <div>
+            <div class="d-flex justify-content-center align-items-center">
+              <p class="text-primary font-anton-regular fs-5">5.0</p>
+              <span class="material-symbols-rounded star">star</span>
+              <span class="text-gray-600 fs-8">(1,200評價)</span>
+            </div>
+            <button class="btn btn-primary w-100" type="button">
+              找<span class="selected-exercise-type">瑜伽</span>教練
+            </button>
+          </div>
+          <div>
+            <p class="text-gray-700 fw-semibold">更多資訊</p>
+            <ul class="list-unstyled fs-7 fw-normal mb-0">
+              <li>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span>課內容</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span
+                  >教練薪資行情</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><span class="selected-exercise-type">瑜伽</span
+                  >學生評價內容</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </li>
+  <!-- 地點 dropdown  -->
+  <li
+    class="dropdown nav-item rounded-0 position-relative me-3"
+    style="max-width: 290px"
+  >
+    <span
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+      style="left: 24px"
+    >
+      location_on
+    </span>
+    <input
+      type="text"
+      class="form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      placeholder="地點?"
+      data-bs-toggle="dropdown"
+      type="search"
+      aria-label="Search"
+      aria-expanded="false"
+    />
+    <!-- dropdown 開始區塊 -->
+    <div class="location-menu dropdown-menu">
+      <p
+        class="location-dropdown-menu-level-one ps-4 fw-semibold text-secondary mb-2"
+      >
+        挑選地區
+      </p>
+      <div class="d-flex justify-content-between">
+        <span>已選擇 2/10</span>
+        <a
+          href="#"
+          class="link-gray-700 text-decoration-underline"
+          role="button"
+          >清除全部</a
+        >
+      </div>
+      <div class="d-flex">
+        <!-- 地點 Level One -->
+        <div class="location-dropdown-menu-level-one border border-primary">
+          <ul class="list-unstyled mb-0"></ul>
+        </div>
+        <!-- 地點 Level Two -->
+        <div class="location-dropdown-menu-level-two border border-primary">
+          <ul class="list-unstyled mb-0 d-block">
+            <li><a class="dropdown-item" href="#">中正區</a></li>
+            <li><a class="dropdown-item" href="#">大同區</a></li>
+            <li><a class="dropdown-item" href="#">中山區</a></li>
+            <li><a class="dropdown-item" href="#">松山區</a></li>
+            <li><a class="dropdown-item" href="#">大安區</a></li>
+            <li><a class="dropdown-item" href="#">萬華區</a></li>
+            <li><a class="dropdown-item" href="#">信義區</a></li>
+          </ul>
+        </div>
+      </div>
+      <button class="btn btn-primary w-100 mt-10" type="button">確認</button>
+    </div>
+  </li>
+  <!-- 時間 dropdown  -->
+  <li
+    class="dropdown nav-item rounded-0 position-relative me-3"
+    style="max-width: 160px"
+  >
+    <span
+      class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle z-1"
+      style="left: 24px"
+    >
+      schedule
+    </span>
+    <input
+      id="flatpickr"
+      type="search"
+      class="flatpickr form-control navbar-input rounded-0 border-2 border-gray-800 text-truncate ps-10"
+      data-bs-toggle="dropdown"
+      type="search"
+      placeholder="時間？"
+      aria-label="Search"
+      aria-expanded="false"
+    />
+  </li>
+  <li class="nav-item">
+    <button
+      type="search"
+      class="btn btn-primary text-white fw-semibold text-nowrap"
+    >
+      搜尋
+    </button>
+  </li>
+</ul>
+
+<!-- navbar 搜尋課程、地點 資料 -->
+<script>
+  document.addEventListener('DOMContentLoaded', function () {
+    // 選取所有 .course-dropdown-menu-level-one 和 .course-dropdown-menu-level-two 的 ul 元素
+    const courseMenuLevelOnes = document.querySelectorAll(
+      '.course-dropdown-menu-level-one ul'
+    );
+    const courseMenuLevelTwos = document.querySelectorAll(
+      '.course-dropdown-menu-level-two ul'
+    );
+
+    // 迴圈處理每對第一層和第二層的課程選單
+    courseMenuLevelOnes.forEach((courseMenuLevelOne, index) => {
+      const courseMenuLevelTwo = courseMenuLevelTwos[index]; // 對應的第二層選單
+
+      // 將 courseData 資料加入每個選單
+      courseData.forEach((element) => {
+        let menuItem = createMainMenuItem(element, courseMenuLevelTwo); // 建立主選單項目
+        courseMenuLevelOne.append(menuItem); // 將主選單項目加入第一層選單
+      });
+    });
+
+    // 同樣處理 location (地點) 選單
+    const locationMenuLevelOnes = document.querySelectorAll(
+      '.location-dropdown-menu-level-one ul'
+    );
+    const locationMenuLevelTwos = document.querySelectorAll(
+      '.location-dropdown-menu-level-two ul'
+    );
+
+    locationMenuLevelOnes.forEach((locationMenuLevelOne, index) => {
+      const locationMenuLevelTwo = locationMenuLevelTwos[index]; // 對應的第二層地點選單
+
+      locationData.forEach((element) => {
+        let locationItem = createMainMenuItem(element, locationMenuLevelTwo); // 建立地點選單項目
+        locationMenuLevelOne.append(locationItem); // 將地點選單項目加入第一層選單
+      });
+    });
+  });
+  // 建立主選單項目 (第一層選單)
+  function createMainMenuItem(element, menuLevelTwo) {
+    let mainMenuItem = createMenuItem(element.title, element.status); // 建立第一層選單項目
+
+    // 當滑鼠移入該選單項目時觸發的事件
+    mainMenuItem.addEventListener('mouseover', () => {
+      menuLevelTwo.innerText = ''; // 清空之前的第二層選單項目
+
+      // 將每個 subject (子選單) 加入第二層選單
+      element.subject.forEach((subject) => {
+        let menuLevelTwoItem = createMenuItem(subject); // 建立第二層選單項目
+        menuLevelTwo.append(menuLevelTwoItem); // 將該項目加入第二層選單
+      });
+
+      // 先移除所有已經被加上 selected 樣式的項目
+      const selectedItems = document.querySelectorAll(
+        '.dropdown-item.selected'
+      );
+      selectedItems.forEach((item) => item.classList.remove('selected'));
+
+      // 將當前選項的項目加上 selected 樣式
+      mainMenuItem.querySelector('.dropdown-item').classList.add('selected');
+    });
+
+    return mainMenuItem; // 回船主選單項目
+  }
+  // 建立選單項目 (通用，用於第一層和第二層選單)
+  function createMenuItem(title, status) {
+    let menuItem = document.createElement('li'); // 建立 li 元素
+    let link = document.createElement('a'); // 建立 a 元素
+
+    // 設定 a 標籤的 class 和屬性
+    link.classList.add('dropdown-item', status); // 加入樣式 class 和狀態
+    link.href = '#'; // 設定連結
+    link.textContent = title; // 設定顯式的文字
+    menuItem.append(link); // 將 a 標籤加入 li 元素中
+
+    return menuItem; // 回傳 li 元素
+  }
+
+  // 課程資料 (用於第一層和第二層選單的生成)
+  const courseData = [
+    {
+      title: '有氧運動',
+      subject: ['有氧 1', '有氧 2', '有氧 3'],
+      status: 'selected',
+    },
+    { title: '肌力訓練', subject: ['肌力 1', '肌力 2', '肌力 3'] },
+    { title: '核心訓練', subject: ['核心 1', '核心 2', '核心 3'] },
+    { title: '舞蹈課程', subject: ['舞蹈 1', '舞蹈 2', '舞蹈 3'] },
+    { title: '靜態課程', subject: ['瑜珈', '皮拉提斯', '冥想', '太極'] },
+  ];
+  // 地點資料 (用於第一層和第二層選單的生成)
+  const locationData = [
+    {
+      title: '台北市',
+      subject: [
+        '中正區',
+        '大同區',
+        '中山區',
+        '松山區',
+        '大安區',
+        '萬華區',
+        '信義區',
+      ],
+      status: 'selected',
+    },
+    { title: '宜蘭縣', subject: ['宜蘭縣 1', '宜蘭縣 2', '宜蘭縣 3'] },
+    { title: '新北市', subject: ['新北市 1', '新北市 2', '新北市 3'] },
+    { title: '基隆市', subject: ['基隆市 1', '基隆市 2', '基隆市 3'] },
+  ];
+</script>
+<!-- 載入 flatpickr  -->
+<!-- <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> -->
+<!-- flatpickr 客製 -->
+<!-- <script>
+  flatpickr('.flatpickr', {
+    onReady: function (selectedDates, dateStr, instance) {
+      const newDiv = document.createElement('div');
+      const newUl = document.createElement('ul');
+
+      const timeItems = ['底下JS', '上午', '下午', '晚上'];
+
+      newUl.classList.add(
+        'flatpickr-custom-time',
+        'list-unstyled',
+        'd-flex',
+        'gap-2'
+      );
+
+      timeItems.forEach((timeText) => {
+        const newLi = document.createElement('li');
+        const newBtn = document.createElement('button');
+        newLi.classList.add('nav-item');
+        newBtn.classList.add('nav-link', 'w-100');
+        newBtn.type = 'button';
+        newBtn.textContent = timeText;
+        newLi.append(newBtn);
+        newUl.appendChild(newLi);
+      });
+
+      newDiv.classList.add('flatpickr-custom-div');
+      // 建立自定義按鈕元素
+      const customButtonCancel = document.createElement('button');
+      customButtonCancel.type = 'button';
+      customButtonCancel.classList.add(
+        'btn',
+        'btn-outline-secondary',
+        'w-50',
+        'rounded-0'
+      );
+      customButtonCancel.innerText = '清除';
+
+      const customButtonConfirm = document.createElement('button');
+      customButtonConfirm.type = 'button';
+      customButtonConfirm.classList.add('btn', 'btn-primary', 'w-50');
+      customButtonConfirm.innerText = '確定';
+
+      customButtonConfirm.addEventListener('click', function () {
+        instance.setDate(new Date()); // 設定為今天的日期
+      });
+      newDiv.append(customButtonCancel, customButtonConfirm);
+      instance.calendarContainer.append(newUl, newDiv);
+    },
+  });
+</script>    -->
+
+          <ul class="navbar-nav align-items-center mx-8">
+            <li class="nav-item me-5 p-0">
+              <a class="nav-link link-img-opacity-75-hover p-0" href="common-questions.html"><span
+                  class="material-symbols-outlined fs-3 text-gray-800 align-middle">
+                  help
+                </span></a>
+            </li>
+            <li class="nav-item me-5 p-0">
+              <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+                  class="material-symbols-outlined fs-3 text-gray-800 align-middle">
+                  notifications
+                </span></a>
+            </li>
+            <li class="nav-item me-5 p-0">
+              <a class="nav-link link-img-opacity-75-hover p-0" href="#"><span
+                  class="material-symbols-outlined fs-3 text-gray-800 align-middle">
+                  mail
+                </span></a>
+            </li>
+          </ul>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp" alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步" width="56" height="56"
+            class="rounded-circle link-img-opacity-75-hover border-2 border border-white" style="cursor: pointer"
+            data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbarSignInTrainer02"
+            aria-controls="offcanvasNavbarSignInTrainer02" />
+      </div>
+    </div>
+  </form>
+</nav>
+<!-- offcanvas-navbar-sign-in-trainer-bg-white -->
+<div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbarSignInTrainer02"
+  aria-labelledby="offcanvasNavbarSignInTrainer02">
+  <div class="offcanvas-header px-4 py-7">
+    <div class="d-flex justify-content-center align-items-center">
+      <img src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp" alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步" width="36" height="36"
+        class="rounded-circle me-3" />
+      <span>王小明</span>
+    </div>
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <div class="offcanvas-body px-0 py-0">
+    <ul class="list-group rounded-0">
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="#">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_clock </span>
+            <span>預約課程 | 預約、上課</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="#">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> calendar_month </span>
+            <span>行事曆 | 課程明細</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="#">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> settings </span>
+            <span>帳號設定</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+      <li>
+        <a class="list-group-item list-group-item-action py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-200"
+          href="index.html">
+          <div class="d-flex align-items-center">
+            <span class="material-symbols-outlined me-2"> logout </span>
+            <span>登出</span>
+          </div>
+          <img src="/HealthGlow-sports-coach-reservation-platform/assets/right Foward-7a06fea0.svg" alt="向右 icon" width="20" height="20" />
+        </a>
+      </li>
+    </ul>
+  </div>
+</div>
+<!-- offcanvas-navbar-sign-in-trainer-bg-white-mobile-search -->
+<div class="offcanvas offcanvas-end overflow-y-auto" tabindex="-1" id="offcanvasNavbarSignInTrainerMobileSearch"
+  aria-labelledby="offcanvasNavbarSignInTrainerMobileSearch">
+  <div class="offcanvas-header px-4">
+    <img src="/HealthGlow-sports-coach-reservation-platform/assets/logo-primary-text-7549c20b.svg" alt="主色 health glow logo" width="64" height="30" />
+    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+  <form>
+    <div class="offcanvas-body px-0 py-0">
+      <ul class="accordion list-unstyled rounded-0" id="accordionSearch">
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseCourseSearch"
+              aria-controls="collapseCourseSearch">
+              <span class="fw-semibold d-flex align-items-center text-secondary"><span
+                  class="material-symbols-outlined text-gray-800 me-1">
+                  search </span>課程搜尋</span>
+            </button>
+          </h2>
+          <div id="collapseCourseSearch" class="accordion-collapse collapse">
+            <div class="accordion-body bg-gray-200">
+              <!-- 運動課程 dropdown menu -->
+              <div class="search d-flex bg-white">
+                <!-- 運動課程 level one-->
+                <div class="course-dropdown-menu-level-one border border-primary flex-grow-1">
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 運動課程 level two-->
+                <div class="course-dropdown-menu-level-two border border-primary flex-grow-1">
+                  <ul class="list-unstyled mb-0">
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 1</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 2</a>
+                    </li>
+                    <li>
+                      <a class="dropdown-item undefined" href="#">有氧運動 3</a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseLocationSelection"
+              aria-controls="collapseLocationSelection">
+              <span class="fw-semibold d-flex align-items-center text-secondary"><span
+                  class="material-symbols-outlined text-gray-800 me-1">
+                  location_on </span>選擇地點</span>
+            </button>
+          </h2>
+          <div id="collapseLocationSelection" class="accordion-collapse collapse">
+            <div class="search accordion-body bg-gray-200">
+              <!-- 地點 dropdown menu -->
+              <div class="d-flex justify-content-between">
+                <span>已選擇 2/10</span>
+                <a href="#" class="link-gray-700 text-decoration-underline" role="button">清除全部</a>
+              </div>
+              <div class="d-flex bg-white">
+                <!-- 地點 Level One -->
+                <div class="location-dropdown-menu-level-one border border-primary">
+                  <ul class="list-unstyled mb-0"></ul>
+                </div>
+                <!-- 地點 Level Two -->
+                <div class="location-dropdown-menu-level-two border border-primary">
+                  <ul class="list-unstyled mb-0 d-block">
+                    <li><a class="dropdown-item" href="#">中正區</a></li>
+                    <li><a class="dropdown-item" href="#">大同區</a></li>
+                    <li><a class="dropdown-item" href="#">中山區</a></li>
+                    <li><a class="dropdown-item" href="#">松山區</a></li>
+                    <li><a class="dropdown-item" href="#">大安區</a></li>
+                    <li><a class="dropdown-item" href="#">萬華區</a></li>
+                    <li><a class="dropdown-item" href="#">信義區</a></li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+        <li class="accordion-item border-0 rounded-0">
+          <h2 class="accordion-header">
+            <button
+              class="accordion-button collapsed py-5 px-6 border-0 d-flex justify-content-between align-items-center border-bottom border-gray-100 rounded-0"
+              type="button" data-bs-toggle="collapse" aria-expanded="false" data-bs-target="#collapseDateSelection"
+              aria-controls="collapseDateSelection">
+              <span class="fw-semibold d-flex align-items-center text-secondary">
+                <span class="material-symbols-outlined text-gray-800 me-1">schedule</span>
+                選擇時間
+              </span>
+            </button>
+          </h2>
+          <div id="collapseDateSelection" class="accordion-collapse collapse text-center">
+            <div class="accordion-body bg-gray-200 d-flex justify-content-center">
+              <div class="flatpickr-inline"></div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div class="p-6 d-flex gap-4">
+        <button type="search" class="btn btn-outline-dark fs-6 fw-semibold px-56 py-3 w-50">
+          重置
+        </button>
+        <button type="search" class="btn btn-primary text-white fs-6 fw-semibold px-56 py-3 w-50">
+          搜尋
+        </button>
+      </div>
+    </div>
+  </form>
+</div>    <!-- 導覽列 -->
+    <!-- 教練介紹、課程內容、專業證照、客戶評價 -->
+    <div
+      class="position-fixed shadow-none shadow-md-sm bg-gray-custom-03 w-100 z-5"
+      id="courseIntroductionNav"
+    >
+      <ul
+        class="nav nav-underline container justify-content-center justify-content-md-start pe-0"
+      >
+        <li class="nav-item">
+          <a
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10 active"
+            href="#coachIntroduction "
+          >
+            <span class="d-none d-md-block">教練介紹</span
+            ><span class="d-block d-md-none">教練</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            href="#courseContent"
+          >
+            <span class="d-none d-md-block">課程內容</span
+            ><span class="d-block d-md-none">課程</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            href="#professionalCertification"
+          >
+            <span class="d-none d-md-block">專業證照</span
+            ><span class="d-block d-md-none">證照</span>
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link fw-normal fs-6 fs-md-5 py-2 py-md-4 px-5 px-md-10"
+            href="#customerReviews"
+          >
+            <span class="d-none d-md-block">客戶評價</span
+            ><span class="d-block d-md-none">評價</span>
+          </a>
+        </li>
+      </ul>
+    </div>
+    <div
+      data-bs-spy="scroll"
+      data-bs-target="#courseIntroductionNav"
+      data-bs-smooth-scroll="true"
+      tabindex="0"
+    >
+      <div class="nav-reserve-space"></div>
+
+      <div class="bg-gray-custom-03">
+        <div class="py-0 py-lg-11">
+          <div class="container">
+            <div class="row flex-column-reverse flex-lg-row">
+              <div class="col-lg-6 ps-lg-0">
+                <div class="d-flex pt-6 pb-6 pb-lg-56 pt-lg-8">
+                  <div class="flex-shrink-0">
+                    <img
+                      src="/HealthGlow-sports-coach-reservation-platform/assets/avatar-03-38942572.webp"
+                      alt="一個帶著黑框眼鏡喝著咖啡的男人半身照"
+                      class="img-fluid d-none d-lg-block me-8"
+                      width="120"
+                      height="120"
+                    />
+                    <img
+                      src="/HealthGlow-sports-coach-reservation-platform/assets/avatar-03-38942572.webp"
+                      alt="一個帶著黑框眼鏡喝著咖啡的男人半身照"
+                      class="img-fluid d-block d-lg-none me-4"
+                      width="64"
+                      height="64"
+                    />
+                  </div>
+                  <div class="flex-grow-1">
+                    <h2 class="fs-5 fs-lg-2 fw-semibold mb-1 mb-lg-2">
+                      林大壯 Jeremy
+                    </h2>
+                    <ul
+                      class="list-unstyled d-flex align-items-center mb-2 mb-lg-4"
+                    >
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li class="me-2">
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5 fs-lg-4"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span class="text-gray-700 fw-normal fs-8 fs-lg-6"
+                          >(99+)</span
+                        >
+                      </li>
+                    </ul>
+                    <ul
+                      class="list-unstyled d-flex align-items-center flex-wrap gap-2 gap-lg-3"
+                    >
+                      <li>
+                        <a
+                          href="#"
+                          class="badge bg-primary-light bg-hover-tint fs-lg-6 fw-lg-medium px-lg-4 py-2"
+                          >#增肌減脂</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="badge bg-primary-light bg-hover-tint fs-lg-6 fw-lg-medium px-lg-4 py-2"
+                          >#體態雕塑</a
+                        >
+                      </li>
+                      <li>
+                        <a
+                          href="#"
+                          class="badge bg-primary-light bg-hover-tint fs-lg-6 fw-lg-medium px-lg-4 py-2"
+                          >#運動表現</a
+                        >
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+                <div class="d-none d-lg-block" style="max-width: 526px">
+                  <div class="row g-0">
+                    <div class="col-6 pe-5">
+                      <button
+                        type="button"
+                        class="btn btn-outline-primary w-100 py-3"
+                      >
+                        <i class="ti ti-message fs-6 me-2"></i>傳送訊息
+                      </button>
+                    </div>
+                    <div class="col-6">
+                      <button type="button" class="btn btn-primary w-100 py-3">
+                        <span
+                          class="material-symbols-outlined align-middle fs-6 me-2"
+                        >
+                          calendar_clock </span
+                        >查看可預約的時間
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- swiper 輪播 -->
+              <div class="col-lg-6 ps-0 pe-0 ps-lg-3 pe-lg-0">
+                <div class="swiper swiperCourseIntroduction position-relative">
+                  <div class="swiper-wrapper">
+                    <a
+                      class="swiper-slide"
+                      href="../assets/images/img/trainer-03-light-box.webp"
+                      data-lightbox="course-introduction-light-box"
+                    >
+                      <div
+                        class="swiper-bkg"
+                        style="
+                          background-image: url('/HealthGlow-sports-coach-reservation-platform/assets/trainer-03-469c62a9.webp');
+                        "
+                      ></div>
+                    </a>
+                    <a
+                      class="swiper-slide"
+                      href="../assets/images/img/trainer-02-light-box.webp"
+                      data-lightbox="course-introduction-light-box"
+                    >
+                      <div
+                        class="swiper-bkg"
+                        style="
+                          background-image: url('/HealthGlow-sports-coach-reservation-platform/assets/trainer-02-87f6d9de.webp');
+                        "
+                      ></div>
+                    </a>
+                    <a
+                      class="swiper-slide"
+                      href="../assets/images/img/trainer-01-light-box.webp"
+                      data-lightbox="course-introduction-light-box"
+                    >
+                      <div
+                        class="swiper-bkg"
+                        style="
+                          background-image: url('/HealthGlow-sports-coach-reservation-platform/assets/trainer-01-33dc096c.webp');
+                        "
+                      ></div>
+                    </a>
+                  </div>
+                  <div
+                    class="swiper-pagination-CourseIntroduction position-absolute"
+                  ></div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 教練介紹 -->
+        <div
+          class="container bg-white scroll-margin-top mb-4 mb-lg-10"
+          id="coachIntroduction"
+        >
+          <div class="row py-4 px-0 py-lg-6 px-lg-6">
+            <h2 class="fs-3 text-secondary d-none d-lg-block px-0 mb-6">
+              教練介紹
+            </h2>
+            <div class="col-lg-6 ps-lg-0">
+              <div class="content fw-normal mb-5 d-none d-lg-block">
+                <p
+                  class="CoachIntroductionContent multiline-ellipsis-11line mb-5"
+                >
+                  我的教練實務教學年資有4年，累積教學時數超過3000個小時。
+                  <br /><br />
+                  熟悉自由重量的教學，同時也知悉器材的操作與引導。
+                  我積極參與各種不同的研習內容,目前經常性使用FMS精選功能性動作評估，來幫助學生進行初步評估，同時建立對該客戶的身體活動狀況的認識。
+                  <br /><br />
+                  SFMA、關鍵點療法抑是我在上課中，若學生反應當日身體怪怪、不適，我會使用的工具，用以幫助學生能夠更為舒服適切的情況下,進行運動。
+                  <br /><br />
+                  其餘一些矯正及運動表現的進修內容,也是我會在上課的過程中，根據客戶的需求及興趣愛好等分配在課程時間內，適當穿插不同的訓練模組，如動作矯正、核心強化、柔韌性訓練等，並根據學生的進步情況動態調整課程重點。我也會隨時關注學生的反饋，確保每次課程都能針對他們當前的需求進行最佳化調整，無論是提升運動表現還是改善身體機能，讓每堂課都能達到最大的效果。
+                </p>
+                <div class="hideMoreButton">
+                  <span
+                    class="d-flex align-items-center text-primary fw-semibold ShowMoreCoachIntroductionContentButton"
+                    style="cursor: pointer"
+                    ><img
+                      src="/HealthGlow-sports-coach-reservation-platform/assets/triangle-d80d93a6.svg"
+                      alt="主色三角形 icon"
+                      class="me-1"
+                      width="20"
+                      height="20"
+                    />
+                    顯示更多
+                  </span>
+                </div>
+              </div>
+              <div class="content fw-normal mb-3 d-block d-lg-none">
+                <h2 class="fs-5 text-secondary d-block d-lg-none mb-4">
+                  教練介紹
+                </h2>
+                <p
+                  class="CoachIntroductionContent multiline-ellipsis-4line mb-3"
+                >
+                  我的教練實務教學年資有4年，累積教學時數超過3000個小時。
+                  <br /><br />
+                  熟悉自由重量的教學，同時也知悉器材的操作與引導。
+                  我積極參與各種不同的研習內容,目前經常性使用FMS精選功能性動作評估，來幫助學生進行初步評估，同時建立對該客戶的身體活動狀況的認識。
+                  <br /><br />
+                  SFMA、關鍵點療法抑是我在上課中，若學生反應當日身體怪怪、不適，我會使用的工具，用以幫助學生能夠更為舒服適切的情況下,進行運動。
+                  <br /><br />
+                  其餘一些矯正及運動表現的進修內容,也是我會在上課的過程中，根據客戶的需求及興趣愛好等分配在課程時間內，適當穿插不同的訓練模組，如動作矯正、核心強化、柔韌性訓練等，並根據學生的進步情況動態調整課程重點。我也會隨時關注學生的反饋，確保每次課程都能針對他們當前的需求進行最佳化調整，無論是提升運動表現還是改善身體機能，讓每堂課都能達到最大的效果。
+                </p>
+                <div class="hideMoreButton">
+                  <span
+                    class="d-flex align-items-center text-primary fw-semibold ShowMoreCoachIntroductionContentButton"
+                    style="cursor: pointer"
+                    ><img
+                      src="/HealthGlow-sports-coach-reservation-platform/assets/triangle-d80d93a6.svg"
+                      alt="主色三角形 icon"
+                      class="me-1"
+                      width="20"
+                      height="20"
+                    />
+                    顯示更多
+                  </span>
+                </div>
+              </div>
+              <ul
+                class="list-unstyled d-flex flex-column align-items-start mb-8 mb-lg-0"
+              >
+                <li
+                  class="badge bg-primary-light bg-hover-tint fw-bold text-gray-800 py-1 px-4 mb-3"
+                >
+                  <div class="d-flex align-items-center">
+                    <i class="ti ti-tags-filled fs-4 me-1 text-primary"></i>滿
+                    10 堂,每堂折 200
+                  </div>
+                </li>
+                <li
+                  class="badge bg-primary-light bg-hover-tint fw-bold text-gray-800 py-1 px-4"
+                >
+                  <div class="d-flex align-items-center">
+                    <i class="ti ti-tags-filled fs-4 me-1 text-primary"></i
+                    >預約滿五堂,贈送一堂
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="col-lg-6 pe-lg-0">
+              <div
+                class="d-flex flex-wrap flex-column flex-xl-row justify-content-between align-items-xl-center mb-2 mb-lg-4"
+              >
+                <h3 class="fs-4 fw-semibold text-secondary mb-4 mb-xl-0">
+                  <i class="ti ti-map-pin-filled me-2"></i>服務地區
+                </h3>
+                <ul
+                  class="nav nav-pills area-of-service"
+                  id="pills-tab-area-of-service"
+                  role="tablist"
+                >
+                  <li class="nav-item me-4" role="presentation">
+                    <button
+                      class="nav-link px-4 px-lg-8 py-2 active"
+                      id="pills-area01-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-area01"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-area01"
+                      aria-selected="true"
+                    >
+                      大安區
+                    </button>
+                  </li>
+                  <li class="nav-item me-4" role="presentation">
+                    <button
+                      class="nav-link px-4 px-lg-8 py-2"
+                      id="pills-area02-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-area02"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-area02"
+                      aria-selected="false"
+                    >
+                      信義區
+                    </button>
+                  </li>
+                  <li class="nav-item" role="presentation">
+                    <button
+                      class="nav-link px-4 px-lg-8 py-2"
+                      id="pills-area03-tab"
+                      data-bs-toggle="pill"
+                      data-bs-target="#pills-area03"
+                      type="button"
+                      role="tab"
+                      aria-controls="pills-area03"
+                      aria-selected="false"
+                    >
+                      中正區
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div class="tab-content" id="pills-tabContent-area-of-service">
+                <div
+                  class="tab-pane fade show active"
+                  id="pills-area01"
+                  role="tabpanel"
+                  aria-labelledby="pills-area01-tab"
+                  tabindex="0"
+                >
+                  <p class="text-secondary fw-normal fs-7 fs-lg-6 mb-2">
+                    地址：臺北市大安區新生南路2段86號8樓及9樓
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.2255176934173!2d121.53193051123739!3d25.02641967772881!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9871bffa62f%3A0x916dc06d6d031f7d!2zMTA25Y-w5YyX5biC5aSn5a6J5Y2A5paw55Sf5Y2X6Lev5LqM5q61ODbomZ855qiT!5e0!3m2!1szh-TW!2stw!4v1728743831331!5m2!1szh-TW!2stw"
+                    width="100%"
+                    height="340"
+                    style="border: 0"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="google-map-height"
+                  ></iframe>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-area02"
+                  role="tabpanel"
+                  aria-labelledby="pills-area02-tab"
+                  tabindex="0"
+                >
+                  <p class="text-secondary fw-normal fs-7 fs-lg-6 mb-2">
+                    地址：臺北市信義區松高路88號
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.858166424819!2d121.56905771123782!3d25.03888697772067!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442aba4ceac2fd5%3A0x17ca62d2a6cd55d1!2zMTEw5Y-w5YyX5biC5L-h576p5Y2A5p2-6auY6LevODjomZ8!5e0!3m2!1szh-TW!2stw!4v1728744050637!5m2!1szh-TW!2stw"
+                    width="100%"
+                    height="340"
+                    style="border: 0"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="google-map-height"
+                  ></iframe>
+                </div>
+                <div
+                  class="tab-pane fade"
+                  id="pills-area03"
+                  role="tabpanel"
+                  aria-labelledby="pills-contact-area03"
+                  tabindex="0"
+                >
+                  <p class="text-secondary fw-normal fs-7 fs-lg-6 mb-2">
+                    地址：臺北市中正區杭州南路一段56號
+                  </p>
+                  <iframe
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3614.834087395073!2d121.52296851123789!3d25.03970397772005!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442a9775ff550d1%3A0x91d8d500aaf7a616!2zMTAw5Y-w5YyX5biC5Lit5q2j5Y2A5p2t5bee5Y2X6Lev5LiA5q61NTbomZ8!5e0!3m2!1szh-TW!2stw!4v1728744124371!5m2!1szh-TW!2stw"
+                    width="100%"
+                    height="340"
+                    style="border: 0"
+                    loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"
+                    class="google-map-height"
+                  ></iframe>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 課程內容 -->
+        <div
+          class="container bg-white scroll-margin-top px-3 px-lg-0 mb-4 mb-lg-10"
+          id="courseContent"
+        >
+          <div class="px-0 px-lg-6 py-4 py-lg-6">
+            <div class="d-flex flex-column flex-lg-row mb-6">
+              <h2 class="fs-5 fs-lg-3 text-secondary mb-2 mb-lg-0 me-0 me-lg-8">
+                課程內容
+              </h2>
+              <form class="position-relative course-search-input-width">
+                <span
+                  class="material-symbols-outlined position-absolute fs-4 top-50 translate-middle"
+                  style="left: 24px"
+                >
+                  search
+                </span>
+                <input
+                  type="search"
+                  class="form-control rounded-0 border-2 border-gray-800 text-truncate py-2 ps-44 pe-3"
+                  placeholder="肌力"
+                />
+              </form>
+            </div>
+            <!-- 課程內容 - 手風琴元件 -->
+            <div class="accordion accordion-flush" id="accordionFlushCourse">
+              <div class="border-0 mb-3 mb-lg-5">
+                <div
+                  class="d-flex flex-column flex-lg-row justify-content-between align-items-lg-center bg-primary-light px-3 px-lg-6 py-3 py-lg-4"
+                >
+                  <span
+                    class="fs-5 fs-lg-4 text-gray-800 fw-medium mb-4 mb-lg-0"
+                    >客製</span
+                  >
+                  <div
+                    class="d-flex align-items-center justify-content-between"
+                  >
+                    <select
+                      class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                    >
+                      <option value="60" selected>60 分鐘</option>
+                      <option value="90">90 分鐘</option>
+                    </select>
+                    <div class="d-flex align-items-center">
+                      <span
+                        class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                        >NT$ 1,000</span
+                      >
+                      <a
+                        href="order-time.html"
+                        class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                        >預約</a
+                      >
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0 mb-3 mb-lg-5">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button bg-primary-light bg-hover-tint px-3 px-lg-6 py-3 py-lg-4"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flushCollapseCourseItem01"
+                    aria-expanded="true"
+                    aria-controls="flushCollapseCourseItem01"
+                  >
+                    <span class="fs-5 fs-lg-4 text-gray-800 fw-medium"
+                      >有氧運動</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="flushCollapseCourseItem01"
+                  class="accordion-collapse collapse show pt-0 pt-lg-3"
+                  data-bs-parent="#accordionFlushCourse"
+                >
+                  <div class="accordion-body bg-gray-100 bg-lg-white px-2 py-0">
+                    <ul class="list-unstyled mb-0">
+                      <li
+                        class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center px-3 px-lg-6 py-5 py-lg-4 border-bottom broder-gray-300"
+                      >
+                        <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                          <h3 class="text-secondary fs-5 mb-2">
+                            燃脂有氧挑戰班
+                          </h3>
+                          <p class="fw-normal fs-6">
+                            此課程專為想要提升體能與減脂的學員設計，透過多樣化的有氧運動組合，如跳繩、舞蹈與高強度間歇訓練，幫助你在短時間內燃燒更多熱量，同時增強心肺功能。
+                          </p>
+                        </div>
+
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <select
+                            class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                          >
+                            <option value="60" selected>60 分鐘</option>
+                            <option value="90">90 分鐘</option>
+                          </select>
+                          <div class="d-flex align-items-center">
+                            <span
+                              class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                              >NT$ 1,500</span
+                            >
+                            <a
+                              href="#"
+                              class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                              >預約</a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center border-bottom-lg-0 border-bottom broder-gray-300 px-3 px-lg-6 py-5 py-lg-4"
+                      >
+                        <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                          <h3 class="text-secondary fs-5 mb-2">
+                            動感有氧活力班
+                          </h3>
+                          <p class="fw-normal fs-6">
+                            在這堂課中，結合音樂與節奏感強的動作，讓你在運動中享受樂趣，並逐步提升心肺耐力。適合任何運動經驗的學員，無論初學者或有經驗者都能輕鬆上手。
+                          </p>
+                        </div>
+
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <select
+                            class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                          >
+                            <option value="60" selected>60 分鐘</option>
+                            <option value="90">90 分鐘</option>
+                          </select>
+                          <div class="d-flex align-items-center">
+                            <span
+                              class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                              >NT$ 1,200</span
+                            >
+                            <a
+                              href="#"
+                              class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                              >預約</a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item border-0">
+                <h2 class="accordion-header">
+                  <button
+                    class="accordion-button collapsed bg-primary-light bg-hover-tint px-3 px-lg-6 py-3 py-lg-4"
+                    type="button"
+                    data-bs-toggle="collapse"
+                    data-bs-target="#flushCollapseCourseItem02"
+                    aria-expanded="false"
+                    aria-controls="flushCollapseCourseItem02"
+                  >
+                    <span class="fs-5 fs-lg-4 text-gray-800 fw-medium"
+                      >肌力訓練</span
+                    >
+                  </button>
+                </h2>
+                <div
+                  id="flushCollapseCourseItem02"
+                  class="accordion-collapse collapse pt-0 pt-lg-3"
+                  data-bs-parent="#accordionFlushCourse"
+                >
+                  <div class="accordion-body bg-gray-100 bg-lg-white px-2 py-0">
+                    <ul class="list-unstyled mb-0">
+                      <li
+                        class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center px-3 px-lg-6 py-5 py-lg-4 border-bottom broder-gray-300"
+                      >
+                        <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                          <h3 class="text-secondary fs-5 mb-2">
+                            爆發力鍛造工坊
+                          </h3>
+                          <p class="fw-normal fs-6">
+                            這個課程專注於提升全身的爆發力和力量，以高強度間歇訓練和動態肌力動作為核心，幫助你快速提升運動表現。
+                          </p>
+                        </div>
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <select
+                            class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                          >
+                            <option value="60" selected>60 分鐘</option>
+                            <option value="90">90 分鐘</option>
+                          </select>
+                          <div class="d-flex align-items-center">
+                            <span
+                              class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                              >NT$ 2,000</span
+                            >
+                            <a
+                              href="#"
+                              class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                              >預約</a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center px-3 px-lg-6 py-5 py-lg-4 border-bottom broder-gray-300"
+                      >
+                        <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                          <h3 class="text-secondary fs-5 mb-2">
+                            力量鍊金術：從零到英雄
+                          </h3>
+                          <p class="fw-normal fs-6">
+                            從基礎開始，逐步鍛煉和轉化你的肌肉力量，這個課程結合了力量訓練和功能性運動，讓你在不知不覺中成為肌力英雄。
+                          </p>
+                        </div>
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <select
+                            class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                          >
+                            <option value="60">60 分鐘</option>
+                            <option value="90" selected>90 分鐘</option>
+                          </select>
+                          <div class="d-flex align-items-center">
+                            <span
+                              class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                              >NT$ 2,000</span
+                            >
+                            <a
+                              href="#"
+                              class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                              >預約</a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                      <li
+                        class="list-unstyled d-flex flex-column flex-lg-row justify-content-between align-items-lg-center border-bottom-lg-0 border-bottom broder-gray-300 px-3 px-lg-6 py-5 py-lg-4"
+                      >
+                        <div class="me-0 me-md-4 mb-6 mb-lg-0">
+                          <h3 class="text-secondary fs-5 mb-2">超越極限之旅</h3>
+                          <p class="fw-normal fs-6">
+                            這是一個挑戰自我極限的課程，通過強度逐漸增加的訓練計劃，鍛煉你每一塊肌肉，幫助你突破力量的巔峰。
+                          </p>
+                        </div>
+                        <div
+                          class="d-flex align-items-center justify-content-between"
+                        >
+                          <select
+                            class="form-select course-content-select-width rounded-0 me-4 ps-3 pe-8 fs-7 fs-lg-6"
+                          >
+                            <option value="60" selected>60 分鐘</option>
+                            <option value="90">90 分鐘</option>
+                          </select>
+                          <div class="d-flex align-items-center">
+                            <span
+                              class="font-anton-regular text-nowrap text-secondary fs-5 fs-lg-28 me-3 me-lg-8"
+                              >NT$ 2,000</span
+                            >
+                            <a
+                              href="#"
+                              class="btn btn-primary text-nowrap fs-6 fs-lg-5 fw-semibold px-8 px-lg-10 py-2"
+                              >預約</a
+                            >
+                          </div>
+                        </div>
+                      </li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 專業證照 -->
+        <div
+          class="container bg-white scroll-margin-top mb-4 mb-lg-10 px-lg-0"
+          id="professionalCertification"
+        >
+          <div class="px-0 px-lg-6 py-4 py-lg-6">
+            <h2 class="fs-5 fs-lg-3 text-secondary mb-4 mb-lg-6">專業證照</h2>
+            <div class="row">
+              <div class="col-lg-8 col-xl-6">
+                <ul class="row list-unstyled mb-0">
+                  <li class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                      <li class="d-flex align-items-center mb-3 mb-lg-4">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >國家體育協會體能私人教練</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-3 mb-lg-4">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >NSCA私人教練培訓</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-3 mb-lg-4">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >FMS精選功能性動作評估</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-3 mb-lg-0">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >SMFA選擇性功能動作評估</span
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                  <li class="col-lg-6">
+                    <ul class="list-unstyled mb-0">
+                      <li class="d-flex align-items-center mb-3 mb-lg-4">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >IMT上下肢動作整合與訓練</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-3 mb-lg-4">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >脊椎側彎與張⼒失衡—運動訓練整合</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center mb-3 mb-lg-4">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >KPM關鍵點療法</span
+                        >
+                      </li>
+                      <li class="d-flex align-items-center">
+                        <span
+                          class="material-symbols-outlined fs-4 text-primary me-1"
+                        >
+                          editor_choice
+                        </span>
+                        <span class="text-secondary fw-normal"
+                          >⼤腦腸道和營養研習</span
+                        >
+                      </li>
+                    </ul>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- 客戶評價 -->
+        <div
+          class="container bg-white scroll-margin-top px-lg-0"
+          id="customerReviews"
+        >
+          <div class="px-0 px-lg-6 pt-4 pt-lg-6 pb-10">
+            <div class="mb-4 mb-lg-10">
+              <div
+                class="d-flex flex-row flex-lg-column justify-content-between justify-content-lg-start align-items-center align-items-lg-start mb-4"
+              >
+                <h2
+                  class="fs-5 fs-lg-3 text-secondary mb-0 mb-lg-6 me-0 me-lg-8"
+                >
+                  客戶評價
+                </h2>
+                <div class="d-flex">
+                  <span
+                    class="font-anton-regular text-primary fw-normal fs-3 fs-lg-2 me-2"
+                    >5.0</span
+                  >
+                  <div class="d-flex flex-column">
+                    <ul class="list-unstyled d-flex align-items-center mb-0">
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li>
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5"
+                        >
+                          star
+                        </span>
+                      </li>
+                      <li class="me-2">
+                        <span
+                          class="material-symbols-rounded star align-middle fs-5"
+                        >
+                          star
+                        </span>
+                      </li>
+                    </ul>
+                    <span
+                      class="fs-7 fs-lg-6 fw-normal fw-lg-medium text-gray-700"
+                      >20+ 課程評價</span
+                    >
+                  </div>
+                </div>
+              </div>
+              <ul class="list-unstyled mb-4">
+                <li class="bg-gray-custom-03 d-flex p-3 mb-4 mb-lg-6">
+                  <img
+                    src="data:image/webp;base64,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"
+                    alt="一位裸上半身並且滿身肌肉背對者的男人半身照"
+                    class="d-none d-lg-block"
+                    width="56"
+                    height="56"
+                  />
+                  <img
+                    src="data:image/webp;base64,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"
+                    alt="一位裸上半身並且滿身肌肉背對者的男人半身照"
+                    class="d-block d-lg-none"
+                    width="44"
+                    height="44"
+                  />
+                  <div class="ms-2">
+                    <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                      王Ｏ慶<span
+                        class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                        >2024 年 8 月 7 號</span
+                      >
+                      <ul class="list-unstyled d-flex align-items-center mb-0">
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li class="me-2">
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                      </ul>
+                    </h3>
+                    <p class="text-gray-custom-01 fw-normal">
+                      Jeremy教練上課很認真，會提醒我訓練時候應該注意的事項，關心我訓練當天的狀況。
+                    </p>
+                    <p class="text-gray-custom-01 fw-normal">
+                      下課之餘也會開課表給我讓我能夠課後訓練。想要進步找Jeremy教練帶你飛上天。
+                    </p>
+                  </div>
+                </li>
+                <li class="bg-gray-custom-03 d-flex p-3 mb-4 mb-lg-6">
+                  <img
+                    src="data:image/webp;base64,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"
+                    alt="一位穿著深色無袖體育服的男人在跑步"
+                    class="d-none d-lg-block"
+                    width="56"
+                    height="56"
+                  />
+                  <img
+                    src="data:image/webp;base64,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"
+                    alt="一位穿著深色無袖體育服的男人在跑步"
+                    class="d-block d-lg-none"
+                    width="44"
+                    height="44"
+                  />
+                  <div class="ms-2">
+                    <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                      郭Ｏ銘<span
+                        class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                        >2024 年 8 月 8 號</span
+                      >
+                      <ul class="list-unstyled d-flex align-items-center mb-0">
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li class="me-2">
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                      </ul>
+                    </h3>
+                    <p class="text-gray-custom-01 fw-normal">
+                      上課幽默風趣，給推。
+                    </p>
+                    <p class="text-gray-custom-01 fw-normal">
+                      請大家用新台幣教訓他！！！！😍
+                    </p>
+                  </div>
+                </li>
+                <li class="bg-gray-custom-03 d-flex p-3 mb-4">
+                  <img
+                    src="data:image/webp;base64,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"
+                    alt="一位穿著綁著高馬尾穿深色運動內衣與瑜珈褲體的女人在做腿部伸展的運動"
+                    class="d-none d-lg-block"
+                    width="56"
+                    height="56"
+                  />
+                  <img
+                    src="data:image/webp;base64,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"
+                    alt="一位穿著綁著高馬尾穿深色運動內衣與瑜珈褲體的女人在做腿部伸展的運動"
+                    class="d-block d-lg-none"
+                    width="44"
+                    height="44"
+                  />
+                  <div class="ms-2">
+                    <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                      蔡Ｏ文<span
+                        class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                        >2024 年 5 月 19 號</span
+                      >
+                      <ul class="list-unstyled d-flex align-items-center mb-0">
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li>
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                        <li class="me-2">
+                          <span
+                            class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                          >
+                            star
+                          </span>
+                        </li>
+                      </ul>
+                    </h3>
+                    <p class="text-gray-custom-01 fw-normal">
+                      因為工作關係、經常腰痠駝背。且因為簽署文件的原因，導致醫生說我有圓肩的狀況。
+                    </p>
+                    <p class="text-gray-custom-01 fw-normal">
+                      經過和教練的上課後，久坐腰痠的狀況居然不見了、同事們還說我變瘦很多！！
+                    </p>
+                    <p class="text-gray-custom-01 fw-normal">五星吹捧吹起來</p>
+                  </div>
+                </li>
+                <!-- MessagesShow -->
+                <ul
+                  class="list-unstyled mb-0 showMoreMessages"
+                  style="display: none"
+                >
+                  <li class="bg-gray-custom-03 d-flex p-3 mb-4">
+                    <img
+                      src="data:image/webp;base64,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"
+                      alt="一位綁高馬尾穿著白色運動服的女性在做伸展"
+                      class="d-none d-lg-block"
+                      width="56"
+                      height="56"
+                    />
+                    <img
+                      src="data:image/webp;base64,UklGRpQOAABXRUJQVlA4WAoAAAAQAAAAYwAAYwAAQUxQSN4BAAABkFVbe9ZMj4Q4mFdCJCChEnDQOJg6IA5SB3wOIgEJr4RXwnsBtJA8mZ+7iJgANBseaVk3NXd301qXNAVQlVTUL9V1jiSmRf1WLVN34ffmDeosPcXFvNUivUj1pov0EBZvvkhzT/MOdW5LqndapaGnebeWWgmLd720IZt3rtKAqHevcls0J2jxpmhO0eIt0ZykxRvEnKbJZaJOVOUqdapbuGZxssslT6ebLhDjY/JddcL1q9kppy9EOVn4rDjp5SNx2vJJ4VU/ECcezwqzfCLO3MLRTM1fR8ptO5ic/LQr7PJO2SmA6PR/ATO/BKz8CqD8FMEHGKYRPNIIUh5BriP4GcKmI1Abgfl/RxuB6Qh0G0Fdh5BHkNMI0mMEUxhBgPJT4M3vB0j8ZkD4RQDKTgEgsyu7id20w8ZNcfjiNh8FoyZHyMwKTiMzOUPlVfCh8JJPkFkVfByMk8pnSJxmfFsZVXwtxsfkOyQ+CVdmNhmXho2L4mJRJipXQYyHCa6PxsIi7ozGwSLujcbAIu4W7U8F94v2tgmazH3lgEaT9WMJ7UrtpQqanrUHS2hd3u3lgA7l3VYVdCrvZixHdCyztrC9Anqf3nqP5gkc47zqNVqSgGqYUq5VbWe6rTk9ApoFVlA4IJAMAADwMwCdASpkAGQAPikQhkIhoQtFA7gMAUJQBm+f325qU8cXtzJ32Q9d+XBzr57fRd/cfUL50nmA/ar1Tf9l+s3uo/Zn2C/7J/kvWc9Uj+4epL5dnsof33/xftJ7U+ac/0n8Gv1V8tP8l+MnnL4xvZXuFyWInHyP7r/nPzH5K+AX7L/zn5b8UnaD0CO8/+78QnV38AeaB/xfVL/Y+P99i/03sD/z/+z/8T1PPor0f/V//f9w79a/+H2GfRZ/YdVkgt9Cwzjlwjn5Kyj+2W69xFsACgdJvRpTw0ktZVpLhtcqYqX1pBOd093ZkQqXLz9SY356BQsEpeUkNmQqeDRLdGf/AwnycpyNIA8x/+NUOmOUn77CfWR5ZNAC2uB+AdM1oTy4hRX3rSPk8nFB+P/HpGULNOTN7so/0zUs6LdQVbjatWDYRsIzMxw3A4OktIN1Ut1GAixWL/LtF1dcaAmqy+VMu/+EJ/6ZY0fPquYoA3n6gF34SFiEFBaZlSOQmRN0dJZIu9JpVuXq02RT8BRdmTk3UowDicl4gzmqQtB1I7a48KCQMUtOX3AAAP7q+6g+p0bnMmjk4y9jUAsQl5MoSkN+C5GE355ogobTq+AMS7iMvj4CybF1OC0dpUlKrDHDq1MdxOqy/ce5V7wOq7hnjkZIfwLIpm2UtN538Qle9zfG/tLY5MTxqEjQMbzv5KWC7l+3R+u6muAbwkO/dp28mrivlLa1X+aX5VvmxQbsuYifV4b2/UJoK62F3ECYV6KmferZKt8KvDWm/YEcL/eQM2dG9q7jLBCnZHINgnwyPi91vCcp5t0oXTT+t6VTzT45mewpsoTO2iHyi8B7Da/f6kSlqJyRVdYnjLlfdgRwGvsTRLSDFx0ZlAnAmlazi5+5ZBzHvFgqOoaIgPSm+HJK0qXW9U0riHEQXdqe/+ru2gCsgahrSSowwvfHgU4nDdXRr40r8OitRrZlBXdET712bFJG/tsv1fcQy2pIWrmrsYIFj8bzaZ3nqn4TWZR4pm/isoXUw2UDvS9hYtGEyGf2G46ltp5P67eu4E1ewCoCV/5t2eCTAaebHZNX0/eC6t+sbN2BBmO+SgAMq61zFWqmygv3YjulAhxj7BdAFP/TbunlCUzhcqfljPv3N/goU7hsh/5r5Nieuwqw/SO+9pjSt+NK1OMbZYDFARhGvS5w5vc8pE5n5W3TV6Uy/h7rjYttJfiTM5o4OfbUJL4PYiFwP6z7fU2AJu6X/142qeI+bjb2VUEABXiFF5i2ce4h/kTYWaSXNJXfC/48TAGrfk1wqqbK//M6dG/bg4vA8Z56baIK+K8RMHbsOWcfFvaoxjnvgWWx2Z61GjbIL62SirCPqK++Cv1+TcrAbTB/aed6Nh4C1STbrK8V2iL6fDt5DhMmfLIFdLPDdl/5uKcx/HqlJs6hzclZeaybP3qCoRXaKnGD1ldimm2Ev/R8pxIfxMaGJiLLY62mAXYWE5vEcVVI7xxeTfBLnquq3nzPjsX3EZhHOOGI39wnZ02tR1Mfk9W7DblYI4r8gxFKr7/w0cOX1bqw4GFPetOPnhWWU85cKHTbLNMR1crEPpOdbAvvak1o0cJ+/ASIe1exLHje7U86DTLryKrMFIk2C//xHvg79Pyd0CO82q6eR7xCfIjIYhRTzgt6tjw9NtXPFlgGKbAKM4zf0moFKL7Md///9ZSAUO54xTH4eU85M0XWgpaGWfAkMHAN3J94gAYK+Xr63trs4s4I+dfwIvxfW/uZqgAsfb/yGQELcrRcF/zu/d/6m2xE+D6WNWtQjHJkiuFY/faNcr+6/5UPqdRPzT016tWJKOkrLYytQEwZv+0GzrvlSZ1/UKgRbKYOd4ZDg9SeUSXmwPQc6QNTtHB8w725is4+lhq/zbTLFLYiteabzDZqmVyOa+K5XpUrDyz1HPL4awfUxsAFA8k0cfINMhVJPI4l2/Iz33nYpqz+U45TVGj2gVNXFaATA60+WFiFhkfhJjriNz8aM7RcWE4f2lYvVeJLKnjKLmuGFzKE9D3bPsERLtE1+vYEzLM1IdWGlsC7MKUxF7VwJl7pVRYuN8YAIvduBzsZQ+JnRnimMJf9FjlBUP8IjfvYdBEYWa05Luhxwn851m1TcJ+sAL59r0g/BAOFqKZzVPe8ShVon+ZMcEpOE6qrrSoTmRgA0AtFsHEytg5cSIwqlllwOTzcBS3/pvMnsDzcAOLYv1apuYcseutnmINbNw09q5Cu1kjKq+/3qW8Zanss39UR09bwRRoo2K1ZpfewCP1J3KawGE5TCSovK1BK0X86/W+IhaBLoX0mBtuSc3VJur84/W2PAZWlRLg0bnyVk+2FC8UY2ZV1TQ2ne++E+e/55qI/AbNvCOmb/Dg+QchwcsDUZ0aeVJlkWPr9DS76sL7giyPOkESHfalblquHT2mBrXUkQR+7zX+6oWPmSwF7MDoMkTuf5oUG6OCh1AyCXl6EZcZr0qwjZQqy8M+QXP0I87HaGe/3MllSk51rn/5glHWegKAzPCUnYybXF17J644aQNsxKl4bR3XoeGGPGMJ0C6ROPSCJc5IMR9j+49jJfiEoxnyEV+/ZcNsHUsqX0gn3SF2BatTCyHGk2vN0CNQXwJUb+JkgPdZKyT9uKWMBn9XfIEkGyvvaKTltUQmrBwHjF0a1+mPQpIs96meti0i/gSWL1vTfCRP4FjVQe4XmF/xsLXQaG//RF61eHjWYlqArU7z6elblP2rDpzsuVtSPJaiiEf1DuW7EJqBq4UE5BRn/hSwk8KjsOpXwwVT9tBqzT7Mh5tWKpTSb+7W9InclC3KzwjfgZDB+dAT/BvgBsbaUVtTwn+DfRJIZHH0l9L8P6sF8LdVgRQ8pFu3PLURHHWpfSEcNjSLZGzC0OVmEsJA1O/q3zhpva1gOa0FD/DKmWeFb0Zj2pJjArfVTIbB+3/LfNI6eib4PqTHS/5mIh9JjGhX0VRdgD9nyYQq9EU7tw9WgLwpikrGNSD2a3KVpE0otRZ4xFjQaLio9PeqH3pvlY34IFFSIpoiPeiJXFTH/2xJ259UQ4M1huNGCo63beeS3zYwsUjXT35n2vepiYTGJ/kYjdTDPNv4x/wyVKwiGRQNR9SFtIgjIaipf+2Hrg1p8BUb47N4xMGfR7RmGLs9db3BaQFbmpZDR8eSWDOYKN8rfojXzhh3C9xw9wp2tXbn+ieLh6gvP2/O/rmfCsW284lH/f6wJbkk5SONTBWHG32OtamBK4Fku6EN5Aw1rAENwYrRTTQs848s3/xQBT9zlQwwtFzI1ZkbOJlghL1gcxuGpvJr04/L2bnGatud3RAnlrgBdpR6uixiJtCMFElalI9cldkrT5hvLuT3EKBjspWuMlWShc/nKYuDA7hoaCM1qYCZKJrgSVf8lfxzzCEnvZha7TqrOpEF4YoVhzmM5bp7a88XAgd3Y1tKYbPXsfPYYVuB3+MAeNjg926l7De7TWvbLv4s+78aRH4apLahmQ0CpTI5t17WEHASUU0VKI3UM8Bx/jOSqI5gxy4tLq6/sA2gSbryJwmL8i2iILPmdkYwZnQUjQw050Ex5ByMSjbAULhGFh94nd9ZrkyTqt6MRrfXZTRG/+JOlzNOYnAHg/5G2//w6r8esdV7WShbwaUMDd6PAxcHEmXjEOn/AQ7YbrAIZztc/mEp8hcg6vYEO0HlB8eqcnNzKgezBCm2tvs9D2/+vR7F0sjbLZv0rtsRVmjsY0x6JPS+NUTD9NYhCzzo/crQn6NJCe8IZf9kTBCmXHreHyx4LjUo+JUL47zuse9x152ClHoKVcKc9tUd5T23Au48THTxDXWcAfiESONmQXZb9rIsf3dPk5+t/+IhB4sQ/8jDyzTXMR9oI7F4wdRoBPw1BrMigQ66gaW6G94xKCgdCP0bipecQyHB8GdIzt8yZ4tHJYH56MnIyoOYc+a+FqCQqEiPKSRCSjk7Kq/OCTvmWVxe2NlNBXdbtHGRmze3yn2EFwC5Ub+30DUmjYVk7ZFPOIoUUaQ84CBSpBs6DdVAavwWAVF4aJH+OwbNgM8wmC9z7pzCVzHOUnl16zEt5YpUwVqPnjTyCwMRlJnKG/+VVACcIXLmlQAAAKjb5///pjOA/qnI6/ndpXKJzyO5Xe+yqOfzABvj3U/0ZJkM1a2504PJChfzRethFJWOOixpInkWi+YwPf2QgKlyWXG2a43FSbUbPigV7q7UgKy2j/QGAKNlA0wHJKepQtBb2ToJZSzvdNEbsUNL/COS4BxH/iMCaz6y0AAAAAAA="
+                      alt="一位綁高馬尾穿著白色運動服的女性在做伸展"
+                      class="d-block d-lg-none"
+                      width="44"
+                      height="44"
+                    />
+                    <div class="ms-2">
+                      <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                        陳Ｏ茜<span
+                          class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                          >2024 年 3 月 29 號</span
+                        >
+                        <ul
+                          class="list-unstyled d-flex align-items-center mb-0"
+                        >
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li class="me-2">
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                        </ul>
+                      </h3>
+                      <p class="text-gray-custom-01 fw-normal">
+                        教練的課程非常專業，每次上課都能感受到他對細節的重視，動作指導很清楚，也會根據我的能力做適當的調整。
+                      </p>
+                      <p class="text-gray-custom-01 fw-normal">
+                        跟著教練訓練這段時間，我發現自己不僅體力變好了，身材也開始慢慢變化！感謝教練的耐心和鼓勵，讓我持續進步，也更加享受健身的過程。
+                      </p>
+                    </div>
+                  </li>
+                  <li class="bg-gray-custom-03 d-flex p-3 mb-4">
+                    <img
+                      src="data:image/webp;base64,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"
+                      alt="一位穿運動服在做啞鈴肩推的男性"
+                      class="d-none d-lg-block"
+                      width="56"
+                      height="56"
+                    />
+                    <img
+                      src="data:image/webp;base64,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"
+                      alt="一位穿運動服在做啞鈴肩推的男性"
+                      class="d-block d-lg-none"
+                      width="44"
+                      height="44"
+                    />
+                    <div class="ms-2">
+                      <h3 class="text-gray-custom-01 fs-5 fw-medium mb-1">
+                        徐Ｏ雄<span
+                          class="text-gray-custom-02 fs-lg-6 fs-7 fw-normal ms-2"
+                          >2024 年 3 月 29 號</span
+                        >
+                        <ul
+                          class="list-unstyled d-flex align-items-center mb-0"
+                        >
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li>
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                          <li class="me-2">
+                            <span
+                              class="material-symbols-rounded star align-middle fs-7 fs-lg-6"
+                            >
+                              star
+                            </span>
+                          </li>
+                        </ul>
+                      </h3>
+                      <p class="text-gray-custom-01 fw-normal">
+                        教練超棒的！每次上課都充滿活力，氣氛超好，完全不無聊！現在感覺每天都更有活力，身材也變得更結實！
+                      </p>
+                      <p class="text-gray-custom-01 fw-normal">
+                        不只讓我把動作做得更標準，還教會我很多訓練的小技巧！
+                      </p>
+                      <p class="text-gray-custom-01 fw-normal">
+                        謝謝教練不斷給我正能量和動力，讓我不斷突破自己！💪💪💪
+                      </p>
+                    </div>
+                  </li>
+                </ul>
+                <li class="hideMoreMessagesButton">
+                  <span
+                    class="d-flex align-items-center text-primary fw-semibold ShowMoreCoachIntroductionMessagesButton"
+                    style="cursor: pointer"
+                    ><img
+                      src="/HealthGlow-sports-coach-reservation-platform/assets/triangle-d80d93a6.svg"
+                      alt="主色三角形 icon"
+                      class="me-1"
+                      width="20"
+                      height="20"
+                    />
+                    顯示更多
+                  </span>
+                </li>
+              </ul>
+            </div>
+            <!-- 客戶留言 -->
+            <div
+              class="d-flex justify-content-center border-top broder-gray-300 px-3 px-lg-0 py-3 py-lg-4"
+            >
+              <div class="d-flex">
+                <img
+                  src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp"
+                  alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+                  class="rounded-circle d-none d-lg-block me-4"
+                  width="56"
+                  height="56"
+                />
+                <img
+                  src="/HealthGlow-sports-coach-reservation-platform/assets/sport-1-4-fcf527d3.webp"
+                  alt="一個拿著啞鈴穿著運動服裝的黑人女性在原地跑步"
+                  class="rounded-circle d-block d-lg-none me-3"
+                  width="32"
+                  height="32"
+                />
+                <form class="d-flex flex-column">
+                  <label
+                    class="form-label text-gray-700 fs-7 fs-lg-6 fw-normal mb-1 mb-lg-3"
+                    for="customerComments"
+                  >
+                    王小明
+                  </label>
+                  <textarea
+                    class="form-control customer-comments border-primary fs-6 fw-normal px-3 py-2 mb-4 mb-lg-5"
+                    id="customerComments"
+                    placeholder="請留下你對教練的評價...."
+                    style="resize: none"
+                  ></textarea>
+                  <div class="align-self-center">
+                    <button
+                      type="submit"
+                      class="btn btn-primary fw-medium px-6 py-2"
+                    >
+                      評價教練
+                    </button>
+                  </div>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="d-block d-lg-none">
+        <ul
+          class="list-unstyled bg-white d-flex justify-content-center p-3 mb-0"
+          style="box-shadow: 0px -2px 4px 0px #0000001f"
+        >
+          <li class="me-6">
+            <button
+              type="button"
+              class="btn btn-outline-primary fw-medium px-4 py-2"
+            >
+              <i class="ti ti-message fs-6 me-2"></i>傳送訊息
+            </button>
+          </li>
+          <li>
+            <button type="button" class="btn btn-primary fw-medium py-2 px-7">
+              查看可預約的時間
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div
+  id="scrollToTop"
+  class="scroll-to-top position-fixed d-block border border-1 border-md-2 border-primary rounded-circle bg-tint text-center d-flex justify-content-center align-items-center"
+>
+  <img
+    src="/HealthGlow-sports-coach-reservation-platform/assets/arrow Up-9f74bfd6.svg"
+    alt="向上的 icon"
+    width="32"
+    height="32"
+  />
+</div>
+    <!--  -->
+    <footer class="bg-primary pt-10 pb-6 pb-lg-10">
+  <div class="container">
+    <div
+      class="d-flex flex-column flex-lg-row justify-content-between align-items-center mb-6 mb-lg-3"
+    >
+      <img
+        src="/HealthGlow-sports-coach-reservation-platform/assets/logo-white-text-e2206eee.svg"
+        alt="health glow 白色 logo"
+        class="img-fluid mb-6 mb-lg-0"
+        width="190"
+        height="88"
+      />
+      <ul
+        class="list-unstyled fs-4 d-flex flex-wrap justify-content-center order-first order-lg-0 pb-10 pb-lg-0 mb-6 mb-lg-0"
+      >
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="about-us.html"
+            >關於我們</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="common-questions.html"
+            >常見問題</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="privacy-policy.html"
+            >隱私政策</a
+          >
+        </li>
+        <li>
+          <a
+            class="link-light link-opacity-75-hover px-6 py-2"
+            href="terms-of-service.html"
+            >服務條款</a
+          >
+        </li>
+      </ul>
+      <ul class="list-unstyled d-flex py-2 py-lg-0 mb-0">
+        <li class="me-4">
+          <a href="#" class="link-img-opacity-75-hover"
+            ><img
+              src="/HealthGlow-sports-coach-reservation-platform/assets/instagram-458c9a70.svg"
+              alt="instagram icon"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li class="me-4">
+          <a href="#" class="link-img-opacity-75-hover"
+            ><img
+              src="/HealthGlow-sports-coach-reservation-platform/assets/facebook-db6a5aa7.svg"
+              alt="facebook icon"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+        <li>
+          <a href="#" class="link-img-opacity-75-hover"
+            ><img
+              src="/HealthGlow-sports-coach-reservation-platform/assets/line-5a9ec259.svg"
+              alt="line icon"
+              width="32"
+              height="32"
+          /></a>
+        </li>
+      </ul>
+    </div>
+    <div class="text-white text-center text-lg-start fs-7 fw-normal">
+      <p class="mb-1">© 2024 Health Glow Inc. All rights reserved</p>
+      <p>僅個人作品練習,無任何商業用途</p>
+    </div>
+  </div>
+</footer>
+    
+    
+  </body>
+</html>
