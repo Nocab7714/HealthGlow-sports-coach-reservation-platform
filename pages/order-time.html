@@ -16,7 +16,7 @@
                     <div class="mt-2 d-flex justify-md-content-center justify-content-md-center justify-content-start">
                         <nav aria-label="breadcrumb">
                             <ol class="breadcrumb">
-                              <li class="breadcrumb-item text-white"><a href="#">Home</a></li>
+                              <li class="breadcrumb-item text-white"><a href="student.html">Home</a></li>
                               <li class="breadcrumb-item active" aria-current="page">預約課程</li>
                             </ol>
                           </nav>
@@ -33,17 +33,16 @@
                 <div class="py-md-15 py-10">
                     <div class="mb-md-10 mb-6">
                     <!-- 預約順序 -->
-                       <ul class="d-flex align-items-center mb-md-0 p-md-0">
-                            <li class="d-flex flex-md-row flex-column align-items-center pe-md-5 pe-3">
-                                <button
+                       <ul class="d-flex align-items-center justify-content-md-start justify-content-center mb-md-0 p-md-0">
+                            <li class="d-flex flex-md-row flex-column align-items-center pe-3">
+                                <a
                                     type="button"
-                                    class="btn btn-sm btn-warning rounded-pill text-secondary fw-bold font-anton-700 fs-4 step-icon-style font-anton-700"
+                                    class="btn btn-sm btn-warning rounded-pill text-secondary fw-bold font-anton-700 fs-md-4 fs-6 lh-base step-icon-style font-anton-700"
+                                    href="order-time.html"
                                     >
-                                <span class="font-anton-700 fs-md-4 fs-6 lh-base">
-                                  1
-                                </span>
-                                </button>
-                                <a href="#" class="fs-md-5 fs-6 text-warning ps-md-4">
+                                    1
+                                </a>
+                                <a href="order-time.html" class="fs-md-5 fs-6 text-warning ps-md-4">
                                     預約時段
                                 </a>
                             </li>
@@ -263,7 +262,7 @@
                       <div class="py-md-56 pt-8 pb-4">
                         <div class="container">
                           <div class="row">
-                            <div class="col-md-6 col-12 px-md-44 px-3 mx-auto  pb-md-0 pb-15">
+                            <div class="col-xxl-6 col-lg-7 col-md-9 col-12 px-xxl-44 px-lg-0 px-md-0 px-3 mx-auto  pb-md-0 pb-15col-xxl-6 col-lg-7 col-md-9 col-12 px-xxl-44 px-lg-0 px-md-0 px-3 mx-auto  pb-md-0 pb-15">
                               <h5 class="h5 text-secondary pb-4">
                                 可選擇的開始時間
                               </h5>
@@ -386,19 +385,23 @@
                         <div class="container">
                           <div class="row px-md-15 justify-content-between">
                             <div class="col-md-4 col-6">
-                              <button type="button" class="btn-dark bg-white d-flex align-items-center p-3">
-                                <i class="bi bi-arrow-left-short fs-4" style="line-height: 0.8;"></i>
-                                <div class="fs-md-5 fs-6 ps-2 lh-sm">回上一頁</div>
-                              </button>
+                              <a type="button" class="btn btn-outline-dark bg-white p-3"
+                              href="course-introduction.html">
+                                <div class=" d-flex align-items-center ">
+                                  <i class="bi bi-arrow-left-short fs-4" style="line-height: 0.8;"></i>
+                                  <div class="fs-md-5 fs-6 ps-2 lh-sm">上一頁</div>
+                                </div>
+                              </a>
                             </div>
                             <div class="col-md-4 col-6 text-end">
-                              <a href="order-place.html" class="d-flex justify-content-end">
-                                <button type="button" class="btn-dark bg-white  p-3 d-flex align-items-center"
+                                <a type="button" class="btn btn-outline-dark bg-white  p-3"
+                                href="order-place.html"
                                 >
-                                  <div class="fs-md-5 fs-6 pe-2 lh-sm">下一步</div>
-                                  <i class="bi bi-arrow-right-short fs-4" style="line-height: 0.8;"></i>
-                                </button>
-                              </a>
+                                  <div class="d-flex align-items-center">
+                                    <div class="fs-md-5 fs-6 pe-2 lh-sm">下一步</div>
+                                    <i class="bi bi-arrow-right-short fs-4" style="line-height: 0.8;"></i>
+                                  </div>
+                                </a>
                             </div>
                           </div>
                         </div>
