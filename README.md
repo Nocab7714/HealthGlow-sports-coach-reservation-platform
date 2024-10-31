@@ -38,10 +38,15 @@ npm run dev
   - images - 圖片資源放置處
   - scss - scss 資源放置處
     - base - 基礎設定資源放置處
+    - components - 元件樣式資源放置處
     - layout - 佈局資源放置處
     - pages - 頁面資源放置處
     - utils - 變數、通用類別資源放置處
+    - vendors - 插件樣式資源放置處
+- components 元件資源放置處
 - layout - 佈局資源放置處
+- pages - 頁面資源放置處
+- plugins - 插件資源放置處
 
 ## 專案技術
 
@@ -57,3 +62,7 @@ npm run dev
 - Flatpickr.js
 
 ## 聯絡作者
+
+- [Huang Macy](https://github.com/macy1215)
+- [yujouwu](https://github.com/yujouwu)
+- [Nocab Wang](https://github.com/Nocab7714)
