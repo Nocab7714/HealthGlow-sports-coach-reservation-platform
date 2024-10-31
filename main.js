@@ -5,7 +5,7 @@ import 'bootstrap/dist/js/bootstrap.min.js';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 
 // swiper
-import './swiper';
+import './plugins/swiper';
 
 // AOS
 import AOS from 'aos';
@@ -17,7 +17,7 @@ AOS.init();
 import './plugins/flatpickr.js';
 
 // GSAP
-import './gsap.js';
+import './plugins/gsap.js';
 
 // lightbox2
 import 'lightbox2/dist/css/lightbox.min.css';
@@ -28,4 +28,3 @@ lightbox.option({
   imageFadeDuration: 300, // 圖片加載後淡入的時間（毫秒）。
   fadeDuration: 300, // 圖片大小變換時的動畫時長
 });
-
