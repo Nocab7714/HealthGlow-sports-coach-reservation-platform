@@ -11,3 +11,10 @@
         left: 0px;
     }
 }
+
+.map-container{
+    height: 300px;
+    @include media-breakpoint-down(md) {
+     height: 168px;
+    }
+}
