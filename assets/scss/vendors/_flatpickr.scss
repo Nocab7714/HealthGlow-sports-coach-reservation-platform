@@ -37,16 +37,11 @@
   }
 }
 
-.flatpickr-day.today {
-  color: white;
-  border: none;
-  background-color: $primary;
-  &:hover {
-    background-color: $accent;
-    border-color: $primary;
-  }
+.dropdown .flatpickr-day.selected,
+.accordion-body .flatpickr-day.selected{
+  background: $primary;
+  border-color: $primary;
 }
-
 .flatpickr-innerContainer {
   justify-content: center;
 }
@@ -71,15 +66,11 @@
       margin-top: 28px;
     }
   }
-  .flatpickr-weekdays{
-    background-color: rgba(0, 179, 191, 0.1);
-    ;
-  }
   .flatpickr-days{
     width: 100%;
     border-right: 1px solid $primary;
     border-bottom: 1px solid $primary;
-    // background-color: white;
+
   }
   .dayContainer{
     min-width: 100%;
@@ -115,8 +106,12 @@
   }
   .flatpickr-day.today{
     background: transparent;
+    border-color: $primary;
+    border-right: 0px;
+    border-bottom: 0px;
     .date{
       background: $primary;
+      color: white;
       display: inline-block;
       width: 32px;
       height: 32px;
@@ -149,8 +144,8 @@
     width: auto;
   }
   .flatpickr-weekdays{
-    border: 1px solid $primary;
-    border-bottom: none;
+    background-color: rgba(0, 179, 191, 0.1);
+
     height: 40px;
     @include media-breakpoint-up(lg){
       height: 56px;
@@ -158,17 +153,17 @@
   }
   .flatpickr-weekdaycontainer{
     height: 100%;
+    border-right: 1px solid $primary;
   }
   .flatpickr-weekday{
     line-height: 1;
     padding-top: 10px;
     font-size: 16px;
+    border-left: 1px solid $primary;
+    border-top: 1px solid $primary;
     @include media-breakpoint-up(lg){
       padding-top: 16px;
       font-size: 20px;
     }
-  }
-  .flatpickr-weekday:not(:last-child){
-    border-right: 1px solid $primary;
   }
 }
