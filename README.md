@@ -4,6 +4,13 @@
 
 ## 畫面
 
+![首頁 banner ](https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/bacon/assets/images/read-me/readme-img-01.png)
+![學員登入畫面 ](https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/bacon/assets/images/read-me/readme-img-02.png)
+![學員專區課程列表 ](https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/bacon/assets/images/read-me/readme-img-03.png)
+![教練及課程介紹 ](https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/bacon/assets/images/read-me/readme-img-04.png)
+![學員專區課程列表行事曆 ](https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/bacon/assets/images/read-me/readme-img-05.png)
+![預約課程步驟 ](https://raw.githubusercontent.com/Nocab7714/HealthGlow-sports-coach-reservation-platform/refs/heads/feature/bacon/assets/images/read-me/readme-img-06.png)
+
 ## 安裝流程
 
 以下將會引導你如何安裝此專案到你的電腦上。
